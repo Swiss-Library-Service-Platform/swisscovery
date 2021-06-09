@@ -1,0 +1,19 @@
+{
+  "name": "41SLSP_NETWORK-VU1_UNION",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "slsp-i-button": "1.0.0",
+    "slsp-courier-info": "1.0.0",
+    "slsp-ill-signin-order-logged-out": "1.0.0",
+    "slsp-ill-signin-order-alert": "1.0.0",
+    "slsp-edit-personal-details": "1.0.0"
+  }
+}
