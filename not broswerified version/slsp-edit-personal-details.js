@@ -9,9 +9,10 @@ app.controller('EditPersonalDetailsController', ['$scope', function ($scope) {
     this.detailsBaseReg = "https:\/\/registration.slsp.ch\/library-card\/?lang=" + lang;
     this.grpA = ['11', '91', '92'];
     this.grpB = ['12', '13', '14', '15', '16'];
+    this.noShow = ['STAFF', '99'];
     this.showButtons = this.showA = this.showB = false;
-    
-    this.$doCheck = function() {
+
+    this.$doCheck = function () {
         if (this.parentCtrl.personalInfoService.personalInfo !== undefined) {
             let patron = this.parentCtrl.personalInfoService.personalInfo.patronstatus[0].registration[0].institution[0].patronstatuscode;
             if (this.grpA.includes(patron)) {
@@ -20,7 +21,7 @@ app.controller('EditPersonalDetailsController', ['$scope', function ($scope) {
             else if (this.grpB.includes(patron)) {
                 this.showB = true;
             }
-            else {
+            else if (!this.noShow.includes(patron)) {
                 this.showButtons = true;
             }
         }
@@ -34,7 +35,7 @@ app.component('prmPersonalInfoAfter', {
                     <md-card-content>\
                         <p>\
                             <span ng-show="$ctrl.showA" translate="customized.libraries.details"></span>\
-                            <span ng-if="$ctrl.showB" translate="customized.slsp.details"></span>\
+                            <span ng-show="$ctrl.showB" translate="customized.slsp.details"></span>\
                         </p>\
                     </md-card-content>\
                 </md-card>\
