@@ -258,13 +258,6 @@ div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-
 span.section-title-header:hover {
     color: #8a8a8a !important;
 }
-
-/*Facet "show more" button*/
-
-.sidebar-section .md-button.button-as-link.link-alt-color:hover {
-    background-color: rgba(17, 17, 17, 0.17) !important;
-}
-
 /*underlined search results*/
 /*.text-highlight, mark {
     box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
@@ -283,9 +276,7 @@ span.section-title-header:hover {
     margin-bottom: .8em !important;
 }
 
-/*Items expand*/
-
-@media (max-width: 960px) {
+/*View Results Journals - Item Details*/ 
 prm-location-items .md-list-item-text.layout-wrap.layout-row.flex {
     flex-direction: column;
 }
@@ -303,8 +294,6 @@ prm-location-items > md-list > md-list-item > div > div > div.layout-wrap {
 }
 prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
     box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
-}
-
 }
 
 /* Hide "search inside" for print journals */
@@ -360,62 +349,6 @@ prm-personal-info-after {
     display: flex;
 }
 
-/******************************************************************************/
-/************************************ Full display ****************************/
-/******************************************************************************/
-
-/*Back buttons*/
-
-md-tabs.tabs-as-app .back-button, prm-location-holdings .md-button.button-as-link, prm-location-items .button-link {
-    box-shadow: none;
-    color: #111111 !important;
-    background: rgba(17, 17, 17, 0.20) !important;
-    line-height: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.59);
-}
-
-md-tabs.tabs-as-app:hover .back-button:hover, prm-location-holdings .md-button.button-as-link:hover:not([disabled]), prm-location-items .button-link:hover:not([disabled]) {
-    color: #111111 !important;
-    background-color: rgba(17, 17, 17, 0.10) !important;
-}
-
-/*Buttons margin*/
-
-prm-request-services, prm-opac, prm-location-holdings .md-button.button-as-link {
-    margin-top: 5px;
-}
-
-/* Locations filter by default; hide filter button */
-prm-locations button[ng-if='$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive']{
-    display: none !important;
-}
-
-/* Location filter "Clear" button */
-
-prm-locations-filter .md-button.button-as-link:hover:not([disabled]) { 
-
-background-color: rgba(17, 17, 17, 0.10) !important;
-
-}
-
-/*FullView - Left Navigation */
-prm-full-view .services-index-under{
-    min-width: 7em;
-}
-prm-full-view .services-index-under .md-button{
-    width: 100%;
-    /* border: 1px solid #c3c3c3; */
-    margin: 1px 0!important;
-    text-overflow: clip;
-    padding-right: 0;
-    white-space: normal;
-    line-height: 20px;
-    padding: 7px 5px;
-}
-prm-full-view .services-index-under .md-button span{
-    text-transform: none;
-}
-
 /*Full view Resource sharing */
 
 #getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
@@ -445,258 +378,163 @@ primo-explore.logged-out alma-htgi-svc, primo-explore.alert alma-htgi-svc {
     font-size: 1em;
 }
 
-/*Full display Resource sharing expand section*/
+/*Full view Resource sharing expand section*/
 
 prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fill {
      height: auto;
      min-height: auto;
 }
 
-/* Full display sections order */ 
+/* Full view change sections order */ 
 
-#full-view-container > *:first-child { 
+#full-view-container >*:first-child { 
 	display: flex; 
 	flex-direction: column; 
 } 
  
-#brief {
-    order: 0 !important;
-    margin-bottom: -40px;
+#brief { 
+	order: 0 !important; 
+}  
+
+#details { 
+	order: 3 !important; 
 }
 
-#citationTrails {
-    order: 1 !important;
-    margin-bottom: -30px;
+#links { 
+	order: 4 !important; 
+} 
+
+#getit_link1_0 { 
+	order: 1 !important; 
+}   
+
+#action_list { 
+	order: 2 !important; 
 }
 
-#searchWithinJournal {
-    order: 2 !important;
-    margin-bottom: -30px;
+#virtualBrowse { 
+	order: 5 !important; 
 }
 
-#getit_link1_0 {
-    order: 3 !important;
-    margin-bottom: -30px;
+/* Change of links in left navigation bar ENG */ 
+
+[aria-label="Top"] {  
+	order: 0 !important;  
+} 
+
+[aria-label="Details"] {  
+	order: 4 !important;  
 }
 
-#getit_link1_1 {
-    order: 4 !important;
-    margin-bottom: -30px;
+[aria-label="Links"] {  
+	order: 5 !important;  
 }
 
-#action_list {
-    order: 5 !important;
-    margin-bottom: -30px;
-}
+[aria-label="Loan and request options"] {  
+	order: 1 !important;  
+} 
 
-#details {
-    order: 6 !important;
-    margin-bottom: -30px;
-}
+[aria-label="Send to"] {  
+	order: 3 !important;  
+} 
 
-#links {
-    order: 7 !important;
-    margin-bottom: -30px;
-}
+[aria-label="Virtual Browse"] {  
+	order: 6 !important;  
+}  
 
-#moreFromTheSameCourse {
-    order: 8 !important;
-    margin-bottom: -30px;
-}
-
-#moreFromTheSameCollection {
-    order: 9 !important;
-    margin-bottom: -30px;
-}
-
-#virtualBrowse {
-    order: 10 !important;
-    margin-bottom: -30px;
-}
-
-/* Change of links in left navigation bar ENG */
-
-[aria-label="Top"] {
-    order: 0 !important;
-}
-
-[aria-label="Citations"] {
-    order: 1 !important;
-}
-
-[aria-label="Search inside"] {
-    order: 2 !important;
-}
-
-[aria-label="View Online"] {
-    order: 3 !important;
-}
-
-[aria-label="Loan and request options"] {
-    order: 4 !important;
-}
-
-[aria-label="Send to"] {
-    order: 5 !important;
-}
-
-[aria-label="Details"] {
-    order: 6 !important;
-}
-
-[aria-label="Links"] {
-    order: 7 !important;
-}
-
-[aria-label="Course"] {
-    order: 8 !important;
-}
-
-[aria-label="Collection"] {
-    order: 9 !important;
-}
-
-[aria-label="Virtual Browse"] {
-    order: 10 !important;
-}
+[aria-label="View Online"] {  
+	order: 2 !important;  
+}  
 
 /* Change of links in left navigation bar GER */
 
-[aria-label="Top"] {
-    order: 0 !important;
+[aria-label="Top"] {  
+	order: 0 !important;  
+} 
+
+[aria-label="Details"] {  
+	order: 4 !important;  
+} 
+
+[aria-label="Links"] {  
+	order: 5 !important;  
 }
 
-[aria-label="Literatur"] {
-    order: 1 !important;
+[aria-label="Ausleih- und Bestelloptionen"] {  
+	order: 1 !important;  
+} 
+
+[aria-label="Senden an"] {  
+	order: 3 !important;  
+} 
+
+[aria-label="Virtuelles Regal"] {  
+	order: 6 !important;  
 }
 
-[aria-label="Suche innerhalb"] {
-    order: 2 !important;
-}
-
-[aria-label="Online ansehen"] {
-    order: 3 !important;
-}
-
-[aria-label="Ausleih- und Bestelloptionen"] {
-    order: 4 !important;
-}
-
-[aria-label="Senden an"] {
-    order: 5 !important;
-}
-
-[aria-label="Details"] {
-    order: 6 !important;
-}
-
-[aria-label="Links"] {
-    order: 7 !important;
-}
-
-[aria-label="Seminar"] {
-    order: 8 !important;
-}
-
-[aria-label="Sammlung"] {
-    order: 9 !important;
-}
-
-[aria-label="Virtuelles Regal"] {
-    order: 10 !important;
+[aria-label="Online ansehen"] {  
+	order: 2 !important;  
 }
 
 /* Change of links in left navigation bar FRE */
 
-[aria-label="Haut"] {
-    order: 0 !important;
+[aria-label="Haut"] {  
+	order: 0 !important;  
+} 
+
+[aria-label="D&#233;tails"] {  
+	order: 4 !important;  
+} 
+
+[aria-label="Liens"] {  
+	order: 5 !important;  
 }
 
-[aria-label="Citations"] {
-    order: 1 !important;
+[aria-label="Options de pr&#234;t et de demande"] {  
+	order: 1 !important;  
+} 
+
+[aria-label="Envoyer vers"] {  
+	order: 3 !important;  
+} 
+
+[aria-label="Etag&#232;re virtuelle"] {  
+	order: 6 !important;  
 }
 
-[aria-label="Rechercher dans"] {
-    order: 2 !important;
-}
-
-[aria-label="Consulter en ligne"] {
-    order: 3 !important;
-}
-
-[aria-label="Options de pr&#234;t et de demande"] {
-    order: 4 !important;
-}
-
-[aria-label="Envoyer vers"] {
-    order: 5 !important;
-}
-
-[aria-label="D&#233;tails"] {
-    order: 6 !important;
-}
-
-[aria-label="Liens"] {
-    order: 7 !important;
-}
-
-[aria-label="Cours"] {
-    order: 8 !important;
-}
-
-[aria-label="Collection"] {
-    order: 9 !important;
-}
-
-[aria-label="Etag&#232;re virtuelle"] {
-    order: 10 !important;
-}
-
+[aria-label="Consulter en ligne"] {  
+	order: 2 !important;  
+} 	
+ 
 /* Change of links in left navigation bar ITA */
 
-[aria-label="Top"] {
-    order: 0 !important;
+[aria-label="Top"] {  
+	order: 0 !important;  
+} 
+
+[aria-label="Dettagli"] {  
+	order: 4 !important;  
+} 
+
+[aria-label="Link"] {  
+	order: 5 !important;  
 }
 
-[aria-label="Citazioni"] {
-    order: 1 !important;
+[aria-label="Opzioni di prestito e richiesta"]{  
+	order: 1 !important;  
+} 
+
+[aria-label="Invia a"] {  
+	order: 3 !important;  
 }
 
-[aria-label="Cerca in"] {
-    order: 2 !important;
+[aria-label="Scorri virtualmente"] {  
+	order: 5 !important;  
 }
 
-[aria-label="Visualizza online"] {
-    order: 3 !important;
-}
-
-[aria-label="Opzioni di prestito e richiesta"] {
-    order: 4 !important;
-}
-
-[aria-label="Invia a"] {
-    order: 5 !important;
-}
-
-[aria-label="Dettagli"] {
-    order: 6 !important;
-}
-
-[aria-label="Link"] {
-    order: 7 !important;
-}
-
-[aria-label="Corso"] {
-    order: 8 !important;
-}
-
-[aria-label="Collezione"] {
-    order: 9 !important;
-}
-
-[aria-label="Scorri virtualmente"] {
-    order: 10 !important;
-}
+[aria-label="Visualizza online"] {  
+	order: 2 !important;  
+} 
 
 /******************************************************************************/
 /************************************ Help Page *******************************/
@@ -740,57 +578,6 @@ prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-co
 color:#ffffff !important;
 background-color: #11111152 !important; }
 
-/******************************************************************************/
-/****************** SLSP "special" external resources ***************************/
-/******************************************************************************/
-
-.slsp-archives md-list-item{
-    cursor: pointer;
-}
-.slsp-archives .md-list-item-inner span {
-    padding-left: 2em;
-}
-.slsp-archives md-list md-list-item .md-button{
-    color: #3d6e94;
-    font-size: 16px;
-}
-.slsp-archives md-list md-list-item .md-button:hover:not([disabled]),
-.slsp-archives md-list md-list-item .md-button:focus:not([disabled]) {
-    background-color: transparent;
-    color: #3d6e94;
-    text-decoration: underline;
-}
-.slsp-archives-additional-hint{
-    justify-content: center;
-    display: flex;
-    padding: 1em;
-    background-color: #f7eda3;
-    border-color: #ede49e;
-    margin-bottom: 1em;
-    padding-left: 2em;
-    box-shadow: 0 1px 0 0 rgb(0 0 0 / 3%), 0 5px 5px -3px rgb(0 0 0 / 7%);
-}
-/* mfa, tma */
-.slsp-archives-hide alma-htgi-svc > * {
-    display: none;
-}
-.slsp-archives-hide alma-htgi-svc-after {
-    display: block;
-}
-/* hsa */
-.slsp-archives-hide prm-alma-viewit > * {
-    display: none;
-}
-.slsp-archives-hide prm-alma-viewit-after {
-    display: block;
-}
-/* availability-line HSA, if no online resource */
-prm-search-result-availability-line.slsp-hsa-no-online  prm-icon{
-    display:none;
-}
-prm-search-result-availability-line.slsp-hsa-no-online  .availability-status {
-    color: gray;
-}
 
 /******************************************************************************/
 /******************************************************************************/
@@ -815,8 +602,10 @@ prm-search-result-availability-line.slsp-hsa-no-online  .availability-status {
 
 
 /*****************This two entries are the background of the primary color*******************/
-.prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-search-bar, prm-newspapers-search-bar, prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon, md-tabs md-ink-bar, md-radio-button.md-checked .md-on, button.switch-to-simple, .md-button.button-confirm,
-prm-request-services .md-button.button-as-link, prm-location-items md-list prm-service-button .md-button.button-as-link {
+.prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-search-bar, prm-newspapers-search-bar,
+prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon,
+md-tabs md-ink-bar, md-radio-button.md-checked .md-on, button.switch-to-simple, .md-button.button-confirm,
+prm-request-services .md-button.button-as-link, md-tabs.tabs-as-app .back-button {
     background-color: #4E4A99 !important;
 }
 
@@ -826,14 +615,19 @@ prm-request-services .md-button.button-as-link, prm-location-items md-list prm-s
     }
 }
 
+
 /*****************This entry is the mouse over background of the links and buttons (primary-color)*******************/
-md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover, button.switch-to-simple:hover, .md-button.button-confirm:hover, .md-button.button-as-link:hover:not([disabled]) {
+md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover,
+button.switch-to-simple:hover, .md-button.button-confirm:hover, md-tabs.tabs-as-app .back-button:hover:not([disabled]), .md-button.button-as-link:hover:not([disabled]) {
     background-color: #393765 !important;
 }
 
+
 /*****************This two entries are the font color of the primary color*******************/
 .prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-newspapers-search-bar,
-prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon:after, .md-button.switch-to-advanced, button.switch-to-simple, span.legal, span.legal > a, a.ps_link.legal, .ps_icon, md-card.prm-primary-bg.psfooter > md-card-content a, .md-button.button-confirm, prm-request-services .md-button.button-as-link, prm-request-services .md-button.button-as-link:hover:not([disabled]), prm-service-button .md-button.button-as-link:hover:not([disabled]), prm-location-items md-list prm-service-button .md-button.button-as-link {
+prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon:after, .md-button.switch-to-advanced, button.switch-to-simple,
+span.legal, span.legal > a, a.ps_link.legal, .ps_icon, md-card.prm-primary-bg.psfooter > md-card-content a, .md-button.button-confirm,
+md-tabs.tabs-as-app .back-button, prm-request-services .md-button.button-as-link {
     color: #fff !important;
 }
 
@@ -874,7 +668,3 @@ div.alert-bar .md-button:hover:not([disabled]) {
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
-
-
-
-
