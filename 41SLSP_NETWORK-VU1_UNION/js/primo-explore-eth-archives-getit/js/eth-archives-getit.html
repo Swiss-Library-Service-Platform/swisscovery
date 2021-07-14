@@ -1,0 +1,47 @@
+<div ng-if="$ctrl.guidCMIStar!=''">
+    <div ng-if="$ctrl.source === 'ETH_Hochschularchiv'">
+        <a class="eth-archive-link" target="_blank" ng-href="{{::$ctrl.ethConfigService.getUrl($ctrl.config.hsa, 'content')}}{{$ctrl.guidCMIStar}}" rel="noopener">
+            {{::$ctrl.ethConfigService.getLabel($ctrl.config.hsa, 'linktext1')}}
+            <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+            <prm-icon link-arrow external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right"></prm-icon>
+        </a>
+        <div>
+            <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.hsa, 'text1')}}</span>
+            <a target="_blank" rel="noopener" ng-href="{{::$ctrl.ethConfigService.getUrl($ctrl.config.hsa, 'manual')}}">
+                <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.hsa, 'linktext2')}}</span>
+                <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+            </a>
+            <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.hsa, 'text2')}}</span>
+        </div>
+    </div>
+    <div ng-if="$ctrl.source === 'ETH_ThomasMannArchiv'">
+        <a class="eth-archive-link" target="_blank" ng-href="{{::$ctrl.ethConfigService.getUrl($ctrl.config.tma, 'content')}}{{$ctrl.guidCMIStar}}" rel="noopener">
+            {{::$ctrl.ethConfigService.getLabel($ctrl.config.tma, 'linktext1')}}
+            <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+            <prm-icon link-arrow external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right"></prm-icon>
+        </a>
+        <div>
+            <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.tma, 'text1')}}</span>
+            <a target="_blank" rel="noopener" ng-href="{{::$ctrl.ethConfigService.getUrl($ctrl.config.tma, 'contact')}}">
+                <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.tma, 'linktext2')}}</span>
+                <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+            </a>
+            <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.tma, 'text2')}}</span>
+        </div>
+    </div>
+    <div ng-if="$ctrl.source === 'ETH_MaxFrischArchiv'">
+        <a class="eth-archive-link" target="_blank" ng-href="{{::$ctrl.ethConfigService.getUrl($ctrl.config.mfa, 'content')}}{{$ctrl.guidCMIStar}}" rel="noopener">
+            {{::$ctrl.ethConfigService.getLabel($ctrl.config.mfa, 'linktext1')}}
+            <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+            <prm-icon link-arrow external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right"></prm-icon>
+        </a>
+        <div>
+            <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.mfa, 'text1')}}</span>
+            <a target="_blank" rel="noopener" ng-href="{{::$ctrl.ethConfigService.getUrl($ctrl.config.mfa, 'manual')}}">
+                <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.mfa, 'linktext2')}}</span>
+                <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+            </a>
+            <span>{{::$ctrl.ethConfigService.getLabel($ctrl.config.mfa, 'text2')}}</span>
+        </div>
+    </div>
+</div>
