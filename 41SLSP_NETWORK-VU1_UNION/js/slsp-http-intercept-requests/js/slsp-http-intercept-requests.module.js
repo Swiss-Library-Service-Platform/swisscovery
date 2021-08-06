@@ -21,7 +21,7 @@ angular.module('slspHttpInterceptRequests', [])
                                 'en': ["in transit", "process started", "on hold shelf"],
                                 'de': ["transfer", "bearbeitung gestartet", "bereitgestellt"],
                                 'fr': ["en cours de transfert", "traitement lancé", "sur le rayon des réservations"],
-                                'it': ["processo avviato", "in transito", "scaffale prenotazioni"]
+                                'it': ["in transito", "processo avviato", "scaffale prenotazioni"]
                             }
 
                             if (Object.keys(list_of_hold_states).includes(interfaceLanguage)) {
