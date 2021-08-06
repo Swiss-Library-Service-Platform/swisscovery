@@ -20,9 +20,9 @@ angular.module('slspHttpInterceptRequests', [])
                             //TODO: add translations
                             let list_of_hold_states = {
                                 'en': ["in transit", "process started", "on hold shelf"],
-                                'de': ["in transit", "process started", "on hold shelf"],
-                                'fr': ["in transit", "process started", "on hold shelf"],
-                                'it': ["in transit", "process started", "on hold shelf"]
+                                'de': ["transfer", "bearbeitung gestartet", "bereitgestellt"],
+                                'fr': ["en cours de transfert", "traitement lancé", "sur le rayon des réservations"],
+                                'it': ["processo avviato", "in transito", "scaffale prenotazioni"]
                             }
 
                             if (Object.keys(list_of_hold_states).includes(interfaceLanguage)) {
