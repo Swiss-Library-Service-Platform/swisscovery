@@ -17,6 +17,7 @@ angular.module('slspHttpInterceptRequests', [])
                             //We can also get the language from userSessionManagerService but it is costly
                             let interfaceLanguage = window.appConfig['primo-view']['attributes-map'].interfaceLanguage
                             
+                            //TODO: add translations
                             let list_of_hold_states = {
                                 'en': ["in transit", "process started", "on hold shelf"],
                                 'de': ["in transit", "process started", "on hold shelf"],
@@ -29,7 +30,6 @@ angular.module('slspHttpInterceptRequests', [])
                                 let list_of_hold_states_regexp = RegExp(list_of_hold_states[interfaceLanguage].map(m => m.toLowerCase()).join('|'))
                                 if (response.status == 200 && response.data.status == "ok") {
                                     //rewrite all cancellable holds.
-                                    console.log(response.data.data.holds.hold);
                                     response.data.data.holds.hold.map((m) => {
                                         if (list_of_hold_states_regexp.test(m.holdstatus.toLowerCase())) {
                                             m.cancel = 'N'
