@@ -260,9 +260,13 @@ span.section-title-header:hover {
 }
 
 /*Facet "show more" button*/
-
 .sidebar-section .md-button.button-as-link.link-alt-color:hover {
     background-color: rgba(17, 17, 17, 0.17) !important;
+}
+
+/*page select buttons*/
+a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+    color: white !important;
 }
 
 /*underlined search results*/
@@ -327,8 +331,24 @@ prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=f
 .login-header {
     display: none !important;
 }
-/*alertbar for the courier info*/
+/*login-box make arrows clickable*/
+prm-union-catalog-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+    z-index: 100;
+}
+prm-login .md-button.md-no-style:hover {
+    color:black;
+}
 
+.login-card md-list-item.login-brighter-dialog prm-login-item {
+    width:100%;
+}
+
+prm-login .md-secondary-container md-icon.md-primoExplore-theme {
+    position: absolute;
+    margin: -27px 22px 0px -57px;
+}
+
+/*alertbar for the courier info*/
 .courier-info {
     margin: 0px 8px;
 }
@@ -389,6 +409,10 @@ prm-request-services, prm-opac, prm-location-holdings .md-button.button-as-link 
 prm-locations button[ng-if='$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive']{
     display: none !important;
 }
+prm-location-items button[ng-if='($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()']{
+    display: none !important;
+}
+
 
 /* Location filter "Clear" button */
 
@@ -396,6 +420,18 @@ prm-locations-filter .md-button.button-as-link:hover:not([disabled]) {
 
 background-color: rgba(17, 17, 17, 0.10) !important;
 
+}
+
+/*filter bar*/
+
+prm-locations-filter md-select {
+    margin-top:1px;
+}
+
+prm-location-items prm-service-button .md-button.button-as-link {
+    padding:0 6px !important;
+    box-shadow:none;
+    line-height:28px;
 }
 
 /*FullView - Left Navigation */
@@ -841,6 +877,12 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
     border-color: #fff !important;
 }
 
+/*****************selection color of the primary color*****************/
+.prm-primary-bg ::selection {
+    background: #3a8888;
+}
+
+
 /******************************************************************************/
 /********************** Secondary colour **************************************/
 /******************************************************************************/
@@ -867,6 +909,12 @@ div.alert-bar .md-button:hover:not([disabled]) {
     color: #111111 !important;
 }
 
+/*****************selection color of the secondary color**********************************/
+.bar.alert-bar ::selection {
+    background: #9d9cbd;
+}
+
+
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
@@ -874,7 +922,3 @@ div.alert-bar .md-button:hover:not([disabled]) {
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
-
-
-
-
