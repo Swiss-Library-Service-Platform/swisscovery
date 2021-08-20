@@ -1,4 +1,4 @@
-# README: swisscovery customization package
+9# README: swisscovery customization package
 
 This repository contains the latest version of the network zone customization package of swisscovery (https://swisscovery.slsp.ch/)
 
@@ -8,4 +8,4 @@ The "not broswerified version" folder contains codes for IZs that don't use brow
 
 New elements implemented in this package are announced via blogpost in SLSPhere.
 
-Last update of the swisscovery customization package: 10.06.2021
+Last update of the swisscovery customization package: 19.08.2021
