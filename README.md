@@ -1,4 +1,4 @@
-9# README: swisscovery customization package
+README: swisscovery customization package
 
 This repository contains the latest version of the network zone customization package of swisscovery (https://swisscovery.slsp.ch/)
 
