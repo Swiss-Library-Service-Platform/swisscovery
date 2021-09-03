@@ -18,10 +18,10 @@ angular.module('slspHttpInterceptRequests', ['ng'])
                                         window.appConfig['primo-view']['attributes-map'].interfaceLanguage
 
                                     let list_of_hold_states = {
-                                        'en': ["in transit", "process started", "on hold shelf"],
-                                        'de': ["transfer", "bearbeitung gestartet", "bereitgestellt"],
-                                        'fr': ["en cours de transfert", "traitement lancé", "sur le rayon des réservations"],
-                                        'it': ["in transito", "processo avviato", "scaffale prenotazioni"]
+                                        'en': ["in transit", "in process", "on hold shelf"],
+                                        'de': ["transfer", "in bearbeitung", "bereitgestellt"],                                    
+                                        'fr': ["en cours de transfert", "en cours", "sur le rayon des réservations"],                                    
+                                        'it': ["in transito", "in processo", "scaffale prenotazioni"]
                                     }
 
                                     if (Object.keys(list_of_hold_states).includes(interfaceLanguage)) {
