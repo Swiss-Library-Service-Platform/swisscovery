@@ -21,7 +21,8 @@
     prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]),
     .md-button.button-link:hover:not([disabled]), .md-button.button-link:focus:not([disabled]), prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow:hover:not([disabled]),
     button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:hover:not([disabled]),
-    button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:not([disabled]) {
+    button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:not([disabled]),
+    .md-button.md-lang-button:hover {
         background-color: #ddd !important;
         color: #111 !important;
     }
@@ -64,6 +65,14 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
     background-color: #111;
 }
 
+/*switch to simple search button*/
+button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
+    border-color: #f1f1f1 !important;
+    border-radius: 5px;
+    border-width: 1px;
+    border: solid;
+}
+
 /*the main color border on mobile view*/
 @media (max-width: 599px) {
     prm-topbar .top-nav-bar {
@@ -81,7 +90,52 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
     white-space: nowrap;
 }
 
+/*Header menu*/
 
+@media (max-width: 960px) {
+    prm-user-area-expandable button.user-button.user-menu-button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple, prm-user-area-expandable-after  {
+        display: none !important;
+    }
+    button#signInBtn {
+        display: block;
+    }
+    }
+    
+    primo-explore.logged-out prm-user-area-expandable md-menu {
+        display: none;
+    }
+    
+    /*Header menu: switch language*/
+    
+    bcu-lang-switch-component {
+        padding-right: 16px;
+    }
+    
+    bcu-lang-switch-component .md-button.md-lang-button {
+        height: 29px;
+        min-height: 29px;
+        margin: 15px 1px !important;
+        min-width: 29px;
+        width: 29px;
+        line-height: 23px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        border-radius: 3px;
+    }
+    
+    bcu-lang-switch-component .md-button.md-lang-button.active {
+        border-color: rgba(19, 18, 18, 0.85);
+    }
+    
+    bcu-lang-switch-component a {
+        color: rgba(255, 255, 255, 0.85);
+        display: inline-block;
+        padding-bottom: 2px;
+    }
+    
+    bcu-lang-switch-component a:hover {
+        color: rgba(255, 255, 255, 0.85);
+    }
 /***************  Main Content  ******************/
 
 /*backgound of the Textboxes Homepage*/
