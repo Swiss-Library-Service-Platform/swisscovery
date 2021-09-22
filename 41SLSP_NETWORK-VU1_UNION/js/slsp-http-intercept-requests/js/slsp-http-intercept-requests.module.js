@@ -46,5 +46,5 @@ angular.module('slspHttpInterceptRequests', ['ng'])
                             return response
                         }
                     }
-                })
+                }])
             }])
