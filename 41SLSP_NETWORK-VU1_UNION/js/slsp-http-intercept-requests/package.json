@@ -1,0 +1,8 @@
+{
+  "name": "slsp-http-intercept-requests",
+  "description": "Intercept and rewrite REQUESTS api calls to stop cancelling 'in transit' holds",
+  "author": {"name": "Mehmet Celik", "email": "mehmet.celik@kuleuven.be"},
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
