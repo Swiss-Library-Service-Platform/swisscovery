@@ -1,4 +1,3 @@
-
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
@@ -55,10 +54,6 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
     border-radius: 5px;
 }
 
-.md-button.button-as-link {
-    line-height: 36px;
-    padding: 0 12px;
-}
 
 .md-button.md-primary:hover:not([disabled]), .md-button.md-primary:focus:not([disabled]), prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), .bar prm-authentication .md-button:hover:not([disabled]), button.dismiss-alert-button:hover {
     color: #fff;
@@ -199,10 +194,12 @@ md-card-content a, prm-service-details a, div.courier-info > span a {
 /*footer layout*/
 md-card.prm-primary-bg.psfooter {
     margin: 16px 0 0 0;
+    padding: 0 8%;
 }
 /*footer layout*/
 md-card.prm-primary-bg.psfooter-legal {
     margin: 1px 0 0 0;
+    padding: 0 8%;
 }
 /*Responsive footer layout*/
 @media (min-width: 960px) {
@@ -386,9 +383,10 @@ prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=f
     display: none !important;
 }
 /*login-box make arrows clickable*/
-prm-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+prm-union-catalog-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
     z-index: 100;
 }
+
 prm-login .md-button.md-no-style:hover {
     color:black;
 }
@@ -400,6 +398,9 @@ prm-login .md-button.md-no-style:hover {
 prm-login .md-secondary-container md-icon.md-primoExplore-theme {
     position: absolute;
     margin: -27px 22px 0px -57px;
+}
+prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+    z-index: unset;
 }
 
 /*alertbar for the courier info*/
@@ -415,7 +416,7 @@ prm-login .md-secondary-container md-icon.md-primoExplore-theme {
 }
 
 /*Library info icon*/
-prm-location-items-after > div > span > a > img {
+slsp-i-button-component > div > span > a > img {
     vertical-align: middle;
     max-width: 30px;
     margin: 4px 12px;
@@ -462,7 +463,6 @@ prm-loan-after span.md-subhead {
     line-height: 18px;
     color: #d84f26;
     padding: 22px 0;
-    margin: 0 0 0 -35px;
 }
 prm-loan > div.align-self-stretch.flex-xs-50 {
     order: 4;
@@ -549,6 +549,15 @@ prm-location-items prm-service-button .md-button.button-as-link {
     padding:0 6px !important;
     box-shadow:none;
     line-height:28px;
+}
+
+.full-view-container {
+    overflow-y: hidden;
+    margin-bottom: 50px;
+}
+
+html#primoExploreRoot {
+    overflow-y: auto !important;
 }
 
 /*FullView - Left Navigation */
@@ -719,7 +728,7 @@ prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fi
     order: 0 !important;
 }
 
-[aria-label="Literatur"] {
+[aria-label="Zitationen"] {
     order: 1 !important;
 }
 
@@ -793,7 +802,7 @@ prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fi
     order: 7 !important;
 }
 
-[aria-label="Cours"] {
+[aria-label="S&#233;minaire"] {
     order: 8 !important;
 }
 
@@ -948,7 +957,7 @@ prm-search-result-availability-line.slsp-hsa-no-online  .availability-status {
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
-/********************** End of the Central Package CSS ************************/
+/********************** Union View Package CSS ********************************/
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
@@ -1016,8 +1025,8 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
 
 /*****************This entry is the mouse over background of the links and buttons (secondary-color)*******************/
 /*.bar prm-authentication .md-button:hover:not([disabled]),*/
-div.alert-bar .md-button:hover:not([disabled]) {
-    background-color: #b6fafa;
+div.alert-bar .md-button:hover:not([disabled]), slsp-edit-personal-details-component a.bar.alert-bar:hover {
+    background-color: #b6fafa !important;
 }
 
 
@@ -1035,7 +1044,7 @@ div.alert-bar .md-button:hover:not([disabled]) {
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
-/********************** End of the UNION Package CSS **************************/
+/********************** End of the Local Package CSS **************************/
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
