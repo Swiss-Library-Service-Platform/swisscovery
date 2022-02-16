@@ -1,3 +1,4 @@
+//--------Renewstatus display of loan items ---------------------------------------
 
 export class slspRenewItemTextController {
 
@@ -9,7 +10,6 @@ export class slspRenewItemTextController {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
             this.getRenewText = getRenewText;
-            
 
             function getRenewText() {
                 if (this.parentCtrl.item.renewstatuses !== undefined && this.parentCtrl.item.renewstatuses.renewstatus[0] !== undefined) {
@@ -19,8 +19,6 @@ export class slspRenewItemTextController {
                     return
                 }
             }
-
-           
         }
 
         catch (e) {
@@ -31,5 +29,4 @@ export class slspRenewItemTextController {
 }
 
 slspRenewItemTextController.$inject = [];
-
 

@@ -12,6 +12,7 @@ import './slsp-http-intercept-requests';
 import './prm-user-area-expandable-after';
 import './prm-loan-after';
 import './prm-personal-info-after';
+import './prm-alma-other-members-after';
 
-var app = angular.module('viewCustom', ['angularLoad', 'slspCourierInfo', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit','slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule' ]);
+var app = angular.module('viewCustom', ['angularLoad', 'slspCourierInfo', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit','slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule' ]);
 

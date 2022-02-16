@@ -1,1050 +1,1442 @@
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-/************************* Union View Package CSS *****************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-
-
-/***************  Navigation  ******************/
-
-/*Font Navigation and buttons*/
-#mainMenu > div > a, button#signInBtn, button#more-links-button, prm-topbar > div > prm-user-area-expandable > md-menu > button > span {
-    font-size: small !important;
-    font-weight: 500 !important;
-    color: #111 !important;
-}
-    /*hover effect Navigation and buttons*/
-    #mainMenu > div > a:hover, button#signInBtn:hover, prm-topbar > div > prm-user-area-expandable > md-menu > button:hover, button#more-links-button:hover,
-    prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]),
-    .md-button.button-link:hover:not([disabled]), .md-button.button-link:focus:not([disabled]), prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow:hover:not([disabled]),
-    button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:hover:not([disabled]),
-    button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:not([disabled]),
-    .md-button.md-lang-button:hover {
-        background-color: #ddd !important;
-        color: #111 !important;
-    }
-/*remove capitalized text*/
-.md-button {
-    text-transform: none;
-}
-    /*Menu button*/
-    button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple:hover, button#signInBtn, .md-button.button-link,
-    .md-button.button-as-link.link-alt-color, prm-icon md-icon, .section-title prm-icon, prm-icon.rotate-180, svg#chevron-up,
-    span.user-name, span.menu-arrow, .md-button.button-as-link, #sidebar-trigger > prm-icon > md-icon {
-        color: #111 !important;
-    }
-/*hide hover effect on Library Logo*/
-#banner > a.md-button.md-primoExplore-theme.md-ink-ripple:hover {
-    background: none;
-}
-/*background buttons*/
-prm-search-bookmark-filter .md-button {
-    background-color: #fff !important;
-}
-/*hiding Refworks from the pulldown menu*/
-.my-refworks-ctm, .my-refworks-separator-ctm {
-    display: none;
-}
-/*switch to advanced search button*/
-button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-}
-
-
-.md-button.md-primary:hover:not([disabled]), .md-button.md-primary:focus:not([disabled]), prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), .bar prm-authentication .md-button:hover:not([disabled]), button.dismiss-alert-button:hover {
-    color: #fff;
-    background-color: #111;
-}
-
-/*switch to simple search button*/
-button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
-    border-color: #f1f1f1 !important;
-    border-radius: 5px;
-    border-width: 1px;
-    border: solid;
-}
-
-/*the main color border on mobile view*/
-@media (max-width: 599px) {
-    prm-topbar .top-nav-bar {
-        border-bottom-style: solid;
-        border-bottom-width: 8px;
-    }
-}
-
-.md-button.button-as-link {
-    line-height: 36px;
-    padding: 0 6px;
-}
-
-.md-autocomplete-suggestions li {
-    white-space: nowrap;
-}
-
-/*Header menu*/
-
-@media (max-width: 960px) {
-    prm-user-area-expandable button.user-button.user-menu-button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple, prm-user-area-expandable-after  {
-        display: none !important;
-    }
-    button#signInBtn {
-        display: block;
-    }
-    }
-    
-    primo-explore.logged-out prm-user-area-expandable md-menu {
-        display: none;
-    }
-    
-    /*Header menu: switch language*/
-    
-    bcu-lang-switch-component {
-        padding-right: 16px;
-    }
-    
-    bcu-lang-switch-component .md-button.md-lang-button {
-        height: 29px;
-        min-height: 29px;
-        margin: 15px 1px !important;
-        min-width: 29px;
-        width: 29px;
-        line-height: 23px;
-        text-transform: uppercase;
-        border: 1px solid transparent;
-        border-radius: 3px;
-    }
-    
-    bcu-lang-switch-component .md-button.md-lang-button.active {
-        border-color: rgba(19, 18, 18, 0.85);
-    }
-    
-    bcu-lang-switch-component a {
-        color: rgba(255, 255, 255, 0.85);
-        display: inline-block;
-        padding-bottom: 2px;
-    }
-    
-    bcu-lang-switch-component a:hover {
-        color: rgba(255, 255, 255, 0.85);
-    }
-/***************  Main Content  ******************/
-
-/*backgound of the Textboxes Homepage*/
-prm-search > div > md-content, md-card.default-card._md.md-primoExplore-theme {
-    background-color: #fff !important;
-    border-radius: 3px;
-}
-
-/*first header of the Textboxes*/
-.cardbox h1 {
-    font-size: 48px;
-    line-height: 56px;
-}
-
-/*second header of the Textboxes*/
-.cardbox h2 {
-    font-size: 32px;
-    line-height: 36px;
-}
-/*third header of the Textboxes (if needed)*/
-.cardbox h3 {
-    font-size: 26px;
-    line-height: 30px;
-}
-
-/*removes the upper and lower space in a list */
-.cardbox ul, .cardbox ol {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-}
-/*links in the textboxes*/
-md-card-content a, prm-service-details a {
-    color: #222222 !important;
-}
-
-md-card-content a, prm-service-details a, div.courier-info > span a {
-    text-decoration: underline !important;
-}
-
-    md-card-content a:hover, prm-service-details a:hover {
-        color: #111;
-        background-color: rgba(47, 47, 47, 0.1) !important;
-    }
-
-/*Responsive Video Frame*/
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/*footer layout*/
-md-card.prm-primary-bg.psfooter {
-    margin: 16px 0 0 0;
-    padding: 0 8%;
-}
-/*footer layout*/
-md-card.prm-primary-bg.psfooter-legal {
-    margin: 1px 0 0 0;
-    padding: 0 8%;
-}
-/*Responsive footer layout*/
-@media (min-width: 960px) {
-
-    md-card-content.prm-primary-bg.layout-align-gt-sm-end-stretch.flex-gt-sm-70 {
-        text-align: end;
-    }
-}
-/*footer links*/
-md-icon.ps_icon, a.ps_link {
-    margin-right: 5%;
-    text-decoration: underline;
-}
-
-/*md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover {
-        background-color: rgba(61,110,148,.1) !important;
-    }*/
-
-
-/*footer text*/
-md-card-content.prm-primary-bg {
-    font-weight: 300;
-}
-
-
-/*links in the legal part of the footer*/
-a.ps_link.legal, span.legal {
-    font-size: 14px;
-    font-weight: 300;
-}
-
-    /************************************************************************************************
-span.legal {
-    color: #14413c;
-}
-*/
-    span.legal > a {
-        /*color: #14413c;*/
-        font-weight: 600;
-    }
-
-/*main container width for footer positioning*/
-prm-static.md-padding.flex {
-    min-width: 100%;
-    padding: 0;
-}
-
-/*mainly white background*/
-.prm-primary-bg.prm-hue1, prm-atoz-search-bar.prm-hue1, prm-browse-search-bar.prm-hue1, prm-collection-gallery-header .prm-hue1.collection-header-inner, prm-newspapers-search-bar.prm-hue1, prm-search-bar.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark:after, prm-tags-search-bar.prm-hue1, prm-topbar .top-nav-bar, prm-tree-nav prm-spinner .prm-hue1.diamond {
-    background-color: #fff !important;
-}
-
-
-/*font color on white background*/
-.hoverable-over-dark, .md-button.button-over-dark, prm-main-menu[menu-type=full] .md-button.md-focused, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type=full] .md-button:focus, prm-main-menu[menu-type=full] .md-button:hover, prm-main-menu[menu-type=full] .md-button md-select:focus, prm-main-menu[menu-type=full] .overlay-menu-item.md-focused, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type=full] .overlay-menu-item:focus, prm-main-menu[menu-type=full] .overlay-menu-item:hover, prm-main-menu[menu-type=full] .overlay-menu-item md-select:focus, prm-main-menu[menu-type=full] md-button:focus, prm-main-menu[menu-type=full] md-button:hover, prm-topbar .md-button, prm-user-area .md-button.user-menu-button, prm-user-area md-fab-toolbar ._md-fab-action-item .md-button, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container {
-    color: #222 !important;
-}
-
-/***************  Brief results  ******************/
-
-/*color of the Alertbar*/
-.bar.alert-bar, .classic-input .search-scope, .prm-alert-bg {
-    /*background-color: #8dd8d8 !important;*/
-    border: none !important;
-}
-
-/*backgound search results boxes*/
-.list-item-wrapper {
-    background-color: #f9f9f9;
-}
-/*Title color*/
-prm-brief-result .item-title span {
-    color: #333;
-}
-
-    prm-brief-result .item-title span:hover {
-        color: #111;
-        background-color: rgba(47, 47, 47, 0.1) !important;
-    }
-
-/*remove hover effect from title links*/
-.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .md-button.arrow-link-button:focus .button-content, .md-button.arrow-link-button:hover .button-content, .recommendations-title.hover > span > span, .recommendations-title:hover > span > span, a.hover, a:focus, a:hover, prm-chapters-and-reviews md-card > .md-button:focus .item-title span, prm-chapters-and-reviews md-card > .md-button:hover .item-title span, prm-citation-trails-item.active-item md-card > .md-button:focus .item-title span, prm-citation-trails-item.active-item md-card > .md-button:hover .item-title span, prm-tags-list .md-chips .md-chip .md-chip-content:hover strong, prm-tags-list .md-chips md-chip .md-chip-content:hover strong, prm-tags-list md-chips .md-chip .md-chip-content:hover strong, prm-tags-list md-chips md-chip .md-chip-content:hover strong {
-    box-shadow: none !important;
-}
-
-/*background color of bookmarked items*/
-.list-item-wrapper .item-bookmarked, .list-item-wrapper .item-bookmarked:hover, .prm-highlight, .prm-highlight.prm-hue1, prm-breadcrumbs .md-chip.persistent-facet, prm-breadcrumbs .prm-hue1.md-chip.persistent-facet {
-    background-color: #ddd !important;
-}
-
-/*hover effect on all Links*/
-.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content,
-.md-button.arrow-link-button:focus .button-content, .md-button.arrow-link-button:hover .button-content, .prm-links-background.prm-hue-1,
-.recommendations-title.hover > span > span, .recommendations-title:hover > span > span, a.hover, a:focus, a:hover,
-prm-chapters-and-reviews md-card > .md-button:focus .item-title span, prm-chapters-and-reviews md-card > .md-button:hover .item-title span,
-prm-citation-trails-item.active-item md-card > .md-button:focus .item-title span, prm-citation-trails-item.active-item md-card > .md-button:hover .item-title span,
-prm-tags-list .md-chips .md-chip .md-chip-content:hover strong, prm-tags-list .md-chips md-chip .md-chip-content:hover strong,
-prm-tags-list md-chips .md-chip .md-chip-content:hover strong, prm-tags-list md-chips md-chip .md-chip-content:hover strong {
-    color: #222 !important;
-}
-
-div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-center-start.layout-row > div > a:hover {
-    background-color: #6b6b6b !important;
-}
-
-/*Facet titles*/
-span.section-title-header:hover {
-    color: #8a8a8a !important;
-}
-
-/*Facet "show more" button*/
-.sidebar-section .md-button.button-as-link.link-alt-color:hover {
-    background-color: rgba(17, 17, 17, 0.17) !important;
-}
-
-/*page select buttons*/
-a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
-    color: white !important;
-}
-
-/*underlined search results*/
-/*.text-highlight, mark {
-    box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
-}*/
-
-/*versions link and other*/
-.getit, .md-button.arrow-link-button prm-search-result-frbr-line .button-content > prm-icon:first-child, .prm-notice, .status-maybe, .worldcat, [class*=_more], [class*=_unknown], [class*=check_], [class*=does_not_exist], [class*=may_], [class*=NFT], prm-search-result-frbr-line .md-button.arrow-link-button .button-content > prm-icon:first-child, prm-search-result-frbr-line a > prm-icon:first-child, prm-service-links a {
-    color: #222 !important;
-}
-/*icon color and text color in request forms*/
-.prm-primary-color, .request-form md-input-container label, .request-form md-input-container label:not(.md-no-float):not(._md-container-ignore), .request-form md-input-container md-select .md-select-value.md-select-placeholder, .request-form md-input-container .md-input-container-dummy > .md-select-dummy .md-select-value.md-select-placeholder, .request-form md-input-container md-select ._md-select-value._md-select-placeholder, .request-form md-input-container .md-input-container-dummy > .md-select-dummy ._md-select-value._md-select-placeholder, .result-item-actions .md-icon-button, .result-item-actions .more-options-button, prm-add-query-to-saved-searches .custom-button, prm-pre-filters md-input-container.is-active, .md-autocomplete-suggestions .suggestion-scope, md-tab-content .tab-content-header md-input-container md-select-value .md-text {
-    color: #222 !important;
-}
-/*space between item details in Fullview*/
-#item-details > div > div {
-    margin-bottom: .8em !important;
-}
-
-/*Items expand*/
-
-@media (max-width: 960px) {
-prm-location-items .md-list-item-text.layout-wrap.layout-row.flex {
-    flex-direction: column;
-}
-prm-location-items h3, prm-location-items h4 {
-    margin:10px 0 !important;
-}
-prm-location-items > md-list > md-list-item > div > div.md-list-item-text > div.weak-text > div > div > p {
-    margin: 4px 18px !important;
-    display: list-item;
-}
-prm-location-items > md-list > md-list-item > div > div > div.layout-wrap {
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    max-width: 100% !important;
-}
-prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
-    box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
-}
-
-}
-
-/* Hide "search inside" for print journals */
-.search-within-p-only { display:none }
-
-/*fullview background of the left part*/
-.md-dialog-container.fixed-container {
-    background-color: #444 !important;
-}
-
-/*background color of the signin window and the fullscreen navigation*/
-md-backdrop._md-dialog-backdrop.md-opaque.md-primoExplore-theme {
-    background-color: #1f1f1f !important;
-}
-/*text color of the signin window and the fullscreen navigation*/
-prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline, .light-on-dark-dialog .md-button.button-as-link, .light-on-dark-dialog .md-button.button-confirm, md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button, md-dialog.light-on-dark-dialog a:hover {
-    color: #fff !important;
-}
-/*hiding the Library Logo in the login window*/
-.login-header {
-    display: none !important;
-}
-/*login-box make arrows clickable*/
-prm-union-catalog-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
-    z-index: 100;
-}
-
-prm-login .md-button.md-no-style:hover {
-    color:black;
-}
-
-.login-card md-list-item.login-brighter-dialog prm-login-item {
-    width:100%;
-}
-
-prm-login .md-secondary-container md-icon.md-primoExplore-theme {
-    position: absolute;
-    margin: -27px 22px 0px -57px;
-}
-prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
-    z-index: unset;
-}
-
-/*alertbar for the courier info*/
-.courier-info {
-    margin: 0px 8px;
-}
-
-.courier-info.bar.alert-bar {
-	height: unset;
-	margin: 6px 8px;
-	padding: .5em .5em 0.25em;
-	text-align: center;
-}
-
-/*Library info icon*/
-slsp-i-button-component > div > span > a > img {
-    vertical-align: middle;
-    max-width: 30px;
-    margin: 4px 12px;
-}
-
-/*Library card Personal details display*/
-#personalDetails > md-card-content > div {
-    flex-flow: column;
-}
-
-#personalDetails .md-input-has-value.layout-column {
-    min-width: 400px;
-}
-
-prm-personal-info-after {
-    display: flex;
-}
-
-slsp-edit-personal-details-component#SLSPeditPersonalDetails {
-    background-color: #f0f0f0;
-    padding-top: 30px;
-}
-
-/*Library card: IZ selector for mobiles*/
-@media (max-width: 599px) {
-div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable, prm-account prm-linked-user-selector  {
-    font-size: 16px !important;
-}
-}
-
-/*Library card: Show not renewable messages in list of loans*/
-prm-loan .md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex {
-    order: 1;
-    /*flex-flow: column;*/
-    max-width: 75%;
-}
-prm-loan-after {
-    order: 2;
-    align-self: baseline;
-    flex: 15%;
-}
-prm-loan-after span.md-subhead {
-    font-size: small;
-    line-height: 18px;
-    color: #d84f26;
-    padding: 22px 0;
-}
-prm-loan > div.align-self-stretch.flex-xs-50 {
-    order: 4;
-}
-
-prm-loan > div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex > div:nth-child(3) {
-    min-width: 100%;
-}
-prm-loan > div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex > div:nth-child(4) {
-    min-width: 50%;
-    margin: 10px 0;
-}
-prm-loan > div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex > div:nth-child(5) {
-    min-width: 43%;
-    justify-content: flex-end;
-    align-items: baseline;
-}
-#accountoverview > md-tabs > md-tabs-content-wrapper > md-tab-content:nth-child(2) > div > div {
-    flex-direction: column;
-}
-prm-loan .not-renewable {
-    padding: 6px 0px 6px 6px;
-    display: block;
-    border: 1px #d23333 solid;
-    max-width: min-content;
-}
-
-/*Library card: hide not renewable messages in list of loans for mobiles*/
-@media (max-width: 599px) {
-slsp-renew-item-text-component {
-    display: none;
-}
-}
-
-/******************************************************************************/
-/************************************ Full display ****************************/
-/******************************************************************************/
-
-/*Back buttons*/
-
-md-tabs.tabs-as-app .back-button, prm-location-holdings .md-button.button-as-link, prm-location-items .button-link {
-    box-shadow: none;
-    color: #111111 !important;
-    background: rgba(17, 17, 17, 0.20) !important;
-    line-height: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.59);
-}
-
-md-tabs.tabs-as-app:hover .back-button:hover, prm-location-holdings .md-button.button-as-link:hover:not([disabled]), prm-location-items .button-link:hover:not([disabled]) {
-    color: #111111 !important;
-    background-color: rgba(17, 17, 17, 0.10) !important;
-}
-
-/*Buttons margin*/
-
-prm-request-services, prm-opac, prm-location-holdings .md-button.button-as-link {
-    margin-top: 5px;
-}
-
-/* Locations filter by default; hide filter button */
-prm-locations button[ng-if='$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive']{
-    display: none !important;
-}
-prm-location-items button[ng-if='($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()']{
-    display: none !important;
-}
-
-
-/* Location filter "Clear" button */
-
-prm-locations-filter .md-button.button-as-link:hover:not([disabled]) { 
-
-background-color: rgba(17, 17, 17, 0.10) !important;
-
-}
-
-/*filter bar*/
-
-prm-locations-filter md-select {
-    margin-top:1px;
-}
-
-prm-location-items prm-service-button .md-button.button-as-link {
-    padding:0 6px !important;
-    box-shadow:none;
-    line-height:28px;
-}
-
-.full-view-container {
-    overflow-y: hidden;
-    margin-bottom: 50px;
-}
-
-html#primoExploreRoot {
-    overflow-y: auto !important;
-}
-
-/*FullView - Left Navigation */
-prm-full-view .services-index-under{
-    min-width: 7em;
-}
-prm-full-view .services-index-under .md-button{
-    width: 100%;
-    /* border: 1px solid #c3c3c3; */
-    margin: 1px 0!important;
-    text-overflow: clip;
-    padding-right: 0;
-    white-space: normal;
-    line-height: 20px;
-    padding: 7px 5px;
-}
-prm-full-view .services-index-under .md-button span{
-    text-transform: none;
-}
-
-/*Full view Resource sharing */
-
-#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
-    display: flex;
-    flex-direction: column;
-}
-
-prm-opac {
-    order: 1;
-}
-
-prm-alma-other-members {
-    order: 2;
-    display: grid;
-}
-
-alma-htgi-svc {
-    order: 3;
-}
-
-primo-explore.logged-out alma-htgi-svc, primo-explore.alert alma-htgi-svc {
-    order: 0 !important;
-}
-
-.medium-uppercase-bold {
-    text-transform: none;
-    font-size: 1em;
-}
-
-/*Full display Resource sharing expand section*/
-
-prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fill {
-     height: auto;
-     min-height: auto;
-}
-
-/* Full display sections order */ 
-
-#full-view-container > *:first-child { 
-	display: flex; 
-	flex-direction: column; 
-} 
- 
-#brief {
-    order: 0 !important;
-    margin-bottom: -40px;
-}
-
-#citationTrails {
-    order: 1 !important;
-    margin-bottom: -30px;
-}
-
-#searchWithinJournal {
-    order: 2 !important;
-    margin-bottom: -30px;
-}
-
-#getit_link1_0 {
-    order: 3 !important;
-    margin-bottom: -30px;
-}
-
-#getit_link1_1 {
-    order: 4 !important;
-    margin-bottom: -30px;
-}
-
-#action_list {
-    order: 5 !important;
-    margin-bottom: -30px;
-}
-
-#details {
-    order: 6 !important;
-    margin-bottom: -30px;
-}
-
-#links {
-    order: 7 !important;
-    margin-bottom: -30px;
-}
-
-#moreFromTheSameCourse {
-    order: 8 !important;
-    margin-bottom: -30px;
-}
-
-#moreFromTheSameCollection {
-    order: 9 !important;
-    margin-bottom: -30px;
-}
-
-#virtualBrowse {
-    order: 10 !important;
-    margin-bottom: -30px;
-}
-
-/* Change of links in left navigation bar ENG */
-
-[aria-label="Top"] {
-    order: 0 !important;
-}
-
-[aria-label="Citations"] {
-    order: 1 !important;
-}
-
-[aria-label="Search inside"] {
-    order: 2 !important;
-}
-
-[aria-label="View Online"] {
-    order: 3 !important;
-}
-
-[aria-label="Loan and request options"] {
-    order: 4 !important;
-}
-
-[aria-label="Send to"] {
-    order: 5 !important;
-}
-
-[aria-label="Details"] {
-    order: 6 !important;
-}
-
-[aria-label="Links"] {
-    order: 7 !important;
-}
-
-[aria-label="Course"] {
-    order: 8 !important;
-}
-
-[aria-label="Collection"] {
-    order: 9 !important;
-}
-
-[aria-label="Virtual Browse"] {
-    order: 10 !important;
-}
-
-/* Change of links in left navigation bar GER */
-
-[aria-label="Top"] {
-    order: 0 !important;
-}
-
-[aria-label="Zitationen"] {
-    order: 1 !important;
-}
-
-[aria-label="Suche innerhalb"] {
-    order: 2 !important;
-}
-
-[aria-label="Online ansehen"] {
-    order: 3 !important;
-}
-
-[aria-label="Ausleih- und Bestelloptionen"] {
-    order: 4 !important;
-}
-
-[aria-label="Senden an"] {
-    order: 5 !important;
-}
-
-[aria-label="Details"] {
-    order: 6 !important;
-}
-
-[aria-label="Links"] {
-    order: 7 !important;
-}
-
-[aria-label="Seminar"] {
-    order: 8 !important;
-}
-
-[aria-label="Sammlung"] {
-    order: 9 !important;
-}
-
-[aria-label="Virtuelles Regal"] {
-    order: 10 !important;
-}
-
-/* Change of links in left navigation bar FRE */
-
-[aria-label="Haut"] {
-    order: 0 !important;
-}
-
-[aria-label="Citations"] {
-    order: 1 !important;
-}
-
-[aria-label="Rechercher dans"] {
-    order: 2 !important;
-}
-
-[aria-label="Consulter en ligne"] {
-    order: 3 !important;
-}
-
-[aria-label="Options de pr&#234;t et de demande"] {
-    order: 4 !important;
-}
-
-[aria-label="Envoyer vers"] {
-    order: 5 !important;
-}
-
-[aria-label="D&#233;tails"] {
-    order: 6 !important;
-}
-
-[aria-label="Liens"] {
-    order: 7 !important;
-}
-
-[aria-label="S&#233;minaire"] {
-    order: 8 !important;
-}
-
-[aria-label="Collection"] {
-    order: 9 !important;
-}
-
-[aria-label="Etag&#232;re virtuelle"] {
-    order: 10 !important;
-}
-
-/* Change of links in left navigation bar ITA */
-
-[aria-label="Top"] {
-    order: 0 !important;
-}
-
-[aria-label="Citazioni"] {
-    order: 1 !important;
-}
-
-[aria-label="Cerca in"] {
-    order: 2 !important;
-}
-
-[aria-label="Visualizza online"] {
-    order: 3 !important;
-}
-
-[aria-label="Opzioni di prestito e richiesta"] {
-    order: 4 !important;
-}
-
-[aria-label="Invia a"] {
-    order: 5 !important;
-}
-
-[aria-label="Dettagli"] {
-    order: 6 !important;
-}
-
-[aria-label="Link"] {
-    order: 7 !important;
-}
-
-[aria-label="Corso"] {
-    order: 8 !important;
-}
-
-[aria-label="Collezione"] {
-    order: 9 !important;
-}
-
-[aria-label="Scorri virtualmente"] {
-    order: 10 !important;
-}
-
-/******************************************************************************/
-/************************************ Help Page *******************************/
-/******************************************************************************/
-#help img {
-    max-width: 100%;
-    height: auto;
-}
-
-img.icon_up1 {
-    width: 16px;
-    float: right;
-    margin: 13px 2px;
-}
-
-img.icon_up2 {
-    width: 10px;
-    float: right;
-    margin: 4px;
-}
-
-a > h3:hover {
-    background-color: #eee !important;
-}
-
-/******************************************************************************/
-/************************************ Collections *****************************/
-/******************************************************************************/
-
-/*Collections navigation bar*/
-
-prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color {
-    box-shadow: none;
-    color: #ffffff !important;
-	background: #1111117a !important;
-	line-height: 24px;
-  }
-
-prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color:hover {
-
-color:#ffffff !important;
-background-color: #11111152 !important; }
-
-/******************************************************************************/
-/****************** SLSP "special" external resources ***************************/
-/******************************************************************************/
-
-.slsp-archives md-list-item{
-    cursor: pointer;
-}
-.slsp-archives .md-list-item-inner span {
-    padding-left: 2em;
-}
-.slsp-archives md-list md-list-item .md-button{
-    color: #3d6e94;
-    font-size: 16px;
-}
-.slsp-archives md-list md-list-item .md-button:hover:not([disabled]),
-.slsp-archives md-list md-list-item .md-button:focus:not([disabled]) {
-    background-color: transparent;
-    color: #3d6e94;
-    text-decoration: underline;
-}
-.slsp-archives-additional-hint{
-    justify-content: center;
-    display: flex;
-    padding: 1em;
-    background-color: #f7eda3;
-    border-color: #ede49e;
-    margin-bottom: 1em;
-    padding-left: 2em;
-    box-shadow: 0 1px 0 0 rgb(0 0 0 / 3%), 0 5px 5px -3px rgb(0 0 0 / 7%);
-}
-/* mfa, tma */
-.slsp-archives-hide alma-htgi-svc > * {
-    display: none;
-}
-.slsp-archives-hide alma-htgi-svc-after {
-    display: block;
-}
-/* hsa */
-.slsp-archives-hide prm-alma-viewit > * {
-    display: none;
-}
-.slsp-archives-hide prm-alma-viewit-after {
-    display: block;
-}
-/* availability-line HSA, if no online resource */
-prm-search-result-availability-line.slsp-hsa-no-online  prm-icon{
-    display:none;
-}
-prm-search-result-availability-line.slsp-hsa-no-online  .availability-status {
-    color: gray;
-}
-
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-/********************** Union View Package CSS ********************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-/********************** Start of the Local Package CSS ************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-
-
-/******************************************************************************/
-/********************** Primary colour ****************************************/
-/******************************************************************************/
-
-
-/*****************This two entries are the background of the primary color*******************/
-.prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-search-bar, prm-newspapers-search-bar, prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon, md-tabs md-ink-bar, md-radio-button.md-checked .md-on, button.switch-to-simple, .md-button.button-confirm,
-prm-request-services .md-button.button-as-link, prm-location-items md-list prm-service-button .md-button.button-as-link {
-    background-color: #4E4A99 !important;
-}
-
-@media (max-width: 599px) {
-    prm-topbar .top-nav-bar {
-        border-color: #4E4A99 !important;
-    }
-}
-
-/*****************This entry is the mouse over background of the links and buttons (primary-color)*******************/
-md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover, button.switch-to-simple:hover, .md-button.button-confirm:hover, .md-button.button-as-link:hover:not([disabled]) {
-    background-color: #393765 !important;
-}
-
-/*****************This two entries are the font color of the primary color*******************/
-.prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-newspapers-search-bar,
-prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon:after, .md-button.switch-to-advanced, button.switch-to-simple, span.legal, span.legal > a, a.ps_link.legal, .ps_icon, md-card.prm-primary-bg.psfooter > md-card-content a, .md-button.button-confirm, prm-request-services .md-button.button-as-link, prm-request-services .md-button.button-as-link:hover:not([disabled]), prm-service-button .md-button.button-as-link:hover:not([disabled]), prm-location-items md-list prm-service-button .md-button.button-as-link {
-    color: #fff !important;
-}
-
-button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
-    border-color: #fff !important;
-}
-
-/*****************selection color of the primary color*****************/
-.prm-primary-bg ::selection {
-    background: #3a8888;
-}
-
-
-/******************************************************************************/
-/********************** Secondary colour **************************************/
-/******************************************************************************/
-
-/*****************This two entries are the background of the secondary color*******************/
-.bar.alert-bar, .classic-input .search-scope, .prm-alert-bg {
-    background-color: #99d0d0 !important;
-}
-
-.text-highlight, mark, prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
-    box-shadow: inset 0 -0.15em 0 0 #99d0d0;
-}
-
-
-/*****************This entry is the mouse over background of the links and buttons (secondary-color)*******************/
-/*.bar prm-authentication .md-button:hover:not([disabled]),*/
-div.alert-bar .md-button:hover:not([disabled]), slsp-edit-personal-details-component a.bar.alert-bar:hover {
-    background-color: #b6fafa !important;
-}
-
-
-/*****************This entry is the font color of the secondary color*******************/
-.bar.alert-bar, .classic-input .search-scope, .prm-alert-bg, .bar prm-authentication .md-button, button.dismiss-alert-button, div.courier-info > span a {
-    color: #111111 !important;
-}
-
-/*****************selection color of the secondary color**********************************/
-.bar.alert-bar ::selection {
-    background: #9d9cbd;
-}
-
-
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-/********************** End of the Local Package CSS **************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
+/***************INDEX*********************/
+
+/*CENTRAL PACKAGE*/
+	/*000 General*/
+		/*000 General*/
+		/*090 Other*/
+	/*100 Header section*/
+		/*100 General*/
+		/*110 Logo*/
+		/*120 Links menu*/
+		/*130 Login / languages section*/
+		/*140 Login pop up box*/
+		/*190 Other*/
+	/*200 Homepage*/
+		/*200 General*/
+		/*210 Search box*/
+		/*220 Frames*/
+		/*221 Video Frame*/
+		/*222 Links frame*/
+		/*230 Footer*/
+		/*290 Other*/
+	/*300 Brief Display*/
+		/*300 General*/
+		/*310 Facets*/
+		/*390 Other*/
+	/*400 Full display*/
+		/*400 General*/
+		/*410 Sections' order*/
+		/*411 Sections' order: navigation English*/
+		/*412 Sections' order: navigation German*/
+		/*413 Sections' order: navigation French*/
+		/*414 Sections' order: navigation Italian*/
+		/*420 View online*/
+		/*430 Get it - requests buttons*/ 
+		/*440 How to get it -  locations, holdings and items*/
+		/*440 General*/
+		/*441 How to get it sections' order*/
+		/*442 Filter bar*/
+		/*443 Items expand for mobiles*/
+		/*449 Other*/
+		/*450 Rapido*/
+		/*460 Special collections*/
+		/*470 Open URL Service Page*/
+		/*490 Other*/
+	/*500 Library card*/
+		/*500 General*/
+		/*510 Overview*/
+		/*520 Loans*/
+		/*530 Requests*/
+		/*540 Fees*/
+		/*550 Block and messages*/
+		/*560 Personal details*/
+		/*590 Other*/
+	/*900 Others*/
+		/*900 General*/
+		/*910 Help page*/
+		/*920 Collections*/
+		/*930 Forms*/
+		/*940 Favorites*/
+		/*950 Alma viewer*/
+		/*960 Email template*/
+		/*990 Other*/
+	
+/*LOCAL PACKAGE*/
+	/*01 Primary colour*/
+	/*02 Secondary colour*/
+	/*03 Other local code*/
+
+/*************END OF INDEX******************/
+
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/	
+/****************************START OF THE CENTRAL PACKAGE*********************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
+/******************************000 General************************************/
+/*****************************************************************************/
+
+		/*000 General*/
+		
+			/*mainly white background*/
+			
+            .prm-primary-bg.prm-hue1, prm-atoz-search-bar.prm-hue1, prm-browse-search-bar.prm-hue1, prm-collection-gallery-header .prm-hue1.collection-header-inner, prm-newspapers-search-bar.prm-hue1, prm-search-bar.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark:after, prm-tags-search-bar.prm-hue1, prm-topbar .top-nav-bar, prm-tree-nav prm-spinner .prm-hue1.diamond {
+                background-color: #fff !important;
+            }
+            
+                        /*font color on white background*/
+                        
+            .hoverable-over-dark, .md-button.button-over-dark, prm-main-menu[menu-type=full] .md-button.md-focused, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type=full] .md-button:focus, prm-main-menu[menu-type=full] .md-button:hover, prm-main-menu[menu-type=full] .md-button md-select:focus, prm-main-menu[menu-type=full] .overlay-menu-item.md-focused, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type=full] .overlay-menu-item:focus, prm-main-menu[menu-type=full] .overlay-menu-item:hover, prm-main-menu[menu-type=full] .overlay-menu-item md-select:focus, prm-main-menu[menu-type=full] md-button:focus, prm-main-menu[menu-type=full] md-button:hover, prm-topbar .md-button, prm-user-area .md-button.user-menu-button, prm-user-area md-fab-toolbar ._md-fab-action-item .md-button, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container {
+                color: #222 !important;
+            }
+            
+                        /*remove hover effect from title links*/
+                        
+            .md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .md-button.arrow-link-button:focus .button-content, .md-button.arrow-link-button:hover .button-content, .recommendations-title.hover > span > span, .recommendations-title:hover > span > span, a.hover, a:focus, a:hover, prm-chapters-and-reviews md-card > .md-button:focus .item-title span, prm-chapters-and-reviews md-card > .md-button:hover .item-title span, prm-citation-trails-item.active-item md-card > .md-button:focus .item-title span, prm-citation-trails-item.active-item md-card > .md-button:hover .item-title span, prm-tags-list .md-chips .md-chip .md-chip-content:hover strong, prm-tags-list .md-chips md-chip .md-chip-content:hover strong, prm-tags-list md-chips .md-chip .md-chip-content:hover strong, prm-tags-list md-chips md-chip .md-chip-content:hover strong {
+                box-shadow: none !important;
+            }
+            
+                        /*background color of bookmarked items*/
+                        
+            .list-item-wrapper .item-bookmarked, .list-item-wrapper .item-bookmarked:hover, .prm-highlight, .prm-highlight.prm-hue1, prm-breadcrumbs .md-chip.persistent-facet, prm-breadcrumbs .prm-hue1.md-chip.persistent-facet {
+                background-color: #ddd !important;
+            }
+            
+                        /*hover effect on all Links*/
+                        
+            .md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content,
+            .md-button.arrow-link-button:focus .button-content, .md-button.arrow-link-button:hover .button-content, .prm-links-background.prm-hue-1,
+            .recommendations-title.hover > span > span, .recommendations-title:hover > span > span, a.hover, a:focus, a:hover,
+            prm-chapters-and-reviews md-card > .md-button:focus .item-title span, prm-chapters-and-reviews md-card > .md-button:hover .item-title span,
+            prm-citation-trails-item.active-item md-card > .md-button:focus .item-title span, prm-citation-trails-item.active-item md-card > .md-button:hover .item-title span,
+            prm-tags-list .md-chips .md-chip .md-chip-content:hover strong, prm-tags-list .md-chips md-chip .md-chip-content:hover strong,
+            prm-tags-list md-chips .md-chip .md-chip-content:hover strong, prm-tags-list md-chips md-chip .md-chip-content:hover strong {
+                color: #222 !important;
+            }
+            
+            div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-center-start.layout-row > div > a:hover {
+                background-color: #6b6b6b !important;
+            }
+            
+                        /*versions link and other*/
+                        
+            .getit, .md-button.arrow-link-button prm-search-result-frbr-line .button-content > prm-icon:first-child, .prm-notice, .status-maybe, .worldcat, [class*=_more], [class*=_unknown], [class*=check_], [class*=does_not_exist], [class*=may_], [class*=NFT], prm-search-result-frbr-line .md-button.arrow-link-button .button-content > prm-icon:first-child, prm-search-result-frbr-line a > prm-icon:first-child, prm-service-links a {
+                color: #222 !important;
+            }
+            
+                        /*icon color and text color in request forms*/
+                        
+            .prm-primary-color, .request-form md-input-container label, .request-form md-input-container label:not(.md-no-float):not(._md-container-ignore), .request-form md-input-container md-select .md-select-value.md-select-placeholder, .request-form md-input-container .md-input-container-dummy > .md-select-dummy .md-select-value.md-select-placeholder, .request-form md-input-container md-select ._md-select-value._md-select-placeholder, .request-form md-input-container .md-input-container-dummy > .md-select-dummy ._md-select-value._md-select-placeholder, .result-item-actions .md-icon-button, .result-item-actions .more-options-button, prm-add-query-to-saved-searches .custom-button, prm-pre-filters md-input-container.is-active, .md-autocomplete-suggestions .suggestion-scope, md-tab-content .tab-content-header md-input-container md-select-value .md-text {
+                color: #222 !important;
+            }
+                    
+                        /*remove capitalized text*/
+                        
+            .md-button {
+                text-transform: none;
+            }
+            
+                        /*menu button*/
+                            
+                button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple:hover, button#signInBtn, .md-button.button-link,
+                .md-button.button-as-link.link-alt-color, prm-icon md-icon, .section-title prm-icon, prm-icon.rotate-180, svg#chevron-up,
+                span.user-name, span.menu-arrow, .md-button.button-as-link, #sidebar-trigger > prm-icon > md-icon {
+                    color: #111 !important;
+                }
+            
+                        /*background buttons*/
+                        
+            prm-search-bookmark-filter .md-button {
+                background-color: #fff !important;
+            }
+            
+                        /*the main color border on mobile view*/
+                        
+            @media (max-width: 599px) {
+                prm-topbar .top-nav-bar {
+                    border-bottom-style: solid;
+                    border-bottom-width: 8px;
+                }
+            }
+            
+            .md-button.button-as-link {
+                line-height: 36px;
+                padding: 0 6px;
+            }
+            
+            .md-autocomplete-suggestions li {
+                white-space: nowrap;
+            }
+                    
+                    /*alertbar*/
+                    
+            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg {
+                /*background-color: #8dd8d8 !important;*/
+                border: none !important;
+            }
+            
+                    /*background color of the signin window and the fullscreen navigation*/
+                
+            md-backdrop._md-dialog-backdrop.md-opaque.md-primoExplore-theme {
+                background-color: #1f1f1f !important;
+            }
+            
+                    /*text color of the signin window and the fullscreen navigation*/
+                    
+            prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline, .light-on-dark-dialog .md-button.button-as-link, .light-on-dark-dialog .md-button.button-confirm, md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button, md-dialog.light-on-dark-dialog a:hover {
+                color: #fff !important;
+            }
+            
+                    /*090 Other*/
+            
+            /*****************************************************************************/		
+            /******************************100 Header section*****************************/
+            /*****************************************************************************/
+            
+                    /*100 General*/
+                    
+                        /*navigation*/
+                        
+            /*Font Navigation and buttons*/
+            #mainMenu > div > a, button#signInBtn, button#more-links-button, prm-topbar > div > prm-user-area-expandable > md-menu > button > span {
+                font-size: small !important;
+                font-weight: 500 !important;
+                color: #111 !important;
+            }
+            
+                        /*hover effect Navigation and buttons*/
+                        
+            #mainMenu > div > a:hover, button#signInBtn:hover, prm-topbar > div > prm-user-area-expandable > md-menu > button:hover, button#more-links-button:hover, prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]),
+            .md-button.button-link:hover:not([disabled]), .md-button.button-link:focus:not([disabled]), prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow:hover:not([disabled]), button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:hover:not([disabled]), button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:not([disabled]), .md-button.md-lang-button:hover {
+                    background-color: #ddd !important;
+                    color: #111 !important;
+                }
+                
+                    /*110 Logo*/
+                    
+                        /*hide hover effect on Library Logo*/
+                        
+            #banner > a.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+                background: none;
+            }
+            
+                    /*120 Links menu*/
+                    
+                    /*130 Login / languages section*/
+                    
+                        /*Header for mobiles*/
+            
+            @media (max-width: 960px) {
+                prm-user-area-expandable button.user-button.user-menu-button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple, prm-user-area-expandable-after  {
+                    display: none !important;
+                }
+                button#signInBtn {
+                    display: block;
+                }
+                }
+                
+                primo-explore.logged-out prm-user-area-expandable md-menu {
+                    display: none;
+                }
+                
+                        /*Switch language*/
+                
+                bcu-lang-switch-component {
+                    padding-right: 16px;
+                }
+                
+                bcu-lang-switch-component .md-button.md-lang-button {
+                    height: 29px;
+                    min-height: 29px;
+                    margin: 15px 1px !important;
+                    min-width: 29px;
+                    width: 29px;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                    border: 1px solid transparent;
+                    border-radius: 3px;
+                }
+                
+                bcu-lang-switch-component .md-button.md-lang-button.active {
+                    border-color: rgba(19, 18, 18, 0.85);
+                }
+                
+                bcu-lang-switch-component a {
+                    color: rgba(255, 255, 255, 0.85);
+                    display: inline-block;
+                    padding-bottom: 2px;
+                }
+                
+                bcu-lang-switch-component a:hover {
+                    color: rgba(255, 255, 255, 0.85);
+                }
+                
+                        /*hiding Refworks from the pulldown menu*/
+                    
+            .my-refworks-ctm, .my-refworks-separator-ctm {
+                display: none;
+            }
+            
+                    /*140 Login pop up box*/
+                    
+                        /*hiding the Library Logo in the login window*/
+                        
+            .login-header {
+                display: none !important;
+            }
+                        /*login-box make arrows clickable*/
+                        
+            prm-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+                z-index: 100;
+            }
+            prm-login .md-list-item-inner prm-login-item a.md-primoExplore-theme {
+                z-index: 1000;
+            }
+            prm-login .md-button.md-no-style:hover {
+                color:black;
+            }
+            prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+                z-index: unset;
+            }
+            .login-card md-list-item.login-brighter-dialog prm-login-item {
+                width:100%;
+            }
+            
+                    /*190 Other*/
+					
+						/*X button close menu */
+						
+			button#mainMenuFullCloseButton:focus {
+			color: #ffffff !important;
+			}
+            
+            /*****************************************************************************/		
+            /*********************************200 Homepage********************************/
+            /*****************************************************************************/
+                
+                    /*200 General*/
+                    
+                        /*backgound of the Textboxes Homepage*/
+                        
+            prm-search > div > md-content, md-card.default-card._md.md-primoExplore-theme {
+                background-color: #fff !important;
+                border-radius: 3px;
+            }
+            
+                        /*first header of the Textboxes*/
+                        
+            .cardbox h1 {
+                font-size: 48px;
+                line-height: 56px;
+            }
+            
+                        /*second header of the Textboxes*/
+                        
+            .cardbox h2 {
+                font-size: 32px;
+                line-height: 36px;
+            }
+                        /*third header of the Textboxes (if needed)*/
+                        
+            .cardbox h3 {
+                font-size: 26px;
+                line-height: 30px;
+            }
+            
+                        /*removes the upper and lower space in a list */
+            .cardbox ul, .cardbox ol {			
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
+            }
+            
+                        /*links in the textboxes*/
+                        
+            md-card-content a, prm-service-details a {
+                color: #222222 !important;
+            }
+            
+            md-card-content a, prm-service-details a, div.courier-info > span a {
+                text-decoration: underline !important;
+            }
+            
+                md-card-content a:hover, prm-service-details a:hover {
+                    color: #111;
+                    background-color: rgba(47, 47, 47, 0.1) !important;
+                }
+            
+                    /*210 Search box*/
+                    
+                        /*switch to advanced search button*/
+                        
+            button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 5px;
+            }
+            
+            .md-button.md-primary:hover:not([disabled]), .md-button.md-primary:focus:not([disabled]), prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), .bar prm-authentication .md-button:hover:not([disabled]), button.dismiss-alert-button:hover {
+                color: #fff;
+                background-color: #111;
+            }
+            
+                        /*switch to simple search button*/
+                        
+            button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
+                border-color: #f1f1f1 !important;
+                border-radius: 5px;
+                border-width: 1px;
+                border: solid;
+            }
+                    /*220 Frames*/
+                    
+                    /*221 Video Frame*/
+                    
+                        /*responsive Video Frame*/
+                        
+            .resp-container {
+                position: relative;
+                overflow: hidden;
+                padding-top: 56.25%;
+            }
+            
+            .resp-iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+            
+                    /*222 Links frame *** ATTENTION: ONLY FOR CP*/
+                        
+            md-card.cardbox.default-card.quicklinksbox md-card-content {
+                padding: 0px;
+            }
+            md-card.cardbox.default-card.quicklinksbox div.md-button {
+                padding: 0 0 0 16px;
+            }
+            md-card.cardbox.default-card.quicklinksbox md-list-item._md-button-wrap._md {
+                border-top: #c5c5c5 1px solid ;
+            }
+            md-card.cardbox.default-card.quicklinksbox._md.md-primoExplore-theme > md-card-content > md-list > md-list-item:last-child {
+                border-bottom:  #c5c5c5 1px solid ;
+            }
+            
+            .md-button._md-focused:not([disabled]), .md-button.md-focused:not([disabled]), .md-button:focus:not([disabled]) {
+                color: unset !important;
+                background-color: unset !important;
+            }
+                    /*230 Footer*/
+                    
+                        /*footer layout*/
+                    
+            md-card.prm-primary-bg.psfooter {
+                margin: 16px 0 0 0;
+                padding: 0 8%;
+            }
+            
+                        /*footer layout*/
+                    
+            md-card.prm-primary-bg.psfooter-legal {
+                margin: 1px 0 0 0;
+                padding: 0 8%;
+            }
+            
+                        /*responsive footer layout for computer screens*/
+                    
+            @media (min-width: 960px) {
+            
+                md-card-content.prm-primary-bg.layout-align-gt-sm-end-stretch.flex-gt-sm-70 {
+                    text-align: end;
+                }
+            }
+            
+                        /*footer links*/
+                
+            md-icon.ps_icon, a.ps_link {
+                margin-right: 5%;
+                text-decoration: underline;
+            }
+            
+            /*md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover {
+                    background-color: rgba(61,110,148,.1) !important;
+                }*/
+            
+                        /*footer text*/
+                
+            md-card-content.prm-primary-bg {
+                font-weight: 300;
+            }
+            
+                        /*links in the legal part of the footer*/
+                    
+            a.ps_link.legal, span.legal {
+                font-size: 14px;
+                font-weight: 300;
+            }
+            
+                /************************************************************************************************
+            span.legal {
+                color: #14413c;
+            }
+            */
+                span.legal > a {
+                    /*color: #14413c;*/
+                    font-weight: 600;
+                }
+            
+                        /*main container width for footer positioning*/
+                
+            prm-static.md-padding.flex {
+                min-width: 100%;
+                padding: 0;
+            }
+            
+                    /*290 Other*/
+            
+            /*****************************************************************************/		
+            /******************************300 Brief Display******************************/
+            /*****************************************************************************/
+                
+                    /*300 General*/
+                    
+                        /*backgound search results boxes*/
+                        
+            .list-item-wrapper {
+                background-color: #f9f9f9;
+            }
+            
+                        /*title color*/
+                        
+            prm-brief-result .item-title span {
+                color: #333;
+            }
+            
+            prm-brief-result .item-title span:hover {
+                    color: #111;
+                    background-color: rgba(47, 47, 47, 0.1) !important;
+                }
+                    
+                        /*page select buttons*/
+                    
+            a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+                color: white !important;
+            }
+			
+						/*Save query button*/
+						
+			#mainResults > prm-search-result-tool-bar > div > md-toolbar > div.search-toolbar-title.hide-xs.layout-row > prm-add-query-to-saved-searches > .md-button:hover:not([disabled]){
+				color: #111111 !important;
+				background-color: rgba(17, 17, 17, 0.10) !important;
+			}
+            
+                    /*310 Facets*/
+            
+                        /*facet titles*/
+                        
+            span.section-title-header:hover {
+                color: #8a8a8a !important;
+            }
+            
+                        /*facet "show more" button*/
+                        
+            .sidebar-section .md-button.button-as-link.link-alt-color:hover {
+                background-color: rgba(17, 17, 17, 0.17) !important;
+            }
+            
+                    /*390 Other*/
+            
+            /*****************************************************************************/		
+            /******************************400 Full display*******************************/
+            /*****************************************************************************/
+                
+                    /*400 General*/
+                    
+                        /*hide "search inside" for print journals*/
+                        
+            .search-within-p-only { 
+                display:none 
+            }
+            
+                        /*library info icon*/
+                        
+            slsp-i-button-component > div > span > a > img {
+                vertical-align: middle;
+                max-width: 30px;
+                margin: 4px 0px;
+            }
+            
+                        /*fullview background of the left part*/
+            
+            .md-dialog-container.fixed-container {
+                background-color: #444 !important;
+            }
+			
+			            /*Full display background - credits: Union college https://union.primo.exlibrisgroup.com/discovery/search?vid=01UCNY_INST:01UCNY_INST&lang=en*/
+            
+            prm-full-view-service-container {
+                display: block;
+                background-color: #fcfcfc;
+                padding: 0.8em;
+                border-radius: 3px;
+                border-left-width: 2px;
+                border-left-style: groove;
+            }
+
+            #brief > prm-full-view-service-container {
+                border: none;
+                background-color: unset;
+            }
+            
+			            /* Sections titles' font weight */
+            
+            .full-view-section .section-title {
+                font-weight: 500;
+                padding-left: unset;
+            }
+			
+			            /* Full display left navigation bar position */
+            
+            .prm-full-view-dialog prm-full-view .services-index-under, prm-full-view-cont prm-full-view .services-index-under {
+                top: 300px;
+            }
+			
+						/* Physical items and e-resources boxes background colour and space between items */
+            
+            .separate-list-items md-list-item {
+                margin-bottom: 5px;
+                min-height: 0;
+                padding: 0;
+                position: relative;
+                background-color: rgb(0 0 0 / 0.05);
+                border-radius: 3px;
+            }
+            
+            .separate-list-items md-list-item:hover {
+            
+                background-color: rgb(0 0 0 / 0.1) !important;
+            
+            }
+            prm-loans .separate-list-items md-list-item, prm-requests .separate-list-items md-list-item {
+                background-color: #fff !important;
+            }
+            prm-loans .separate-list-items md-list-item:hover, prm-requests .separate-list-items md-list-item:hover {
+                background-color: #f5f5f5 !important;
+            }
+			
+						/* Alignment of full display elements */
+						
+			md-list.separate-list-items.margin-left-medium.md-primoExplore-theme.layout-column {
+				margin-left: unset;
+				border-radius: 3px;
+			}
+			
+			.tab-content-header.margin-bottom-small.margin-left-medium.layout-row.layout-align-space-between-end {
+				margin-left: unset;
+			}
+			
+			.form-focus.service-form.layout-margin.layout-row.form-read-only {
+				margin-left: unset;
+				border-radius: 3px;
+			}
+
+			div > md-content > prm-locations > div.padding-left-medium {
+				padding-left: unset;
+				border-radius: 3px !important;
+			}
+			
+						/*Available other members button alignment*/
+			
+			#alma_other_members > div.layout-align-start-center.layout-row > h3 {
+				line-height: 2px;
+				margin: 14px 0px;
+			}
+			
+                    /*410 Sections' order*/
+            
+            #full-view-container > *:first-child { 
+                display: flex; 
+                flex-direction: column; 
+            } 
+             
+            #brief {
+                order: 0 !important;
+                margin-bottom: -20px;
+            }
+            
+            #citationTrails {
+                order: 1 !important;
+            }
+            
+            #searchWithinJournal {
+                order: 2 !important;
+            }
+            
+            #getit_link1_0 {
+                order: 3 !important;
+            }
+            
+            #getit_link1_1 {
+                order: 4 !important;
+            }
+            
+            #action_list {
+                order: 5 !important;
+            }
+            
+            #details {
+                order: 6 !important;
+            }
+            
+            #links {
+                order: 7 !important;
+            }
+            
+            #moreFromTheSameCourse {
+                order: 8 !important;
+            }
+            
+            #moreFromTheSameCollection {
+                order: 9 !important;
+            }
+            
+            #virtualBrowse {
+                order: 10 !important;
+            }
+            
+                    /*411 Sections' order: navigation English*/
+            
+            [aria-label="Top"] {
+                order: 0 !important;
+            }
+            
+            [aria-label="Citations"] {
+                order: 1 !important;
+            }
+            
+            [aria-label="Search inside"] {
+                order: 2 !important;
+            }
+            
+            [aria-label="View Online"] {
+                order: 3 !important;
+            }
+            
+            [aria-label="Loan and request options"] {
+                order: 4 !important;
+            }
+            
+            [aria-label="Send to"] {
+                order: 5 !important;
+            }
+            
+            [aria-label="Details"] {
+                order: 6 !important;
+            }
+            
+            [aria-label="Links"] {
+                order: 7 !important;
+            }
+            
+            [aria-label="Course"] {
+                order: 8 !important;
+            }
+            
+            [aria-label="Collection"] {
+                order: 9 !important;
+            }
+            
+            [aria-label="Virtual Browse"] {
+                order: 10 !important;
+            }
+            
+                    /*412 Sections' order: navigation German*/
+            
+            [aria-label="Top"] {
+                order: 0 !important;
+            }
+            
+            [aria-label="Zitationen"] {
+                order: 1 !important;
+            }
+            
+            [aria-label="Suche innerhalb"] {
+                order: 2 !important;
+            }
+            
+            [aria-label="Online ansehen"] {
+                order: 3 !important;
+            }
+            
+            [aria-label="Ausleih- und Bestelloptionen"] {
+                order: 4 !important;
+            }
+            
+            [aria-label="Senden an"] {
+                order: 5 !important;
+            }
+            
+            [aria-label="Details"] {
+                order: 6 !important;
+            }
+            
+            [aria-label="Links"] {
+                order: 7 !important;
+            }
+            
+            [aria-label="Seminar"] {
+                order: 8 !important;
+            }
+            
+            [aria-label="Sammlung"] {
+                order: 9 !important;
+            }
+            
+            [aria-label="Virtuelles Regal"] {
+                order: 10 !important;
+            }
+            
+                    /*413 Sections' order: navigation French*/
+            
+            [aria-label="Haut"] {
+                order: 0 !important;
+            }
+            
+            [aria-label="Citations"] {
+                order: 1 !important;
+            }
+            
+            [aria-label="Rechercher dans"] {
+                order: 2 !important;
+            }
+            
+            [aria-label="Consulter en ligne"] {
+                order: 3 !important;
+            }
+            
+            [aria-label="Options de pr&#234;t et de demande"] {
+                order: 4 !important;
+            }
+            
+            [aria-label="Envoyer vers"] {
+                order: 5 !important;
+            }
+            
+            [aria-label="D&#233;tails"] {
+                order: 6 !important;
+            }
+            
+            [aria-label="Liens"] {
+                order: 7 !important;
+            }
+            
+            [aria-label="S&#233;minaire"] {
+                order: 8 !important;
+            }
+            
+            [aria-label="Collection"] {
+                order: 9 !important;
+            }
+            
+            [aria-label="Etag&#232;re virtuelle"] {
+                order: 10 !important;
+            }
+            
+                    /*414 Sections' order: navigation Italian*/
+            
+            [aria-label="Top"] {
+                order: 0 !important;
+            }
+            
+            [aria-label="Citazioni"] {
+                order: 1 !important;
+            }
+            
+            [aria-label="Cerca in"] {
+                order: 2 !important;
+            }
+            
+            [aria-label="Visualizza online"] {
+                order: 3 !important;
+            }
+            
+            [aria-label="Opzioni di prestito e richiesta"] {
+                order: 4 !important;
+            }
+            
+            [aria-label="Invia a"] {
+                order: 5 !important;
+            }
+            
+            [aria-label="Dettagli"] {
+                order: 6 !important;
+            }
+            
+            [aria-label="Link"] {
+                order: 7 !important;
+            }
+            
+            [aria-label="Corso"] {
+                order: 8 !important;
+            }
+            
+            [aria-label="Collezione"] {
+                order: 9 !important;
+            }
+            
+            [aria-label="Scorri virtualmente"] {
+                order: 10 !important;
+            }
+            
+                    /*420 View online*/
+                    
+                    /*430 Get it - requests buttons*/ 
+					
+						/*Requests buttons*/
+            
+            prm-request-services .md-button.button-as-link {
+                padding: 0 20px;
+                border-radius: 3px;
+            }
+            
+            prm-request-services .section-title {
+                margin-top: 11px !important;
+            }
+
+            prm-opac > div > prm-request-services > div > div {
+                line-height: 45px;
+            }
+                    
+                    /*440 How to get it -  locations, holdings and items*/
+                    
+                    /*440 How to get it: general*/
+                    
+                                /*space between item details in Fullview*/
+                        
+            #item-details > div > div {
+                margin-bottom: .8em !important;
+            }
+            
+                                /*full display Resource sharing expand section*/
+            
+            prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fill {
+                 height: auto;
+                 min-height: auto;
+            }
+			
+								/*Hide physical items box shadow*/
+						
+            prm-opac md-list md-list-item, prm-location-items md-list {
+             box-shadow: none;
+            }
+			
+								/*Hide "location" label for physical items*/
+            
+            prm-location-items > h3, prm-locations > div.layout-align-space-between-center.layout-row {
+             display: none;
+            }
+                    
+                    /*441 How to get it sections' order*/
+            
+            #getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            prm-opac {
+                order: 1;
+            }
+            
+            prm-alma-other-members {
+                order: 2;
+                display: grid;
+            }
+            
+            alma-htgi-svc {
+                order: 3;
+            }
+            
+            primo-explore.logged-out alma-htgi-svc, primo-explore.alert alma-htgi-svc {
+                order: 0 !important;
+            }
+            
+            .medium-uppercase-bold {
+                text-transform: none;
+                font-size: 1em;
+            }	
+            
+                    /*442 Filter bar*/
+                            
+                            /*locations filter by default: hide filter button*/
+                            
+            prm-locations button[ng-if='$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive']{
+                display: none !important;
+            }
+            prm-location-items button[ng-if='($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()']{
+                display: none !important;
+            }
+            
+                            /*location filter "Clear" button*/
+            
+            prm-locations-filter .md-button.button-as-link:hover:not([disabled]) { 
+            
+            background-color: rgba(17, 17, 17, 0.10) !important;
+            
+            }
+            
+                            /*filter bar*/
+            
+            prm-locations-filter md-select {
+                margin-top:1px;
+            }
+            
+            prm-location-items prm-service-button .md-button.button-as-link {
+                padding:0 6px !important;
+                box-shadow:none;
+                line-height:28px;
+            }
+            
+            .full-view-container {
+                overflow-y: hidden;
+                margin-bottom: 50px;
+            }
+            
+            html#primoExploreRoot {
+                overflow-y: auto !important;
+            }
+			
+			            /* Filter bar background and border color */
+						
+            .bar.filter-bar { 
+            background-color: rgb(17 17 17 / 0%) !important;
+            border-color: rgb(17 17 17 / 0%) !important;
+            padding-left: 0px !important;
+            }
+            
+                    /*443 Items expand for mobiles*/
+            
+            @media (max-width: 960px) {
+            prm-location-items .md-list-item-text.layout-wrap.layout-row.flex {
+                flex-direction: column;
+            }
+            prm-location-items h3, prm-location-items h4 {
+                margin:10px 0 !important;
+            }
+            prm-location-items > md-list > md-list-item > div > div.md-list-item-text > div.weak-text > div > div > p {
+                margin: 4px 18px !important;
+                display: list-item;
+            }
+            prm-location-items > md-list > md-list-item > div > div > div.layout-wrap {
+                flex-direction: row !important;
+                justify-content: flex-start !important;
+                max-width: 100% !important;
+            }
+            prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
+                box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
+            }
+            }
+            
+                    /*449 Other*/
+                            
+                            /*Back buttons*/
+            
+            md-tabs.tabs-as-app .back-button, prm-location-holdings .md-button.button-as-link, prm-location-items .button-link {
+                box-shadow: none;
+                color: #111111 !important;
+                background: rgba(17, 17, 17, 0.20) !important;
+                line-height: 22px;
+                border: 1px solid rgba(0, 0, 0, 0.59);
+            }
+            
+            md-tabs.tabs-as-app:hover .back-button:hover, prm-location-holdings .md-button.button-as-link:hover:not([disabled]), prm-location-items .button-link:hover:not([disabled]) {
+                color: #111111 !important;
+                background-color: rgba(17, 17, 17, 0.10) !important;
+            }
+			
+			prm-opac-back-button button.back-button.button-with-icon.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple {
+				background-color: #fff !important;
+				line-height: 34px
+			}
+			
+			prm-opac-back-button button.back-button.button-with-icon.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+				background-color: rgb(240, 240, 240) !important;
+			}
+			
+			md-tabs-content-wrapper div > button.back-button.button-with-icon.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple > span::before {
+
+					content: "« ";
+					font-size: 2em;
+					vertical-align: text-bottom;
+			}
+			
+			            /*Space around back buttons*/
+						
+            md-tab-content .tab-header {
+				margin-bottom: 1em;
+            }
+            
+            prm-alma-other-members button.layout-fill {
+				margin-bottom: 0.5em !important;
+            }
+            
+                            /*Buttons margin*/
+            
+            prm-request-services, prm-opac, prm-location-holdings .md-button.button-as-link {
+                margin-top: 5px;
+            }				
+                                
+                    /*450 Left navigation bar*/
+            
+            prm-full-view .services-index-under{
+                min-width: 7em;
+            }
+            prm-full-view .services-index-under .md-button{
+                width: 100%;
+                /* border: 1px solid #c3c3c3; */
+                margin: 1px 0!important;
+                text-overflow: clip;
+                padding-right: 0;
+                white-space: normal;
+                line-height: 20px;
+                padding: 7px 5px;
+            }
+            prm-full-view .services-index-under .md-button span{
+                text-transform: none;
+            }
+            
+                    /*460 Rapido*/
+                    
+                    /*470 Special external collections*/
+                    
+            .slsp-archives md-list-item{
+                cursor: pointer;
+            }
+            .slsp-archives .md-list-item-inner span {
+                padding-left: 2em;
+            }
+            .slsp-archives md-list md-list-item .md-button{
+                color: #3d6e94;
+                font-size: 16px;
+            }
+            .slsp-archives md-list md-list-item .md-button:hover:not([disabled]),
+            .slsp-archives md-list md-list-item .md-button:focus:not([disabled]) {
+                background-color: transparent;
+                color: #3d6e94;
+                text-decoration: underline;
+            }
+            .slsp-archives-additional-hint{
+                justify-content: center;
+                display: flex;
+                padding: 1em;
+                background-color: #f7eda3;
+                border-color: #ede49e;
+                margin-bottom: 1em;
+                padding-left: 2em;
+                box-shadow: 0 1px 0 0 rgb(0 0 0 / 3%), 0 5px 5px -3px rgb(0 0 0 / 7%);
+            }
+            /* mfa, tma */
+            .slsp-archives-hide alma-htgi-svc > * {
+                display: none;
+            }
+            .slsp-archives-hide alma-htgi-svc-after {
+                display: block;
+            }
+            /* hsa */
+            .slsp-archives-hide prm-alma-viewit > * {
+                display: none;
+            }
+            .slsp-archives-hide prm-alma-viewit-after {
+                display: block;
+            }
+            /* availability-line HSA, if no online resource */
+            prm-search-result-availability-line.slsp-hsa-no-online  prm-icon{
+                display:none;
+            }
+            prm-search-result-availability-line.slsp-hsa-no-online  .availability-status {
+                color: gray;
+            }
+            
+                    /*480 Open URL Service Page*/
+                    
+                    /*490 Other*/
+            
+            /*****************************************************************************/
+            /******************************500 Library card*******************************/	
+            /*****************************************************************************/	
+            
+                    /*500 General*/
+                    
+                            /*Library card: IZ selector for mobiles*/
+                    
+            @media (max-width: 599px) {
+            div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable, prm-account prm-linked-user-selector  {
+                font-size: 16px !important;
+            }
+            }
+            
+                    /*510 Overview*/
+                    
+                    /*520 Loans*/
+                    
+                    /*Library card: hide not renewable messages in list of loans for mobiles*/
+                    
+            @media (max-width: 599px) {
+            slsp-renew-item-text-component {
+                display: none;
+            }
+            }
+            
+                    /*Library card: Show not renewable messages in list of loans*/
+                    
+            prm-loan .md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex {
+                order: 1;
+                /*flex-flow: column;*/
+                max-width: 75%;
+            }
+            prm-loan-after {
+                order: 2;
+                align-self: baseline;
+                flex: 15%;
+            }
+            prm-loan-after span.md-subhead {
+                font-size: small;
+                line-height: 18px;
+                color: #d84f26;
+                padding: 22px 0;
+            }
+            prm-loan > div.align-self-stretch.flex-xs-50 {
+                order: 4;
+            }
+            
+            prm-loan > div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex > div:nth-child(3) {
+                min-width: 100%;
+            }
+            prm-loan > div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex > div:nth-child(4) {
+                min-width: 50%;
+                margin: 10px 0;
+            }
+            prm-loan > div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex > div:nth-child(5) {
+                min-width: 43%;
+                justify-content: flex-end;
+                align-items: baseline;
+            }
+            #accountoverview > md-tabs > md-tabs-content-wrapper > md-tab-content:nth-child(2) > div > div {
+                flex-direction: column;
+            }
+            prm-loan .not-renewable {
+                padding: 6px 0px 6px 6px;
+                display: block;
+                border: 1px #d23333 solid;
+                max-width: min-content;
+            }
+            
+                    /*530 Requests*/
+                    
+                    /*540 Fees*/
+                    
+                    /*550 Block and messages*/
+                    
+                    /*560 Personal details*/
+                    
+                        /*Library card Personal details display*/
+                        
+            #personalDetails > md-card-content > div {
+                flex-flow: column;
+            }
+            
+            #personalDetails .md-input-has-value.layout-column {
+                min-width: 400px;
+            }
+            
+            prm-personal-info-after {
+                display: flex;
+            }
+            
+            slsp-edit-personal-details-component#SLSPeditPersonalDetails {
+                background-color: #f0f0f0;
+                padding-top: 30px;
+            }
+            
+                    /*590 Other*/
+            
+            /*****************************************************************************/
+            /*********************************900 Others**********************************/
+            /*****************************************************************************/
+                
+                    /*900 General*/
+                    
+                    /*910 Help page*/
+                    
+            #help img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            img.icon_up1 {
+                width: 16px;
+                float: right;
+                margin: 13px 2px;
+            }
+            
+            img.icon_up2 {
+                width: 10px;
+                float: right;
+                margin: 4px;
+            }
+            
+            a > h3:hover {
+                background-color: #eee !important;
+            }
+            
+                    /*920 Collections*/
+                    
+                        /*Collections navigation bar*/
+            
+            prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color {
+                box-shadow: none;
+                color: #ffffff !important;
+                background: #1111117a !important;
+                line-height: 24px;
+              }
+            
+            prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color:hover {
+            
+            color:#ffffff !important;
+            background-color: #11111152 !important; }
+            
+                    /*930 Forms*/
+                    
+                            /*alertbar for the courier fees info*/
+                    
+            .courier-info {
+                margin: 0px 8px;
+            }
+            
+            .courier-info.bar.alert-bar {
+                height: unset;
+                margin: 6px 8px;
+                padding: .5em .5em 0.25em;
+                text-align: center;
+            }
+			
+							/* Reset form button */  
+			
+			prm-request > div > div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex > form > div.layout-align-end-stretch.layout-column > button {
+			border: 1px solid gray;
+			} 
+                    
+                    /*940 Favorites*/
+                    
+                    /*950 Alma viewer*/
+                    
+                    /*960 Email template*/
+                    
+                    /*990 Other*/
+                    
+            /*****************************************************************************/
+            /*****************************************************************************/
+            /*****************************************************************************/	
+            /****************************END OF THE CENTRAL PACKAGE***********************/
+            /*****************************************************************************/
+            /*****************************************************************************/
+            /*****************************************************************************/
+            
+            /*****************************************************************************/
+            /*****************************************************************************/
+            /*****************************************************************************/	
+            /****************************START OF THE LOCAL PACKAGE***********************/
+            /*****************************************************************************/
+            /*****************************************************************************/
+            /*****************************************************************************/
+            
+            /*****************************************************************************/
+            /*****************************01 Primary colour*******************************/
+            /*****************************************************************************/
+                
+                    /*background of the primary color*/
+                    
+            .prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-search-bar, prm-newspapers-search-bar, prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon, md-tabs md-ink-bar, md-radio-button.md-checked .md-on, button.switch-to-simple, .md-button.button-confirm,
+            prm-request-services .md-button.button-as-link, prm-location-items md-list prm-service-button .md-button.button-as-link {
+                background-color: #4E4A99 !important;
+            }
+            
+            @media (max-width: 599px) {
+                prm-topbar .top-nav-bar {
+                    border-color: #4E4A99 !important;
+                }
+            }
+			
+			prm-full-view-service-container {
+                border-left-color: #4E4A99;
+            }
+            
+                    /*mouse over background of the links and buttons (primary-color)*/
+                    
+            md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover, button.switch-to-simple:hover, .md-button.button-confirm:hover, .md-button.button-as-link:hover:not([disabled]) {
+                background-color: #393765 !important;
+            }
+            
+                    /*font color of the primary color*/
+            .prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-newspapers-search-bar,
+            prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon:after, .md-button.switch-to-advanced, button.switch-to-simple, span.legal, span.legal > a, a.ps_link.legal, .ps_icon, md-card.prm-primary-bg.psfooter > md-card-content a, .md-button.button-confirm, prm-request-services .md-button.button-as-link, prm-request-services .md-button.button-as-link:hover:not([disabled]), prm-service-button .md-button.button-as-link:hover:not([disabled]), prm-location-items md-list prm-service-button .md-button.button-as-link {
+                color: #fff !important;
+            }
+            
+            button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
+                border-color: #fff !important;
+            }
+            
+            /*****************selection color of the primary color*****************/
+            .prm-primary-bg ::selection {
+                background: #3a8888;
+            }
+            
+            /*****************************************************************************/
+            /*****************************02 Secondary colour*****************************/
+            /*****************************************************************************/
+                
+                    /*background of the secondary color**/
+                    
+            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg {
+                background-color: #99d0d0 !important;
+            }
+            
+            .text-highlight, mark, prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
+                box-shadow: inset 0 -0.15em 0 0 #99d0d0;
+            }
+            
+                    /*mouse over background of the links and buttons (secondary-color)*/
+            
+            /*.bar prm-authentication .md-button:hover:not([disabled]),*/
+            div.alert-bar .md-button:hover:not([disabled]), slsp-edit-personal-details-component a.bar.alert-bar:hover {
+                background-color: #b6fafa !important;
+            }
+            
+                    /*font color of the secondary color*/
+            
+            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg, .bar prm-authentication .md-button, button.dismiss-alert-button, div.courier-info > span a {
+                color: #111111 !important;
+            }
+            
+                    /*selection color of the secondary color*/
+            
+            .bar.alert-bar ::selection {
+                background: #9d9cbd;
+            }
+            
+            /*****************************************************************************/
+            /*******************************03 Other local code***************************/
+            /*****************************************************************************/
+            
+            /*****************************************************************************/
+            /*****************************************************************************/
+            /*****************************************************************************/	
+            /****************************END OF THE LOCAL PACKAGE*************************/
+            /*****************************************************************************/
+            /*****************************************************************************/
+            /*****************************************************************************/
