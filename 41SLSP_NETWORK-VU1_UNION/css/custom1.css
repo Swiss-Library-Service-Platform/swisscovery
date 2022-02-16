@@ -666,7 +666,7 @@
              
             #brief {
                 order: 0 !important;
-                margin-bottom: -20px;
+                margin-bottom: -40px;
             }
             
             #citationTrails {
@@ -685,7 +685,7 @@
                 order: 4 !important;
             }
             
-            #action_list {
+			#links {
                 order: 5 !important;
             }
             
@@ -693,7 +693,7 @@
                 order: 6 !important;
             }
             
-            #links {
+            #action_list {
                 order: 7 !important;
             }
             
@@ -731,7 +731,7 @@
                 order: 4 !important;
             }
             
-            [aria-label="Send to"] {
+            [aria-label="Links"] {
                 order: 5 !important;
             }
             
@@ -739,7 +739,7 @@
                 order: 6 !important;
             }
             
-            [aria-label="Links"] {
+            [aria-label="Send to"] {
                 order: 7 !important;
             }
             
@@ -777,7 +777,7 @@
                 order: 4 !important;
             }
             
-            [aria-label="Senden an"] {
+            [aria-label="Links"] {
                 order: 5 !important;
             }
             
@@ -785,7 +785,7 @@
                 order: 6 !important;
             }
             
-            [aria-label="Links"] {
+            [aria-label="Senden an"] {
                 order: 7 !important;
             }
             
@@ -823,7 +823,7 @@
                 order: 4 !important;
             }
             
-            [aria-label="Envoyer vers"] {
+            [aria-label="Liens"] {
                 order: 5 !important;
             }
             
@@ -831,7 +831,7 @@
                 order: 6 !important;
             }
             
-            [aria-label="Liens"] {
+            [aria-label="Envoyer vers"] {
                 order: 7 !important;
             }
             
@@ -869,7 +869,7 @@
                 order: 4 !important;
             }
             
-            [aria-label="Invia a"] {
+            [aria-label="Link"] {
                 order: 5 !important;
             }
             
@@ -877,7 +877,7 @@
                 order: 6 !important;
             }
             
-            [aria-label="Link"] {
+            [aria-label="Invia a"] {
                 order: 7 !important;
             }
             
