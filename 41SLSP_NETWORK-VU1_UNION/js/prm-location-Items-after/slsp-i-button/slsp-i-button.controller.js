@@ -14,7 +14,7 @@
                 this.getLibraryCode = getLibraryCode;
                 this.getLanguage = getLanguage;
                 this.biblinkText = "Library";
-                this.biblinkBase = "https:\/\/registration.slsp.ch\/libraries\/\?search\=";
+                this.biblinkBase = "https:\/\/registration.slsp.ch\/libraries\/\?library\=";
 
                 function getLibrary() {
                     return this.parentCtrl.currLoc.location.librarycodeTranslation;
