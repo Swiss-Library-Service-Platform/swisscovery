@@ -98,7 +98,7 @@ angular
                     return;
                 }
                 this.source = this.parentCtrl.result.pnx.display.source[0];
-                if(!this.source === 'ETH_Hochschularchiv')return;
+                if(!(this.source === 'ETH_Hochschularchiv'))return;
                 if(!this.parentCtrl.result.delivery.GetIt1 || this.parentCtrl.result.delivery.GetIt1.length == 0 || !this.parentCtrl.result.delivery.GetIt1[0].links || this.parentCtrl.result.delivery.GetIt1[0].links.length == 0)return;
 
                 let aOnlineLink = this.parentCtrl.result.delivery.GetIt1[0].links.filter( l => {
