@@ -1,4 +1,4 @@
-angular.module('slspHttpInterceptPickupInformation', ['ng'])
+export const slspHttpInterceptPickupInformation = angular.module('slspHttpInterceptPickupInformation', ['ng'])
     .config(['$httpProvider', ($httpProvider) => {
         $httpProvider.interceptors.push(['$q', ($q) => {
             return {
