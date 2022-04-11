@@ -61,8 +61,7 @@
 		/*950 Alma viewer*/
 		/*960 Email template*/
 		/*990 Other*/
-		/*991 Mapongo*/
-		
+	
 /*LOCAL PACKAGE*/
 	/*01 Primary colour*/
 	/*02 Secondary colour*/
@@ -1041,7 +1040,7 @@
             prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
                 box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
             }
-            }			
+            }
             
                     /*449 Other*/
                             
@@ -1339,7 +1338,7 @@
                     /*960 Email template*/
                     
                     /*990 Other*/
-			
+					
 					/*991 ETH Mapongo*/
     
 			md-list-item {
@@ -1439,7 +1438,7 @@
                     /*mouse over background of the links and buttons (primary-color)*/
                     
             md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover, button.switch-to-simple:hover, .md-button.button-confirm:hover, .md-button.button-as-link:hover:not([disabled]) {
-                background-color: #393765 !important;
+                background-color:#393765 !important;
             }
             
                     /*font color of the primary color*/
@@ -1501,7 +1500,3 @@
             /*****************************************************************************/
             /*****************************************************************************/
             /*****************************************************************************/
-			
-			
-
-  

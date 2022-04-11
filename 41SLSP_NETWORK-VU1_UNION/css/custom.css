@@ -38,9 +38,10 @@
 		/*442 Filter bar*/
 		/*443 Items expand for mobiles*/
 		/*449 Other*/
-		/*450 Rapido*/
-		/*460 Special collections*/
-		/*470 Open URL Service Page*/
+		/*450 Left Navigation Bar*/
+		/*460 Rapido*/
+		/*470 Special collections*/
+		/*480 Open URL Service Page*/
 		/*490 Other*/
 	/*500 Library card*/
 		/*500 General*/
@@ -1074,7 +1075,7 @@
 					vertical-align: text-bottom;
 			}
 			
-			            /*Space around back buttons*/
+							/*Space around back buttons*/
 						
             md-tab-content .tab-header {
 				margin-bottom: 1em;
@@ -1337,6 +1338,65 @@
                     /*960 Email template*/
                     
                     /*990 Other*/
+					
+					/*991 ETH Mapongo*/
+    
+			md-list-item {
+				flex-wrap: wrap;
+			}
+    
+			md-list-item>prm-location-item-after {
+				order: 3;
+				padding: 0 1em 0 1em;
+				flex-basis: 100%;
+			}
+    
+			.eth-mapongo-qrc {
+				margin-right: 10px;
+			}
+    
+			.eth-mapongo-qrc img {
+				margin-bottom: 1em;
+				width: 100%;
+			}
+    
+			.eth-mapongo-qrc img+div {
+				display: none;
+			}
+    
+			.eth-mapongo-qrc img {
+				max-width: 100%;
+				height: auto;
+			}
+    
+			.eth-mapongo-link img {
+				max-width: 100%;
+				height: auto;
+				max-width: 100%;
+				width: 65%;
+				margin-top: 13px;
+			}
+    
+			@media (max-width: 960px) {
+			.eth-mapongo-qrc img {
+				max-width: 70%;
+			}
+			
+			.eth-mapongo-link img {
+				width: 65%;
+			}
+			}
+    
+			@media(max-width: 599px) {
+			.eth-mapongo-link {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			
+			.eth-mapongo-link img {
+				width: 75%;
+			}
+			}
                     
             /*****************************************************************************/
             /*****************************************************************************/
@@ -1378,7 +1438,7 @@
                     /*mouse over background of the links and buttons (primary-color)*/
                     
             md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover, button.switch-to-simple:hover, .md-button.button-confirm:hover, .md-button.button-as-link:hover:not([disabled]) {
-                background-color: #393765 !important;
+                background-color:#393765 !important;
             }
             
                     /*font color of the primary color*/
