@@ -1,0 +1,8 @@
+{
+  "name": "slsp-http-intercept-pickup-information",
+  "description": "Intercept and rewrite PICKUP INFORMATION fro RappidILL",
+  "author": {"name": "Mehmet Celik", "email": "mehmet.celik@kuleuven.be"},
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
