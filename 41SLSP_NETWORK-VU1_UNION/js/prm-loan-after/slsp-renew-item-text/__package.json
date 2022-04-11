@@ -1,0 +1,12 @@
+{
+  "name": "slsp-renew-item-text",
+  "version": "1.0.0",
+  "description": "Persistant renew info for items on loan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Philipp Schulz",
+  "license": "ISC"
+}

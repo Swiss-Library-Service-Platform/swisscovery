@@ -1,0 +1,29 @@
+<span>{{ $ctrl.buttonMove() }}</span>
+<md-card ng-if="$ctrl.grpLabelA()" translate="customized.libraries.details" flex="100"
+    class="bar alert-bar courier-info">
+</md-card>
+<md-card ng-if="$ctrl.grpLabelB()" translate="customized.slsp.details" flex="100" class="bar alert-bar courier-info">
+</md-card>
+
+<div  layout="column">
+    <md-button ng-if="$ctrl.getPatronGrp()" href="{{ $ctrl.detailsBaseEdu }}" target="_blank" layout="row"
+        class="courier-info bar alert-bar layout-align-left-center layout-row" layout-align="left center">
+        <span class="md-subhead">
+            <prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui"
+                icon-definition="pencil">
+            </prm-icon>
+            <span class="md-subhead" translate="customized.personal.details">
+            </span>
+    </md-button>
+
+    <br />
+
+    <md-button ng-if="$ctrl.getPatronGrp()" href="{{ $ctrl.detailsBaseReg }}" target="_blank" layout="row"
+        class="courier-info bar alert-bar layout-align-left-center layout-row" layout-align="left center">
+        <prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui"
+            icon-definition="account-card-details">
+        </prm-icon><span class="md-subhead" translate="customized.libcard.number">
+
+        </span>
+    </md-button>
+</div>
