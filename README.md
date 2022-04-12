@@ -8,5 +8,4 @@ The "not broswerified version" folder contains codes for IZs that don't use brow
 
 New elements implemented in this package are announced via blogpost in SLSPhere.
 
-Last update of the swisscovery customization package: 17.02.2022
-0
+Last update of the swisscovery customization package: 12.04.2022
