@@ -24,7 +24,7 @@ angular
 
             //create and insert info block if not present
 
-            if (form && form.children.length == formLength) {
+            if (form && form.innerText != "" && form.children.length >= 2) {
                 let info = document.createElement('DIV');
                 info.className = "courier-info bar alert-bar";
                 info.innerHTML =
@@ -32,7 +32,7 @@ angular
 		<p>${this.parentCtrl.$translate.instant('customize.fullview.feesInfo')}</p>
 		<p><a href="${this.parentCtrl.$translate.instant('customize.fullview.feesUrl')}"
 		target="_blank">${this.parentCtrl.$translate.instant('customize.fullview.feesLinkText')}</a></p>`;
-                form.insertBefore(info, form.children[formLength -1]);
+                form.insertBefore(info, form.children[formLength -2]);
             }
         }
 

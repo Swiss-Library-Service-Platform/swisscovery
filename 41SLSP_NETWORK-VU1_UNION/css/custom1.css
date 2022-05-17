@@ -38,11 +38,12 @@
 		/*442 Filter bar*/
 		/*443 Items expand for mobiles*/
 		/*449 Other*/
-		/*450 Left Navigation Bar*/
+		/*450 Left navigation bar*/
 		/*460 Rapido*/
 		/*470 Special collections*/
 		/*480 Open URL Service Page*/
 		/*490 Other*/
+		/*491 Icons*/
 	/*500 Library card*/
 		/*500 General*/
 		/*510 Overview*/
@@ -306,6 +307,12 @@
             .login-card md-list-item.login-brighter-dialog prm-login-item {
                 width:100%;
             }
+			
+						/*background color*/
+						
+			.full-view-spacer, md-content.padded-container.layout-fill._md.md-primoExplore-theme.layout-row {
+				background-color: #fcfcfc !important;
+			}
             
                     /*190 Other*/
 					
@@ -578,15 +585,17 @@
                 background-color: #444 !important;
             }
 			
-			            /*Full display background - credits: Union college https://union.primo.exlibrisgroup.com/discovery/search?vid=01UCNY_INST:01UCNY_INST&lang=en*/
+						/*fullview background color*/
+						
+			.full-view-inner-container.flex {
+				background-color: #fcfcfc;
+			}
+			
+			            /*Full display background*/
             
             prm-full-view-service-container {
-                display: block;
-                background-color: #fcfcfc;
                 padding: 0.8em;
-                border-radius: 3px;
-                border-left-width: 2px;
-                border-left-style: groove;
+				border: none;
             }
 
             #brief > prm-full-view-service-container {
@@ -594,8 +603,12 @@
                 background-color: unset;
             }
             
-			            /* Sections titles' font weight */
+			            /* Sections titles' font weight and space */
             
+			.full-view-section {
+				margin-top: 2.5em !important;
+			}
+			
             .full-view-section .section-title {
                 font-weight: 500;
                 padding-left: unset;
@@ -616,6 +629,7 @@
                 position: relative;
                 background-color: rgb(0 0 0 / 0.05);
                 border-radius: 3px;
+                box-shadow: none !important;
             }
             
             .separate-list-items md-list-item:hover {
@@ -629,6 +643,21 @@
             prm-loans .separate-list-items md-list-item:hover, prm-requests .separate-list-items md-list-item:hover {
                 background-color: #f5f5f5 !important;
             }
+			
+						/*Location icon (hidden for mobiles)*/
+						
+			@media only screen and (min-width: 600px) {
+			prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location > div > div.layout-align-space-between-center.layout-row.flex-100 > div:before, 
+			md-content > md-list > md-list-item > button > div.layout-align-space-between-center.layout-row.flex-100 > div h3:before {
+				content: ' ';
+				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" focusable="false"><rect x="0.6" y="5.2169" width="22.8" height="13.5661" fill="none"></rect><path d="M12.0005,3.6446a6.059,6.059,0,0,0-6.052,6.052c0,4.141,5.416,10.221,5.646,10.478a.545.545,0,0,0,.77.0413.52.52,0,0,0,.0414-.0413c.231-.257,5.646-6.336,5.646-10.478A6.059,6.059,0,0,0,12.0005,3.6446Zm0,9.1a3.045,3.045,0,1,1,3.044-3.048A3.0451,3.0451,0,0,1,12.0005,12.7446Z"></path></svg>');
+				background-repeat: no-repeat;
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				margin-right: 3px;
+			}
+			}
 			
 						/* Alignment of full display elements */
 						
@@ -648,254 +677,356 @@
 
 			div > md-content > prm-locations > div.padding-left-medium {
 				padding-left: unset;
+                padding-top: 16px;
+                padding-right: 10px;
 				border-radius: 3px !important;
+                background-color: #f3f3f3;
 			}
+			
+			#getit_link1_0 > div > prm-full-view-service-container, #getit_link1_1 > div > prm-full-view-service-container, #rapidoOffer > div > prm-full-view-service-container {
+				border: 7px solid #ececec;
+				border-radius: 8px;
+			}
+
+			md-content > prm-locations > div.padding-left-medium > md-list > md-list-item {
+				margin-left: 10px;
+			}
+
+			prm-service-physical-best-offer .pickupButton { 
+				margin-top: unset;
+			}
+
+			prm-ngrs-results-button {
+				display: none;
+			} 
+			
+			prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location > div > div.layout-align-space-between-center.layout-row.flex-100 > div {
+				padding-left: 0px;
+			}
+
+			span.availability-status.available_in_institution {
+				margin-left: 34px;
+			}
+
+			div > md-content > prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location > div > div.layout-align-space-between-center.layout-row.flex-100 > div > div {
+				min-width: 80%;
+			}
+			
+			@media only screen and (max-width: 960px) {
+			#item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon:after,
+			#item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon:after,
+			#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-viewit > prm-alma-viewit-items > md-list:before,
+			md-content > prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location:before, 
+			md-content > md-list > md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md:before,
+			md-content > prm-location-items > md-list md-list-item:before {
+				display: none !important;
+				}
+			}
+			
+			@media only screen and (min-width: 960px) {
+			md-content > prm-location-items > md-list > md-list-item {
+				margin-left: 100px;
+				padding-left: 20px !important;
+				}
+			}
+
 			
 						/*Available other members button alignment*/
 			
 			#alma_other_members > div.layout-align-start-center.layout-row > h3 {
 				line-height: 2px;
-				margin: 14px 0px;
+				margin: 14px;
 			}
 			
-                    /*410 Sections' order*/
+						/*410 Sections' order*/
             
-            #full-view-container > *:first-child { 
-                display: flex; 
-                flex-direction: column; 
-            } 
-             
-            #brief {
-                order: 0 !important;
-                margin-bottom: -40px;
-            }
-            
-            #citationTrails {
-                order: 1 !important;
-            }
-            
-            #searchWithinJournal {
-                order: 2 !important;
-            }
-            
-            #getit_link1_0 {
-                order: 3 !important;
-            }
-            
-            #getit_link1_1 {
-                order: 4 !important;
-            }
-            
+			#full-view-container > *:first-child { 
+				display: flex; 
+				flex-direction: column; 
+			} 
+ 
+			#brief {
+				order: 0 !important;
+				margin-bottom: -40px;
+			}
+
+			#citationTrails {
+				order: 1 !important;
+			}
+
+			#searchWithinJournal {
+				order: 2 !important;
+			}
+
+			#getit_link1_0 {
+				order: 3 !important;
+			}
+
+			#getit_link1_1 {
+				order: 4 !important;
+			}
+
+			#rapidoOffer {
+				order: 5 !important;
+			}
+
 			#links {
-                order: 5 !important;
-            }
-            
-            #details {
-                order: 6 !important;
-            }
-            
-            #action_list {
-                order: 7 !important;
-            }
-            
-            #moreFromTheSameCourse {
-                order: 8 !important;
-            }
-            
-            #moreFromTheSameCollection {
-                order: 9 !important;
-            }
-            
-            #virtualBrowse {
-                order: 10 !important;
-            }
-            
-                    /*411 Sections' order: navigation English*/
-            
-            [aria-label="Top"] {
-                order: 0 !important;
-            }
-            
-            [aria-label="Citations"] {
-                order: 1 !important;
-            }
-            
-            [aria-label="Search inside"] {
-                order: 2 !important;
-            }
-            
-            [aria-label="View Online"] {
-                order: 3 !important;
-            }
-            
-            [aria-label="Loan and request options"] {
-                order: 4 !important;
-            }
-            
-            [aria-label="Links"] {
-                order: 5 !important;
-            }
-            
-            [aria-label="Details"] {
-                order: 6 !important;
-            }
-            
-            [aria-label="Send to"] {
-                order: 7 !important;
-            }
-            
-            [aria-label="Course"] {
-                order: 8 !important;
-            }
-            
-            [aria-label="Collection"] {
-                order: 9 !important;
-            }
-            
-            [aria-label="Virtual Browse"] {
-                order: 10 !important;
-            }
-            
-                    /*412 Sections' order: navigation German*/
-            
-            [aria-label="Top"] {
-                order: 0 !important;
-            }
-            
-            [aria-label="Zitationen"] {
-                order: 1 !important;
-            }
-            
-            [aria-label="Suche innerhalb"] {
-                order: 2 !important;
-            }
-            
-            [aria-label="Online ansehen"] {
-                order: 3 !important;
-            }
-            
-            [aria-label="Ausleih- und Bestelloptionen"] {
-                order: 4 !important;
-            }
-            
-            [aria-label="Links"] {
-                order: 5 !important;
-            }
-            
-            [aria-label="Details"] {
-                order: 6 !important;
-            }
-            
-            [aria-label="Senden an"] {
-                order: 7 !important;
-            }
-            
-            [aria-label="Seminar"] {
-                order: 8 !important;
-            }
-            
-            [aria-label="Sammlung"] {
-                order: 9 !important;
-            }
-            
-            [aria-label="Virtuelles Regal"] {
-                order: 10 !important;
-            }
-            
-                    /*413 Sections' order: navigation French*/
-            
-            [aria-label="Haut"] {
-                order: 0 !important;
-            }
-            
-            [aria-label="Citations"] {
-                order: 1 !important;
-            }
-            
-            [aria-label="Rechercher dans"] {
-                order: 2 !important;
-            }
-            
-            [aria-label="Consulter en ligne"] {
-                order: 3 !important;
-            }
-            
-            [aria-label="Options de pr&#234;t et de demande"] {
-                order: 4 !important;
-            }
-            
-            [aria-label="Liens"] {
-                order: 5 !important;
-            }
-            
-            [aria-label="D&#233;tails"] {
-                order: 6 !important;
-            }
-            
-            [aria-label="Envoyer vers"] {
-                order: 7 !important;
-            }
-            
-            [aria-label="S&#233;minaire"] {
-                order: 8 !important;
-            }
-            
-            [aria-label="Collection"] {
-                order: 9 !important;
-            }
-            
-            [aria-label="Etag&#232;re virtuelle"] {
-                order: 10 !important;
-            }
-            
-                    /*414 Sections' order: navigation Italian*/
-            
-            [aria-label="Top"] {
-                order: 0 !important;
-            }
-            
-            [aria-label="Citazioni"] {
-                order: 1 !important;
-            }
-            
-            [aria-label="Cerca in"] {
-                order: 2 !important;
-            }
-            
-            [aria-label="Visualizza online"] {
-                order: 3 !important;
-            }
-            
-            [aria-label="Opzioni di prestito e richiesta"] {
-                order: 4 !important;
-            }
-            
-            [aria-label="Link"] {
-                order: 5 !important;
-            }
-            
-            [aria-label="Dettagli"] {
-                order: 6 !important;
-            }
-            
-            [aria-label="Invia a"] {
-                order: 7 !important;
-            }
-            
-            [aria-label="Corso"] {
-                order: 8 !important;
-            }
-            
-            [aria-label="Collezione"] {
-                order: 9 !important;
-            }
-            
-            [aria-label="Scorri virtualmente"] {
-                order: 10 !important;
-            }
+				order: 6 !important;
+			}
+
+			#details {
+				order: 7 !important;
+			}
+
+			#action_list {
+				order: 8 !important;
+				}
+
+			#moreFromTheSameCourse {
+				order: 9 !important;
+			}
+
+			#moreFromTheSameCollection {
+				order: 10 !important;
+			}
+
+			#virtualBrowse {
+				order: 11 !important;
+			}
+
+							/*411 Sections' order: navigation English*/
+
+			[aria-label="Top"] {
+				order: 0 !important;
+			}
+
+			[aria-label="Citations"] {
+				order: 1 !important;
+			}
+
+			[aria-label="Search inside"] {
+				order: 2 !important;
+			}
+
+			[aria-label="View Online"] {
+				order: 3 !important;
+			}
+
+			[aria-label="Pick up on site"] {
+				order: 4 !important;
+			}
+
+			[aria-label="Further request options"] {
+				order: 5 !important;
+			}
+
+			[aria-label="Links"] {
+				order: 6 !important;
+			}
+
+			[aria-label="Details"] {
+				order: 7 !important;
+			}
+
+			[aria-label="Send to"] {
+				order: 8 !important;
+			}
+
+			[aria-label="Course"] {
+				order: 9 !important;
+			}
+
+			[aria-label="Collection"] {
+				order: 10 !important;
+			}
+
+			[aria-label="Virtual Browse"] {
+				order: 11 !important;
+			}
+
+							/*412 Sections' order: navigation German*/
+
+			[aria-label="Top"] {
+				order: 0 !important;
+			}
+
+			[aria-label="Zitationen"] {
+				order: 1 !important;
+			}
+
+			[aria-label="Suche innerhalb"] {
+				order: 2 !important;
+			}
+
+			[aria-label="Online ansehen"] {
+				order: 3 !important;
+			}
+
+			[aria-label="Abholung vor Ort"] {
+				order: 4 !important;
+			}
+
+			[aria-label="Weitere Bestelloptionen"] {
+				order: 5 !important;
+			}
+
+			[aria-label="Links"] {
+				order: 6 !important;
+			}
+
+			[aria-label="Details"] {
+				order: 7 !important;
+			}
+
+			[aria-label="Senden an"] {
+				order: 8 !important;
+			}
+
+			[aria-label="Seminar"] {
+				order: 9 !important;
+			}
+
+			[aria-label="Sammlung"] {
+				order: 10 !important;
+			}
+
+			[aria-label="Virtuelles Regal"] {
+				order: 11 !important;
+			}
+
+							/*413 Sections' order: navigation French*/
+
+			[aria-label="Haut"] {
+				order: 0 !important;
+			}
+
+			[aria-label="Citations"] {
+				order: 1 !important;
+			}
+
+			[aria-label="Rechercher dans"] {
+				order: 2 !important;
+			}
+
+			[aria-label="Consulter en ligne"] {
+				order: 3 !important;
+			}
+
+			[aria-label="Retrait sur place"] {
+				order: 4 !important;
+			}
+
+			[aria-label="Options de demande suppl&#233;mentaires"] {
+				order: 5 !important;
+			}
+
+			[aria-label="Liens"] {
+				order: 6 !important;
+			}
+
+			[aria-label="D&#233;tails"] {
+				order: 7 !important;
+			}
+
+			[aria-label="Envoyer vers"] {
+				order: 8 !important;
+			}
+
+			[aria-label="S&#233;minaire"] {
+				order: 9 !important;
+			}
+
+			[aria-label="Collection"] {
+				order: 10 !important;
+			}
+
+			[aria-label="Etag&#232;re virtuelle"] {
+				order: 11 !important;
+				}
+
+						/*414 Sections' order: navigation Italian*/
+
+			[aria-label="Top"] {
+				order: 0 !important;
+			}
+
+			[aria-label="Citazioni"] {
+				order: 1 !important;
+			}
+
+			[aria-label="Cerca in"] {
+				order: 2 !important;
+			}
+
+			[aria-label="Visualizza online"] {
+				order: 3 !important;
+			}
+
+			[aria-label="Ritiro locale"] {
+				order: 4 !important;
+			}
+
+			[aria-label="Altre opzioni di richiesta"] {
+				order: 5 !important;
+			}
+
+			[aria-label="Link"] {
+				order: 6 !important;
+			}
+
+			[aria-label="Dettagli"] {
+				order: 7 !important;
+			}
+
+			[aria-label="Invia a"] {
+				order: 8 !important;
+			}
+
+			[aria-label="Corso"] {
+				order: 9 !important;
+			}
+
+			[aria-label="Collezione"] {
+				order: 10 !important;
+			}
+
+			[aria-label="Scorri virtualmente"] {
+				order: 11 !important;
+			}
             
                     /*420 View online*/
-                    
+					
+			#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-viewit > prm-alma-viewit-items > md-list {
+				background-color: #f3f3f3;
+				flex-flow: row;
+			}
+			
+			#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-viewit > prm-alma-viewit-items > md-list > div > md-list-item {
+				background-color: white;
+			}
+			
+			#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-viewit > prm-alma-viewit-items > md-list > div {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				padding: 10px;
+			}
+
+					/*View online icon*/
+			#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-viewit > prm-alma-viewit-items > md-list:before {
+				content: '';
+				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>');
+				background-repeat: no-repeat;
+				background-color: white;
+				border-radius: 25px;
+				width: 50px;
+				height: 50px;
+				display: block;
+				visibility: visible;
+				margin: 10px 28px 10px 10px;
+				padding: 25px;
+			}
+   
                     /*430 Get it - requests buttons*/ 
 					
 						/*Requests buttons*/
@@ -913,9 +1044,9 @@
                 line-height: 45px;
             }
                     
-                    /*440 How to get it -  locations, holdings and items*/
+                    /*440 How to get it / Pick up on site -  locations, holdings and items*/
                     
-                    /*440 How to get it: general*/
+                    /*440 How to get it / Pick up on site: general*/
                     
                                 /*space between item details in Fullview*/
                         
@@ -941,13 +1072,65 @@
             prm-location-items > h3, prm-locations > div.layout-align-space-between-center.layout-row {
              display: none;
             }
-                    
-                    /*441 How to get it sections' order*/
-            
-            #getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
+			
+								/*Look of the section and icon*/
+
+			#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
                 display: flex;
                 flex-direction: column;
             }
+			
+			div#getit_link1_0 {
+				margin-top:0;
+			}
+			#getit_link1_0 prm-alma-other-members{
+				background-color: #ffffff;
+			}
+			
+			#getit_link1_0 md-divider.inner-divider.md-primoExplore-theme {
+				display: none;
+			}
+
+			#getit_link1_0 .md-button.neutralized-button, prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location > div.neutralized-button {
+				color: #626262 !important;
+				background-color: #ffffff !important;   
+				border: #d4d4d4 solid 1px;
+				min-height: 64px;
+				padding-left: 10px;
+			}	
+
+			md-content > prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location {
+				display: flex;
+				background-color: #f3f3f3;
+			}
+
+			md-content > prm-locations > div.padding-left-medium > md-list > md-list-item > prm-location:before, 
+			md-content > md-list > md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md:before, 
+			md-content > prm-location-items > md-list  md-list-item:before {
+				content: '';
+				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5,1L2,6V8H21V6M16,10V17H19V10M2,22H21V19H2M10,10V17H13V10M4,10V17H7V10H4Z" /></svg>');
+				background-repeat: no-repeat;
+				background-color: white;
+				border-radius: 25px;
+				width: 50px;
+				height: 50px;
+				display: block;
+				visibility: hidden;
+				margin: 10px 28px 10px 10px;
+				padding: 25px;
+			}
+			
+			md-content > prm-location-items > md-list > md-list-item:before {
+				margin-left: -100px;
+			}
+
+			md-content > prm-locations > div.padding-left-medium > md-list:nth-child(1) > md-list-item:nth-child(1) > prm-location:before, 
+			md-content > md-list:nth-child(1) > md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md:nth-child(1):before,
+			md-content > prm-location-items > md-list  md-list-item:nth-child(1):before {
+				visibility: visible;
+			}
+                    
+                    /*441 How to get it sections' order*/
             
             prm-opac {
                 order: 1;
@@ -1061,7 +1244,7 @@
 			
 			prm-opac-back-button button.back-button.button-with-icon.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple {
 				background-color: #fff !important;
-				line-height: 34px
+				line-height: 34px;
 			}
 			
 			prm-opac-back-button button.back-button.button-with-icon.zero-margin.md-button.md-primoExplore-theme.md-ink-ripple:hover {
@@ -1075,7 +1258,7 @@
 					vertical-align: text-bottom;
 			}
 			
-							/*Space around back buttons*/
+			            /*Space around back buttons*/
 						
             md-tab-content .tab-header {
 				margin-bottom: 1em;
@@ -1111,6 +1294,163 @@
             }
             
                     /*460 Rapido*/
+					
+			prm-service-ngrs .best-offer-tile-for-two-offers, prm-service-ngrs .best-offer-tile-for-one-offer {
+				min-width: 55%;
+			}
+			prm-service-ngrs .grid-for-two-offers, prm-service-ngrs .grid-for-one-offer  {
+			   box-shadow: none ;
+			}
+			prm-service-physical-best-offer .main_tiles {
+			   background-color: unset;
+			}
+			prm-service-physical-best-offer .icon-wrapper{
+			   width: 25%;
+			   margin: 2em 4px;
+			   justify-content: center;
+			}
+			prm-service-physical-best-offer .offer_details-wrapper {
+			   width: 100%;
+			}
+			button.pickup_information_btn.md-ink-ripple.button-link.md-button.md-primoExplore-theme {
+				min-width: 84%;
+				margin: 12px 0;
+				text-align: left;
+				padding: 0;
+				background-color: #ffffff;
+				border: 1px solid #d4d4d4;
+			}
+			prm-service-physical-best-offer .ngrs-delivery-box-tile {
+			   color: #2e2e2e!important;
+			   filter: none; 
+			   width: 64px !important;
+			}
+			prm-service-ngrs .or-separator .or .word {
+			   background: #dedede;
+			}
+			prm-service-ngrs .main_tile_request_form {
+			   box-shadow: none;
+			}
+
+			prm-get-it-request .offer_details_main_tail {
+			   border-left:none; 
+			   background: #ffffff;
+			   width: 24%;
+			}	
+
+			#rapidoOffer prm-rapido-no-offer-message .main_tile {
+				box-shadow: none;
+			}
+			#rapidoOffer prm-rapido-no-offer-message .main_tile .tile {
+				justify-content: center;
+			}
+			#rapidoOffer .main-tile {
+				background-color: #f3f3f3;
+				font-size: 90% !important;
+				line-height: 14px;	
+			}
+			
+					/*Rapido buttons*/
+			#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital, prm-service-physical-best-offer .get_it_btn_physical {
+				color: #ffffff !important;
+				background-color: #4E4A99 !important;
+			}
+			#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover, prm-service-physical-best-offer .get_it_btn_physical:hover {
+				background-color: #393765 !important;
+			}
+			
+					/*Rapido box*/
+			#rapidoOffer prm-service-ngrs .main-tile {
+				margin-top: 0;
+			}
+			#rapidoOffer prm-service-physical-best-offer .last_line {
+				margin-bottom: 7px;
+			}
+			#rapidoOffer md-divider.md-primoExplore-theme.flex, #getit_link1_0 md-divider.md-primoExplore-theme.flex, #getit_link1_1 md-divider.md-primoExplore-theme.flex {
+				border: none !important;
+			}
+
+			#item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer .offer_details-wrapper .offer_details {
+				margin-right: 4.5em;
+			}
+			#item-ngrs > div > div > div > prm-service-physical-best-offer .rota_line {
+				margin-bottom: unset;
+			}
+			#item-ngrs > div > div > div > prm-service-physical-best-offer > div > div.offer_details-wrapper > div > div.first_line_rota {
+				line-height: 20px !important;
+			}
+
+			@media only screen and (max-width: 740px) {
+				#item-ngrs > div > div > div.or-separator {
+				position: inherit;
+				}
+			}
+			
+			@media only screen and (max-width: 740px) {
+			#item-ngrs .or {
+			margin-top: 30px !important;
+			}
+			#item-ngrs .line {
+			margin-top: 60px !important;
+				}
+			}
+			
+					/*Rapido customized labels*/
+			
+			.rapidoFeesLink {
+				align-self: end;
+			}
+			
+			.rapidoCosts {
+				margin-bottom: 18px;
+				font-size: 110%;
+			}
+
+            span.reading-Room-Pod {
+                margin-left: 5px;
+            }
+
+					/*Reservation button*/
+			span.noOffer {
+				display: none;
+			}
+
+					/*Rapido physical icon*/
+			#item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon svg {
+				display: none;
+			}
+
+			#item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon:after {
+				content: ' ';
+				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L10.11,5.22L16,8.61L17.96,7.5L12,4.15M6.04,7.5L12,10.85L13.96,9.75L8.08,6.35L6.04,7.5M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" /></svg>');
+				background-repeat: no-repeat;
+				background-color: white;
+				border-radius: 25px;
+				width: 50px;
+				height: 50px;
+				display: block;
+			}
+
+					/*Rapido digital icon*/
+			#item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon svg {
+				display: none;
+			}
+
+			#item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon:after {
+				content: ' ';
+				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12,15C12.81,15 13.5,14.7 14.11,14.11C14.7,13.5 15,12.81 15,12C15,11.19 14.7,10.5 14.11,9.89C13.5,9.3 12.81,9 12,9C11.19,9 10.5,9.3 9.89,9.89C9.3,10.5 9,11.19 9,12C9,12.81 9.3,13.5 9.89,14.11C10.5,14.7 11.19,15 12,15M12,2C14.75,2 17.1,3 19.05,4.95C21,6.9 22,9.25 22,12V13.45C22,14.45 21.65,15.3 21,16C20.3,16.67 19.5,17 18.5,17C17.3,17 16.31,16.5 15.56,15.5C14.56,16.5 13.38,17 12,17C10.63,17 9.45,16.5 8.46,15.54C7.5,14.55 7,13.38 7,12C7,10.63 7.5,9.45 8.46,8.46C9.45,7.5 10.63,7 12,7C13.38,7 14.55,7.5 15.54,8.46C16.5,9.45 17,10.63 17,12V13.45C17,13.86 17.16,14.22 17.46,14.53C17.76,14.84 18.11,15 18.5,15C18.92,15 19.27,14.84 19.57,14.53C19.87,14.22 20,13.86 20,13.45V12C20,9.81 19.23,7.93 17.65,6.35C16.07,4.77 14.19,4 12,4C9.81,4 7.93,4.77 6.35,6.35C4.77,7.93 4,9.81 4,12C4,14.19 4.77,16.07 6.35,17.65C7.93,19.23 9.81,20 12,20H17V22H12C9.25,22 6.9,21 4.95,19.05C3,17.1 2,14.75 2,12C2,9.25 3,6.9 4.95,4.95C6.9,3 9.25,2 12,2Z" /></svg>');
+				background-repeat: no-repeat;
+				background-color: white;
+				border-radius: 25px;
+				width: 50px;
+				height: 50px;
+				display: block;
+			}
+			
+					/*Hide fees link when logged out*/
+			#getit_link1_1 div.rapidoFeesLink a, primo-explore.logged-out .rapidoFeesLink  {
+				display: none;
+			}
                     
                     /*470 Special external collections*/
                     
@@ -1164,7 +1504,7 @@
             
                     /*480 Open URL Service Page*/
                     
-                    /*490 Other*/
+                    /*490 Other*/		
             
             /*****************************************************************************/
             /******************************500 Library card*******************************/	
@@ -1338,8 +1678,8 @@
                     /*960 Email template*/
                     
                     /*990 Other*/
-					
-					/*991 ETH Mapongo*/
+
+                    /*991 ETH Mapongo*/
     
 			md-list-item {
 				flex-wrap: wrap;
@@ -1430,15 +1770,11 @@
                     border-color: #4E4A99 !important;
                 }
             }
-			
-			prm-full-view-service-container {
-                border-left-color: #4E4A99;
-            }
             
                     /*mouse over background of the links and buttons (primary-color)*/
                     
             md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover, button.switch-to-simple:hover, .md-button.button-confirm:hover, .md-button.button-as-link:hover:not([disabled]) {
-                background-color:#393765 !important;
+                background-color: #393765 !important;
             }
             
                     /*font color of the primary color*/
@@ -1462,7 +1798,7 @@
                 
                     /*background of the secondary color**/
                     
-            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg {
+            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg, #rapidoOffer prm-rapido-no-offer-message .main_tile {
                 background-color: #99d0d0 !important;
             }
             
@@ -1479,7 +1815,7 @@
             
                     /*font color of the secondary color*/
             
-            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg, .bar prm-authentication .md-button, button.dismiss-alert-button, div.courier-info > span a {
+            .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg, .bar prm-authentication .md-button, button.dismiss-alert-button, div.courier-info > span a, #no_offer_message_out_text_part1, #no_offer_message_out_text_notClickable {
                 color: #111111 !important;
             }
             

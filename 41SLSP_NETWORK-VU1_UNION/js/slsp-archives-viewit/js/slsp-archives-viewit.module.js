@@ -3,7 +3,8 @@ angular
 
     .component('prmSearchResultAvailabilityLineAfter', {
         bindings: { parentCtrl: '<' },
-        controller: 'ArchivesAvailabilityLineController'
+        controller: 'ArchivesAvailabilityLineController',
+        template:'<slsp-search-result-availability-line-after parent-ctrl="$parent.$ctrl"></slsp-search-result-availability-line-after>'
     })
 
     .component('prmAlmaViewitAfter', {
@@ -30,7 +31,7 @@ angular
                     <span translate="customized.archives.ETH_Hochschularchiv.text2">.</span>
                 </div>
             </div>
-        </div>
+        </div><slsp-alma-viewit-after parent-ctrl="$parent.$ctrl"></slsp-alma-viewit-after>
         `
         })
 
@@ -98,7 +99,7 @@ angular
                     return;
                 }
                 this.source = this.parentCtrl.result.pnx.display.source[0];
-                if(!(this.source === 'ETH_Hochschularchiv'))return;
+                if(!this.source === 'ETH_Hochschularchiv')return;
                 if(!this.parentCtrl.result.delivery.GetIt1 || this.parentCtrl.result.delivery.GetIt1.length == 0 || !this.parentCtrl.result.delivery.GetIt1[0].links || this.parentCtrl.result.delivery.GetIt1[0].links.length == 0)return;
 
                 let aOnlineLink = this.parentCtrl.result.delivery.GetIt1[0].links.filter( l => {

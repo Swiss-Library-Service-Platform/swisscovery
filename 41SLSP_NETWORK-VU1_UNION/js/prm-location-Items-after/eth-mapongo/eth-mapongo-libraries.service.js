@@ -53,16 +53,16 @@ export const ethMapongoLibrariesService = [function(){
                     "name": "FHNW HGK-Mediathek Basel",
                     "libraryCode": "E75",
                     "baseUrl":"https://mediathek.hgk.fhnw.ch/nebis",
-                    "locationCodeWhiteList": ["HAP","E75BI","E75AC","E75MA","E75VS"],
-		            "locationWhiteList":["Handapparat","Mediathek","Archiv","Magazin","Verschiedene Standorte"]
+                    "locationCodeWhiteList": ["","HAP"],
+		            "locationWhiteList":["", "Handapparat"]
             },
             {
                     "shortname": "HGK-MED",
                     "name": "FHNW Campus Muttenz Bibliothek",
                     "libraryCode": "E44",
                     "baseUrl":"https://fhnw-cmu.mapongo.de",
-                    "locationCodeWhiteList": ["E44TE","E44BI","E44MG","E44VS"],
-                    "locationWhiteList":["Ausleihe auf Anfrage, bitte Bibliothek kontaktieren","Bibliothek","Magazin: Nicht frei zugänglich, zur Abholung bestellen","Verschiedene Standorte"]
+                    "locationCodeWhiteList": [""],
+                    "locationWhiteList":[""]
             }
     ];
 
