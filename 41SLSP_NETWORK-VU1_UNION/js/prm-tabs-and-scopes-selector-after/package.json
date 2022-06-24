@@ -1,0 +1,12 @@
+{
+  "name": "bcu-tabs-and-scopes-selector-after",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bcu-tabs-and-scopes-selector-after.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Thomas Henkel, ed.Philipp Schulz",
+  "license": "ISC"
+}

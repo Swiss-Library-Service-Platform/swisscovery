@@ -36,18 +36,36 @@ export class slspRapidoDigitalOfferController {
                     
 
                 /* reading room POD */
-                if (this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer.podId == '377063760090000041'){
-                
+                if (this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '377067383680000041'){
+                                                                                                                                                 
                     this.readingRoomPod = readingRoomPod;
-                    let readingRoomPod = document.querySelectorAll('prm-service-physical-best-offer .keep_for span');
+                    let readingRoomPod = document.querySelectorAll('div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer .keep_for span');
                     let html = `<span class="reading-Room-Pod" translate="customized.rapido.readingroom"></span>`;
                        
                         angular.element(readingRoomPod).after(this.$compile(html)(this.$scope)).addClass('pod');
     
                     }
                     
+                /*icon label*/
+                if (this.parentCtrl.isdigitaloffer === true) {
+                    this.iconLabel = iconLabel;
+               
+                    let iconLabel = document.querySelectorAll('#item-ngrs > div > div > div[ng-if="$ctrl.digitalTileVisible"] > prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon');
+                    let html = `<div class="iconLabel">digi</div>`;
+                   
+                        
+                        angular.element(iconLabel).after(this.$compile(html)(this.$scope)).addClass('icnLbl');
+                    }
+
+                     if (this.parentCtrl.isdigitaloffer !== true) {
+                        this.iconLabel2 = iconLabel2 ;
+                        let iconLabel2 = document.querySelectorAll('#item-ngrs > div > div > div[ng-if="$ctrl.physicalTileVisible"] > prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon');
+                        let html2 = `<div class="iconLabel">courier</div>`;
+                            
+                            angular.element(iconLabel2).after(this.$compile(html2)(this.$scope)).addClass('icnLbl2');
+                     }
                 
-            }, 0);   
+            }, 2500);   
         }
         
         catch(e){

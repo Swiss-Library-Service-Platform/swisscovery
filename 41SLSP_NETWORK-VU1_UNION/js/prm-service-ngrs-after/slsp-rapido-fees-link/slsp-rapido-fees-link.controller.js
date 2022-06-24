@@ -34,5 +34,3 @@ export class slspRapidoFeesLinkController {
     }
 
     slspRapidoFeesLinkController.$inject = ['$scope', '$compile'];
-
-   

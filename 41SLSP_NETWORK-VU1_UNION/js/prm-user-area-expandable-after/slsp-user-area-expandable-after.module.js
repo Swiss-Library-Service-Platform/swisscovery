@@ -5,7 +5,7 @@ export const slspUserAreaExpandableAfterModule = angular
     .module('slspUserAreaExpandableAfterModule', [])
         .component('prmUserAreaExpandableAfter',  {
             bindings: {parentCtrl: '<'},
-            template: `<bcu-lang-switch-component after-ctrl="$ctrl"></bcu-lang-switch-component><slsp-ill-signin-order-logged-out-component after-ctrl="$ctrl"></slsp-ill-signin-order-logged-out-component>`,
+            template: `<bcu-lang-switch-component after-ctrl="$ctrl"></bcu-lang-switch-component><slsp-ill-signin-order-logged-out-component after-ctrl="$ctrl"></slsp-ill-signin-order-logged-out-component><slsp-user-area-expandable-after parent-ctrl="$parent.$ctrl"></slsp-user-area-expandable-after>`,
         });
 
 slspUserAreaExpandableAfterModule.requires.push(bcuLangSwitchModule.name);

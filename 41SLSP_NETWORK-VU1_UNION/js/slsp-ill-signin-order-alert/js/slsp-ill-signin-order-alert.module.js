@@ -27,5 +27,5 @@ angular
     .component('almaHowovpAfter', {
         bindings: { parentCtrl: '<' },
         controller: 'AlertMsgController',
-        template: '<div style="display:none">{{$ctrl.getAlert()}}</div>'
+        template: '<div style="display:none">{{$ctrl.getAlert()}}</div><slsp-howovp-after parent-ctrl="$parent.$ctrl"></slsp-howovp-after>'
     });

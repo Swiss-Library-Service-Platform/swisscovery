@@ -12,9 +12,14 @@ import './prm-personal-info-after';
 import './prm-alma-other-members-after';
 import './prm-service-ngrs-after';
 import './prm-service-physical-best-offer-after';
-import './slsp-request-cancel-button';
 import './slsp-http-intercept-pickup-information';
+import './prm-search-bar-after';
+import './prm-tabs-and-scopes-selector-after';
+import './prm-service-button-after';
+import './prm-full-view-after';
+import './prm-request-after';
 
 
-var app = angular.module('viewCustom', ['angularLoad', 'slspCourierInfo', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit','slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspRequestCancelButton', 'slspHttpInterceptPickupInformation']);
+
+var app = angular.module('viewCustom', ['angularLoad', 'slspCourierInfo', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit','slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule']);
 

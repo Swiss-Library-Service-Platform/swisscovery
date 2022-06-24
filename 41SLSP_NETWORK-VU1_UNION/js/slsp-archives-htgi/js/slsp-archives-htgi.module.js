@@ -75,6 +75,6 @@ angular
                     <span translate="customized.archives.ETH_MaxFrischArchiv.text2">.</span>
                 </div>
             </div>
-        </div>
+        </div><slsp-htgi-svc-after parent-ctrl="$parent.$ctrl"></slsp-htgi-svc-after>
         `
     });
