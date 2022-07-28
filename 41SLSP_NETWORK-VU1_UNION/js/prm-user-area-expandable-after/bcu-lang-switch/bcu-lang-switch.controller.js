@@ -2,13 +2,13 @@ export class bcuLangSwitchController {
 
     constructor($element, $window) {
         this.$parent = $element.parent().parent()[0];
-        this.parentCtrl = this.afterCtrl.parentCtrl;
+        
         this.$window = $window;
     }
 
     $onInit() {
         try {
-            
+            this.parentCtrl = this.afterCtrl.parentCtrl;
             this.languages = ["de","fr","it","en"];
             if (!this.languages.includes(this.parentCtrl.lang)) {
                 this.changeLanguage("en");

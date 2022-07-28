@@ -12,7 +12,9 @@ export class slspRequestCancelButtonController {
 
     $onInit() {
         try{
-            this.scope.$watch('$parent.$ctrl.requestsDisplay', (currentRequestArray) => {
+            this.parentCtrl = this.afterCtrl.parentCtrl;
+
+            this.$scope.$watch('this.$ctrl.parentCtrl.requestsDisplay', (currentRequestArray) => {
 
                 if (angular.isArray(currentRequestArray) && currentRequestArray.length > 0)
     

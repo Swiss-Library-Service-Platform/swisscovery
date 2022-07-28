@@ -31,7 +31,7 @@ export class bcuScopesSelectorController {
                     searchScopes[i].onclick = function() {
                         setTimeout(function(){
                             document.getElementsByClassName("zero-margin button-confirm md-button md-primoExplore-theme")[0].click();
-                        }, 0)
+                        }, 100)
                     }
                 }
             }

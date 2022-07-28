@@ -28,9 +28,9 @@ export class slspRapidoDigitalOfferController {
                 
                     this.reservation = reservation;
                     let reservation = document.querySelectorAll('prm-service-physical-best-offer .get_it_btn_physical > span');
-                    let html = `<div class="reservationButton" translate="customized.rapido.reservation"></div>`;
+                    let htmlR1 = `<div class="reservationButton" translate="customized.rapido.reservation"></div>`;
                        
-                        angular.element(reservation).after(this.$compile(html)(this.$scope)).addClass('noOffer');
+                        angular.element(reservation).after(this.$compile(htmlR1)(this.$scope)).addClass('noOffer');
     
                     }
                     
@@ -40,30 +40,13 @@ export class slspRapidoDigitalOfferController {
                                                                                                                                                  
                     this.readingRoomPod = readingRoomPod;
                     let readingRoomPod = document.querySelectorAll('div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer .keep_for span');
-                    let html = `<span class="reading-Room-Pod" translate="customized.rapido.readingroom"></span>`;
+                    let htmlPD = `<span class="reading-Room-Pod" translate="customized.rapido.readingroom"></span>`;
                        
-                        angular.element(readingRoomPod).after(this.$compile(html)(this.$scope)).addClass('pod');
+                        angular.element(readingRoomPod).after(this.$compile(htmlPD)(this.$scope)).addClass('pod');
     
                     }
                     
-                /*icon label*/
-                if (this.parentCtrl.isdigitaloffer === true) {
-                    this.iconLabel = iconLabel;
-               
-                    let iconLabel = document.querySelectorAll('#item-ngrs > div > div > div[ng-if="$ctrl.digitalTileVisible"] > prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon');
-                    let html = `<div class="iconLabel">digi</div>`;
-                   
-                        
-                        angular.element(iconLabel).after(this.$compile(html)(this.$scope)).addClass('icnLbl');
-                    }
-
-                     if (this.parentCtrl.isdigitaloffer !== true) {
-                        this.iconLabel2 = iconLabel2 ;
-                        let iconLabel2 = document.querySelectorAll('#item-ngrs > div > div > div[ng-if="$ctrl.physicalTileVisible"] > prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon');
-                        let html2 = `<div class="iconLabel">courier</div>`;
-                            
-                            angular.element(iconLabel2).after(this.$compile(html2)(this.$scope)).addClass('icnLbl2');
-                     }
+                
                 
             }, 2500);   
         }

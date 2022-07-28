@@ -1,5 +1,5 @@
 
-import './slsp-courier-info';
+//import './slsp-courier-info';
 import './slsp-ill-signin-order-alert';
 import './prm-locations-after';
 import './prm-location-items-after';
@@ -18,8 +18,10 @@ import './prm-tabs-and-scopes-selector-after';
 import './prm-service-button-after';
 import './prm-full-view-after';
 import './prm-request-after';
+import './prm-requests-after';
+import './prm-alma-viewit-items-after';
 
 
 
-var app = angular.module('viewCustom', ['angularLoad', 'slspCourierInfo', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit','slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule']);
+var app = angular.module('viewCustom', ['angularLoad', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit','slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule', 'slspRequestsAfterModule', 'prmAlmaViewitItemsAfterModule']);
 

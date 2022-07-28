@@ -5,8 +5,8 @@
 
 export class slspCollapseOtherInstController {
 
-    constructor($timeout, $scope) {
-        this.$timeout = $timeout;
+    constructor($scope) {
+        
         this.$scope = $scope;
     }
 
@@ -14,25 +14,25 @@ export class slspCollapseOtherInstController {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
 
-            this.$scope.$watch('this.$ctrl.parentCtrl.almaInstitutionsList', (currentInstArray) => {
-
-                if (angular.isArray(currentInstArray) && currentInstArray.length > 1) {
-                   
-                    this.$timeout(() => {
-                        this.parentCtrl.isCollapsed = true;
-                    }, 0);
+            if (this.parentCtrl.serviceMode !== 'howovp') {
+           
+                this.parentCtrl.isCollapsed = true;
+            }
+            else {
+                this.parentCtrl.isCollapsed = false;
+            }
         
-                }
-            })
-            
         }
+            
+            
+       
         catch (e) {
             console.error("***SLSP*** an error occured: slspCollapseOtherInstController\n\n");
             console.error(e.message);
         }
     }
+ }
 
-}
 
-slspCollapseOtherInstController.$inject =  ['$timeout', '$scope'];
+slspCollapseOtherInstController.$inject =  ['$scope'];
 

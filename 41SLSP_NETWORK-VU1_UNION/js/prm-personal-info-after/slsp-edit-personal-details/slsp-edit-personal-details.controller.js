@@ -71,7 +71,7 @@ export class slspEditPersonalDetailsController {
             }
 
             this.buttonMove = function () {
-                let parentElement = angular.element(document.querySelector('prm-personal-info > div.layout-wrap.layout-align-center-start.layout-row > md-card:nth-child(2)'));
+                let parentElement = angular.element(document.querySelector('md-card > md-card-content > prm-personal-settings > prm-personal-settings-after'));
                 let element = angular.element(document.querySelector('#SLSPeditPersonalDetails'));
                 parentElement.append(element);
             }
