@@ -3,6 +3,7 @@ import { ethMapongoModule } from './eth-mapongo/eth-mapongo.module';
 import { slspIButtonModule } from './slsp-i-button/slsp-i-button.module';
 import {slspIconLabelLocationItemsModule} from './slsp-icon-label-location-items/slsp-icon-label-location-items.module';
 
+
 export const ethLocationItemsAfterModule = angular
     .module('ethLocationItemsAfterModule', [])
     .component('prmLocationItemsAfter', {
@@ -13,6 +14,7 @@ export const ethLocationItemsAfterModule = angular
         <slsp-i-button-component after-ctrl="$ctrl"></slsp-i-button-component>
         <slsp-icon-label-location-items-component after-ctrl="$ctrl"></slsp-icon-label-location-items-component>
         <slsp-alma-location-items-after parent-ctrl="$parent.$ctrl"></slsp-alma-location-items-after>
+        
 		`
     });
 
@@ -20,3 +22,5 @@ ethLocationItemsAfterModule.requires.push(ethMapongoCheckModule.name);
 ethLocationItemsAfterModule.requires.push(ethMapongoModule.name);
 ethLocationItemsAfterModule.requires.push(slspIButtonModule.name);
 ethLocationItemsAfterModule.requires.push(slspIconLabelLocationItemsModule.name);
+
+

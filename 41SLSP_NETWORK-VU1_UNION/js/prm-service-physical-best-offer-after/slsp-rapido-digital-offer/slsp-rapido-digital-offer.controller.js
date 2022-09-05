@@ -13,18 +13,18 @@ export class slspRapidoDigitalOfferController {
                 this.parentCtrl = this.afterCtrl.parentCtrl;
                 
                 /* costs per page */
-                if (this.parentCtrl.isdigitaloffer === true){
+                //if (this.parentCtrl.isdigitaloffer === true){
                 
-                this.rapidoCosts = rapidoCosts;
-                let rapidoCosts = document.querySelectorAll('div[ng-if="$ctrl.digitalTileVisible"] .patron_cost.last_line');
-                let html = `<div class="rapidoCosts" translate="customized.rapido.digi"></div>`;
+                //this.rapidoCosts = rapidoCosts;
+                //let rapidoCosts = document.querySelectorAll('div[ng-if="$ctrl.digitalTileVisible"] .patron_cost.last_line');
+                //let html = `<div class="rapidoCosts" translate="customized.rapido.digi"></div>`;
                     
-                    angular.element(rapidoCosts).after(this.$compile(html)(this.$scope));
-                }
+                //    angular.element(rapidoCosts).after(this.$compile(html)(this.$scope));
+                //}
                
                 
                 /* reservation button */
-                if (this.parentCtrl.bestoffer == undefined && this.parentCtrl.isdigitaloffer === true){
+                if (this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.unavailableInAllMembersPod === true && this.parentCtrl.bestoffer.unavailableResource === true){
                 
                     this.reservation = reservation;
                     let reservation = document.querySelectorAll('prm-service-physical-best-offer .get_it_btn_physical > span');

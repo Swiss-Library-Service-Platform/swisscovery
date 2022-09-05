@@ -1,8 +1,8 @@
 {
-  "name": "prm-service-button-after",
+  "name": "slsp-collapse-other-inst",
   "version": "1.0.0",
-  "description": "",
-  "main": "prm-service-button-after.module.js",
+  "description": "Collapse_Get_It_From_Other_Institutions",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
