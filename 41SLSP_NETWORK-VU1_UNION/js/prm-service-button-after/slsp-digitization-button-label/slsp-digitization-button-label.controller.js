@@ -16,11 +16,20 @@ export class slspDigitizationButtonLabelController {
             this.$timeout(() => {
                 this.parentCtrl = this.afterCtrl.parentCtrl;
                                
-               
                 if (this.parentCtrl.service.type !== undefined && this.parentCtrl.service.type === 'AlmaDigitization'){
                     
+                    this.digiButtonLabel = digiButtonLabel;
+                    let digiButtonLabel = document.querySelectorAll('prm-full-view-service-container prm-service-button button span[translate="AlmaDigitization"]');
+                    let html = `<div class="DigiButtonLabel1">CHF</div>`;
+                        
+                        angular.element(digiButtonLabel).after(html).addClass('digiButton');
+                    }
+                    
+
+                if (this.parentCtrl.service.type !== undefined && this.parentCtrl.service.type === 'AlmaGeneralDigitization'){
+                    
                 this.digiButtonLabel = digiButtonLabel;
-                let digiButtonLabel = document.querySelectorAll('prm-full-view-service-container prm-service-button button span[translate="AlmaDigitization"]');
+                let digiButtonLabel = document.querySelectorAll('prm-full-view-service-container prm-service-button button span[translate="AlmaGeneralDigitization"]');
                 let html = `<div class="DigiButtonLabel1">CHF</div>`;
                     
                     angular.element(digiButtonLabel).after(html).addClass('digiButton');

@@ -551,7 +551,7 @@ bcu-lang-switch-component {
     padding-right: 16px;
 }
 
-bcu-lang-switch-component .md-button.md-lang-button {
+bcu-lang-switch-component .md-button:not(.close-btn-favorits-warning-message):not(.md-icon-button) {
     height: 29px;
     min-height: 29px;
     margin: 15px 1px !important;
@@ -2588,6 +2588,7 @@ md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.m
     max-width: 64px;
     display: flex;
     margin-bottom: -70px;
+    margin-left: 10px;
 }
 
 .iconLabel {
@@ -2680,7 +2681,7 @@ md-list.md-primoExplore-theme.icnLblOtherMembersE {
 }
 
 
-/*little location icom*/
+/*little location icon*/
 
 md-content>md-list>md-list-item>button>div.layout-align-space-between-center.layout-row.flex-100>div>h3 {
     display: flex;
@@ -2733,4 +2734,47 @@ span[translate="customized.libcard.number"] {
     padding: 0px;
     margin: 0px 14px !important;
     background-color: white;
+}
+
+
+/*button alignment order form*/
+
+prm-get-it-request .margin-buttons {
+    flex-direction: column;
+}
+
+#offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-secondary.md-button.md-primoExplore-theme.md-ink-ripple {
+    border: 1px solid gray;
+    margin-right: 0px;
+}
+
+#offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple {
+    margin-right: 0px;
+}
+
+md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex>form>div.layout-align-end-stretch.layout-column>div>button {
+    min-width: 97%;
+}
+
+@media only screen and (max-width: 767px) {
+    prm-get-it-request .margin-buttons {
+        right: -2px;
+    }
+}
+
+
+/*edit personal details buttons*/
+
+slsp-edit-personal-details-component#SLSPeditPersonalDetails .bar {
+    min-height: unset;
+    margin-left: 0;
+    padding: 0;
+    margin-right: 0px;
+}
+
+
+/*alert bar center alignment*/
+
+.bar.alert-bar.layout-align-start-center.layout-row[ng-if="$ctrl.locations.length==0 && (!$ctrl.otherLocations || $ctrl.otherLocations.length==0)"] {
+    margin-left: 10px;
 }

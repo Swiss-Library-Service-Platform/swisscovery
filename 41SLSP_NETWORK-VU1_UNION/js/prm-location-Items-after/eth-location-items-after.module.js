@@ -13,7 +13,7 @@ export const ethLocationItemsAfterModule = angular
 		<eth-mapongo-check after-ctrl="$ctrl"></eth-mapongo-check>
         <slsp-i-button-component after-ctrl="$ctrl"></slsp-i-button-component>
         <slsp-icon-label-location-items-component after-ctrl="$ctrl"></slsp-icon-label-location-items-component>
-        <slsp-alma-location-items-after parent-ctrl="$parent.$ctrl"></slsp-alma-location-items-after>
+        <slsp-location-items-after parent-ctrl="$parent.$ctrl"></slsp-location-items-after>
         
 		`
     });
