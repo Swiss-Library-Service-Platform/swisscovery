@@ -2778,3 +2778,17 @@ slsp-edit-personal-details-component#SLSPeditPersonalDetails .bar {
 .bar.alert-bar.layout-align-start-center.layout-row[ng-if="$ctrl.locations.length==0 && (!$ctrl.otherLocations || $ctrl.otherLocations.length==0)"] {
     margin-left: 10px;
 }
+
+
+
+/*Temporary code for locations padding*/
+md-list.md-primoExplore-theme.icnLblOtherMembersP2,
+md-list.md-primoExplore-theme.icnLblOtherMembersE {
+    padding-top: 20px;
+}
+
+/*Temporary code to hide no location bar*/
+#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-other-members > div {
+    
+    display:none;
+}
