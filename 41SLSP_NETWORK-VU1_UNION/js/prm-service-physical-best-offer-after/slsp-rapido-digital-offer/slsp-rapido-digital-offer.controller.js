@@ -12,14 +12,14 @@ export class slspRapidoDigitalOfferController {
                 this.parentCtrl = this.afterCtrl.parentCtrl;
 
                 /* costs per page */
-                //if (this.parentCtrl.isdigitaloffer === true){
+                if (this.parentCtrl.isdigitaloffer === true){
 
-                //this.rapidoCosts = rapidoCosts;
-                //let rapidoCosts = document.querySelectorAll('div[ng-if="$ctrl.digitalTileVisible"] .patron_cost.last_line');
-                //let html = `<div class="rapidoCosts" translate="customized.rapido.digi"></div>`;
+                this.rapidoCosts = rapidoCosts;
+                let rapidoCosts = document.querySelectorAll('div[ng-if="$ctrl.digitalTileVisible"] .patron_cost.last_line');
+                let htmlRc = `<div class="rapidoCosts" translate="customized.rapido.digi"></div>`;
 
-                //    angular.element(rapidoCosts).after(this.$compile(html)(this.$scope));
-                //}
+                    angular.element(rapidoCosts).after(this.$compile(htmlRc)(this.$scope));
+                }
 
 
                 /* reservation button */
@@ -47,7 +47,7 @@ export class slspRapidoDigitalOfferController {
 
 
 
-            }, 300);
+            }, 2500);
         } catch (e) {
             console.error("***SLSP*** an error occured: Rapido \n\n");
             console.error(e.message);

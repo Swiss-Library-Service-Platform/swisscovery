@@ -2,238 +2,91 @@
 
 
 /*CENTRAL PACKAGE*/
-
-
 /*000 General*/
-
-
-/*000 General*/
-
-
 /*090 Other*/
-
-
 /*100 Header section*/
-
-
 /*100 General*/
-
-
+/*101 Navigation*/
 /*110 Logo*/
-
-
 /*120 Links menu*/
-
-
 /*130 Login / languages section*/
-
-
 /*140 Login pop up box*/
-
-
 /*190 Other*/
-
-
 /*200 Homepage*/
-
-
 /*200 General*/
-
-
 /*210 Search box*/
-
-
 /*220 Frames*/
-
-
 /*221 Video Frame*/
-
-
 /*222 Links frame*/
-
-
 /*230 Footer*/
-
-
 /*290 Other*/
-
-
 /*300 Brief Display*/
-
-
 /*300 General*/
-
-
 /*310 Facets*/
-
-
 /*390 Other*/
-
-
 /*400 Full display*/
-
-
 /*400 General*/
-
-
 /*410 Sections' order*/
-
-
 /*411 Sections' order: navigation English*/
-
-
 /*412 Sections' order: navigation German*/
-
-
 /*413 Sections' order: navigation French*/
-
-
 /*414 Sections' order: navigation Italian*/
-
-
 /*420 View online*/
-
-
 /*430 Get it - requests buttons*/
-
-
 /*440 How to get it -  locations, holdings and items*/
-
-
 /*440 General*/
-
-
 /*441 How to get it sections' order*/
-
-
 /*442 Filter bar*/
-
-
 /*443 Items expand for mobiles*/
-
-
+/*444 Related titles*/
 /*449 Other*/
-
-
 /*450 Left navigation bar*/
-
-
 /*460 Rapido*/
-
-
 /*470 Special collections*/
-
-
 /*480 Open URL Service Page*/
-
-
 /*490 Other*/
-
-
 /*491 Icons*/
-
-
 /*500 Library card*/
-
-
 /*500 General*/
-
-
 /*510 Overview*/
-
-
 /*520 Loans*/
-
-
 /*530 Requests*/
-
-
 /*540 Fees*/
-
-
 /*550 Block and messages*/
-
-
 /*560 Personal details*/
-
-
 /*590 Other*/
-
-
 /*900 Others*/
-
-
 /*900 General*/
-
-
 /*910 Help page*/
-
-
 /*920 Collections*/
-
-
 /*930 Forms*/
-
-
 /*940 Favorites*/
-
-
 /*950 Alma viewer*/
-
-
 /*960 Email template*/
-
-
 /*990 Other*/
 
-
 /*LOCAL PACKAGE*/
-
-
 /*01 Primary colour*/
-
-
 /*02 Secondary colour*/
-
-
 /*03 Other local code*/
 
 
 /*************END OF INDEX******************/
 
-
 /*****************************************************************************/
-
-
 /*****************************************************************************/
-
-
 /*****************************************************************************/
-
-
 /****************************START OF THE CENTRAL PACKAGE*********************/
-
-
 /*****************************************************************************/
-
-
 /*****************************************************************************/
-
-
 /*****************************************************************************/
-
-
 /*****************************************************************************/
 
 
 /******************************000 General************************************/
-
-
 /*****************************************************************************/
 
-
 /*000 General*/
-
 
 /*mainly white background*/
 
@@ -249,7 +102,6 @@ prm-topbar .top-nav-bar,
 prm-tree-nav prm-spinner .prm-hue1.diamond {
     background-color: #fff !important;
 }
-
 
 /*font color on white background*/
 
@@ -276,7 +128,6 @@ prm-user-area md-fab-toolbar .md-fab-action-item md-input-container {
     color: #222 !important;
 }
 
-
 /*remove hover effect from title links*/
 
 .md-button.arrow-link-button .button-content:focus,
@@ -300,7 +151,6 @@ prm-tags-list md-chips md-chip .md-chip-content:hover strong {
     box-shadow: none !important;
 }
 
-
 /*background color of bookmarked items*/
 
 .list-item-wrapper .item-bookmarked,
@@ -311,7 +161,6 @@ prm-breadcrumbs .md-chip.persistent-facet,
 prm-breadcrumbs .prm-hue1.md-chip.persistent-facet {
     background-color: #ddd !important;
 }
-
 
 /*hover effect on all Links*/
 
@@ -341,7 +190,6 @@ div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-
     background-color: #6b6b6b !important;
 }
 
-
 /*versions link and other*/
 
 .getit,
@@ -361,7 +209,6 @@ prm-service-links a {
     color: #222 !important;
 }
 
-
 /*icon color and text color in request forms*/
 
 .prm-primary-color,
@@ -380,13 +227,11 @@ md-tab-content .tab-content-header md-input-container md-select-value .md-text {
     color: #222 !important;
 }
 
-
 /*remove capitalized text*/
 
 .md-button {
     text-transform: none;
 }
-
 
 /*menu button*/
 
@@ -405,13 +250,11 @@ span.menu-arrow,
     color: #111 !important;
 }
 
-
 /*background buttons*/
 
 prm-search-bookmark-filter .md-button {
     background-color: #fff !important;
 }
-
 
 /*the main color border on mobile view*/
 
@@ -431,7 +274,6 @@ prm-search-bookmark-filter .md-button {
     white-space: nowrap;
 }
 
-
 /*alertbar*/
 
 .bar.alert-bar,
@@ -441,13 +283,15 @@ prm-search-bookmark-filter .md-button {
     border: none !important;
 }
 
+.bar.alert-bar.layout-align-start-center.layout-row[ng-if="$ctrl.locations.length==0 && (!$ctrl.otherLocations || $ctrl.otherLocations.length==0)"] {
+    margin-left: 10px;
+}
 
 /*background color of the signin window and the fullscreen navigation*/
 
 md-backdrop._md-dialog-backdrop.md-opaque.md-primoExplore-theme {
     background-color: #1f1f1f !important;
 }
-
 
 /*text color of the signin window and the fullscreen navigation*/
 
@@ -460,24 +304,15 @@ md-dialog.light-on-dark-dialog a:hover {
     color: #fff !important;
 }
 
-
 /*090 Other*/
 
-
 /*****************************************************************************/
-
-
 /******************************100 Header section*****************************/
-
-
 /*****************************************************************************/
-
 
 /*100 General*/
 
-
-/*navigation*/
-
+/*101 Navigation*/
 
 /*Font Navigation and buttons*/
 
@@ -489,7 +324,6 @@ prm-topbar>div>prm-user-area-expandable>md-menu>button>span {
     font-weight: 500 !important;
     color: #111 !important;
 }
-
 
 /*hover effect Navigation and buttons*/
 
@@ -511,9 +345,7 @@ button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:no
     color: #111 !important;
 }
 
-
 /*110 Logo*/
-
 
 /*hide hover effect on Library Logo*/
 
@@ -521,12 +353,9 @@ button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:no
     background: none;
 }
 
-
 /*120 Links menu*/
 
-
 /*130 Login / languages section*/
-
 
 /*Header for mobiles*/
 
@@ -543,7 +372,6 @@ button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:no
 primo-explore.logged-out prm-user-area-expandable md-menu {
     display: none;
 }
-
 
 /*Switch language*/
 
@@ -577,7 +405,6 @@ bcu-lang-switch-component a:hover {
     color: rgba(255, 255, 255, 0.85);
 }
 
-
 /*hiding Refworks from the pulldown menu*/
 
 .my-refworks-ctm,
@@ -585,16 +412,13 @@ bcu-lang-switch-component a:hover {
     display: none;
 }
 
-
 /*140 Login pop up box*/
-
 
 /*hiding the Library Logo in the login window*/
 
 .login-header {
     display: none !important;
 }
-
 
 /*login-box make arrows clickable*/
 
@@ -618,7 +442,6 @@ prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-
     width: 100%;
 }
 
-
 /*background color*/
 
 .full-view-spacer,
@@ -626,9 +449,7 @@ md-content.padded-container.layout-fill._md.md-primoExplore-theme.layout-row {
     background-color: #fcfcfc !important;
 }
 
-
 /*190 Other*/
-
 
 /*X button close menu */
 
@@ -636,18 +457,11 @@ button#mainMenuFullCloseButton:focus {
     color: #ffffff !important;
 }
 
-
 /*****************************************************************************/
-
-
 /*********************************200 Homepage********************************/
-
-
 /*****************************************************************************/
-
 
 /*200 General*/
-
 
 /*backgound of the Textboxes Homepage*/
 
@@ -657,14 +471,12 @@ md-card.default-card._md.md-primoExplore-theme {
     border-radius: 3px;
 }
 
-
 /*first header of the Textboxes*/
 
 .cardbox h1 {
     font-size: 48px;
     line-height: 56px;
 }
-
 
 /*second header of the Textboxes*/
 
@@ -673,14 +485,12 @@ md-card.default-card._md.md-primoExplore-theme {
     line-height: 36px;
 }
 
-
 /*third header of the Textboxes (if needed)*/
 
 .cardbox h3 {
     font-size: 26px;
     line-height: 30px;
 }
-
 
 /*removes the upper and lower space in a list */
 
@@ -689,7 +499,6 @@ md-card.default-card._md.md-primoExplore-theme {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
-
 
 /*links in the textboxes*/
 
@@ -710,9 +519,7 @@ prm-service-details a:hover {
     background-color: rgba(47, 47, 47, 0.1) !important;
 }
 
-
 /*210 Search box*/
-
 
 /*switch to advanced search button*/
 
@@ -732,7 +539,6 @@ button.dismiss-alert-button:hover {
     background-color: #111;
 }
 
-
 /*switch to simple search button*/
 
 button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
@@ -742,12 +548,9 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     border: solid;
 }
 
-
 /*220 Frames*/
 
-
 /*221 Video Frame*/
-
 
 /*responsive Video Frame*/
 
@@ -766,8 +569,7 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     border: 0;
 }
 
-
-/*222 Links frame *** ATTENTION: ONLY FOR CP*/
+/*222 Links frame *** Attetion: used only for the central package*/
 
 md-card.cardbox.default-card.quicklinksbox md-card-content {
     padding: 0px;
@@ -792,9 +594,7 @@ md-card.cardbox.default-card.quicklinksbox._md.md-primoExplore-theme>md-card-con
     background-color: unset !important;
 }
 
-
 /*230 Footer*/
-
 
 /*footer layout*/
 
@@ -803,14 +603,12 @@ md-card.prm-primary-bg.psfooter {
     padding: 0 8%;
 }
 
-
 /*footer layout*/
 
 md-card.prm-primary-bg.psfooter-legal {
     margin: 1px 0 0 0;
     padding: 0 8%;
 }
-
 
 /*responsive footer layout for computer screens*/
 
@@ -820,7 +618,6 @@ md-card.prm-primary-bg.psfooter-legal {
     }
 }
 
-
 /*footer links*/
 
 md-icon.ps_icon,
@@ -829,18 +626,15 @@ a.ps_link {
     text-decoration: underline;
 }
 
-
 /*md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover {
                     background-color: rgba(61,110,148,.1) !important;
                 }*/
-
 
 /*footer text*/
 
 md-card-content.prm-primary-bg {
     font-weight: 300;
 }
-
 
 /*links in the legal part of the footer*/
 
@@ -849,7 +643,6 @@ span.legal {
     font-size: 14px;
     font-weight: 300;
 }
-
 
 /************************************************************************************************
             span.legal {
@@ -862,7 +655,6 @@ span.legal>a {
     font-weight: 600;
 }
 
-
 /*main container width for footer positioning*/
 
 prm-static.md-padding.flex {
@@ -870,28 +662,19 @@ prm-static.md-padding.flex {
     padding: 0;
 }
 
-
 /*290 Other*/
 
-
 /*****************************************************************************/
-
-
 /******************************300 Brief Display******************************/
-
-
 /*****************************************************************************/
-
 
 /*300 General*/
-
 
 /*backgound search results boxes*/
 
 .list-item-wrapper {
     background-color: #f9f9f9;
 }
-
 
 /*title color*/
 
@@ -904,13 +687,11 @@ prm-brief-result .item-title span:hover {
     background-color: rgba(47, 47, 47, 0.1) !important;
 }
 
-
 /*page select buttons*/
 
 a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     color: white !important;
 }
-
 
 /*Save query button*/
 
@@ -919,9 +700,7 @@ a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     background-color: rgba(17, 17, 17, 0.10) !important;
 }
 
-
 /*310 Facets*/
-
 
 /*facet titles*/
 
@@ -929,35 +708,26 @@ span.section-title-header:hover {
     color: #8a8a8a !important;
 }
 
-
 /*facet "show more" button*/
 
 .sidebar-section .md-button.button-as-link.link-alt-color:hover {
     background-color: rgba(17, 17, 17, 0.17) !important;
 }
 
-
 /*390 Other*/
 
 
 /*****************************************************************************/
-
-
 /******************************400 Full display*******************************/
-
-
 /*****************************************************************************/
 
-
 /*400 General*/
-
 
 /*hide "search inside" for print journals*/
 
 .search-within-p-only {
     display: none
 }
-
 
 /*library info icon*/
 
@@ -967,20 +737,17 @@ slsp-i-button-component>div>span>a>img {
     margin: 4px 0px;
 }
 
-
 /*fullview background of the left part*/
 
 .md-dialog-container.fixed-container {
     background-color: #444 !important;
 }
 
-
 /*fullview background color*/
 
 .full-view-inner-container.flex {
     background-color: #fcfcfc;
 }
-
 
 /*Full display background*/
 
@@ -993,7 +760,6 @@ prm-full-view-service-container {
     border: none;
     background-color: unset;
 }
-
 
 /* Sections titles' font weight and space */
 
@@ -1010,14 +776,12 @@ prm-full-view-service-container {
     padding-left: unset;
 }
 
-
 /* Full display left navigation bar position */
 
 .prm-full-view-dialog prm-full-view .services-index-under,
 prm-full-view-cont prm-full-view .services-index-under {
     top: 300px;
 }
-
 
 /* Physical items and e-resources boxes background colour and space between items */
 
@@ -1045,7 +809,6 @@ prm-requests .separate-list-items md-list-item:hover {
     background-color: #f5f5f5 !important;
 }
 
-
 /*Location icon (hidden for mobiles)*/
 
 @media only screen and (min-width: 600px) {
@@ -1060,7 +823,6 @@ prm-requests .separate-list-items md-list-item:hover {
         margin-right: 3px;
     }
 }
-
 
 /* Alignment of full display elements */
 
@@ -1142,6 +904,30 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
     }
 }
 
+/*button alignment order form*/
+
+prm-get-it-request .margin-buttons {
+    flex-direction: column;
+}
+
+#offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-secondary.md-button.md-primoExplore-theme.md-ink-ripple {
+    border: 1px solid gray;
+    margin-right: 0px;
+}
+
+#offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple {
+    margin-right: 0px;
+}
+
+md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex>form>div.layout-align-end-stretch.layout-column>div>button {
+    min-width: 97%;
+}
+
+@media only screen and (max-width: 767px) {
+    prm-get-it-request .margin-buttons {
+        right: -2px;
+    }
+}
 
 /*Available other members button alignment*/
 
@@ -1150,6 +936,31 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
     margin: 14px;
 }
 
+/*Digitization button CHF label*/
+
+.DigiButtonLabel,
+.DigiButtonLabel1 {
+    display: none;
+}
+
+.DigiButtonLabel:nth-child(1),
+.DigiButtonLabel1:nth-child(2) {
+    display: flex;
+}
+
+.DigiButtonLabel,
+.DigiButtonLabel1 {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 6px;
+    background-color: rgb(75 75 75 / 65%);
+    line-height: 22px;
+    font-size: smaller;
+    padding: 0 5px;
+    color: #fff;
+    float: right;
+    border-radius: 3px;
+}
 
 /*410 Sections' order*/
 
@@ -1207,7 +1018,6 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
     order: 11 !important;
 }
 
-
 /*411 Sections' order: navigation English*/
 
 [aria-label="Top"] {
@@ -1257,7 +1067,6 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
 [aria-label="Virtual Browse"] {
     order: 11 !important;
 }
-
 
 /*412 Sections' order: navigation German*/
 
@@ -1309,7 +1118,6 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
     order: 11 !important;
 }
 
-
 /*413 Sections' order: navigation French*/
 
 [aria-label="Haut"] {
@@ -1359,7 +1167,6 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
 [aria-label="Etag&#232;re virtuelle"] {
     order: 11 !important;
 }
-
 
 /*414 Sections' order: navigation Italian*/
 
@@ -1411,7 +1218,6 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
     order: 11 !important;
 }
 
-
 /*420 View online*/
 
 #getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items>md-list {
@@ -1429,28 +1235,28 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
     /* padding: 10px; */
 }
 
+/*Hide fees message*/
 
-/*View online icon*/
+#getit_link1_0>div>prm-full-view-service-container>div.section-head>prm-service-header>div>div {
+    display: none;
+}
 
+/*Show icon*/
 
-/*      .iconDiv {
-				content: '';
-				background-image: url('data:image/svg+xml;UTF-8,<svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 185 185"><g id="System_icons"><g><rect width="185" height="185" fill="none" opacity=".2"/><g><g><circle cx="130" cy="130" r="10.57" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/><path d="M145.26,152.31c-4.34,2.98-9.6,4.69-15.26,4.69-14.91,0-27-12.09-27-27s12.09-27,27-27,27,12.09,27,27v2.35c0,4.54-3.68,8.21-8.21,8.21s-8.22-3.68-8.22-8.21v-2.35" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/></g><g><path d="M88.91,130H37c-4.97,0-9-4.03-9-9V55c0-4.96,4.03-9,9-9h108c4.97,0,9,4.04,9,9v42.32" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/><polyline points="151 49 91 97 31 49" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/></g></g></g></g></svg>');
-				background-repeat: no-repeat;
-				background-color: white;
-				border-radius: 25px;
-				width: 50px;
-				height: 50px;
-				display: block;
-				visibility: visible;
-				margin: 0px 10px 20px 10px;
-				padding: 25px;
-			}
-    */
+#getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items>md-list>div>md-list-item {
+    margin-right: 10px;
+    margin-left: 86px;
+    min-width: 88%;
+}
 
+@media only screen and (max-width: 960px) {
+    #getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items>md-list>div>md-list-item {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
 
 /*430 Get it - requests buttons*/
-
 
 /*Requests buttons*/
 
@@ -1467,19 +1273,21 @@ prm-opac>div>prm-request-services>div>div {
     line-height: 45px;
 }
 
+/*Hide fees message for loan form*/
+
+form.almaRequestLoan div.courier-info.bar.alert-bar {
+    display: none;
+}
 
 /*440 How to get it / Pick up on site -  locations, holdings and items*/
 
-
 /*440 How to get it / Pick up on site: general*/
-
 
 /*space between item details in Fullview*/
 
 #item-details>div>div {
     margin-bottom: .8em !important;
 }
-
 
 /*full display Resource sharing expand section*/
 
@@ -1489,7 +1297,6 @@ prm-alma-other-members button.layout-fill {
     min-height: auto;
 }
 
-
 /*Hide physical items box shadow*/
 
 prm-opac md-list md-list-item,
@@ -1497,14 +1304,12 @@ prm-location-items md-list {
     box-shadow: none;
 }
 
-
 /*Hide "location" label for physical items*/
 
 prm-location-items>h3,
 prm-locations>div.layout-align-space-between-center.layout-row {
     display: none;
 }
-
 
 /*Look of the section and icon*/
 
@@ -1540,31 +1345,23 @@ md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-locati
 }
 
 md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md:before {
-    /* content: '';
-				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5,1L2,6V8H21V6M16,10V17H19V10M2,22H21V19H2M10,10V17H13V10M4,10V17H7V10H4Z" /></svg>');
-				background-repeat: no-repeat;
-				background-color: white;
-				border-radius: 25px; 
-				width: 50px;
-				height: 50px;
-				display: block;*/
     margin: 0px 10px 20px 10px;
     padding: 25px;
-    /* visibility: hidden;*/
 }
 
+md-list.separate-list-items.md-primoExplore-theme.layout-column.icnLblViewitItems {
+    min-height: 100px;
+}
 
-/* 
-			 md-content > prm-location-items > md-list > md-list-item:before {
-				margin-left: -100px;
-			}
-           
-			md-content > prm-locations > div.padding-left-medium > md-list:nth-child(1) > md-list-item:nth-child(1) > prm-location:before, 
-			md-content > md-list:nth-child(1) > md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md:nth-child(1):before,
-			md-content > prm-location-items > md-list  md-list-item:nth-child(1):before {
-				visibility: visible;
-			}  */
+md-list.separate-list-items.margin-bottom-medium.padding-bottom-zero.md-primoExplore-theme {
+    margin-bottom: 0;
+}
 
+md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 10px !important;
+}
 
 /*441 How to get it sections' order*/
 
@@ -1591,9 +1388,7 @@ primo-explore.alert alma-htgi-svc {
     font-size: 1em;
 }
 
-
 /*442 Filter bar*/
-
 
 /*locations filter by default: hide filter button*/
 
@@ -1605,13 +1400,11 @@ prm-location-items button[ng-if='($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.i
     display: none !important;
 }
 
-
 /*location filter "Clear" button*/
 
 prm-locations-filter .md-button.button-as-link:hover:not([disabled]) {
     background-color: rgba(17, 17, 17, 0.10) !important;
 }
-
 
 /*filter bar*/
 
@@ -1634,7 +1427,6 @@ html#primoExploreRoot {
     overflow-y: auto !important;
 }
 
-
 /* Filter bar background and border color */
 
 .bar.filter-bar {
@@ -1642,7 +1434,6 @@ html#primoExploreRoot {
     border-color: rgb(17 17 17 / 0%) !important;
     padding-left: 0px !important;
 }
-
 
 /*443 Items expand for mobiles*/
 
@@ -1668,9 +1459,41 @@ html#primoExploreRoot {
     }
 }
 
+/*444 Related titles*/
+
+/*Locations for related titles - "show more" button look*/
+
+[translate="nui.locations.related_locations"] {
+    padding: 29px 0px 0px 14px !important;
+}
+
+[translate="fulldisplay.holdings.showmore"] {
+    border: 1px solid #a4a4a4;
+    border-radius: 2px;
+    padding: 8px;
+}
+
+[ng-if="$ctrl.relatedLocations.length>$ctrl.relatedLocationsListLimit"] {
+    padding: 0px;
+    margin: 0px 14px !important;
+    background-color: white;
+}
+
+/*Locations for related titles - little location icon alignment*/
+
+md-content>md-list>md-list-item>button>div.layout-align-space-between-center.layout-row.flex-100>div>h3 {
+    display: flex;
+    align-items: center;
+}
+
+/*Background color*/
+
+md-list.md-primoExplore-theme.icnLblOtherMembersP2,
+md-list.md-primoExplore-theme.icnLblOtherMembersE {
+    background-color: #f3f3f3;
+}
 
 /*449 Other*/
-
 
 /*Back buttons*/
 
@@ -1706,7 +1529,6 @@ md-tabs-content-wrapper div>button.back-button.button-with-icon.zero-margin.md-b
     vertical-align: text-bottom;
 }
 
-
 /*Space around back buttons*/
 
 md-tab-content .tab-header {
@@ -1717,7 +1539,6 @@ prm-alma-other-members button.layout-fill {
     margin-bottom: 0.5em !important;
 }
 
-
 /*Buttons margin*/
 
 prm-request-services,
@@ -1725,7 +1546,6 @@ prm-opac,
 prm-location-holdings .md-button.button-as-link {
     margin-top: 5px;
 }
-
 
 /*450 Left navigation bar*/
 
@@ -1747,7 +1567,6 @@ prm-full-view .services-index-under .md-button {
 prm-full-view .services-index-under .md-button span {
     text-transform: none;
 }
-
 
 /*460 Rapido*/
 
@@ -1777,9 +1596,6 @@ prm-service-physical-best-offer .main_tiles {
 }
 
 prm-service-physical-best-offer .icon-wrapper {
-    /*  width: 25%;
-			   margin: 2em 4px;
-			   justify-content: center; */
     display: none;
 }
 
@@ -1830,18 +1646,7 @@ prm-get-it-request .offer_details_main_tail {
     line-height: 14px;
 }
 
-
 /*Rapido buttons*/
-
-
-/*#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital, prm-service-physical-best-offer .get_it_btn_physical {
-				color: #ffffff !important;
-				background-color: #4E4A99 !important;
-			}
-			#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover, prm-service-physical-best-offer .get_it_btn_physical:hover {
-				background-color: #393765 !important;
-			}*/
-
 
 /*Rapido box*/
 
@@ -1886,6 +1691,23 @@ prm-get-it-request .offer_details_main_tail {
     }
 }
 
+/*Name of IZ and libraries divided more lines in the forms*/
+
+@media only screen and (max-width: 640px) {
+    div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable {
+        max-width: 80%;
+    }
+    #prm_nui\.ngrs\.pickup\.information\.pickupInstitution>div.md-text>span,
+    #prm_nui\.ngrs\.pickup\.information\.pickupLibrary>div.md-text>span {
+        white-space: normal;
+        height: unset;
+        margin: 5px 0;
+    }
+    md-option#prm_nui\.ngrs\.pickup\.information\.pickupInstitution,
+    md-option#prm_nui\.ngrs\.pickup\.information\.pickupLibrary {
+        height: auto;
+    }
+}
 
 /*Rapido customized labels*/
 
@@ -1902,6 +1724,22 @@ span.reading-Room-Pod {
     margin-left: 5px;
 }
 
+/*Local courier label*/
+
+.courierInfo {
+    max-width: 64px;
+    margin: 24px 0px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 4px;
+    border: #d3d3d3 1px solid;
+}
+
+/*Hide Local courier label*/
+
+.courierInfo {
+    display: none;
+}
 
 /*Reservation button*/
 
@@ -1909,44 +1747,17 @@ span.noOffer {
     display: none;
 }
 
-
 /*Rapido physical icon*/
 
 #item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon svg {
     display: none;
 }
 
-
-/* #item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon:after {
-				content: ' ';
-				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L10.11,5.22L16,8.61L17.96,7.5L12,4.15M6.04,7.5L12,10.85L13.96,9.75L8.08,6.35L6.04,7.5M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" /></svg>');
-				background-repeat: no-repeat;
-				background-color: white;
-				border-radius: 25px;
-				width: 50px;
-				height: 50px;
-				display: block;
-			} */
-
-
 /*Rapido digital icon*/
 
 #item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon svg {
     display: none;
 }
-
-
-/* 			#item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer > div > div.icon-wrapper > prm-icon > md-icon:after {
-				content: ' ';
-				background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12,15C12.81,15 13.5,14.7 14.11,14.11C14.7,13.5 15,12.81 15,12C15,11.19 14.7,10.5 14.11,9.89C13.5,9.3 12.81,9 12,9C11.19,9 10.5,9.3 9.89,9.89C9.3,10.5 9,11.19 9,12C9,12.81 9.3,13.5 9.89,14.11C10.5,14.7 11.19,15 12,15M12,2C14.75,2 17.1,3 19.05,4.95C21,6.9 22,9.25 22,12V13.45C22,14.45 21.65,15.3 21,16C20.3,16.67 19.5,17 18.5,17C17.3,17 16.31,16.5 15.56,15.5C14.56,16.5 13.38,17 12,17C10.63,17 9.45,16.5 8.46,15.54C7.5,14.55 7,13.38 7,12C7,10.63 7.5,9.45 8.46,8.46C9.45,7.5 10.63,7 12,7C13.38,7 14.55,7.5 15.54,8.46C16.5,9.45 17,10.63 17,12V13.45C17,13.86 17.16,14.22 17.46,14.53C17.76,14.84 18.11,15 18.5,15C18.92,15 19.27,14.84 19.57,14.53C19.87,14.22 20,13.86 20,13.45V12C20,9.81 19.23,7.93 17.65,6.35C16.07,4.77 14.19,4 12,4C9.81,4 7.93,4.77 6.35,6.35C4.77,7.93 4,9.81 4,12C4,14.19 4.77,16.07 6.35,17.65C7.93,19.23 9.81,20 12,20H17V22H12C9.25,22 6.9,21 4.95,19.05C3,17.1 2,14.75 2,12C2,9.25 3,6.9 4.95,4.95C6.9,3 9.25,2 12,2Z" /></svg>');
-				background-repeat: no-repeat;
-				background-color: white;
-				border-radius: 25px;
-				width: 50px;
-				height: 50px;
-				display: block;
-			} */
-
 
 /*Hide fees link when logged out*/
 
@@ -1955,6 +1766,11 @@ primo-explore.logged-out .rapidoFeesLink {
     display: none;
 }
 
+/*Hide Fees Link in the link section*/
+
+#links .rapidoFeesLink {
+    display: none;
+}
 
 /*470 Special external collections*/
 
@@ -1989,8 +1805,7 @@ primo-explore.logged-out .rapidoFeesLink {
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 3%), 0 5px 5px -3px rgb(0 0 0 / 7%);
 }
 
-
-/* mfa, tma */
+/* Max Frisch Archive, Thomas Mann Archive*/
 
 .slsp-archives-hide alma-htgi-svc>* {
     display: none;
@@ -2000,8 +1815,7 @@ primo-explore.logged-out .rapidoFeesLink {
     display: block;
 }
 
-
-/* hsa */
+/* Hochschule Archive*/
 
 .slsp-archives-hide prm-alma-viewit>* {
     display: none;
@@ -2010,7 +1824,6 @@ primo-explore.logged-out .rapidoFeesLink {
 .slsp-archives-hide prm-alma-viewit-after {
     display: block;
 }
-
 
 /* availability-line HSA, if no online resource */
 
@@ -2022,564 +1835,11 @@ prm-search-result-availability-line.slsp-hsa-no-online .availability-status {
     color: gray;
 }
 
-
 /*480 Open URL Service Page*/
-
 
 /*490 Other*/
 
-
-/*****************************************************************************/
-
-
-/******************************500 Library card*******************************/
-
-
-/*****************************************************************************/
-
-
-/*500 General*/
-
-
-/*Library card: IZ selector for mobiles*/
-
-@media only screen and (max-width: 599px) {
-    div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable,
-    prm-account prm-linked-user-selector {
-        font-size: 16px !important;
-    }
-}
-
-
-/*510 Overview*/
-
-
-/*520 Loans*/
-
-
-/*Library card: hide not renewable messages in list of loans for mobiles*/
-
-@media only screen and (max-width: 599px) {
-    slsp-renew-item-text-component {
-        display: none;
-    }
-}
-
-
-/*Library card: Show not renewable messages in list of loans*/
-
-prm-loan .md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex {
-    order: 1;
-    /*flex-flow: column;*/
-    max-width: 75%;
-}
-
-prm-loan-after {
-    order: 2;
-    align-self: baseline;
-    flex: 15%;
-}
-
-prm-loan-after span.md-subhead {
-    font-size: small;
-    line-height: 18px;
-    color: #d84f26;
-    padding: 22px 0;
-}
-
-prm-loan>div.align-self-stretch.flex-xs-50 {
-    order: 4;
-}
-
-prm-loan>div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex>div:nth-child(3) {
-    min-width: 100%;
-}
-
-prm-loan>div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex>div:nth-child(4) {
-    min-width: 50%;
-    margin: 10px 0;
-}
-
-prm-loan>div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex>div:nth-child(5) {
-    min-width: 43%;
-    justify-content: flex-end;
-    align-items: baseline;
-}
-
-#accountoverview>md-tabs>md-tabs-content-wrapper>md-tab-content:nth-child(2)>div>div {
-    flex-direction: column;
-}
-
-prm-loan .not-renewable {
-    padding: 6px 0px 6px 6px;
-    display: block;
-    border: 1px #d23333 solid;
-    max-width: min-content;
-}
-
-
-/*530 Requests*/
-
-
-/*540 Fees*/
-
-
-/*550 Block and messages*/
-
-
-/*560 Personal details*/
-
-
-/*Library card Personal details display*/
-
-#personalDetails>md-card-content>div {
-    flex-flow: column;
-}
-
-#personalDetails .md-input-has-value.layout-column {
-    min-width: 400px;
-}
-
-prm-personal-info-after {
-    display: flex;
-}
-
-slsp-edit-personal-details-component#SLSPeditPersonalDetails {
-    background-color: #f0f0f0;
-    padding-top: 30px;
-}
-
-slsp-edit-personal-details-component a.courier-info.bar.alert-bar.layout-align-left-center.md-button.md-primoExplore-theme.layout-align-start-center.layout-row {
-    text-decoration: none !important;
-}
-
-
-/*590 Other*/
-
-
-/*****************************************************************************/
-
-
-/*********************************900 Others**********************************/
-
-
-/*****************************************************************************/
-
-
-/*900 General*/
-
-
-/*910 Help page*/
-
-#help img {
-    max-width: 100%;
-    height: auto;
-}
-
-img.icon_up1 {
-    width: 16px;
-    float: right;
-    margin: 13px 2px;
-}
-
-img.icon_up2 {
-    width: 10px;
-    float: right;
-    margin: 4px;
-}
-
-a>h3:hover {
-    background-color: #eee !important;
-}
-
-
-/*920 Collections*/
-
-
-/*Collections navigation bar*/
-
-prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color {
-    box-shadow: none;
-    color: #ffffff !important;
-    background: #1111117a !important;
-    line-height: 24px;
-}
-
-prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color:hover {
-    color: #ffffff !important;
-    background-color: #11111152 !important;
-}
-
-
-/*930 Forms*/
-
-
-/*alertbar for the courier fees info*/
-
-.courier-info {
-    margin: 0px 8px;
-}
-
-.courier-info.bar.alert-bar {
-    height: unset;
-    margin: 6px 8px;
-    padding: .5em .5em 0.25em;
-    text-align: center;
-}
-
-
-/* Reset form button */
-
-prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex>form>div.layout-align-end-stretch.layout-column>button {
-    border: 1px solid gray;
-}
-
-
-/*940 Favorites*/
-
-
-/*950 Alma viewer*/
-
-
-/*960 Email template*/
-
-
-/*990 Other*/
-
-
-/*991 ETH Mapongo*/
-
-md-list-item {
-    flex-wrap: wrap;
-}
-
-md-list-item>prm-location-item-after {
-    order: 3;
-    padding: 0 1em 0 1em;
-    flex-basis: 100%;
-}
-
-.eth-mapongo-qrc {
-    margin-right: 10px;
-}
-
-.eth-mapongo-qrc img {
-    margin-bottom: 1em;
-    width: 100%;
-}
-
-.eth-mapongo-qrc img+div {
-    display: none;
-}
-
-.eth-mapongo-qrc img {
-    max-width: 100%;
-    height: auto;
-}
-
-.eth-mapongo-link img {
-    max-width: 100%;
-    height: auto;
-    max-width: 100%;
-    width: 65%;
-    margin-top: 13px;
-}
-
-@media only screen and (max-width: 960px) {
-    .eth-mapongo-qrc img {
-        max-width: 70%;
-    }
-    .eth-mapongo-link img {
-        width: 65%;
-    }
-}
-
-@media only screen and (max-width: 599px) {
-    .eth-mapongo-link {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    .eth-mapongo-link img {
-        width: 75%;
-    }
-}
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/****************************END OF THE CENTRAL PACKAGE***********************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/****************************START OF THE LOCAL PACKAGE***********************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************01 Primary colour*******************************/
-
-
-/*****************************************************************************/
-
-
-/*background of the primary color*/
-
-.prm-primary-bg,
-prm-atoz-search-bar,
-prm-browse-search-bar,
-prm-collection-gallery-header .collection-header-inner,
-prm-search-bar,
-prm-newspapers-search-bar,
-prm-spinner.overlay-cover.light-on-dark:after,
-prm-tags-search-bar,
-prm-tree-nav prm-spinner .diamond,
-.prm-primary-bg,
-md-checkbox.md-checked .md-icon,
-md-tabs md-ink-bar,
-md-radio-button.md-checked .md-on,
-button.switch-to-simple,
-.md-button.button-confirm,
-prm-request-services .md-button.button-as-link,
-prm-location-items md-list prm-service-button .md-button.button-as-link,
-#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
-prm-service-physical-best-offer .get_it_btn_physical {
-    background-color: #4E4A99 !important;
-}
-
-@media only screen and (max-width: 599px) {
-    prm-topbar .top-nav-bar {
-        border-color: #4E4A99 !important;
-    }
-}
-
-
-/*mouse over background of the links and buttons (primary-color)*/
-
-md-card.prm-primary-bg.psfooter>md-card-content a:hover,
-md-icon.ps_icon:hover,
-a.ps_link:hover,
-a.ps_link.legal:hover,
-span.legal a:hover,
-button.switch-to-advanced:hover,
-button.switch-to-simple:hover,
-.md-button.button-confirm:hover,
-.md-button.button-as-link:hover:not([disabled]),
-#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover,
-prm-service-physical-best-offer .get_it_btn_physical:hover {
-    background-color: #393765 !important;
-}
-
-
-/*font color of the primary color*/
-
-.prm-primary-bg,
-prm-atoz-search-bar,
-prm-browse-search-bar,
-prm-collection-gallery-header .collection-header-inner,
-prm-newspapers-search-bar,
-prm-spinner.overlay-cover.light-on-dark:after,
-prm-tags-search-bar,
-prm-tree-nav prm-spinner .diamond,
-.prm-primary-bg,
-md-checkbox.md-checked .md-icon:after,
-.md-button.switch-to-advanced,
-button.switch-to-simple,
-span.legal,
-span.legal>a,
-a.ps_link.legal,
-.ps_icon,
-md-card.prm-primary-bg.psfooter>md-card-content a,
-.md-button.button-confirm,
-prm-request-services .md-button.button-as-link,
-prm-request-services .md-button.button-as-link:hover:not([disabled]),
-prm-service-button .md-button.button-as-link:hover:not([disabled]),
-prm-location-items md-list prm-service-button .md-button.button-as-link#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
-prm-service-physical-best-offer .get_it_btn_physical,
-button#get_it_btn_digital {
-    color: #fff !important;
-}
-
-button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
-    border-color: #fff !important;
-}
-
-
-/*****************selection color of the primary color*****************/
-
-.prm-primary-bg ::selection {
-    background: #3a8888;
-}
-
-
-/*****************************************************************************/
-
-
-/*****************************02 Secondary colour*****************************/
-
-
-/*****************************************************************************/
-
-
-/*background of the secondary color**/
-
-.bar.alert-bar,
-.classic-input .search-scope,
-.prm-alert-bg,
-#rapidoOffer prm-rapido-no-offer-message .main_tile {
-    background-color: #99d0d0 !important;
-}
-
-.text-highlight,
-mark,
-prm-location-items>md-list>md-list-item>div>div>div>div>prm-service-button>button {
-    box-shadow: inset 0 -0.15em 0 0 #99d0d0;
-}
-
-
-/*mouse over background of the links and buttons (secondary-color)*/
-
-
-/*.bar prm-authentication .md-button:hover:not([disabled]),*/
-
-div.alert-bar .md-button:hover:not([disabled]),
-slsp-edit-personal-details-component a.bar.alert-bar:hover {
-    background-color: #b6fafa !important;
-}
-
-
-/*font color of the secondary color*/
-
-.bar.alert-bar,
-.classic-input .search-scope,
-.prm-alert-bg,
-.bar prm-authentication .md-button,
-button.dismiss-alert-button,
-div.courier-info>span a,
-#no_offer_message_out_text_part1,
-#no_offer_message_out_text_notClickable {
-    color: #111111 !important;
-}
-
-
-/*selection color of the secondary color*/
-
-.bar.alert-bar ::selection {
-    background: #9d9cbd;
-}
-
-
-/*****************************************************************************/
-
-
-/*******************************03 Other local code***************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/****************************END OF THE LOCAL PACKAGE*************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-
-/*****************************************************************************/
-
-md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.md-no-proxy._md {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0 10px !important;
-}
-
-.DigiButtonLabel,
-.DigiButtonLabel1 {
-    display: none;
-}
-
-.DigiButtonLabel:nth-child(1),
-.DigiButtonLabel1:nth-child(2) {
-    display: flex;
-}
-
-.DigiButtonLabel,
-.DigiButtonLabel1 {
-    position: relative;
-    margin-top: 8px;
-    margin-left: 6px;
-    background-color: rgb(75 75 75 / 65%);
-    line-height: 22px;
-    font-size: smaller;
-    padding: 0 5px;
-    color: #fff;
-    float: right;
-    border-radius: 3px;
-}
-
-
-/*fees link not in view online*/
-
-#getit_link1_0>div>prm-full-view-service-container>div.section-head>prm-service-header>div>div {
-    display: none;
-}
-
-#getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items>md-list>div>md-list-item {
-    margin-right: 10px;
-    margin-left: 86px;
-    min-width: 88%;
-}
-
-@media only screen and (max-width: 960px) {
-    #getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items>md-list>div>md-list-item {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-}
+/*491 Icons*/
 
 .icnWrp {
     flex-direction: column;
@@ -2648,48 +1908,120 @@ prm-service-physical-best-offer .icnWrp {
     min-width: 64px;
 }
 
-.courierInfo {
-    max-width: 64px;
-    margin: 24px 0px;
-    background-color: white;
-    padding: 6px;
-    border-radius: 4px;
-    border: #d3d3d3 1px solid;
-}
+/*****************************************************************************/
+/******************************500 Library card*******************************/
+/*****************************************************************************/
 
-md-list.separate-list-items.md-primoExplore-theme.layout-column.icnLblViewitItems {
-    min-height: 100px;
-}
+/*500 General*/
 
-md-list.separate-list-items.margin-bottom-medium.padding-bottom-zero.md-primoExplore-theme {
-    margin-bottom: 0;
-}
-
-
-/*library card*/
+/*Align check mark icon in the IZs list left block*/
 
 prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clickable {
     flex-wrap: unset;
 }
 
+/*Library card: IZ selector for mobiles*/
 
-/*background color*/
-
-md-list.md-primoExplore-theme.icnLblOtherMembersP2,
-md-list.md-primoExplore-theme.icnLblOtherMembersE {
-    background-color: #f3f3f3;
+@media only screen and (max-width: 599px) {
+    div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable,
+    prm-account prm-linked-user-selector {
+        font-size: 16px !important;
+    }
 }
 
+/*510 Overview*/
 
-/*little location icon*/
+/*520 Loans*/
 
-md-content>md-list>md-list-item>button>div.layout-align-space-between-center.layout-row.flex-100>div>h3 {
+/*Library card: hide not renewable messages in list of loans for mobiles*/
+
+@media only screen and (max-width: 599px) {
+    slsp-renew-item-text-component {
+        display: none;
+    }
+}
+
+/*Library card: Show not renewable messages in list of loans*/
+
+prm-loan .md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex {
+    order: 1;
+    /*flex-flow: column;*/
+    max-width: 75%;
+}
+
+prm-loan-after {
+    order: 2;
+    align-self: baseline;
+    flex: 15%;
+}
+
+prm-loan-after span.md-subhead {
+    font-size: small;
+    line-height: 18px;
+    color: #d84f26;
+    padding: 22px 0;
+}
+
+prm-loan>div.align-self-stretch.flex-xs-50 {
+    order: 4;
+}
+
+prm-loan>div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex>div:nth-child(3) {
+    min-width: 100%;
+}
+
+prm-loan>div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex>div:nth-child(4) {
+    min-width: 50%;
+    margin: 10px 0;
+}
+
+prm-loan>div.md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex>div:nth-child(5) {
+    min-width: 43%;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+#accountoverview>md-tabs>md-tabs-content-wrapper>md-tab-content:nth-child(2)>div>div {
+    flex-direction: column;
+}
+
+prm-loan .not-renewable {
+    padding: 6px 0px 6px 6px;
+    display: block;
+    border: 1px #d23333 solid;
+    max-width: min-content;
+}
+
+/*530 Requests*/
+
+/*540 Fees*/
+
+/*550 Block and messages*/
+
+/*560 Personal details*/
+
+/*Library card Personal details display*/
+
+#personalDetails>md-card-content>div {
+    flex-flow: column;
+}
+
+#personalDetails .md-input-has-value.layout-column {
+    min-width: 400px;
+}
+
+prm-personal-info-after {
     display: flex;
-    align-items: center;
 }
 
+slsp-edit-personal-details-component#SLSPeditPersonalDetails {
+    background-color: #f0f0f0;
+    padding-top: 30px;
+}
 
-/*edit personal details button*/
+slsp-edit-personal-details-component a.courier-info.bar.alert-bar.layout-align-left-center.md-button.md-primoExplore-theme.layout-align-start-center.layout-row {
+    text-decoration: none !important;
+}
 
 span[translate="customized.personal.details"],
 span[translate="customized.libcard.number"] {
@@ -2700,71 +2032,6 @@ span[translate="customized.libcard.number"] {
     min-width: 258px;
 }
 
-
-/*Loan form - Entries of selection Pickup location*/
-
-@media only screen and (max-width: 640px) {
-    div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable {
-        max-width: 80%;
-    }
-    #prm_nui\.ngrs\.pickup\.information\.pickupInstitution>div.md-text>span,
-    #prm_nui\.ngrs\.pickup\.information\.pickupLibrary>div.md-text>span {
-        white-space: normal;
-    }
-}
-
-
-/*hide rapidoFeesLink in the link section*/
-
-#links .rapidoFeesLink {
-    display: none;
-}
-
-[translate="nui.locations.related_locations"] {
-    padding: 29px 0px 0px 14px !important;
-}
-
-[translate="fulldisplay.holdings.showmore"] {
-    border: 1px solid #a4a4a4;
-    border-radius: 2px;
-    padding: 8px;
-}
-
-[ng-if="$ctrl.relatedLocations.length>$ctrl.relatedLocationsListLimit"] {
-    padding: 0px;
-    margin: 0px 14px !important;
-    background-color: white;
-}
-
-
-/*button alignment order form*/
-
-prm-get-it-request .margin-buttons {
-    flex-direction: column;
-}
-
-#offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-secondary.md-button.md-primoExplore-theme.md-ink-ripple {
-    border: 1px solid gray;
-    margin-right: 0px;
-}
-
-#offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple {
-    margin-right: 0px;
-}
-
-md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex>form>div.layout-align-end-stretch.layout-column>div>button {
-    min-width: 97%;
-}
-
-@media only screen and (max-width: 767px) {
-    prm-get-it-request .margin-buttons {
-        right: -2px;
-    }
-}
-
-
-/*edit personal details buttons*/
-
 slsp-edit-personal-details-component#SLSPeditPersonalDetails .bar {
     min-height: unset;
     margin-left: 0;
@@ -2772,22 +2039,342 @@ slsp-edit-personal-details-component#SLSPeditPersonalDetails .bar {
     margin-right: 0px;
 }
 
+/*590 Other*/
 
-/*alert bar center alignment*/
+/*****************************************************************************/
+/*********************************900 Others**********************************/
+/*****************************************************************************/
 
-.bar.alert-bar.layout-align-start-center.layout-row[ng-if="$ctrl.locations.length==0 && (!$ctrl.otherLocations || $ctrl.otherLocations.length==0)"] {
-    margin-left: 10px;
+/*900 General*/
+
+/*910 Help page*/
+
+#help img {
+    max-width: 100%;
+    height: auto;
 }
 
-
-/*Temporary code for locations padding*/
-md-list.md-primoExplore-theme.icnLblOtherMembersP2,
-md-list.md-primoExplore-theme.icnLblOtherMembersE {
-    padding-top: 20px;
+img.icon_up1 {
+    width: 16px;
+    float: right;
+    margin: 13px 2px;
 }
+
+img.icon_up2 {
+    width: 10px;
+    float: right;
+    margin: 4px;
+}
+
+a>h3:hover {
+    background-color: #eee !important;
+}
+
+/*920 Collections*/
+
+/*Collections navigation bar*/
+
+prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color {
+    box-shadow: none;
+    color: #ffffff !important;
+    background: #1111117a !important;
+    line-height: 24px;
+}
+
+prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color:hover {
+    color: #ffffff !important;
+    background-color: #11111152 !important;
+}
+
+/*930 Forms*/
+
+/*alertbar for the courier fees info*/
+
+.courier-info {
+    margin: 0px 8px;
+}
+
+.courier-info.bar.alert-bar {
+    height: unset;
+    margin: 6px 8px;
+    padding: .5em .5em 0.25em;
+    text-align: center;
+}
+
+/* Reset form button */
+
+prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex>form>div.layout-align-end-stretch.layout-column>button {
+    border: 1px solid gray;
+}
+
+/*940 Favorites*/
+
+/*950 Alma viewer*/
+
+/*960 Email template*/
+
+/*990 Other*/
+
+/*991 ETH Mapongo*/
+
+md-list-item {
+    flex-wrap: wrap;
+}
+
+md-list-item>prm-location-item-after {
+    order: 3;
+    padding: 0 1em 0 1em;
+    flex-basis: 100%;
+}
+
+.eth-mapongo-qrc {
+    margin-right: 10px;
+}
+
+.eth-mapongo-qrc img {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.eth-mapongo-qrc img+div {
+    display: none;
+}
+
+.eth-mapongo-qrc img {
+    max-width: 100%;
+    height: auto;
+}
+
+.eth-mapongo-link img {
+    max-width: 100%;
+    height: auto;
+    max-width: 100%;
+    width: 65%;
+    margin-top: 13px;
+}
+
+@media only screen and (max-width: 960px) {
+    .eth-mapongo-qrc img {
+        max-width: 70%;
+    }
+    .eth-mapongo-link img {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .eth-mapongo-link {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .eth-mapongo-link img {
+        width: 75%;
+    }
+}
+
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/****************************END OF THE CENTRAL PACKAGE***********************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+
+
+/*****************************************************************************/
+/*****************************************************************************/
+/****************************START OF THE LOCAL PACKAGE***********************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
+/*****************************01 Primary colour*******************************/
+/*****************************************************************************/
+
+/*background of the primary color*/
+
+.prm-primary-bg,
+prm-atoz-search-bar,
+prm-browse-search-bar,
+prm-collection-gallery-header .collection-header-inner,
+prm-search-bar,
+prm-newspapers-search-bar,
+prm-spinner.overlay-cover.light-on-dark:after,
+prm-tags-search-bar,
+prm-tree-nav prm-spinner .diamond,
+.prm-primary-bg,
+md-checkbox.md-checked .md-icon,
+md-tabs md-ink-bar,
+md-radio-button.md-checked .md-on,
+button.switch-to-simple,
+.md-button.button-confirm,
+prm-request-services .md-button.button-as-link,
+prm-location-items md-list prm-service-button .md-button.button-as-link,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
+prm-service-physical-best-offer .get_it_btn_physical {
+    background-color: #4E4A99 !important;
+}
+
+@media only screen and (max-width: 599px) {
+    prm-topbar .top-nav-bar {
+        border-color: #4E4A99 !important;
+    }
+}
+
+/*mouse over background of the links and buttons (primary-color)*/
+
+md-card.prm-primary-bg.psfooter>md-card-content a:hover,
+md-icon.ps_icon:hover,
+a.ps_link:hover,
+a.ps_link.legal:hover,
+span.legal a:hover,
+button.switch-to-advanced:hover,
+button.switch-to-simple:hover,
+.md-button.button-confirm:hover,
+.md-button.button-as-link:hover:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover,
+prm-service-physical-best-offer .get_it_btn_physical:hover {
+    background-color: #393765 !important;
+}
+
+/*font color of the primary color*/
+
+.prm-primary-bg,
+prm-atoz-search-bar,
+prm-browse-search-bar,
+prm-collection-gallery-header .collection-header-inner,
+prm-newspapers-search-bar,
+prm-spinner.overlay-cover.light-on-dark:after,
+prm-tags-search-bar,
+prm-tree-nav prm-spinner .diamond,
+.prm-primary-bg,
+md-checkbox.md-checked .md-icon:after,
+.md-button.switch-to-advanced,
+button.switch-to-simple,
+span.legal,
+span.legal>a,
+a.ps_link.legal,
+.ps_icon,
+md-card.prm-primary-bg.psfooter>md-card-content a,
+.md-button.button-confirm,
+prm-request-services .md-button.button-as-link,
+prm-request-services .md-button.button-as-link:hover:not([disabled]),
+prm-service-button .md-button.button-as-link:hover:not([disabled]),
+prm-location-items md-list prm-service-button .md-button.button-as-link#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
+prm-service-physical-best-offer .get_it_btn_physical,
+button#get_it_btn_digital,
+span.digiButton {
+    color: #fff !important;
+}
+
+button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
+    border-color: #fff !important;
+}
+
+/*****************selection color of the primary color*****************/
+
+.prm-primary-bg ::selection {
+    background: #3a8888;
+}
+
+/*****************************************************************************/
+/*****************************02 Secondary colour*****************************/
+/*****************************************************************************/
+
+/*background of the secondary color**/
+
+.bar.alert-bar,
+.classic-input .search-scope,
+.prm-alert-bg,
+#rapidoOffer prm-rapido-no-offer-message .main_tile {
+    background-color: #99d0d0 !important;
+}
+
+.text-highlight,
+mark,
+prm-location-items>md-list>md-list-item>div>div>div>div>prm-service-button>button {
+    box-shadow: inset 0 -0.15em 0 0 #99d0d0;
+}
+
+/*mouse over background of the links and buttons (secondary-color)*/
+
+/*.bar prm-authentication .md-button:hover:not([disabled]),*/
+
+div.alert-bar .md-button:hover:not([disabled]),
+slsp-edit-personal-details-component a.bar.alert-bar:hover {
+    background-color: #b6fafa !important;
+}
+
+/*font color of the secondary color*/
+
+.bar.alert-bar,
+.classic-input .search-scope,
+.prm-alert-bg,
+.bar prm-authentication .md-button,
+button.dismiss-alert-button,
+div.courier-info>span a,
+#no_offer_message_out_text_part1,
+#no_offer_message_out_text_notClickable {
+    color: #111111 !important;
+}
+
+/*selection color of the secondary color*/
+
+.bar.alert-bar ::selection {
+    background: #9d9cbd;
+}
+
+/*****************************************************************************/
+/*******************************03 Other local code***************************/
+/*****************************************************************************/
+
+
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/****************************END OF THE LOCAL PACKAGE*************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
 
 /*Temporary code to hide no location bar*/
 #getit_link1_0 > div > prm-full-view-service-container > div.section-body > div > prm-alma-other-members > div {
     
     display:none;
 }
+
+/*Temporary alert banner for start page*/
+
+body::before { 
+content: "12.11.-13.11.22: Unterhaltsarbeiten – Bestellmöglichkeiten eingeschränkt / Travaux de maintenance – options de commandes limitées / Lavori di manutenzione – opzioni di richiesta limitate / Maintenance work – request options restricted"; 
+display: inline-block; 
+background: #8dd8d8; 
+text-align: center; 
+padding: 10px; 
+width: 100%; 
+font-weight: bold; 
+color: black;
+}
+
+/*Temporary code for start page guide*/
+
+@media (min-width: 959px) {
+#mobiles {  
+display: none;
+}
+
+#computer {  
+display: block;
+} }
+
+@media (max-width: 960px){
+#computer {  
+display: none;
+} 
+			
+#mobiles {  
+display: block;
+} }
+
