@@ -2265,7 +2265,7 @@ prm-service-button .md-button.button-as-link:hover:not([disabled]),
 prm-location-items md-list prm-service-button .md-button.button-as-link#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
 prm-service-physical-best-offer .get_it_btn_physical,
 button#get_it_btn_digital,
-span.digiButton {
+prm-service-button > button > span {
     color: #fff !important;
 }
 

@@ -8,7 +8,7 @@ export class bcuFeesLinkController {
 
     $doCheck() {
       let form = false;
-      console.log('old-module');
+      //console.log('old-module');
             if (this.form.children[0].children[1] !== undefined && this.form.children[0].children[1].children[0] !== undefined) {
                 form = this.form.children[0].children[1].children[0];
             }
