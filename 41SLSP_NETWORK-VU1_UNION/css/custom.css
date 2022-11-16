@@ -2345,19 +2345,6 @@ div.courier-info>span a,
     display:none;
 }
 
-/*Temporary alert banner for start page*/
-
-body::before { 
-content: "12.11.-13.11.22: Unterhaltsarbeiten – Bestellmöglichkeiten eingeschränkt / Travaux de maintenance – options de commandes limitées / Lavori di manutenzione – opzioni di richiesta limitate / Maintenance work – request options restricted"; 
-display: inline-block; 
-background: #8dd8d8; 
-text-align: center; 
-padding: 10px; 
-width: 100%; 
-font-weight: bold; 
-color: black;
-}
-
 /*Temporary code for start page guide*/
 
 @media (min-width: 959px) {
