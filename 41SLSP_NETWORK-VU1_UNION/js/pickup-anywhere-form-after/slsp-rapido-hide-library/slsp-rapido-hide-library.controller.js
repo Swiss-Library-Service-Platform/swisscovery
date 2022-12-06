@@ -60,8 +60,6 @@ export class slspRapidoHideLibraryController {
                             //Zofingen
                             library.value === '112067340005504' ||
                             //UBE-------------------------------
-                            //Speicherbibliothek / get it section
-                            library.value === '112063420005511$$LIBRARY' ||
                             //PH Mediothek
                             library.value === '112061070005511' ||
                             //BEWI
@@ -90,6 +88,18 @@ export class slspRapidoHideLibraryController {
                             library.value === '112060330005511' ||
                             //Zahnmedizin
                             library.value === '112062270005511' ||
+                            //Bibliothek für Gestaltung Bern
+                            library.value === '112047360005527' ||
+                            //Bildungszentrum Pflege Online
+                            library.value === '112048510005527' ||
+                            //Campus Muristalden Bern
+                            library.value === '112046900005527' ||
+                            //Gosteli-Stiftung
+                            library.value === '112048690005527' ||
+                            //Naturhistorisches Museum Bern Bibliothek
+                            library.value === '112047820005527' ||
+                            //Staatsarchiv des Kantons Bern
+                            library.value === '112048280005527' ||
                             //Alexandria------------------------
                             //Musikautomaten
                             library.value === '13298420001791' ||
@@ -120,8 +130,6 @@ export class slspRapidoHideLibraryController {
                             //UNINE---------------------------
                             //Empty library
                             library.value === '112045850005517' ||
-                            //Empty library / get it section
-                            library.value === '112045850005517$$LIBRARY' ||
                             //PHZH----------------------------
                             //PHZH, Bibliothek
                             library.value === '112047180005521' ||
@@ -133,6 +141,9 @@ export class slspRapidoHideLibraryController {
                             //UNIGE---------------------------
                             //Observatoire
                             library.value === '112048390005502' ||
+                            //RZH-----------------------------
+                            //MUG
+                            library.value === '112059990005526' ||
                             //RZS-----------------------------
                             //Hochdorf (PMZ-Kurier Dienstag)
                             library.value === '1007807780005505' ||
@@ -191,6 +202,8 @@ export class slspRapidoHideLibraryController {
                             library.value === '112054870005508' ||
                             //UZH und ETH Zuerich, Sprachenzentrum
                             library.value === '112046410005508' ||
+                            //ETH Math
+                            library.value === '112048250005503' ||
                             //UZH, Anthropologisches Institut und Museum
                             library.value === '112049580005508' ||
                             //UZH, Bibliothek fuer Biomedizinische Ethik
@@ -210,7 +223,25 @@ export class slspRapidoHideLibraryController {
                             //ZB, Karten
                             library.value === '112070950005508' ||
                             //ZB, VAR
-                            library.value === '112070720005508'
+                            library.value === '112070720005508' ||
+                            //HPH 
+                            //PHSG  Studienbereichsbibliotheken Mariaberg
+                            library.value === '112062440005520' ||
+                            //Empty Library
+                            library.value === '112069930005520' ||
+                            //PHSG Online Dokumente
+                            library.value === '112063820005520' ||
+                            //PHSG  Infomedis Web App
+                            library.value === '734691490005520' ||
+                            //SFUVET - Infomedis Web App
+                            library.value === '1333405650005520' ||
+                            //Zollikofen EHB Online
+                            library.value === '112056780005520' ||
+                            //Empty Library
+                            library.value === '112046060005514' ||
+                            //HES CDI Library
+                            library.value === '332743630005514'
+
 
                         ) {
                             console.log('hidden Library', library);
