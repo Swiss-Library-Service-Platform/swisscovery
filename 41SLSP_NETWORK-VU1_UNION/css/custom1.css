@@ -1269,7 +1269,7 @@ md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div
     order: 3 !important;
 }
 
-[aria-label="Ritiro locale"] {
+[aria-label="Ritiro in sede"] {
     order: 4 !important;
 }
 
@@ -2546,13 +2546,6 @@ div.courier-info>span a,
 /*****************************************************************************/
 /*****************************************************************************/
 /*****************************************************************************/
-
-
-/*Temporary code to hide no location bar*/
-
-#getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-other-members>div {
-    display: none;
-}
 
 /*Temporary code for start page guide*/
 
