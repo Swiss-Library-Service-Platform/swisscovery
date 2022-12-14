@@ -60,8 +60,6 @@ export class slspRapidoHideLibraryController {
                             //Zofingen
                             library.value === '112067340005504' ||
                             //UBE-------------------------------
-                            //PH Mediothek
-                            library.value === '112061070005511' ||
                             //BEWI
                             library.value === '112056880005511' ||
                             //Geographie
@@ -240,7 +238,22 @@ export class slspRapidoHideLibraryController {
                             //Empty Library
                             library.value === '112046060005514' ||
                             //HES CDI Library
-                            library.value === '332743630005514'
+                            library.value === '332743630005514' ||
+                            //-------------------------------------------------
+                            //Tribunal fédéral Lausanne
+                            library.value === '112048620005532' ||
+                            //Tribunal fédéral Lucerne
+                            library.value === '112049000005532' ||
+                            //Institut suisse de droit comparé
+                            library.value === '112047860005532' ||
+                            //Bibliothek des Bundesamtes für Justiz
+                            library.value === '112048240005532' ||
+                            //Empty Library
+                            library.value === '112047160005532' ||
+                            //TRI CDI Library
+                            library.value === '534313700005532' ||
+                            //Schweizerisches Nationalmuseum
+                            library.value === '112049420005526'
 
 
                         ) {
