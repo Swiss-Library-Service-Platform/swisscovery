@@ -253,8 +253,14 @@ export class slspRapidoHideLibraryController {
                             //TRI CDI Library
                             library.value === '534313700005532' ||
                             //Schweizerisches Nationalmuseum
-                            library.value === '112049420005526'
-
+                            library.value === '112049420005526' ||
+                            //-------------------------------------------------
+                            //RZH CDI Library
+                            library.value === '744134310005526' ||
+                            //SIK-ISEA – Schweizerisches Institut für Kunstwissenschaft
+                            library.value === '112049040005526' ||
+                            //Jesuitenbibliothek Zürich
+                            library.value === '112046860005526'
 
                         ) {
                             console.log('hidden Library', library);
