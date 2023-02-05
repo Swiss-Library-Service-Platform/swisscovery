@@ -1,7 +1,7 @@
 {
-  "name": "slsp-rapido-fees-link",
+  "name": "slsp-collapse-other-inst",
   "version": "1.0.0",
-  "description": "Rapido Fees Link",
+  "description": "Collapse_Get_It_From_Other_Institutions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

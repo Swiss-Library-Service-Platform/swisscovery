@@ -1,89 +1,244 @@
+@import url("https://swisscovery.help/RapidoHideLibraryCSS/rapido-hide-library.css");
+
 /***************INDEX*********************/
 
 
 /*CENTRAL PACKAGE*/
+
+
 /*000 General*/
+
+
 /*090 Other*/
+
+
 /*100 Header section*/
+
+
 /*100 General*/
+
+
 /*101 Navigation*/
+
+
 /*110 Logo*/
+
+
 /*120 Links menu*/
+
+
 /*130 Login / languages section*/
+
+
 /*140 Login pop up box*/
+
+
 /*190 Other*/
+
+
 /*200 Homepage*/
+
+
 /*200 General*/
+
+
 /*210 Search box*/
+
+
 /*220 Frames*/
+
+
 /*221 Video Frame*/
+
+
 /*222 Links frame*/
+
+
 /*230 Footer*/
+
+
 /*290 Other*/
+
+
 /*300 Brief Display*/
+
+
 /*300 General*/
+
+
 /*310 Facets*/
+
+
 /*390 Other*/
+
+
 /*400 Full display*/
+
+
 /*400 General*/
+
+
 /*410 Sections' order*/
+
+
 /*411 Sections' order: navigation English*/
+
+
 /*412 Sections' order: navigation German*/
+
+
 /*413 Sections' order: navigation French*/
+
+
 /*414 Sections' order: navigation Italian*/
+
+
 /*420 View online*/
+
+
 /*430 Get it - requests buttons*/
+
+
 /*440 How to get it -  locations, holdings and items*/
+
+
 /*440 General*/
+
+
 /*441 How to get it sections' order*/
+
+
 /*442 Filter bar*/
+
+
 /*443 Items expand for mobiles*/
+
+
 /*444 Related titles*/
+
+
 /*449 Other*/
+
+
 /*450 Left navigation bar*/
+
+
 /*460 Rapido*/
+
+
 /*470 Special collections*/
+
+
 /*480 Open URL Service Page*/
+
+
 /*490 Other*/
+
+
 /*491 Icons*/
+
+
 /*500 Library card*/
+
+
 /*500 General*/
+
+
 /*510 Overview*/
+
+
 /*520 Loans*/
+
+
 /*530 Requests*/
+
+
 /*540 Fees*/
+
+
 /*550 Block and messages*/
+
+
 /*560 Personal details*/
+
+
 /*590 Other*/
+
+
 /*900 Others*/
+
+
 /*900 General*/
+
+
 /*910 Help page*/
+
+
 /*920 Collections*/
+
+
 /*930 Forms*/
+
+
 /*940 Favorites*/
+
+
 /*950 Alma viewer*/
+
+
 /*960 Email template*/
+
+
 /*990 Other*/
+
+
 /*LOCAL PACKAGE*/
+
+
 /*01 Primary colour*/
+
+
 /*02 Secondary colour*/
+
+
 /*03 Other local code*/
+
+
 /*************END OF INDEX******************/
 
+
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
 /****************************START OF THE CENTRAL PACKAGE*********************/
-/*****************************************************************************/
-/*****************************************************************************/
+
+
 /*****************************************************************************/
 
 
 /*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
 /******************************000 General************************************/
+
+
 /*****************************************************************************/
+
 
 /*000 General*/
+
 
 /*mainly white background*/
 
@@ -319,8 +474,13 @@ md-dialog.light-on-dark-dialog a:hover {
 
 
 /*****************************************************************************/
+
+
 /******************************100 Header section*****************************/
+
+
 /*****************************************************************************/
+
 
 /*100 General*/
 
@@ -487,7 +647,11 @@ button#mainMenuFullCloseButton:focus {
 
 
 /*****************************************************************************/
+
+
 /*********************************200 Homepage********************************/
+
+
 /*****************************************************************************/
 
 
@@ -720,7 +884,11 @@ prm-static.md-padding.flex {
 
 
 /*****************************************************************************/
+
+
 /******************************300 Brief Display******************************/
+
+
 /*****************************************************************************/
 
 
@@ -782,7 +950,11 @@ span.section-title-header:hover {
 
 
 /*****************************************************************************/
+
+
 /******************************400 Full display*******************************/
+
+
 /*****************************************************************************/
 
 
@@ -1008,7 +1180,8 @@ md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div
 
 /*Available other members button alignment*/
 
-#alma_other_members>div.layout-align-start-center.layout-row>h3 {
+#alma_other_members>div.layout-align-start-center.layout-row>h3,
+prm-alma-other-units>button>div>h3 {
     line-height: 2px;
     margin: 14px;
 }
@@ -1029,7 +1202,6 @@ md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div
 .DigiButtonLabel,
 .DigiButtonLabel1 {
     position: relative;
-    margin-top: 8px;
     margin-left: 6px;
     background-color: rgb(75 75 75 / 65%);
     line-height: 22px;
@@ -1038,6 +1210,14 @@ md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div
     color: #fff;
     float: right;
     border-radius: 3px;
+}
+
+.DigiButtonLabel {
+    margin-top: 3px;
+}
+
+.DigiButtonLabel1 {
+    margin-top: 8px;
 }
 
 
@@ -1368,7 +1548,10 @@ form.almaRequestLoan div.courier-info.bar.alert-bar {
     display: none;
 }
 
-/* Hide library pickup, get it section */ 
+
+/* Hide library pickup, get it section */
+
+
 /* Speicherbibliothek UBE, Empty library UNINE */
 
 md-optgroup [value="112063420005511$$LIBRARY"],
@@ -1377,6 +1560,7 @@ md-optgroup [value="112045850005517$$LIBRARY"] {
     max-height: 0px;
     visibility: collapse;
 }
+
 
 /*440 How to get it / Pick up on site -  locations, holdings and items*/
 
@@ -1605,7 +1789,8 @@ md-content>md-list>md-list-item>button>div.layout-align-space-between-center.lay
 /*Background color*/
 
 md-list.md-primoExplore-theme.icnLblOtherMembersP2,
-md-list.md-primoExplore-theme.icnLblOtherMembersE {
+md-list.md-primoExplore-theme.icnLblOtherMembersE,
+md-list.md-primoExplore-theme.icnLblOtherUnitsE {
     background-color: #f3f3f3;
 }
 
@@ -1740,8 +1925,12 @@ prm-service-physical-best-offer .ngrs-delivery-box-tile {
     width: 64px !important;
 }
 
+
+/*hide the OR separator*/
+
 prm-service-ngrs .or-separator .or .word {
-    background: #dedede;
+    /*background: #dedede;*/
+    display: none;
 }
 
 prm-service-ngrs .main_tile_request_form {
@@ -1815,6 +2004,7 @@ prm-get-it-request .offer_details_main_tail {
     }
 }
 
+
 /*Name of IZ and libraries divided more lines in the forms*/
 
 @media only screen and (max-width: 640px) {
@@ -1833,6 +2023,7 @@ prm-get-it-request .offer_details_main_tail {
     }
 }
 
+
 /*Rapido customized labels*/
 
 .rapidoFeesLink {
@@ -1848,6 +2039,7 @@ span.reading-Room-Pod {
     margin-left: 5px;
 }
 
+
 /*Local courier label*/
 
 .courierInfo {
@@ -1859,11 +2051,13 @@ span.reading-Room-Pod {
     border: #d3d3d3 1px solid;
 }
 
+
 /*Hide Local courier label*/
 
 .courierInfo {
     display: none;
 }
+
 
 /*Reservation button*/
 
@@ -1871,17 +2065,20 @@ span.noOffer {
     display: none;
 }
 
+
 /*Rapido physical icon*/
 
 #item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon svg {
     display: none;
 }
 
+
 /*Rapido digital icon*/
 
 #item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon svg {
     display: none;
 }
+
 
 /*Hide fees link when logged out*/
 
@@ -1890,25 +2087,30 @@ primo-explore.logged-out .rapidoFeesLink {
     display: none;
 }
 
+
 /*Hide Fees Link in the link section*/
 
 #links .rapidoFeesLink {
     display: none;
 }
 
+
 /*Hide Fees Link in Course reserve section*/
 
-#moreFromTheSameCourse .rapidoFeesLink { 
-display: none; 
+#moreFromTheSameCourse .rapidoFeesLink {
+    display: none;
 }
 
-/* Hide library pickup menu, Rapido */ 
 
-#prm_nui\.ngrs\.pickup\.information\.pickupLibrary[value="undefined"] {
+/* Hide library pickup menu, Rapido */
+
+
+/* #prm_nui\.ngrs\.pickup\.information\.pickupLibrary[value="undefined"] {
     margin: 0px;
     max-height: 0px;
     visibility: collapse;
-}
+} */
+
 
 /* Rapido larger library select button */
 
@@ -1928,11 +2130,13 @@ prm-service-physical-best-offer .pickupButton button span {
     float: right;
 }
 
+
 /* Rapido show/hide switch language fix */
 
 .slsp-hide-rapido {
     display: none;
 }
+
 
 /*470 Special external collections*/
 
@@ -2078,7 +2282,11 @@ prm-service-physical-best-offer .icnWrp {
 
 
 /*****************************************************************************/
+
+
 /******************************500 Library card*******************************/
+
+
 /*****************************************************************************/
 
 
@@ -2225,7 +2433,11 @@ slsp-edit-personal-details-component#SLSPeditPersonalDetails .bar {
 
 
 /*****************************************************************************/
+
+
 /*********************************900 Others**********************************/
+
+
 /*****************************************************************************/
 
 
@@ -2369,25 +2581,53 @@ md-list-item>prm-location-item-after {
 
 
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
 /****************************END OF THE CENTRAL PACKAGE***********************/
-/*****************************************************************************/
-/*****************************************************************************/
+
+
 /*****************************************************************************/
 
 
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
 /****************************START OF THE LOCAL PACKAGE***********************/
-/*****************************************************************************/
-/*****************************************************************************/
+
+
 /*****************************************************************************/
 
 
 /*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
 /*****************************01 Primary colour*******************************/
+
+
 /*****************************************************************************/
 
 
@@ -2482,7 +2722,11 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
 
 
 /*****************************************************************************/
+
+
 /*****************************02 Secondary colour*****************************/
+
+
 /*****************************************************************************/
 
 
@@ -2535,17 +2779,34 @@ div.courier-info>span a,
 
 
 /*****************************************************************************/
+
+
 /*******************************03 Other local code***************************/
-/*****************************************************************************/
+
+
 /*****************************************************************************/
 
 
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
+/*****************************************************************************/
+
+
 /****************************END OF THE LOCAL PACKAGE*************************/
+
+
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
+
 /*****************************************************************************/
+
 
 /*Temporary code for start page guide*/
 
@@ -2567,3 +2828,30 @@ div.courier-info>span a,
     }
 }
 
+
+/******************************************************************/
+
+.rapido-loading {
+    line-height: 50px;
+}
+
+prm-alma-other-units .md-button._md-focused:not([disabled]),
+prm-alma-other-units .md-button.hovered:not([disabled]),
+prm-alma-other-units .md-button.md-focused:not([disabled]),
+prm-alma-other-units .md-button:focus:not([disabled]),
+prm-alma-other-units .md-button:hover:not([disabled]) {
+    color: rgba(0, 0, 0, .87);
+    background-color: #e6e6e6;
+}
+
+prm-alma-other-units {
+    margin-bottom: 10px;
+}
+
+
+/************************************************************************/
+
+.authMethSaml>div>div.md-list-item-inner>prm-login-item>div>p,
+.authMethAlma>div>div.md-list-item-inner>prm-login-item>div>p {
+    display: none;
+}
