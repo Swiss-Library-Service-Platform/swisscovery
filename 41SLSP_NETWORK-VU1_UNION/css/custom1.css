@@ -2849,9 +2849,3 @@ prm-alma-other-units {
 }
 
 
-/************************************************************************/
-
-.authMethSaml>div>div.md-list-item-inner>prm-login-item>div>p,
-.authMethAlma>div>div.md-list-item-inner>prm-login-item>div>p {
-    display: none;
-}
