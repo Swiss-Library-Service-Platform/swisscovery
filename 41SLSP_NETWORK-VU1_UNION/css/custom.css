@@ -1652,6 +1652,20 @@ md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.m
     padding: 0 10px !important;
 }
 
+/*Other campuses*/
+
+prm-alma-other-units .md-button._md-focused:not([disabled]),
+prm-alma-other-units .md-button.hovered:not([disabled]),
+prm-alma-other-units .md-button.md-focused:not([disabled]),
+prm-alma-other-units .md-button:focus:not([disabled]),
+prm-alma-other-units .md-button:hover:not([disabled]) {
+    color: rgba(0, 0, 0, .87);
+    background-color: #e6e6e6;
+}
+
+prm-alma-other-units {
+    margin-bottom: 10px;
+}
 
 /*441 How to get it sections' order*/
 
@@ -2137,6 +2151,11 @@ prm-service-physical-best-offer .pickupButton button span {
     display: none;
 }
 
+/* Rapido spinner */
+
+.rapido-loading {
+    line-height: 50px;
+}
 
 /*470 Special external collections*/
 
@@ -2827,25 +2846,3 @@ div.courier-info>span a,
         display: block;
     }
 }
-
-
-/******************************************************************/
-
-.rapido-loading {
-    line-height: 50px;
-}
-
-prm-alma-other-units .md-button._md-focused:not([disabled]),
-prm-alma-other-units .md-button.hovered:not([disabled]),
-prm-alma-other-units .md-button.md-focused:not([disabled]),
-prm-alma-other-units .md-button:focus:not([disabled]),
-prm-alma-other-units .md-button:hover:not([disabled]) {
-    color: rgba(0, 0, 0, .87);
-    background-color: #e6e6e6;
-}
-
-prm-alma-other-units {
-    margin-bottom: 10px;
-}
-
-
