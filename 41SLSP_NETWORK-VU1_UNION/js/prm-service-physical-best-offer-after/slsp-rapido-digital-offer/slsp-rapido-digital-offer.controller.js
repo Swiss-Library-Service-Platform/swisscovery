@@ -22,6 +22,7 @@ export class slspRapidoDigitalOfferController {
     $doCheck() {
         try {
 
+
             // loader
             const loadingText = document.querySelectorAll('span[translate="rapido.tiles.placeholder.text"]')
             if (loadingText) {

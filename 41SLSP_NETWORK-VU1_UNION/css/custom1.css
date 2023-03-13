@@ -609,6 +609,7 @@ bcu-lang-switch-component a:hover {
 
 prm-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
     z-index: 100;
+    border: 1px solid #ccc;
 }
 
 prm-login .md-list-item-inner prm-login-item a.md-primoExplore-theme {
@@ -628,11 +629,38 @@ prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-
 }
 
 
-/*background color*/
+/*Background color*/
 
 .full-view-spacer,
 md-content.padded-container.layout-fill._md.md-primoExplore-theme.layout-row {
     background-color: #fcfcfc !important;
+}
+
+
+/*Other login box*/
+
+.authMethSaml>div>div.md-list-item-inner>prm-login-item>div>p,
+.authMethAlma>div>div.md-list-item-inner>prm-login-item>div>p {
+    display: none;
+}
+
+md-list-item.authMethSaml,
+md-list-item.authMethAlma {
+    display: flex;
+    flex-direction: column;
+}
+
+.authMethSaml div.md-button.md-no-style,
+.authMethAlma div.md-button.md-no-style {
+    flex-flow: row;
+}
+
+p.parallelLoginDescription {
+    padding-left: 15px;
+}
+
+p.parallelLoginDescription>a.md-primoExplore-theme:focus {
+    color: #fff !important;
 }
 
 
@@ -1181,7 +1209,8 @@ md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div
 /*Available other members button alignment*/
 
 #alma_other_members>div.layout-align-start-center.layout-row>h3,
-prm-alma-other-units>button>div>h3 {
+prm-alma-other-units>button>div>h3,
+#getit_link1_0 prm-alma-viewit-items button>div>h3 {
     line-height: 2px;
     margin: 14px;
 }
@@ -1523,6 +1552,26 @@ prm-alma-other-units>button>div>h3 {
 }
 
 
+/* Collapse related titles for e-resources */
+
+#getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items:nth-child(2)>md-list.collapsed {
+    display: none;
+}
+
+#getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items:nth-child(2)>md-list {
+    display: block;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+#getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items .md-button:hover:not([disabled]) {
+    color: rgba(0, 0, 0, .87);
+    background-color: #e6e6e6;
+}
+
+
 /*430 Get it - requests buttons*/
 
 
@@ -1652,6 +1701,7 @@ md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.m
     padding: 0 10px !important;
 }
 
+
 /*Other campuses*/
 
 prm-alma-other-units .md-button._md-focused:not([disabled]),
@@ -1666,6 +1716,53 @@ prm-alma-other-units .md-button:hover:not([disabled]) {
 prm-alma-other-units {
     margin-bottom: 10px;
 }
+
+
+/* On-site libraries info bar */
+
+.spezLibInfo {
+    margin-top: 20px;
+}
+
+
+/* i-button in library title */
+
+
+/*old library title, same parameter but hidden*/
+
+h4[ng-if="$ctrl.currLoc.location && $ctrl.getLibraryName($ctrl.currLoc.location)"],
+md-list-item>prm-location>div>div.layout-align-space-between-center.layout-row.flex-100>div>div>prm-location-holdings>prm-location-holdings-after>slsp-i-button-component {
+    visibility: hidden;
+    margin: 5px 0 !important;
+    min-height: 23px !important;
+    font-size: 18px !important;
+}
+
+md-list-item>prm-location>div>div.layout-align-space-between-center.layout-row.flex-100>div>div>prm-location-holdings>prm-location-holdings-after>slsp-i-button-component {
+    display: none;
+}
+
+
+/*new library title with link*/
+
+.i-button {
+    margin: 5px 0 !important;
+    padding-left: 0 !important;
+    border: unset !important;
+    min-height: 23px !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    top: 0;
+    display: block;
+}
+
+
+/* Background color */
+
+prm-opac {
+    background-color: #fff !important;
+}
+
 
 /*441 How to get it sections' order*/
 
@@ -2116,16 +2213,6 @@ primo-explore.logged-out .rapidoFeesLink {
 }
 
 
-/* Hide library pickup menu, Rapido */
-
-
-/* #prm_nui\.ngrs\.pickup\.information\.pickupLibrary[value="undefined"] {
-    margin: 0px;
-    max-height: 0px;
-    visibility: collapse;
-} */
-
-
 /* Rapido larger library select button */
 
 prm-service-physical-best-offer .pickupButton button prm-icon {
@@ -2151,11 +2238,83 @@ prm-service-physical-best-offer .pickupButton button span {
     display: none;
 }
 
+
 /* Rapido spinner */
 
 .rapido-loading {
     line-height: 50px;
 }
+
+
+/* Digitization supply time label */
+
+div[ng-if="$ctrl.digitalTileVisible"] .delivered_in span.bold_text,
+div#digitalGetItRequest .offer_detail .second_line {
+    display: none;
+    /* color: #3BBFAD; */
+}
+
+span[translate="rapido.tiles.digital_chapter.best_offer.line_2.first_part"]>span,
+span[translate="rapido.tiles.digital.best_offer.line_2.first_part"]>span {
+    font-weight: bold;
+}
+
+span[translate="nui.ngrs.search.brief.digital.getAChapter"],
+span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 122px;
+}
+
+span[translate="nui.ngrs.search.brief.digital.getAChapter"] span,
+span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+span[translate="nui.ngrs.search.brief.digital.getAChapter"] span strong,
+span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span strong {
+    font-size: 30px;
+    display: flex;
+    padding: 0 5px;
+    font-weight: 700 !important;
+    align-items: center;
+}
+
+span[translate="nui.ngrs.search.brief.digital.getAChapter"] span b,
+span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span b {
+    font-size: 16px;
+    font-weight: bold !important;
+    text-align: left;
+}
+
+@media only screen and (min-width: 766px) {
+    div#digitalGetItRequest prm-offer-details-tile .offer_detail {
+        width: 100%;
+        padding-right: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    div#digitalGetItRequest prm-offer-details-tile .first_line {
+        display: flex !important;
+        justify-content: center;
+    }
+    div#digitalGetItRequest prm-offer-details-tile .first_line_s {
+        display: none;
+    }
+    span[translate="nui.ngrs.search.brief.digital.getAChapter"],
+    span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+/*nui.ngrs.digital.deliverdin ??? */
+
 
 /*470 Special external collections*/
 
@@ -2754,7 +2913,8 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
 .bar.alert-bar,
 .classic-input .search-scope,
 .prm-alert-bg,
-#rapidoOffer prm-rapido-no-offer-message .main_tile {
+#rapidoOffer prm-rapido-no-offer-message .main_tile,
+.diamond {
     background-color: #99d0d0 !important;
 }
 
