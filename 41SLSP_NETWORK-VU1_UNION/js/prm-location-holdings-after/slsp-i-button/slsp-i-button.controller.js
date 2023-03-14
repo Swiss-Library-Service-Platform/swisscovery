@@ -41,7 +41,10 @@ export class slspIButtonController {
         }
     }
 
-
+    specialInfoBox() {
+        let addSpecialInfoClass = document.querySelectorAll("prm-location-items");
+        angular.element(addSpecialInfoClass).addClass('special-library-info');
+    }
 
 }
 

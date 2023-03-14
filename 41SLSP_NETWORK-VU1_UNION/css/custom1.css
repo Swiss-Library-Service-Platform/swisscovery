@@ -3006,3 +3006,29 @@ div.courier-info>span a,
         display: block;
     }
 }
+
+
+/*****************************************************************************/
+
+prm-stand-alone-login p[translate="parallel.login.description2"] {
+    color: #222 !important;
+}
+
+md-dialog.login-dialog.light-on-dark-dialog p[translate="parallel.login.description2"] {
+    color: #ffffff !important;
+}
+
+
+/*************************/
+
+prm-location-items md-list {
+    margin-bottom: 1.3em !important;
+}
+
+
+/*********************/
+
+.special-library-info button.md-icon-button.header-action.expand-collapse-button.md-button.md-primoExplore-theme.md-ink-ripple {
+    top: 20px;
+    position: absolute;
+}

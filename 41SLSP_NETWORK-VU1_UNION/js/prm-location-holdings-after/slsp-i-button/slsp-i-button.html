@@ -1,7 +1,7 @@
 <div ng-if="['E73', 'E76', 'E79'].includes($ctrl.getLibraryCode())" layout="row" class="spezLibInfo bar alert-bar zero-margin-bottom layout-align-center-center layout-row" layout-align="center center">
     <span class="md-subhead"><span class="md-subhead-part1" translate="customized.onsite.before">&nbsp;</span>
     <a ng-href="{{ $ctrl.biblinkBase }}{{ $ctrl.getLibraryCode() }}&lang={{ $ctrl.getLanguage() }}" target="_blank">{{ $ctrl.getLibrary() }}</a>
-    </span>
+    </span>{{$ctrl.specialInfoBox()}}
 </div>
 
 
