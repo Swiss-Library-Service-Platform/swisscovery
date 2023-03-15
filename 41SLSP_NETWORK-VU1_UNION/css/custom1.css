@@ -604,7 +604,6 @@ bcu-lang-switch-component a:hover {
     display: none !important;
 }
 
-
 /*login-box make arrows clickable*/
 
 prm-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
@@ -628,14 +627,12 @@ prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-
     width: 100%;
 }
 
-
 /*Background color*/
 
 .full-view-spacer,
 md-content.padded-container.layout-fill._md.md-primoExplore-theme.layout-row {
     background-color: #fcfcfc !important;
 }
-
 
 /*Other login box*/
 
@@ -663,6 +660,13 @@ p.parallelLoginDescription>a.md-primoExplore-theme:focus {
     color: #fff !important;
 }
 
+prm-stand-alone-login p[translate="parallel.login.description2"] {
+    color: #222 !important;
+}
+
+md-dialog.login-dialog.light-on-dark-dialog p[translate="parallel.login.description2"] {
+    color: #ffffff !important;
+}
 
 /*190 Other*/
 
@@ -1528,13 +1532,11 @@ prm-alma-other-units>button>div>h3,
     /* padding: 10px; */
 }
 
-
 /*Hide fees message*/
 
 #getit_link1_0>div>prm-full-view-service-container>div.section-head>prm-service-header>div>div {
     display: none;
 }
-
 
 /*Show icon*/
 
@@ -1550,7 +1552,6 @@ prm-alma-other-units>button>div>h3,
         margin-left: 10px;
     }
 }
-
 
 /* Collapse related titles for e-resources */
 
@@ -1571,6 +1572,16 @@ prm-alma-other-units>button>div>h3,
     background-color: #e6e6e6;
 }
 
+prm-location-items md-list {
+    margin-bottom: 1.3em !important;
+}
+
+/* Move expand button */
+
+.special-library-info button.md-icon-button.header-action.expand-collapse-button.md-button.md-primoExplore-theme.md-ink-ripple {
+    top: 20px;
+    position: absolute;
+}
 
 /*430 Get it - requests buttons*/
 
@@ -3005,30 +3016,4 @@ div.courier-info>span a,
     #mobiles {
         display: block;
     }
-}
-
-
-/*****************************************************************************/
-
-prm-stand-alone-login p[translate="parallel.login.description2"] {
-    color: #222 !important;
-}
-
-md-dialog.login-dialog.light-on-dark-dialog p[translate="parallel.login.description2"] {
-    color: #ffffff !important;
-}
-
-
-/*************************/
-
-prm-location-items md-list {
-    margin-bottom: 1.3em !important;
-}
-
-
-/*********************/
-
-.special-library-info button.md-icon-button.header-action.expand-collapse-button.md-button.md-primoExplore-theme.md-ink-ripple {
-    top: 20px;
-    position: absolute;
 }
