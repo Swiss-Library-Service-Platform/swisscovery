@@ -36,7 +36,7 @@ export class slspCollapseRelatedEResourcesController {
                         this.$compile(buttonElement)(this.$scope);
                     });
 
-                    console.log(buttonElement);
+                    //console.log(buttonElement);
 
                 } else {
                     return;

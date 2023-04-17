@@ -14,14 +14,14 @@ export class slspRenewItemTextController {
             function getRenewText() {
                 if (this.parentCtrl.item.renewstatuses !== undefined && this.parentCtrl.item.renewstatuses.renewstatus[0] !== undefined) {
                     return this.parentCtrl.item.renewstatuses.renewstatus[0];
-                }
-                else {
+                } else {
                     return
                 }
-            }
-        }
 
-        catch (e) {
+            }
+
+
+        } catch (e) {
             console.error("***SLSP*** an error occured: slspRenewItemTextController\n\n");
             console.error(e.message);
         }
@@ -29,4 +29,3 @@ export class slspRenewItemTextController {
 }
 
 slspRenewItemTextController.$inject = [];
-

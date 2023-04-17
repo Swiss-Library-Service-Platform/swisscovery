@@ -620,8 +620,18 @@ prm-login .md-button.md-no-style:hover {
     color: black;
 }
 
-prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+
+/* prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
     z-index: unset;
+}
+ */
+
+prm-stand-alone-login .md-secondary-container {
+    z-index: 10;
+}
+
+prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button:hover {
+    background-color: rgb(228 228 228 / 28%)!important;
 }
 
 .login-card md-list-item.login-brighter-dialog prm-login-item {
@@ -794,6 +804,25 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
 
 /*220 Frames*/
 
+/*Genialy requests guide*/
+
+@media (min-width: 959px) {
+    #mobiles {
+        display: none;
+    }
+    #computer {
+        display: flex;
+    }
+}
+
+@media (max-width: 960px) {
+    #computer {
+        display: none;
+    }
+    #mobiles {
+        display: flex;
+    }
+}
 
 /*221 Video Frame*/
 
@@ -815,8 +844,7 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     border: 0;
 }
 
-
-/*222 Links frame *** Attetion: used only for the central package*/
+/*222 Links frame *** Attention: used only for the central package*/
 
 md-card.cardbox.default-card.quicklinksbox md-card-content {
     padding: 0px;
@@ -951,6 +979,10 @@ prm-brief-result .item-title span {
 prm-brief-result .item-title span:hover {
     color: #111;
     background-color: rgba(47, 47, 47, 0.1) !important;
+}
+
+prm-full-view-service-container prm-brief-result .item-title span:hover {
+    background-color: unset !important;
 }
 
 
@@ -2526,7 +2558,6 @@ prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clic
     }
 }
 
-
 /*Library card: Show not renewable messages in list of loans*/
 
 prm-loan .md-list-item-text.md-list-item-with-checkbox.layout-wrap.layout-row.flex {
@@ -2578,9 +2609,40 @@ prm-loan .not-renewable {
     max-width: min-content;
 }
 
+/*Remove link for Rapido previous loans*/
+
+div.loan-item-title {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 65%;
+    position: absolute;
+    display: block;
+    left: 30px;
+    top: 11px;
+}
+
+.item-expanded div.loan-item-title {
+    white-space: normal;
+    width: 60%;
+}
+
+.hide-title h3 a,
+.hide-title h3 svg {
+    visibility: hidden;
+}
 
 /*530 Requests*/
 
+/*Remove estimated due date*/
+
+.request-location[ng-if="::$ctrl.isRapidoInst() && requestDisplay.requestType == 'ill' && !$ctrl.isRapidoDigitalRequest(requestDisplay.format) && !$ctrl.showRapidoDate(requestDisplay.dates.dueDate) && !$ctrl.showRapidoDate(requestDisplay.dates.unavailableResource)"],
+.request-location[ng-if="$ctrl.isRapidoInst() && requestDisplay.requestType == 'ill' && !$ctrl.isRapidoDigitalRequest(requestDisplay.format) && $ctrl.showRapidoDate(requestDisplay.dates.dueDate)"] {
+    display: none;
+}
 
 /*540 Fees*/
 
@@ -3009,24 +3071,3 @@ div.courier-info>span a,
 
 
 /*****************************************************************************/
-
-
-/*Temporary code for start page guide*/
-
-@media (min-width: 959px) {
-    #mobiles {
-        display: none;
-    }
-    #computer {
-        display: block;
-    }
-}
-
-@media (max-width: 960px) {
-    #computer {
-        display: none;
-    }
-    #mobiles {
-        display: block;
-    }
-}
