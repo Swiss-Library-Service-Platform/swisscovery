@@ -20,7 +20,7 @@ export class slspRenewItemTextController {
 
             }
 
-
+            
         } catch (e) {
             console.error("***SLSP*** an error occured: slspRenewItemTextController\n\n");
             console.error(e.message);

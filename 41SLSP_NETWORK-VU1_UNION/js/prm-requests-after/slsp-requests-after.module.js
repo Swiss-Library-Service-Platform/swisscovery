@@ -1,6 +1,5 @@
 import { slspRequestCancelButtonModule } from './slsp-request-cancel-button/slsp-request-cancel-button.module';
 
-
 export const slspRequestsAfterModule = angular
     .module('slspRequestsAfterModule', [])
     .component('prmRequestsAfter', {

@@ -828,6 +828,22 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     }
 }
 
+/* Fix for long search strings */
+
+
+div[ng-if="::item.tab && item.queryType != 'recentSearches'"] {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+span[md-highlight-text="$ctrl.mainSearchField"] {
+    overflow: hidden;
+    align-self: flex-start;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+}
+
 /*221 Video Frame*/
 
 
@@ -1623,6 +1639,9 @@ prm-location-items md-list {
     margin-bottom: 1.3em !important;
 }
 
+.collapse-related {
+    width: 100%;
+  }
 
 /* Move expand button */
 
@@ -2547,6 +2566,39 @@ prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clic
     }
 }
 
+/* Fix for cut labels */
+
+#accountoverview > md-tabs > md-tabs-wrapper {
+    min-height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 5px;
+}
+md-tabs md-tabs-wrapper md-tabs-canvas md-pagination-wrapper md-tab-item:not([disabled]) {
+    min-width: fit-content;
+    align-self: center;
+}
+md-tabs-wrapper md-next-button md-icon, md-tabs-wrapper md-prev-button md-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d8d8d8;
+    border-radius: 39px;
+}
+md-tabs-wrapper md-next-button md-icon:hover, md-tabs-wrapper md-prev-button md-icon:hover {
+    background-color: #c6c6c6;
+}
+md-pagination-wrapper {
+    height: 65px;
+}
+md-tabs-canvas {
+    height: 68px;
+    display: flex;
+}
+md-tabs-canvas.md-paginated {
+    margin: 0 46px;
+}
 
 /*510 Overview*/
 
@@ -2635,7 +2687,8 @@ div.loan-item-title {
 }
 
 .hide-title h3 a,
-.hide-title h3 svg {
+.hide-title h3 svg, 
+.hide-title prm-icon[icon-definition="open-in-new"] {
     visibility: hidden;
 }
 
@@ -3075,3 +3128,61 @@ div.courier-info>span a,
 
 
 /*****************************************************************************/
+
+
+
+
+
+
+/**************************search bar*************************/
+
+
+div[ng-if="::item.tab && item.queryType != 'recentSearches'"] {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+span[md-highlight-text="$ctrl.mainSearchField"] {
+    overflow: hidden;
+    align-self: flex-start;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+}
+
+
+/************************library card************************/
+
+#accountoverview > md-tabs > md-tabs-wrapper {
+    min-height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 5px;
+}
+md-tabs md-tabs-wrapper md-tabs-canvas md-pagination-wrapper md-tab-item:not([disabled]) {
+    min-width: fit-content;
+    align-self: center;
+}
+md-tabs-wrapper md-next-button md-icon, md-tabs-wrapper md-prev-button md-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d8d8d8;
+    border-radius: 39px;
+}
+md-tabs-wrapper md-next-button md-icon:hover, md-tabs-wrapper md-prev-button md-icon:hover {
+    background-color: #c6c6c6;
+}
+md-pagination-wrapper {
+    height: 65px;
+}
+md-tabs-canvas {
+    height: 68px;
+    display: flex;
+}
+md-tabs-canvas.md-paginated {
+    margin: 0 46px;
+}
+
+

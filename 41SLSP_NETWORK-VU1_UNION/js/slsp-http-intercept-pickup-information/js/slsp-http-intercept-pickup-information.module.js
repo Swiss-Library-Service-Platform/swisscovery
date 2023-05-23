@@ -22,6 +22,7 @@ export const slspHttpInterceptPickupInformation = angular.module('slspHttpInterc
                                 response.data.personalDelivery = 'None';
                             }
                         }
+                     
                     } catch (error) {
                         console.log(error)
                     }

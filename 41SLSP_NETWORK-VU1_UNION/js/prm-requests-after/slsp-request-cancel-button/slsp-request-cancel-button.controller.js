@@ -41,7 +41,7 @@ export class slspRequestCancelButtonController {
                     }
                 })
             })
-
+          
         } catch (e) {
             console.error("***SLSP*** an error occured: RequestCancelButton \n\n");
             console.error(e.message);

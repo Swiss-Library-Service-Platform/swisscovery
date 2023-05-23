@@ -52,11 +52,14 @@ export const slspHttpInterceptRequests = angular.module('slspHttpInterceptReques
                                         }
                                     })
                                 }
+                                
                                 else {
                                     throw `No mapping found for photocopies: ${interfaceLanguage}`
                                 }
                             }
                         }
+
+                        
                     }
                     catch (error) {
                         console.error(error);
