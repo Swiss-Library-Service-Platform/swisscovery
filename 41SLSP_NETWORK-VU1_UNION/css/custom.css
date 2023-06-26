@@ -540,10 +540,12 @@ button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:no
 /*Header for mobiles*/
 
 @media (max-width: 960px) {
+
     prm-user-area-expandable button.user-button.user-menu-button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple,
     prm-user-area-expandable-after {
         display: none !important;
     }
+
     button#signInBtn {
         display: block;
     }
@@ -620,18 +622,12 @@ prm-login .md-button.md-no-style:hover {
     color: black;
 }
 
-
-/* prm-stand-alone-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
-    z-index: unset;
-}
- */
-
 prm-stand-alone-login .md-secondary-container {
     z-index: 10;
 }
 
 prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button:hover {
-    background-color: rgb(228 228 228 / 28%)!important;
+    background-color: rgb(228 228 228 / 28%) !important;
 }
 
 prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button:focus {
@@ -689,6 +685,11 @@ p[translate="parallel.login.description2"] {
     cursor: default;
 }
 
+/*Login Union view arrow*/
+
+prm-union-catalog-login md-dialog-content md-list md-list-item button.md-button {
+    z-index: 100;
+}
 
 /*190 Other*/
 
@@ -814,6 +815,7 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     #mobiles {
         display: none;
     }
+
     #computer {
         display: flex;
     }
@@ -823,6 +825,7 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     #computer {
         display: none;
     }
+
     #mobiles {
         display: flex;
     }
@@ -1150,6 +1153,7 @@ prm-requests .separate-list-items md-list-item:hover {
 /*Location icon (hidden for mobiles)*/
 
 @media only screen and (min-width: 600px) {
+
     prm-locations>div.padding-left-medium>md-list>md-list-item>prm-location>div>div.layout-align-space-between-center.layout-row.flex-100>div:before,
     md-content>md-list>md-list-item>button>div.layout-align-space-between-center.layout-row.flex-100>div h3:before {
         content: ' ';
@@ -1226,6 +1230,7 @@ div>md-content>prm-locations>div.padding-left-medium>md-list>md-list-item>prm-lo
 }
 
 @media only screen and (max-width: 960px) {
+
     #item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon:after,
     #item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon:after,
     #getit_link1_0>div>prm-full-view-service-container>div.section-body>div>prm-alma-viewit>prm-alma-viewit-items>md-list:before,
@@ -1641,7 +1646,7 @@ prm-location-items md-list {
 
 .collapse-related {
     width: 100%;
-  }
+}
 
 /* Move expand button */
 
@@ -1748,7 +1753,8 @@ div#getit_link1_0 {
 }
 
 #getit_link1_0 .md-button.neutralized-button,
-prm-locations>div.padding-left-medium>md-list>md-list-item>prm-location>div.neutralized-button {
+prm-locations>div.padding-left-medium>md-list>md-list-item>prm-location>div.neutralized-button,
+#getit_link1_1 .md-button.neutralized-button {
     color: #626262 !important;
     background-color: #ffffff !important;
     border: #d4d4d4 solid 1px;
@@ -1779,7 +1785,6 @@ md-content>md-list>md-list-item.md-2-line.separate-list-items.narrow-list-item.m
     flex-wrap: nowrap;
     padding: 0 10px !important;
 }
-
 
 /*Other campuses*/
 
@@ -1927,19 +1932,23 @@ html#primoExploreRoot {
     prm-location-items .md-list-item-text.layout-wrap.layout-row.flex {
         flex-direction: column;
     }
+
     prm-location-items h3,
     prm-location-items h4 {
         margin: 10px 0 !important;
     }
+
     prm-location-items>md-list>md-list-item>div>div.md-list-item-text>div.weak-text>div>div>p {
         margin: 4px 18px !important;
         display: list-item;
     }
+
     prm-location-items>md-list>md-list-item>div>div>div.layout-wrap {
         flex-direction: row !important;
         justify-content: flex-start !important;
         max-width: 100% !important;
     }
+
     prm-location-items>md-list>md-list-item>div>div>div>div>prm-service-button>button {
         box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
     }
@@ -2052,7 +2061,7 @@ prm-full-view .services-index-under {
 prm-full-view .services-index-under .md-button {
     width: 100%;
     /* border: 1px solid #c3c3c3; */
-    margin: 1px 0!important;
+    margin: 1px 0 !important;
     text-overflow: clip;
     padding-right: 0;
     white-space: normal;
@@ -2110,7 +2119,7 @@ button.pickup_information_btn.md-ink-ripple.button-link.md-button.md-primoExplor
 }
 
 prm-service-physical-best-offer .ngrs-delivery-box-tile {
-    color: #2e2e2e!important;
+    color: #2e2e2e !important;
     filter: none;
     width: 64px !important;
 }
@@ -2189,6 +2198,7 @@ prm-get-it-request .offer_details_main_tail {
     #item-ngrs .or {
         margin-top: 30px !important;
     }
+
     #item-ngrs .line {
         margin-top: 60px !important;
     }
@@ -2201,12 +2211,14 @@ prm-get-it-request .offer_details_main_tail {
     div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable {
         max-width: 80%;
     }
+
     #prm_nui\.ngrs\.pickup\.information\.pickupInstitution>div.md-text>span,
     #prm_nui\.ngrs\.pickup\.information\.pickupLibrary>div.md-text>span {
         white-space: normal;
         height: unset;
         margin: 5px 0;
     }
+
     md-option#prm_nui\.ngrs\.pickup\.information\.pickupInstitution,
     md-option#prm_nui\.ngrs\.pickup\.information\.pickupLibrary {
         height: auto;
@@ -2381,9 +2393,11 @@ span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span b {
         display: flex !important;
         justify-content: center;
     }
+
     div#digitalGetItRequest prm-offer-details-tile .first_line_s {
         display: none;
     }
+
     span[translate="nui.ngrs.search.brief.digital.getAChapter"],
     span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] {
         flex-direction: row;
@@ -2391,9 +2405,18 @@ span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span b {
     }
 }
 
+/* Fix to hide "Request" button for journals before login */
 
-/*nui.ngrs.digital.deliverdin ??? */
+primo-explore.logged-out #rapidoOffer prm-service-physical-best-offer .offer_details-wrapper[ng-if="!$ctrl.showOfferTile() && !$ctrl.dontShowAnyOfferTile()"] button.get_it_btn_digital {
+    visibility: hidden;
+}
 
+/*Multivolume request button*/
+
+button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple[disabled] {
+    cursor: not-allowed;
+    background-color: #999999 !important;
+}
 
 /*470 Special external collections*/
 
@@ -2560,6 +2583,7 @@ prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clic
 /*Library card: IZ selector for mobiles*/
 
 @media only screen and (max-width: 599px) {
+
     div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable,
     prm-account prm-linked-user-selector {
         font-size: 16px !important;
@@ -2568,7 +2592,7 @@ prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clic
 
 /* Fix for cut labels */
 
-#accountoverview > md-tabs > md-tabs-wrapper {
+#accountoverview>md-tabs>md-tabs-wrapper {
     min-height: 65px;
     display: flex;
     flex-direction: column;
@@ -2576,28 +2600,108 @@ prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clic
     flex-wrap: wrap;
     margin: 0 5px;
 }
+
 md-tabs md-tabs-wrapper md-tabs-canvas md-pagination-wrapper md-tab-item:not([disabled]) {
     min-width: fit-content;
     align-self: center;
 }
-md-tabs-wrapper md-next-button md-icon, md-tabs-wrapper md-prev-button md-icon {
+
+md-tabs-wrapper md-next-button md-icon,
+md-tabs-wrapper md-prev-button md-icon {
     width: 40px;
     height: 40px;
     background-color: #d8d8d8;
     border-radius: 39px;
 }
-md-tabs-wrapper md-next-button md-icon:hover, md-tabs-wrapper md-prev-button md-icon:hover {
+
+md-tabs-wrapper md-next-button md-icon:hover,
+md-tabs-wrapper md-prev-button md-icon:hover {
     background-color: #c6c6c6;
 }
+
 md-pagination-wrapper {
     height: 65px;
 }
+
 md-tabs-canvas {
     height: 68px;
     display: flex;
 }
+
 md-tabs-canvas.md-paginated {
     margin: 0 46px;
+}
+
+/*IZ selection*/
+
+
+prm-account-overview .institutions-list md-list-item.is-selected span.institution-name {
+    color: #fff !important;
+    background-color: #191919 !important;
+}
+
+prm-account-overview .institutions-list md-list-item.is-selected span.institution-name:hover {
+    background-color: #5d5d5d !important;
+}
+
+/*Mobile Toolbar positioning*/
+
+@media (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
+    .md-toolbar-tools.layout-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    md-toolbar.default-toolbar button#backtosearch {
+        left: 10px;
+        display: block;
+        position: absolute;
+    }
+
+    prm-linked-user-selector md-input-container:after {
+        background-color: unset !important;
+    }
+
+/*Mobile IZ selectbox*/
+
+    prm-linked-user-selector md-input-container.toolbar-select-input.hide-gt-sm.md-primoExplore-theme.layout-align-center-stretch.layout-row.md-input-has-value md-select {
+        border: #5e5e5e 1px solid !important;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #e8e8e8;
+        transition: background-color 0.5s ease;
+    }
+
+    prm-linked-user-selector md-input-container.toolbar-select-input.hide-gt-sm.md-primoExplore-theme.layout-align-center-stretch.layout-row.md-input-has-value md-select:hover {
+        background-color: #c6c6c6;
+    }
+
+    prm-account prm-linked-user-selector {
+        font-size: 16px !important;
+    }
+    
+}
+
+/*Mobile IZ selectbox:small screens*/
+
+@media (min-width: 0) and (max-width: 599px) and (orientation: portrait) {
+    div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable {
+        left: 10% !important;
+        top: 50px !important;
+        min-width: 80% !important;       
+    }
+}
+
+@media (min-width: 0) and (max-width: 399px) and (orientation: portrait) {
+    md-toolbar.default-toolbar button#backtosearch {
+        top: 0 !important;
+        max-height: 20px;
+    }
+    .md-select-menu-container md-select-menu md-option .md-text {
+        white-space: normal !important;
+    }
 }
 
 /*510 Overview*/
@@ -2687,7 +2791,7 @@ div.loan-item-title {
 }
 
 .hide-title h3 a,
-.hide-title h3 svg, 
+.hide-title h3 svg,
 .hide-title prm-icon[icon-definition="open-in-new"] {
     visibility: hidden;
 }
@@ -2885,6 +2989,7 @@ md-list-item>prm-location-item-after {
     .eth-mapongo-qrc img {
         max-width: 70%;
     }
+
     .eth-mapongo-link img {
         width: 65%;
     }
@@ -2895,6 +3000,7 @@ md-list-item>prm-location-item-after {
         text-align: center;
         margin-bottom: 15px;
     }
+
     .eth-mapongo-link img {
         width: 75%;
     }
@@ -3128,61 +3234,3 @@ div.courier-info>span a,
 
 
 /*****************************************************************************/
-
-
-
-
-
-
-/**************************search bar*************************/
-
-
-div[ng-if="::item.tab && item.queryType != 'recentSearches'"] {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-}
-
-span[md-highlight-text="$ctrl.mainSearchField"] {
-    overflow: hidden;
-    align-self: flex-start;
-    margin-right: 10px;
-    text-overflow: ellipsis;
-}
-
-
-/************************library card************************/
-
-#accountoverview > md-tabs > md-tabs-wrapper {
-    min-height: 65px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin: 0 5px;
-}
-md-tabs md-tabs-wrapper md-tabs-canvas md-pagination-wrapper md-tab-item:not([disabled]) {
-    min-width: fit-content;
-    align-self: center;
-}
-md-tabs-wrapper md-next-button md-icon, md-tabs-wrapper md-prev-button md-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #d8d8d8;
-    border-radius: 39px;
-}
-md-tabs-wrapper md-next-button md-icon:hover, md-tabs-wrapper md-prev-button md-icon:hover {
-    background-color: #c6c6c6;
-}
-md-pagination-wrapper {
-    height: 65px;
-}
-md-tabs-canvas {
-    height: 68px;
-    display: flex;
-}
-md-tabs-canvas.md-paginated {
-    margin: 0 46px;
-}
-
-

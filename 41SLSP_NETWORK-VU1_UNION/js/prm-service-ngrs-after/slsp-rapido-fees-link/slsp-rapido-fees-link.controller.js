@@ -30,6 +30,7 @@ export class slspRapidoFeesLinkController {
                 console.error("***SLSP*** an error occured: Rapido Fees Link\n\n");
                 console.error(e.message);
             }
+          
         }
     }
 
