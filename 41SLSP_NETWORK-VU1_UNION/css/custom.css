@@ -2664,7 +2664,7 @@ prm-account-overview .institutions-list md-list-item.is-selected span.institutio
         background-color: unset !important;
     }
 
-/*Mobile IZ selectbox*/
+    /*Mobile IZ selectbox*/
 
     prm-linked-user-selector md-input-container.toolbar-select-input.hide-gt-sm.md-primoExplore-theme.layout-align-center-stretch.layout-row.md-input-has-value md-select {
         border: #5e5e5e 1px solid !important;
@@ -2681,7 +2681,7 @@ prm-account-overview .institutions-list md-list-item.is-selected span.institutio
     prm-account prm-linked-user-selector {
         font-size: 16px !important;
     }
-    
+
 }
 
 /*Mobile IZ selectbox:small screens*/
@@ -2690,7 +2690,7 @@ prm-account-overview .institutions-list md-list-item.is-selected span.institutio
     div.md-select-menu-container.md-primoExplore-theme.md-active.md-clickable {
         left: 10% !important;
         top: 50px !important;
-        min-width: 80% !important;       
+        min-width: 80% !important;
     }
 }
 
@@ -2699,6 +2699,7 @@ prm-account-overview .institutions-list md-list-item.is-selected span.institutio
         top: 0 !important;
         max-height: 20px;
     }
+
     .md-select-menu-container md-select-menu md-option .md-text {
         white-space: normal !important;
     }
@@ -3234,3 +3235,16 @@ div.courier-info>span a,
 
 
 /*****************************************************************************/
+
+/*temporary fix for the Primo August Release, it will replace line 1730 and 1817 in the next sprint*/
+
+h6[ng-if="$ctrl.currLoc.location && $ctrl.getLibraryName($ctrl.currLoc.location)"] {
+    visibility: hidden;
+    margin: 5px 0 !important;
+    min-height: 23px !important;
+    font-size: 18px !important;
+}
+
+prm-location-items>h5 {
+    display: none;
+}
