@@ -2241,7 +2241,12 @@ span.reading-Room-Pod {
     margin-left: 5px;
 }
 
+/*Hide rapido.tiles.physical.no_best_offer.line_3 from tile*/
 
+prm-service-physical-best-offer [translate="rapido.tiles.physical.no_best_offer.line_3"] {
+    display: none !important;
+ }
+ 
 /*Local courier label*/
 
 .courierInfo {
