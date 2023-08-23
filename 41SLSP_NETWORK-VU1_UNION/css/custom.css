@@ -117,6 +117,9 @@
 /*444 Related titles*/
 
 
+/*445 Details*/
+
+
 /*449 Other*/
 
 
@@ -700,6 +703,11 @@ button#mainMenuFullCloseButton:focus {
     color: #ffffff !important;
 }
 
+/* Timeout session: close button background color */
+
+prm-timeout-toast md-toast .md-toast-content .md-button:hover:not(disabled) {
+    background: #9d9cbd !important;
+}
 
 /*****************************************************************************/
 
@@ -806,6 +814,37 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     border: solid;
 }
 
+/*Mobiles: Search profiles*/
+
+@media screen and (max-width: 599px) {
+    prm-search-bar .simple-search-wrapper .search-options prm-tabs-and-scopes-selector {
+        width: auto;
+        margin: 16px;
+        border: 1px solid #bcbcbc;
+        border-radius: 3px;
+        padding: 0px;
+    }
+
+    prm-search-bar .simple-search-wrapper .search-options prm-tabs-and-scopes-selector {
+        background-color: #f9f9f9;
+        transition: background-color 0.5s ease;
+    }
+
+    prm-search-bar .simple-search-wrapper .search-options prm-tabs-and-scopes-selector:hover {
+        background-color: #d1d1d1;
+
+    }
+
+    prm-search-bar .simple-search-wrapper .search-options prm-tabs-and-scopes-selector md-input-container .md-select-icon {
+        transform: scale(1.5) !important;
+        transform-origin: 100% 33% !important;
+    }
+
+    prm-search-bar .simple-search-wrapper .search-options prm-tabs-and-scopes-selector md-input-container:after {
+        background-color: unset !important;
+        bottom: 0px !important;
+    }
+}
 
 /*220 Frames*/
 
@@ -1008,13 +1047,17 @@ prm-full-view-service-container prm-brief-result .item-title span:hover {
     background-color: unset !important;
 }
 
+/*removes the hand- cursor from the title of the brief result and fullview*/
+
+prm-brief-result .item-title {
+    cursor: auto;
+}
 
 /*page select buttons*/
 
 a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     color: white !important;
 }
-
 
 /*Save query button*/
 
@@ -1063,7 +1106,7 @@ span.section-title-header:hover {
 }
 
 
-/*library info icon*/
+/*library info icon for the library title*/
 
 slsp-i-button-component>div>span>a>img {
     vertical-align: middle;
@@ -1071,6 +1114,26 @@ slsp-i-button-component>div>span>a>img {
     margin: 4px 0px;
 }
 
+prm-icon#library-info-arrow md-icon {
+    vertical-align: text-top;
+}
+
+prm-icon#library-info-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+svg#library-info {
+    margin-bottom: -5px;
+    margin-left: 2px;
+    fill: #3d6e94;
+}
+
+.i-button a:hover {
+    color: #3d6e94 !important;
+    background-color: #f1f1f1 !important;
+    border-radius: 2px;
+}
 
 /*fullview background of the left part*/
 
@@ -1727,7 +1790,7 @@ prm-location-items md-list {
 
 /*Hide "location" label for physical items*/
 
-prm-location-items>h3,
+prm-location-items>h5,
 prm-locations>div.layout-align-space-between-center.layout-row {
     display: none;
 }
@@ -1814,7 +1877,7 @@ prm-alma-other-units {
 
 /*old library title, same parameter but hidden*/
 
-h4[ng-if="$ctrl.currLoc.location && $ctrl.getLibraryName($ctrl.currLoc.location)"],
+h6[ng-if="$ctrl.currLoc.location && $ctrl.getLibraryName($ctrl.currLoc.location)"],
 md-list-item>prm-location>div>div.layout-align-space-between-center.layout-row.flex-100>div>div>prm-location-holdings>prm-location-holdings-after>slsp-i-button-component {
     visibility: hidden;
     margin: 5px 0 !important;
@@ -1993,6 +2056,54 @@ md-list.md-primoExplore-theme.icnLblOtherUnitsE {
     background-color: #f3f3f3;
 }
 
+/*445 Details*/
+
+/*HSG foldable details*/
+.hsg-collapsed {
+    overflow: hidden;
+}
+
+.hsg-expanded {
+    overflow: hidden;
+}
+
+.hsg-collapsed .hsg-foldable-item {
+    display: none;
+}
+
+.hsg-collapsed .hsg-foldable-item-longtext {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.hsg-expand-button,
+.hsg-collapse-button {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 23px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.59);
+    padding: 1px 10px 1px 0px;
+    margin-top: 10px;
+}
+
+.hsg-expand-button {
+    margin-bottom: 10px;
+}
+
+.hsg-expand-button:hover,
+.hsg-collapse-button:hover {
+    background-color: #ddd;
+}
+
+.hsg-fold-icon-collapse {
+    transform: rotate(180deg);
+    margin-top: -5px;
+}
 
 /*449 Other*/
 
@@ -2031,6 +2142,9 @@ md-tabs-content-wrapper div>button.back-button.button-with-icon.zero-margin.md-b
     vertical-align: text-bottom;
 }
 
+prm-opac-back-button .md-button.button-with-icon>prm-icon md-icon {
+    top: -1px;
+}
 
 /*Space around back buttons*/
 
@@ -2245,8 +2359,8 @@ span.reading-Room-Pod {
 
 prm-service-physical-best-offer [translate="rapido.tiles.physical.no_best_offer.line_3"] {
     display: none !important;
- }
- 
+}
+
 /*Local courier label*/
 
 .courierInfo {
@@ -2412,7 +2526,8 @@ span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span b {
 
 /* Fix to hide "Request" button for journals before login */
 
-primo-explore.logged-out #rapidoOffer prm-service-physical-best-offer .offer_details-wrapper[ng-if="!$ctrl.showOfferTile() && !$ctrl.dontShowAnyOfferTile()"] button.get_it_btn_digital {
+primo-explore.logged-out #rapidoOffer prm-service-physical-best-offer .offer_details-wrapper[ng-if="!$ctrl.showOfferTile() && !$ctrl.dontShowAnyOfferTile()"] button.get_it_btn_digital,
+primo-explore.logged-out #rapidoOffer prm-service-physical-best-offer .offer_details-wrapper[ng-if="$ctrl.showOfferTile() && !$ctrl.dontShowAnyOfferTile()"] button.get_it_btn_digital {
     visibility: hidden;
 }
 
@@ -2813,6 +2928,28 @@ div.loan-item-title {
 
 /*540 Fees*/
 
+/*Alert bar for closed fines*/
+
+prm-fines.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+prm-fines.flex .tab-content-header.layout-xs-column.layout-align-xs-start-stretch.layout-align-space-between-end.layout-row {
+    order: 0;
+}
+
+prm-fines.flex md-list.separate-list-items.gapped-list.md-primoExplore-theme.layout-column {
+    order: 2;
+}
+
+prm-fines-after {
+    order: 1;
+}
+
+div[ng-if="$ctrl.isFinesFeatureFlagEnabled && $ctrl.finesTypeDropDownSelection === 'active' && $ctrl.numOfTransferredFines && !$ctrl.isLoadingFines"] {
+    order: 3;
+}
 
 /*550 Block and messages*/
 
@@ -2946,6 +3083,11 @@ prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout
 
 /*950 Alma viewer*/
 
+/*Hide OTB logo in alma viewer*/
+
+#almaViewerHeader>prm-topbar>div>div.flex-xs-50>div>header>span {
+    display: none !important;
+}
 
 /*960 Email template*/
 
@@ -3241,15 +3383,6 @@ div.courier-info>span a,
 
 /*****************************************************************************/
 
-/*temporary fix for the Primo August Release, it will replace line 1730 and 1817 in the next sprint*/
 
-h6[ng-if="$ctrl.currLoc.location && $ctrl.getLibraryName($ctrl.currLoc.location)"] {
-    visibility: hidden;
-    margin: 5px 0 !important;
-    min-height: 23px !important;
-    font-size: 18px !important;
-}
 
-prm-location-items>h5 {
-    display: none;
-}
+

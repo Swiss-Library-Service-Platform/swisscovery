@@ -10,7 +10,7 @@ export class slspMultivolumeRequestController {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
             const currentUnavailableResource = this.parentCtrl.bestoffer.unavailableResource;
-
+           
             if (currentUnavailableResource !== this.previousUnavailableResource) {
               
                 //console.log(this.parentCtrl);
