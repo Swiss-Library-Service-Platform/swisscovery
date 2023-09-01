@@ -2951,6 +2951,11 @@ div[ng-if="$ctrl.isFinesFeatureFlagEnabled && $ctrl.finesTypeDropDownSelection =
     order: 3;
 }
 
+.bar.alert-bar[ng-if="$ctrl.showClosedFines"] {
+    height: auto !important;
+    padding: 0.75em 2em;
+}
+
 /*550 Block and messages*/
 
 
