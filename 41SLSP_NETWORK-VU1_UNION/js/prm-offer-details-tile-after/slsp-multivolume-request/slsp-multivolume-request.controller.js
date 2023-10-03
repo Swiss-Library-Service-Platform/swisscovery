@@ -1,29 +1,26 @@
-//-----------------MultivolumeRequest------------------------------
-
 export class slspMultivolumeRequestController {
     constructor($scope) {
         this.$scope = $scope;
-        this.previousUnavailableResource = null; 
+        this.previousUnavailableVolume = null;
+    }
+
+    $onInit() {
+        this.parentCtrl = this.afterCtrl.parentCtrl;
+
     }
 
     $doCheck() {
         try {
-            this.parentCtrl = this.afterCtrl.parentCtrl;
-            const currentUnavailableResource = this.parentCtrl.bestoffer.unavailableResource;
-           
-            if (currentUnavailableResource !== this.previousUnavailableResource) {
-              
-                //console.log(this.parentCtrl);
-             
-                if (currentUnavailableResource !== false) {
-                    //console.log("Request nicht möglich");
+            const currentUnavailableVolume = this.parentCtrl.isNoOfferAfterRefine();
+
+            if (currentUnavailableVolume !== this.previousUnavailableVolume) {
+                if (currentUnavailableVolume == true) {
                     this.disableRequestButton();
                 } else {
-                    //console.log("Request möglich");
                     this.enableRequestButton();
                 }
 
-                this.previousUnavailableResource = currentUnavailableResource; 
+                this.previousUnavailableVolume = currentUnavailableVolume;
             }
         } catch (e) {
             console.error("***SLSP*** an error occurred: Multivolume Request\n\n");
@@ -32,18 +29,19 @@ export class slspMultivolumeRequestController {
     }
 
     disableRequestButton() {
-        const requestButton = document.querySelector('button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple');
+        const requestButton = angular.element(document.querySelector('button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple'));
         if (requestButton) {
-            requestButton.disabled = true;
+            requestButton.attr('disabled', 'disabled');
         }
     }
 
     enableRequestButton() {
-        const requestButton = document.querySelector('button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple');
+        const requestButton = angular.element(document.querySelector('button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple'));
         if (requestButton) {
-            requestButton.disabled = false;
+            requestButton.removeAttr('disabled');
         }
     }
+
 }
 
 slspMultivolumeRequestController.$inject = ['$scope'];
