@@ -11,7 +11,7 @@ export class ethDisableRequestButtonController {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
             this.processDoCheck = true;
-            console.log(this.parentCtrl);
+            console.log(this.parentCtrl)
         } catch (e) {
             console.error("***ETH*** an error occurred: ethDisableRequestButtonController \n\n");
             console.error(e.message);
@@ -20,6 +20,7 @@ export class ethDisableRequestButtonController {
 
     $doCheck() {
         try {
+
             if (!this.processDoCheck || !document.querySelector('prm-service-physical-best-offer .offer_details .rota_line > div > span')) return;
             let noAvailableCopies = document.querySelector('span[translate="rapido.tiles.physical.no_best_offer.line_2"]');
             let noAvailableCopiesLine1 = document.querySelector('span[translate="rapido.tiles.physical.no_best_offer.line_1"]');
@@ -31,6 +32,7 @@ export class ethDisableRequestButtonController {
             if (angular.isArray(delCategory) && delCategory.indexOf('Alma-P') !== -1) {
                 this.hasNoAlmaP = false; // Setze die Variable auf "false", wenn 'ALMA-P' vorhanden ist
             }
+
 
             // Überprüfe auf linkType "linktorsrc"
             let linkArray = this.parentCtrl.item.delivery.link;
@@ -45,24 +47,17 @@ export class ethDisableRequestButtonController {
 
             let requestButton = document.querySelector('#get_it_btn_physical');
 
-            console.log('hasNoAlmaP: ' + this.hasNoAlmaP + '\n' + 'resType: ' + resType + '\n' + 'noAvailableCopies: ' + noAvailableCopies + '\n' + 'hasLinkToSrc: ' + this.hasLinkToSrc + '\n' + 'requestButton: ' + requestButton);
-
-            if (noAvailableCopies && resType == 'JOUR' && !this.hasLinkToSrc && !this.hasNoAlmaP) {
-                // Button klickbar machen
-                angular.element(requestButton).removeAttr('disabled');
-                // Ausführung des "else" Codes
-                angular.element(noAvailableCopies).replaceWith(journalRequest);
-                angular.element(noAvailableCopiesLine1).remove();
-            } else if (noAvailableCopies && resType !== 'JOUR') {
-                // Button nicht klickbar machen
+            if (noAvailableCopies && resType !== 'JOUR') {
                 angular.element(requestButton).attr('disabled', 'disabled');
-            } else {
-                // Ausführung des "else" Codes
+            }
+            else {
                 angular.element(noAvailableCopies).replaceWith(journalRequest);
                 angular.element(noAvailableCopiesLine1).remove();
             }
-           
             
+            console.log('hasNoAlmaP: ' + this.hasNoAlmaP + '\n' + 'resType: ' + resType + '\n' + 'noAvailableCopies: ' + noAvailableCopies + '\n' + 'hasLinkToSrc: ' + this.hasLinkToSrc);
+
+
             this.processDoCheck = false;
         } catch (e) {
             console.error("***ETH*** an error occurred: ethDisableRequestButtonController $doCheck\n\n");
@@ -72,3 +67,6 @@ export class ethDisableRequestButtonController {
 }
 
 ethDisableRequestButtonController.$inject = ['$scope', '$compile'];
+
+
+// && this.hasNoAlmaP || noAvailableCopies && resType !== 'JOUR' && !this.hasNoAlmaP && this.hasLinkToSrc
