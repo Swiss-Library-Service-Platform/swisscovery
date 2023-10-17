@@ -6,12 +6,31 @@ export class slspMultivolumeRequestController {
 
     $onInit() {
         this.parentCtrl = this.afterCtrl.parentCtrl;
+        //this.domManipulated = false;
 
     }
 
     $doCheck() {
         try {
             const currentUnavailableVolume = this.parentCtrl.isNoOfferAfterRefine();
+
+            //if (!this.domManipulated) {
+            //   let volumeField = angular.element(document.querySelector('prm-get-it-request .form_item[ng-if="::$ctrl.isCodeEnabledforForm(\'VOLUME\')"]'));
+            //    let refineButton = angular.element(document.querySelector('span[ng-if="::$ctrl._tempRapidoLocateSerialMultivolumeOffers"]'));
+
+            //   volumeField.append(refineButton);
+
+            //console.log(volumeField);
+            //console.log(refineButton);
+
+            //    this.domManipulated = true;
+
+
+            // }
+
+            //console.log('isNoOfferAfterRefine:' + this.parentCtrl.isNoOfferAfterRefine() + '\n' + 'resType: ' + resType + '\n' + 'currentUnavailableVolume: ' + currentUnavailableVolume + '\n' + 'previousUnavailableVolume: ' + this.previousUnavailableVolume);
+
+            //console.log(this.parentCtrl);
 
             if (currentUnavailableVolume !== this.previousUnavailableVolume) {
                 if (currentUnavailableVolume == true) {

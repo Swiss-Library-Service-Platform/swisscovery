@@ -1,4 +1,5 @@
 /* locations filter by default; hide filter button */
-prm-locations button[ng-if='$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive'], prm-location-items button[ng-if='($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()']{
-    display: none !important;
+/*prm-locations button[ng-if='$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive'], prm-location-items button[ng-if='($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()']{
+    /*display: none !important;
 }
+*/

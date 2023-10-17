@@ -44,7 +44,7 @@ export class slspIconLabelViewitItemsController {
                     return
                 }
 
-                //console.log(this.parentCtrl.serviceType);
+                ///console.log(this.parentCtrl);
 
             }, 0);
         }
