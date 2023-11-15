@@ -19,7 +19,7 @@ export class ethLocationItemsFilterController {
                 // Stop the loop if the element is replaced
                 this.filterButtonReplaced = true;
             }
-          
+         
          
         }
         catch(e){

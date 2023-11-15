@@ -1,6 +1,6 @@
 import { slspIconLabelViewitItemsModule } from './slsp-icon-label-viewit-items/slsp-icon-label-viewit-items.module';
 import { slspCollapseRelatedEResourcesModule } from './slsp-collapse-related-e-resources/slsp-collapse-related-e-resources.module';
-//import { slspTranslatePublicNoteModule } from './slsp-translate-public-note/slsp-translate-public-note.module';
+import { slspTranslatePublicNoteModule } from './slsp-translate-public-note/slsp-translate-public-note.module';
 
 export const prmAlmaViewitItemsAfterModule = angular
     .module('prmAlmaViewitItemsAfterModule', [])
@@ -15,4 +15,4 @@ export const prmAlmaViewitItemsAfterModule = angular
 
 prmAlmaViewitItemsAfterModule.requires.push(slspIconLabelViewitItemsModule.name);
 prmAlmaViewitItemsAfterModule.requires.push(slspCollapseRelatedEResourcesModule.name);
-//prmAlmaViewitItemsAfterModule.requires.push(slspTranslatePublicNoteModule.name);
+prmAlmaViewitItemsAfterModule.requires.push(slspTranslatePublicNoteModule.name);

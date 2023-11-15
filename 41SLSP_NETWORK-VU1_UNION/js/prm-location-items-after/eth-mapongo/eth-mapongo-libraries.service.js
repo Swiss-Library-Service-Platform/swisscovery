@@ -70,7 +70,7 @@ export const ethMapongoLibrariesService = [function () {
             "libraryCode": "E39",
             "baseUrl": "https://fhnw-solothurn.mapongo.de",
             "locationCodeWhiteList": ["E39BJ", "E39BI", "E39BB", "E39KA", "E39LS", "E39LE", "E39TK", "E39ZS"],
-            "locationWhiteList": ["Belletristik Kinder/Jugend", "Bibliothek", "Bilderbücher", "Kamishibai", "Lehrmittelsammlung", "Lernspiele", "Themenkisten", "Zeitschriften"]
+            "locationWhiteList": ["Belletristik Kinder/Jugend", "Bibliothek", "Bilderbücher", "Kamishibai", "Benutzung nur vor Ort", "Lernspiele", "Themenkisten", "Zeitschriften"]
         },
         {
             "shortname": "UBH",

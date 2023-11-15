@@ -602,13 +602,11 @@ bcu-lang-switch-component a:hover {
 
 /*140 Login pop up box*/
 
-
 /*hiding the Library Logo in the login window*/
 
 .login-header {
     display: none !important;
 }
-
 
 /*login-box make arrows clickable*/
 
@@ -641,14 +639,12 @@ prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button:
     width: 100%;
 }
 
-
 /*Background color*/
 
 .full-view-spacer,
 md-content.padded-container.layout-fill._md.md-primoExplore-theme.layout-row {
     background-color: #fcfcfc !important;
 }
-
 
 /*Other login box*/
 
@@ -670,6 +666,7 @@ md-list-item.authMethAlma {
 
 p.parallelLoginDescription {
     padding-left: 15px;
+    padding-top: 10px;
 }
 
 p.parallelLoginDescription>a.md-primoExplore-theme:focus {
@@ -688,10 +685,121 @@ p[translate="parallel.login.description2"] {
     cursor: default;
 }
 
-/*Login Union view arrow*/
+/*Login Union arrow*/
 
 prm-union-catalog-login md-dialog-content md-list md-list-item button.md-button {
     z-index: 100;
+}
+
+/*Login "register" button*/
+
+slsp-union-login-box-component {
+    position: absolute;
+    right: 0;
+    margin: 6px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.union-loginbox-register {
+    margin: 24px;
+}
+
+.union-loginbox-register a {
+    color: #fff !important;
+}
+
+.union-loginbox-register a:hover {
+    text-decoration: underline;
+}
+
+button.cancel-union-login svg {
+    width: 25px;
+    fill: white;
+    height: 25px;
+}
+
+button.cancel-union-login:hover svg {
+    fill: rgb(14, 14, 14);
+}
+
+.loginbox-register {
+    left: 37px;
+    top: 70px;
+    position: absolute;
+}
+
+/*div.loginbox-register a:focus,
+div.loginbox-register a svg:focus {
+    color: #fff !important;
+}*/
+
+.loginbox-register svg {
+    width: 14px;
+    height: 14px;
+    fill: rgb(17, 17, 17);
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+prm-login .loginbox-register svg,
+prm-login md-list-item.authMethSaml a svg {
+    fill: rgb(47 222 223);
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+prm-login .loginbox-register:hover svg,
+prm-login .loginbox-register a:focus svg,
+prm-login md-list-item.authMethSaml a:hover svg,
+prm-login md-list-item.authMethSaml a:focus svg {
+    fill: rgb(241, 241, 241);
+}
+
+prm-login .loginbox-register a:focus,
+prm-login md-list-item.authMethSaml a:focus {
+    color: #fff !important;
+}
+
+.union-loginbox-register svg {
+    width: 14px;
+    height: 14px;
+    fill: rgb(244, 244, 244);
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+a.parallelLoginDescription.md-primoExplore-theme {
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+prm-stand-alone-login .loginbox-register {
+    left: 16px;
+    top: 56px;
+    position: absolute;
+}
+
+prm-stand-alone-login prm-login .loginbox-register svg,
+prm-stand-alone-login prm-login .loginbox-register a:hover svg,
+prm-stand-alone-login prm-login .loginbox-register a:focus svg,
+prm-stand-alone-login prm-login md-list-item.authMethSaml a svg,
+prm-stand-alone-login prm-login md-list-item.authMethSaml a:hover svg,
+prm-stand-alone-login prm-login md-list-item.authMethSaml a:focus svg {
+    fill: #111;
+}
+
+prm-stand-alone-login h2 {
+    margin-bottom: 20px;
+}
+
+prm-stand-alone-login p.parallelLoginDescription>a.md-primoExplore-theme:focus,
+prm-stand-alone-login div.loginbox-register>a.md-primoExplore-theme:focus,
+prm-stand-alone-login prm-login md-list-item.authMethSaml a:focus {
+    color: #111 !important;
 }
 
 /*190 Other*/
@@ -846,6 +954,13 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
     }
 }
 
+/*Resource type filter bar*/
+
+prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+    font-weight: 500;
+    cursor: pointer;
+}
+
 /*220 Frames*/
 
 /*Genialy requests guide*/
@@ -924,13 +1039,14 @@ md-card.cardbox.default-card.quicklinksbox._md.md-primoExplore-theme>md-card-con
     border-bottom: #c5c5c5 1px solid;
 }
 
+/*
 .md-button._md-focused:not([disabled]),
 .md-button.md-focused:not([disabled]),
 .md-button:focus:not([disabled]) {
     color: unset !important;
     background-color: unset !important;
 }
-
+*/
 
 /*230 Footer*/
 
@@ -1066,9 +1182,7 @@ a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     background-color: rgba(17, 17, 17, 0.10) !important;
 }
 
-
 /*310 Facets*/
-
 
 /*facet titles*/
 
@@ -1076,13 +1190,16 @@ span.section-title-header:hover {
     color: #8a8a8a !important;
 }
 
-
 /*facet "show more" button*/
 
 .sidebar-section .md-button.button-as-link.link-alt-color:hover {
     background-color: rgba(17, 17, 17, 0.17) !important;
 }
 
+/*Hide NZ as IZ (import of Recherche Patrimonial data)*/
+div[data-facet-value="institution-5501"] {
+    display: none !important;
+}
 
 /*390 Other*/
 
@@ -1199,7 +1316,7 @@ prm-full-view-cont prm-full-view .services-index-under {
 }
 
 .separate-list-items md-list-item:hover {
-    background-color: rgb(0 0 0 / 0.1) !important;
+    background-color: #ffffff0d !important;
 }
 
 prm-loans .separate-list-items md-list-item,
@@ -1718,6 +1835,25 @@ prm-location-items md-list {
     position: absolute;
 }
 
+/* Public and auth note translated */
+p[ng-if="item.authNote"], span#public-note p  {
+    margin-bottom: 10px !important;
+}
+
+@media (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
+prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex {
+    flex-direction: column-reverse;
+}
+prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex .md-list-item-text.layout-wrap.layout-row.flex {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+prm-alma-viewit-items .separate-list-items ._md-secondary-container{
+    align-self: flex-end;
+    max-height: 32px;
+}
+}
 
 /*430 Get it - requests buttons*/
 
@@ -1757,7 +1893,6 @@ md-optgroup [value="112045850005517$$LIBRARY"] {
     visibility: collapse;
 }
 
-
 /*440 How to get it / Pick up on site -  locations, holdings and items*/
 
 
@@ -1770,7 +1905,6 @@ md-optgroup [value="112045850005517$$LIBRARY"] {
     margin-bottom: .8em !important;
 }
 
-
 /*full display Resource sharing expand section*/
 
 prm-alma-other-units button.layout-fill,
@@ -1779,7 +1913,6 @@ prm-alma-other-members button.layout-fill {
     min-height: auto;
 }
 
-
 /*Hide physical items box shadow*/
 
 prm-opac md-list md-list-item,
@@ -1787,17 +1920,12 @@ prm-location-items md-list {
     box-shadow: none;
 }
 
-
 /*Hide "location" label for physical items*/
 
 prm-location-items>h5 {
     display: none;
 }
-/*
-prm-locations>div.layout-align-space-between-center.layout-row {
-    display: none;
-}
-*/
+
 /*Look of the section and icon*/
 
 #getit_link1_0>div>prm-full-view-service-container>div.section-body>div {
@@ -1866,17 +1994,13 @@ prm-alma-other-units {
     margin-bottom: 10px;
 }
 
-
 /* On-site libraries info bar */
 
 .spezLibInfo {
     margin-top: 20px;
 }
 
-
 /* i-button in library title */
-
-
 /*old library title, same parameter but hidden*/
 
 h6[ng-if="$ctrl.currLoc.location && $ctrl.getLibraryName($ctrl.currLoc.location)"],
@@ -1891,7 +2015,6 @@ md-list-item>prm-location>div>div.layout-align-space-between-center.layout-row.f
     display: none;
 }
 
-
 /*new library title with link*/
 
 .i-button {
@@ -1905,13 +2028,16 @@ md-list-item>prm-location>div>div.layout-align-space-between-center.layout-row.f
     display: block;
 }
 
-
 /* Background color */
 
 prm-opac {
     background-color: #fff !important;
 }
 
+/*Item policy: hide wrong NOT_DEFINED*/
+span[translate="nui.item.brief.4"] {
+    display: none !important;
+}
 
 /*441 How to get it sections' order*/
 
@@ -1938,16 +2064,15 @@ primo-explore.alert alma-htgi-svc {
     font-size: 1em;
 }
 
+
 /*442 Filter bar*/
 
-/* Location filter "Clear" button */
+
+/* Location filter "Clear" button*/
 
 prm-locations-filter .md-button.button-as-link:hover:not([disabled]) {
     background-color: rgba(17, 17, 17, 0.10) !important;
-}
-
-/* Filter bar */
-
+}			
 prm-locations-filter md-select {
     margin-top: 1px;
 }
@@ -1975,12 +2100,11 @@ html#primoExploreRoot {
     padding-left: 0px !important;
 }
 
-/* Filter bar button */
+/* Filter bar as button */
 
 prm-locations h3.section-title {
     visibility: hidden;
 }
-
 
 button[ng-if="$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive"],
 button[ng-if="($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()"]  {
@@ -2024,7 +2148,7 @@ button[ng-if="$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive"] md
 
 prm-locations-filter div[ng-include="$ctrl.templateUrl"] {
     border-top: 4px solid #ececec !important;
-}
+}					   
 
 /*443 Items expand for mobiles*/
 
@@ -2307,9 +2431,7 @@ prm-get-it-request .offer_details_main_tail {
     line-height: 14px;
 }
 
-
 /*Rapido buttons*/
-
 
 /*Rapido box*/
 
@@ -2355,7 +2477,6 @@ prm-get-it-request .offer_details_main_tail {
     }
 }
 
-
 /*Name of IZ and libraries divided more lines in the forms*/
 
 @media only screen and (max-width: 640px) {
@@ -2375,7 +2496,6 @@ prm-get-it-request .offer_details_main_tail {
         height: auto;
     }
 }
-
 
 /*Rapido customized labels*/
 
@@ -2409,13 +2529,11 @@ prm-service-physical-best-offer [translate="rapido.tiles.physical.no_best_offer.
     border: #d3d3d3 1px solid;
 }
 
-
 /*Hide Local courier label*/
 
 .courierInfo {
     display: none;
 }
-
 
 /*Reservation button*/
 
@@ -2423,20 +2541,17 @@ span.noOffer {
     display: none;
 }
 
-
 /*Rapido physical icon*/
 
 #item-ngrs div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon svg {
     display: none;
 }
 
-
 /*Rapido digital icon*/
 
 #item-ngrs div[ng-if="$ctrl.digitalTileVisible"] prm-service-physical-best-offer>div>div.icon-wrapper>prm-icon>md-icon svg {
     display: none;
 }
-
 
 /*Hide fees link when logged out*/
 
@@ -2445,20 +2560,17 @@ primo-explore.logged-out .rapidoFeesLink {
     display: none;
 }
 
-
 /*Hide Fees Link in the link section*/
 
 #links .rapidoFeesLink {
     display: none;
 }
 
-
 /*Hide Fees Link in Course reserve section*/
 
 #moreFromTheSameCourse .rapidoFeesLink {
     display: none;
 }
-
 
 /* Rapido larger library select button */
 
@@ -2478,20 +2590,17 @@ prm-service-physical-best-offer .pickupButton button span {
     float: right;
 }
 
-
 /* Rapido show/hide switch language fix */
 
 .slsp-hide-rapido {
     display: none;
 }
 
-
 /* Rapido spinner */
 
 .rapido-loading {
     line-height: 50px;
 }
-
 
 /* Digitization supply time label */
 
@@ -2573,6 +2682,31 @@ primo-explore.logged-out #rapidoOffer prm-service-physical-best-offer .offer_det
 button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple[disabled] {
     cursor: not-allowed;
     background-color: #999999 !important;
+}
+
+/*Refine Offer button*/
+
+button[ng-if="$ctrl.refineOfferIsVisible()"] {
+    display: flex;
+    width: 85%;
+    border: 1px solid #808080;
+    border-radius: 2px;
+}
+
+button[ng-if="$ctrl.refineOfferIsVisible()"] span {
+    text-wrap: wrap;
+    line-height: 16px;
+    margin-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+prm-get-it-request .getItNgrs {
+    width: 95%;
+}
+
+prm-get-it-request .form_item {
+    justify-content: left;
+    padding-left: 4%;
 }
 
 /*470 Special external collections*/
@@ -3291,10 +3425,9 @@ button.switch-to-simple:hover,
 .md-button.button-confirm:hover,
 .md-button.button-as-link:hover:not([disabled]),
 #rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover,
-prm-service-physical-best-offer .get_it_btn_physical:hover {
+prm-service-physical-best-offer .get_it_btn_physical:hover, prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     background-color: #393765 !important;
 }
-
 
 /*font color of the primary color*/
 
@@ -3423,9 +3556,11 @@ div.courier-info>span a,
 /*****************************************************************************/
 
 
-/*****************************************************************************/
+/*****************************************************************************/ 
 
-/************** Public note - will be published in the CP ******************
+
+
+/************** Public note - will be published in the CP ******************/
 p[ng-if="item.authNote"], span#public-note p  {
     margin-bottom: 10px !important;
 }
@@ -3446,8 +3581,7 @@ prm-alma-viewit-items .separate-list-items ._md-secondary-container{
 }
 }
 
-/*change on line 1201 (Physical items and e-resources boxes background colour and space between items)
+/*change on line 1201*/
 .separate-list-items md-list-item:hover {
     background-color: #ffffff0d !important;
 }
-*/
