@@ -3558,30 +3558,3 @@ div.courier-info>span a,
 
 /*****************************************************************************/ 
 
-
-
-/************** Public note - will be published in the CP ******************/
-p[ng-if="item.authNote"], span#public-note p  {
-    margin-bottom: 10px !important;
-}
-
-
-@media (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
-prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex {
-    flex-direction: column-reverse;
-}
-prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex .md-list-item-text.layout-wrap.layout-row.flex {
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-prm-alma-viewit-items .separate-list-items ._md-secondary-container{
-    align-self: flex-end;
-    max-height: 32px;
-}
-}
-
-/*change on line 1201*/
-.separate-list-items md-list-item:hover {
-    background-color: #ffffff0d !important;
-}
