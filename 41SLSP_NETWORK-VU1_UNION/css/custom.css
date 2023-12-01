@@ -1836,23 +1836,26 @@ prm-location-items md-list {
 }
 
 /* Public and auth note translated */
-p[ng-if="item.authNote"], span#public-note p  {
+p[ng-if="item.authNote"],
+span#public-note p {
     margin-bottom: 10px !important;
 }
 
 @media (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
-prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex {
-    flex-direction: column-reverse;
-}
-prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex .md-list-item-text.layout-wrap.layout-row.flex {
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-prm-alma-viewit-items .separate-list-items ._md-secondary-container{
-    align-self: flex-end;
-    max-height: 32px;
-}
+    prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex {
+        flex-direction: column-reverse;
+    }
+
+    prm-alma-viewit-items .separate-list-items .in-element-dialog-context.layout-row.flex .md-list-item-text.layout-wrap.layout-row.flex {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    prm-alma-viewit-items .separate-list-items ._md-secondary-container {
+        align-self: flex-end;
+        max-height: 32px;
+    }
 }
 
 /*430 Get it - requests buttons*/
@@ -2072,7 +2075,8 @@ primo-explore.alert alma-htgi-svc {
 
 prm-locations-filter .md-button.button-as-link:hover:not([disabled]) {
     background-color: rgba(17, 17, 17, 0.10) !important;
-}			
+}
+
 prm-locations-filter md-select {
     margin-top: 1px;
 }
@@ -2107,7 +2111,7 @@ prm-locations h3.section-title {
 }
 
 button[ng-if="$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive"],
-button[ng-if="($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()"]  {
+button[ng-if="($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()"] {
     border-radius: 5px !important;
     width: auto !important;
     min-width: 80px !important;
@@ -2137,9 +2141,10 @@ span.filter-label {
 prm-icon[ng-if="$ctrl.isLocationsFilterVisible"] .filter-label:after {
     transform: scaleY(0.5) scaleX(1) rotate(180deg);
 }
+
 prm-icon[ng-if="!$ctrl.isLocationsFilterVisible"] .filter-label:after {
     transform: scaleY(0.5) scaleX(1) rotate(0deg);
-    
+
 }
 
 button[ng-if="$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive"] md-icon {
@@ -2148,7 +2153,7 @@ button[ng-if="$ctrl.displayFiltersButton && !$ctrl.locationsPrefilterActive"] md
 
 prm-locations-filter div[ng-include="$ctrl.templateUrl"] {
     border-top: 4px solid #ececec !important;
-}					   
+}
 
 /*443 Items expand for mobiles*/
 
@@ -3425,7 +3430,8 @@ button.switch-to-simple:hover,
 .md-button.button-confirm:hover,
 .md-button.button-as-link:hover:not([disabled]),
 #rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover,
-prm-service-physical-best-offer .get_it_btn_physical:hover, prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+prm-service-physical-best-offer .get_it_btn_physical:hover,
+prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     background-color: #393765 !important;
 }
 
@@ -3455,7 +3461,9 @@ prm-service-button .md-button.button-as-link:hover:not([disabled]),
 prm-location-items md-list prm-service-button .md-button.button-as-link#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
 prm-service-physical-best-offer .get_it_btn_physical,
 button#get_it_btn_digital,
-prm-service-button>button>span {
+prm-service-button>button>span,
+prm-resource-type-filter-bar .container .box div,
+prm-resource-type-filter-bar prm-icon {
     color: #fff !important;
 }
 
@@ -3517,7 +3525,9 @@ slsp-edit-personal-details-component a.bar.alert-bar:hover {
 button.dismiss-alert-button,
 div.courier-info>span a,
 #no_offer_message_out_text_part1,
-#no_offer_message_out_text_notClickable {
+#no_offer_message_out_text_notClickable,
+prm-resource-type-filter-bar .container .box button.selectedResourceTypeOption div,
+prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
     color: #111111 !important;
 }
 
@@ -3556,5 +3566,4 @@ div.courier-info>span a,
 /*****************************************************************************/
 
 
-/*****************************************************************************/ 
-
+/*****************************************************************************/
