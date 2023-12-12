@@ -809,6 +809,7 @@ prm-stand-alone-login prm-login md-list-item.authMethSaml a:focus {
 
 button#mainMenuFullCloseButton:focus {
     color: #ffffff !important;
+    background-color:unset !important;
 }
 
 /* Timeout session: close button background color */
