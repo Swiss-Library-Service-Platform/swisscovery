@@ -12,6 +12,7 @@ export class slspRapidoDigitalOfferController {
 
             this.parentCtrl = this.afterCtrl.parentCtrl;
             this.isDone = false;
+            //console.log(this.parentCtrl);
 
         } catch (e) {
             console.error("***SLSP*** an error occured: Rapido onInit \n\n");
@@ -21,7 +22,7 @@ export class slspRapidoDigitalOfferController {
 
     $doCheck() {
         try {
-
+           
 
             // loader
             const loadingText = document.querySelectorAll('span[translate="rapido.tiles.placeholder.text"]')

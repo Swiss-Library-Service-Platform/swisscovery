@@ -22,7 +22,7 @@ export class slspCollapseDetailsController {
 		this.parentCtrl.NUMBER_OF_DETAILS_TO_SHOW = 1000;
 		this.rootEl = this.$element.parent().parent().query('div').children()
 		let that = this
-		//console.log(this);
+		
 		// add a watcher to the root element
 		// trigger when children are rendered
 		// and deregister after first call
@@ -46,10 +46,10 @@ export class slspCollapseDetailsController {
 		for (let key in details) {
 			let detail = details[key]
 			if (typeof detail != 'object') {
-				continue
+			continue
 			}
 			if (this.config.ignore.includes(detail.label)) {
-				continue
+			continue
 			}
 			let values = detail.values[0].values
 			
@@ -57,7 +57,7 @@ export class slspCollapseDetailsController {
 			const configItem = this.config.itemCount;
 			const lowerBound = configItem + 3;
 			//console.log(values);
-			//console.log(detail);
+			//console.log(this);
 			if (textLength > this.config.charCount) {
 				this.addMarkup(this.getItemContainer(key), 1, true)
 			} else if (values.length > configItem && values.length >= lowerBound) {
@@ -90,7 +90,7 @@ export class slspCollapseDetailsController {
 		}
 
 		//console.log(longtext);
-
+		
 		let expand = document.createElement('div');
 		expand.classList.add('hsg-expand-button');
 		expand.innerHTML = this.iconExpand + this.labels.expandButtonLabel;

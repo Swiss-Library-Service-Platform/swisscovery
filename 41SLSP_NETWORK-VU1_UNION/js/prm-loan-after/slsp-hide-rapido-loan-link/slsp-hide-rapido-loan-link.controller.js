@@ -12,7 +12,7 @@ export class slspHideRapidoLoanLinkController {
             this.itemBarcode = this.parentCtrl.item.itembarcode;
             this.itemType = this.parentCtrl.loansService.requestParams.type;
 
-            if (this.itemType !== 'active' && (this.itemBarcode.includes("RAPIDO") || this.itemBarcode.includes("41SLSP"))) {
+            if (this.itemBarcode.includes("RAPIDO") || this.itemBarcode.includes("41SLSP")) {
                 this.setTitle = setTitle;
 
                 function setTitle() {

@@ -9,7 +9,7 @@ export class slspClosedFinesBarController {
     $onInit() {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
-            //console.log(this.parentCtrl);
+           // console.log(this.parentCtrl);
         } catch (e) {
             console.error("***SLSP*** an error occurred: RequestCancelButton \n\n");
             console.error(e.message);

@@ -2043,7 +2043,9 @@ span[translate="nui.item.brief.4"] {
     display: none !important;
 }
 
-/*441 How to get it sections' order*/
+/*441 How to get it*/
+
+/*How to get it sections' order*/
 
 prm-opac {
     order: 1;
@@ -2068,6 +2070,30 @@ primo-explore.alert alma-htgi-svc {
     font-size: 1em;
 }
 
+/*Holding fields display*/
+
+.weak-text.layout-row[ng-repeat="line in $ctrl.currLoc.summaryHoldings.baseSummaryShort track by $index"] {
+    display: none !important;
+}
+
+prm-location prm-location-holdings[ng-if="$ctrl.displayHoldingsInLocationsList"] {
+    display: none;
+}
+
+
+button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple.holding-expand-button,
+button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple.holding-collapse-button {
+    line-height: 23px !important;
+    padding: 1px 10px 1px 0px !important;
+    margin-top: 10px !important;
+    margin-left: 0px !important;
+    background-color: #fff !important;
+}
+
+button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple.holding-expand-button:hover,
+button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple.holding-collapse-button:hover {
+    background-color: #ddd !important;
+}
 
 /*442 Filter bar*/
 
