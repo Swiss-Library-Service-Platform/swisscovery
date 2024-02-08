@@ -13,7 +13,7 @@ export class slspDigitizationButtonLabelController {
         try {
             this.$timeout(() => {
                 this.parentCtrl = this.afterCtrl.parentCtrl;
-
+                //console.log(this.parentCtrl);
                 if (this.parentCtrl.service.type !== undefined && this.parentCtrl.service.type === 'AlmaDigitization') {
 
                     this.digiButtonLabel = digiButtonLabel;
@@ -42,12 +42,10 @@ export class slspDigitizationButtonLabelController {
 
 
                     angular.element(digiItemButtonLabel).append(`<div class="DigiButtonLabel">CHF</div>`).addClass('digiButton');
-                } else {
+                }else {
                     return
                 }
-
-
-
+                
             }, 20);
         } catch (e) {
             console.error("***SLSP*** an error occured: Rapido \n\n");

@@ -29,4 +29,5 @@ import './prm-location-item-after';
 import './prm-union-catalog-login-after';
 
 
+
 var app = angular.module('viewCustom', ['angularLoad', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit', 'slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule', 'slspRequestsAfterModule', 'prmAlmaViewitItemsAfterModule', 'prmAlmaOtherUnitsAfterModule', 'prmLoginAfterModule', 'prmLocationHoldingsAfterModule', 'prmOfferDetailsTileAfterModule', 'prmFinesAfterModule', 'prmServiceDetailsAfterModule', 'hsgLocationItemAfterModule', 'prmUnionCatalogLoginAfterModule']);

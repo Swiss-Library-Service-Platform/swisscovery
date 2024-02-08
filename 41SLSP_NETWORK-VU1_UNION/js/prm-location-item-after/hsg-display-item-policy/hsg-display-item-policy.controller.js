@@ -9,7 +9,7 @@ export class hsgDisplayItemPolicyController {
 	$onInit() {
 		this.ctrl = this.afterCtrl.parentCtrl
 		this.setItemPolicyText()
-		//console.log(this.ctrl)
+		
 	}
 	
 	setItemPolicyText() {

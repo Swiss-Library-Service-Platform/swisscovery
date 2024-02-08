@@ -957,9 +957,25 @@ button.switch-to-simple.zero-margin.button-with-icon.md-button.md-primoExplore-t
 
 /*Resource type filter bar*/
 
+prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple {
+	
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00000000;
+    margin: 5px 6px 5px 0;
+}
+
 prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover {
-    font-weight: 500;
+
+    border-style: solid;
+    border-width: 1px;
+	font-weight: 500;
     cursor: pointer;
+}
+
+prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover span {
+    box-shadow: none;
 }
 
 /*220 Frames*/
@@ -3494,7 +3510,8 @@ prm-resource-type-filter-bar prm-icon {
     color: #fff !important;
 }
 
-button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
+button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple, 
+prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     border-color: #fff !important;
 }
 
@@ -3594,3 +3611,4 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
 
 
 /*****************************************************************************/
+

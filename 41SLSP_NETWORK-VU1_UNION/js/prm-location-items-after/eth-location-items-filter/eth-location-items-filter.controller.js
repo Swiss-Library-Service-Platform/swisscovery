@@ -10,7 +10,7 @@ export class ethLocationItemsFilterController {
     $doCheck() {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
-
+  
             // Check if the filter button exists
             let filterButton = document.querySelectorAll('button[ng-if="($ctrl.isFilter || $ctrl.isFiltered) && $ctrl.isAnyFilterFilled()"] svg');
             if (filterButton.length > 0) {
