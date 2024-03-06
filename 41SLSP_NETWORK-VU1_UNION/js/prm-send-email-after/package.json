@@ -1,0 +1,12 @@
+{
+    "name": "prm-send-email-after",
+    "version": "1.0.0",
+    "description": "",
+    "main": "prm-send-email-after.module.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Philipp Schulz",
+    "license": "ISC"
+}

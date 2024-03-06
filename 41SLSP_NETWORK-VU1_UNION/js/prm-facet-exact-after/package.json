@@ -1,0 +1,14 @@
+{
+  "name": "prm-facet-exact-after",
+  "main": "prm-facet-exact-after.module.js",
+  "description": "Integrates links to Open Knowledge Maps in Primo VE",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-eth-okm-link"
+  },
+  "author": "Bernd Uttenweiler <bernd.uttenweiler@library.ethz.ch>",
+  "version": "0.0.1",
+  "keywords": [
+    "primo-explore"
+  ]
+}

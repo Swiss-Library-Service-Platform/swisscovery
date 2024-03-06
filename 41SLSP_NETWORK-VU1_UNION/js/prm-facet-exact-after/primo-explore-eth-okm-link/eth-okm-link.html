@@ -1,0 +1,19 @@
+<div ng-if="$ctrl.parentCtrl.facetGroup.name == $ctrl.groupName" class="eth-okm">
+    <div ng-hide="$ctrl.parentCtrl.facetGroup.facetGroupCollapsed" aria-hidden="false">
+        <div class="section-content animate-max-height-variable">
+            <div class="md-chips md-chips-wrap">
+                <div ng-repeat="search in $ctrl.searchAlternatives" aria-live="polite" class="md-chip  eth-okm-link">
+                    <div class="md-chip-content layout-row" role="button" tabindex="0">
+                        <strong>
+                            <a ng-href="{{search.url}}" target="_blank" rel="noopener">
+                                <img ng-src="{{search.image}}" alt="">
+                                <span >{{search.label}}</span>
+                                
+                            </a>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
