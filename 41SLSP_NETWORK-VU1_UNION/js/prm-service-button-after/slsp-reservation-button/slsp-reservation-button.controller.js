@@ -33,10 +33,10 @@ export class slspReservationButtonController {
                     // Den Button innerhalb des aktuellen "md-list-item" Teils auswählen
                     let itemReservationButton = prmOpacElement.querySelector('prm-service-button button span[translate="AlmaItemRequest"]');
     
-                    console.log('this.parentCtrl', this.parentCtrl);
-                    console.log('language', language);
-                    console.log('serviceType', serviceType);
-                    console.log('statusName', statusName);
+                    // console.log('this.parentCtrl', this.parentCtrl);
+                    // console.log('language', language);
+                    // console.log('serviceType', serviceType);
+                    // console.log('statusName', statusName);
     
                     // Check conditions and execute code if necessary
                     if (serviceType === 'AlmaItemRequest' &&

@@ -69,6 +69,9 @@
 /*310 Facets*/
 
 
+/*320 Top bar*/
+
+
 /*390 Other*/
 
 
@@ -1160,13 +1163,11 @@ prm-static.md-padding.flex {
 
 /*300 General*/
 
-
 /*backgound search results boxes*/
 
 .list-item-wrapper {
     background-color: #f9f9f9;
 }
-
 
 /*title color*/
 
@@ -1193,13 +1194,6 @@ prm-brief-result .item-title {
 
 a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     color: white !important;
-}
-
-/*Save query button*/
-
-#mainResults>prm-search-result-tool-bar>div>md-toolbar>div.search-toolbar-title.hide-xs.layout-row>prm-add-query-to-saved-searches>.md-button:hover:not([disabled]) {
-    color: #111111 !important;
-    background-color: rgba(17, 17, 17, 0.10) !important;
 }
 
 /*310 Facets*/
@@ -1268,6 +1262,125 @@ div[data-facet-value="institution-5501"] {
 /*Hide the "Open Knowledge Maps" link in the facet group*/
 eth-okm-link-component {
     display: block;
+}
+
+/*320 Top Bar*/
+
+#mainResults>prm-search-result-tool-bar>div>md-toolbar>div.search-toolbar-title.hide-xs.layout-row>prm-add-query-to-saved-searches>.md-button:hover:not([disabled]) {
+    color: #111111 !important;
+    background-color: rgba(17, 17, 17, 0.10) !important;
+}
+
+prm-search-result-tool-bar span.text.tiny-uppercase-text {
+    display: none;
+}
+
+prm-search-result-tool-bar .results-title {
+    font-style: normal;
+    font-size: 14px;
+}
+
+prm-add-query-to-saved-searches button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple {
+    border: 1px solid #1c1c1c;
+    line-height: 30px;
+}
+
+prm-add-query-to-saved-searches button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple:focus {
+    background-color: #d3d3d3 !important;
+    color: #111 !important;
+}
+
+prm-add-query-to-saved-searches md-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+span[translate="results.savequery"] {
+    font-weight: 400 !important;
+    color: #111 !important;
+    font-size: 14px !important;
+}
+
+prm-search-result-tool-bar .search-toolbar-title.hide-xs.layout-row {
+    margin-bottom: 1px;
+}
+
+prm-search-result-list .pages-separated-with-gaps .results-title:not(.results-title-favorites) {
+    place-content: space-between;
+}
+
+prm-search-result-list span.results-count.layout-align-center-start {
+    font-style: normal !important;
+}
+
+prm-search-result-list .toolbar-actions.layout-align-end-center.layout-row.flex {
+    max-width: 10%;
+}
+
+prm-search-result-list .mobile-page-range span.text.tiny-uppercase-text {
+    display: none;
+}
+
+/*Mobiles*/
+
+@media only screen and (max-width: 959px) {
+
+    prm-add-query-to-saved-searches button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple,
+    prm-search-result-list button.button-link.padding-zero.facet-filter.button-as-link-mobile.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple,
+    button#sidebar-trigger {
+        border: 1px solid #1c1c1c;
+        width: 36px;
+        height: 36px;
+        margin: 6px !important;
+    }
+
+    prm-add-query-to-saved-searches button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple:hover,
+    prm-search-result-list button.button-link.padding-zero.facet-filter.button-as-link-mobile.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple:hover,
+    button#sidebar-trigger:hover,
+    prm-add-query-to-saved-searches button.button-as-link.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple:focus,
+    prm-search-result-list button.button-link.padding-zero.facet-filter.button-as-link-mobile.link-alt-color.md-button.md-primoExplore-theme.md-ink-ripple:focus,
+    button#sidebar-trigger:focus {
+        background-color: #ddd !important;
+        color: #111 !important;
+    }
+
+    prm-search-result-list .pages-separated-with-gaps .results-title:not(.results-title-favorites) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    md-toolbar.md-toolbar-tools.results-title._md.md-primoExplore-theme.layout-align-start-center.layout-row._md-toolbar-transitions {
+        flex-direction: row;
+        align-content: center;
+    }
+
+    prm-search-result-tool-bar .md-toolbar-tools {
+        padding: 0 10px !important;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    prm-search-result-list div.mobile-actions.layout-align-end-center.layout-row.flex {
+        align-items: normal !important;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+    prm-add-query-to-saved-searches {
+        height: 38px !important;
+    }
+
+    prm-search-result-list .mobile-actions.layout-align-end-center.layout-row.flex {
+        align-items: center !important;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    prm-search-result-list .pages-separated-with-gaps .results-title:not(.results-title-favorites) {
+        padding: 0 8px 0 13px !important;
+    }
 }
 
 /*390 Other*/
@@ -2391,7 +2504,8 @@ md-list.md-primoExplore-theme.icnLblOtherUnitsE {
     }
 }
 
-label[translate="email.to"], label[translate="email.note"] {
+label[translate="email.to"],
+label[translate="email.note"] {
     color: #848484 !important;
 }
 
@@ -3304,6 +3418,18 @@ div.loan-item-title {
     display: none;
 }
 
+/*Cancel request popup box*/
+
+prm-requests md-dialog.in-element-dialog {
+    width: 94%;
+    height: 80%;
+    background-color: #fff;
+}
+
+prm-requests md-dialog.in-element-dialog button.md-button.md-primoExplore-theme.md-ink-ripple {
+    border: 1px solid #8e8e8e;
+}
+
 /*540 Fees*/
 
 /*Alert bar for closed fines*/
@@ -3463,6 +3589,40 @@ prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout
 
 /*940 Favorites*/
 
+form[ng-submit="$ctrl.addNewLabel()"] {
+    background-color: unset;
+}
+
+form[ng-submit="$ctrl.addNewLabel()"] input[ng-model="$ctrl.newLabel"] {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+form[ng-submit="$ctrl.addNewLabel()"] label[translate="nui.favorites.labels.new"] {
+    color: #aaa !important;
+}
+
+button.slsp-save-label-button {
+    background: none;
+    border: unset;
+}
+
+button.slsp-save-label-button svg {
+    fill: #9c9c9c;
+}
+
+button.slsp-save-label-button:hover svg {
+    fill: #111111;
+}
+
+md-menu-content#menuContent md-menu-item .md-button:focus {
+    background-color: #ffffff !important;
+    color: #111 !important;
+}
+
+md-menu-content#menuContent md-menu-item .md-button:hover {
+    background-color: #111111 !important;
+    color: #fff !important;
+}
 
 /*950 Alma viewer*/
 
@@ -3609,7 +3769,8 @@ button.switch-to-simple,
 prm-request-services .md-button.button-as-link,
 prm-location-items md-list prm-service-button .md-button.button-as-link,
 #rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
-prm-service-physical-best-offer .get_it_btn_physical {
+prm-service-physical-best-offer .get_it_btn_physical,
+md-input-container:after {
     background-color: #4E4A99 !important;
 }
 
