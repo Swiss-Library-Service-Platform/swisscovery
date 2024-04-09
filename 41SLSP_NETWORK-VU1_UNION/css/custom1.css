@@ -2253,7 +2253,7 @@ primo-explore.alert alma-htgi-svc {
 
 /*Holding fields display*/
 
-.weak-text.layout-row[ng-repeat="line in $ctrl.currLoc.summaryHoldings.baseSummaryShort track by $index"] {
+prm-location-holdings.holding-data-expandable .weak-text.layout-row[ng-repeat="line in $ctrl.currLoc.summaryHoldings.baseSummaryShort track by $index"] {
     display: none !important;
 }
 

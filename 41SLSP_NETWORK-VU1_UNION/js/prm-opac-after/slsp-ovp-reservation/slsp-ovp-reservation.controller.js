@@ -39,7 +39,7 @@ export class slspOvpReservationController {
                     angular.element(reservationButton).replaceWith(compiledHtml);
                 }
             }
-            console.log(this.parentCtrl);
+            //console.log(this.parentCtrl);
             this.processDoCheck = false;
         } catch (e) {
             console.error("***SLSP*** Ein Fehler ist aufgetreten: slspOvpReservationController \n\n");
