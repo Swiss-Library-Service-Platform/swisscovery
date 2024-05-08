@@ -33,6 +33,9 @@
 /*140 Login pop up box*/
 
 
+/*150 swisscovery alert bar*/
+
+
 /*190 Other*/
 
 
@@ -808,6 +811,45 @@ prm-stand-alone-login prm-login md-list-item.authMethSaml a:focus {
     color: #111 !important;
 }
 
+/*Magnifying-glass in the login institution search box*/
+label[translate="login.union.title"]:before {
+    content: ' ';
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="100%" height="100%" viewBox="0 0 24 24" style="transform:scale(-1,1)" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false"><path fill="white" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path></svg>');
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    margin-right: 5px;
+    background-position: 1px 3px;
+    margin-bottom: -3px;
+}
+
+/*Search bar*/
+label[translate="login.union.title"] {
+    text-transform: none !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+}
+
+/*150 swisscovery alert bar*/
+
+.slsp-git-topbar {
+    background-color: #FEF3BE;
+    color: #000;
+    border-bottom: solid 1px rgba(58, 58, 58, .2);
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em 0.5em 0;
+    font-size: 16px;
+}
+
+.slsp-git-topbar svg {
+    margin-right: 0.3em;
+    flex: 0 0 24px;
+}
+
 /*190 Other*/
 
 
@@ -1194,6 +1236,24 @@ prm-brief-result .item-title {
 
 a.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
     color: white !important;
+}
+
+/*Availability status color switched to black*/
+span[translate="delivery.code.Loan"],
+span[translate="delivery.code.Acquisition"],
+span[translate="delivery.code.ClaimedReturned"],
+span[translate="delivery.code.HoldShelf"],
+span[translate="delivery.code.Lost"],
+span[translate="delivery.code.InProcess"],
+span[translate="delivery.code.Missing"],
+span[translate="delivery.code.ResourceSharingRequest"],
+span[translate="delivery.code.TechnicalMigration"],
+span[translate="delivery.code.Transit"],
+span[translate="delivery.code.Requested"],
+span[translate="delivery.code.ngrs.unavailable"],
+span[translate="delivery.code.ngrs.not_available"],
+span[translate="delivery.code.NotinProcess"] {
+        color: #222 !important;
 }
 
 /*310 Facets*/
@@ -1680,6 +1740,16 @@ prm-alma-other-units>button>div>h3,
     margin-top: 8px;
 }
 
+/*View it and getit Other institutions alignement*/
+
+span[translate="nui.brief.results.tabs.viewit_other"],
+span[translate="nui.brief.results.tabs.getit_other"] {
+    white-space: normal;
+}
+
+prm-alma-other-members .medium-uppercase-bold .bold {
+    text-align: left;
+}
 
 /*410 Sections' order*/
 
@@ -2582,10 +2652,6 @@ label[translate="email.note"] {
     transform: scale(.5);
 }
 
-.slsp-citation-select-radio.md-active .md-on {
-    background-color: #4E4A99 !important;
-    /* add to custom css - background of the primary color*/
-}
 
 /*449 Other*/
 
@@ -3422,12 +3488,18 @@ div.loan-item-title {
 
 prm-requests md-dialog.in-element-dialog {
     width: 94%;
-    height: 80%;
+    height: 91%;
+	padding-right: 10px !important;
     background-color: #fff;
 }
 
 prm-requests md-dialog.in-element-dialog button.md-button.md-primoExplore-theme.md-ink-ripple {
     border: 1px solid #8e8e8e;
+}
+
+form.ng-pristine.ng-valid.layout-fill.layout-align-end-center.layout-row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /*540 Fees*/
@@ -3770,7 +3842,8 @@ prm-request-services .md-button.button-as-link,
 prm-location-items md-list prm-service-button .md-button.button-as-link,
 #rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
 prm-service-physical-best-offer .get_it_btn_physical,
-md-input-container:after {
+md-input-container:after,
+.slsp-citation-select-radio.md-active .md-on {
     background-color: #4E4A99 !important;
 }
 

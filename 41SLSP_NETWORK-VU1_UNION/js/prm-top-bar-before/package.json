@@ -1,0 +1,12 @@
+{
+    "name": "prm-top-bar-before",
+    "version": "1.0.0",
+    "description": "",
+    "main": "prm-top-bar-before.module.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "B.Uttenweiler, ed. Philipp Schulz",
+    "license": "ISC"
+}
