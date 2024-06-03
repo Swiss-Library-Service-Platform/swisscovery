@@ -961,6 +961,43 @@ button.dismiss-alert-button:hover {
     background-color: #111;
 }
 
+/*Delete last line advanced search button*/
+
+form[name="advancedSearch"] div.margin-top-small.layout-align-start-center.layout-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button[ng-click="$ctrl.incrementLimit()"],
+button[ng-click="$ctrl.decrementLimit()"] {
+    display: flex;
+    margin: 10px 10px 10px 0 !important;
+    border-radius: 3px;
+    min-width: fit-content;
+}
+
+button[ng-click="$ctrl.decrementLimit()"] svg {
+    height: 23px;
+    width: 23px;
+    min-width: 23px;
+}
+
+button[ng-click="$ctrl.decrementLimit()"] svg path {
+    fill: #3d6e94;
+}
+
+button[ng-click="$ctrl.decrementLimit()"]:hover svg path,
+button[ng-click="$ctrl.decrementLimit()"]:focus svg path {
+    fill: #ffffff;
+}
+
+span[translate="nui.search-advanced.add"],
+button.decrement-limit span {
+    white-space: normal;
+    line-height: normal;
+    text-align: left;
+}
 
 /*switch to simple search button*/
 
@@ -1253,7 +1290,7 @@ span[translate="delivery.code.Requested"],
 span[translate="delivery.code.ngrs.unavailable"],
 span[translate="delivery.code.ngrs.not_available"],
 span[translate="delivery.code.NotinProcess"] {
-        color: #222 !important;
+    color: #222 !important;
 }
 
 /*310 Facets*/
@@ -3489,7 +3526,7 @@ div.loan-item-title {
 prm-requests md-dialog.in-element-dialog {
     width: 94%;
     height: 91%;
-	padding-right: 10px !important;
+    padding-right: 10px !important;
     background-color: #fff;
 }
 
@@ -3968,10 +4005,12 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
     color: #111111 !important;
 }
 
-
 /*selection color of the secondary color*/
 
-.bar.alert-bar ::selection {
+.bar.alert-bar ::selection,
+.classic-input .search-scope ::selection,
+.prm-alert-bg ::selection,
+#rapidoOffer prm-rapido-no-offer-message .main_tile ::selection {
     background: #9d9cbd;
 }
 
@@ -4004,3 +4043,5 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
 
 
 /*****************************************************************************/
+
+

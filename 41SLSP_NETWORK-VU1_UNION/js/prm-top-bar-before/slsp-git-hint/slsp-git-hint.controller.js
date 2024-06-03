@@ -34,9 +34,9 @@ export class slspGitHintController {
 
 
                 // Vergleich der aktuellen Zeit mit den Zeitfenstern
-                if (currentTime >= startTime && currentTime <= endTime) {
+                if (currentTime <= startTime && currentTime >= endTime) {
                     // Anzeige des Textes in der entsprechenden Sprache
-                    const topBarBefore = document.querySelector('prm-explore-main');
+                    const topBarBefore = document.querySelector('prm-explore-main, prm-back-to-search-results-button md-toolbar, prm-account');
                     const html = `
                         <div class="slsp-git-topbar" layout="row">
                             <svg fill="#a8322d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
