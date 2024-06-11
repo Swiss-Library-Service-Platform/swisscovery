@@ -13,13 +13,13 @@ export class slspAdvancedSearchClearButtonController {
         try {
             this.$timeout(() => {
                 this.afterCtrl = this.afterCtrl.parentCtrl;
-                this.afterCtrl.limit = 1;
+                this.afterCtrl.limit = 2;
                 
                 console.log("slspAdvancedSearchClearButtonController: ", this.afterCtrl);
 
                 let incrementButton = angular.element(document.querySelector(`button[ng-click="$ctrl.incrementLimit()"`));
                 let decrementButtonHtml = `
-                    <button type="button" class="decrement-limit button-with-icon md-primary zero-margin button-with-icon md-button md-primoExplore-theme" ng-click="$ctrl.decrementLimit()" ng-hide="$ctrl.afterCtrl.limit <= 1">
+                    <button type="button" class="decrement-limit button-with-icon md-primary zero-margin button-with-icon md-button md-primoExplore-theme" ng-click="$ctrl.decrementLimit()" ng-hide="$ctrl.afterCtrl.limit <= 2">
                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false">
                             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
                         </svg>
@@ -55,7 +55,7 @@ export class slspAdvancedSearchClearButtonController {
     }
 
     decrementLimit() {
-        if (this.afterCtrl.limit > 1) {
+        if (this.afterCtrl.limit > 2) {
             this.afterCtrl.limit -= 1;
 
             const limitIndex = this.afterCtrl.limit; // Index des letzten Elements basierend auf dem Limit
@@ -71,7 +71,7 @@ export class slspAdvancedSearchClearButtonController {
     }
     resetForm() {
         this.afterCtrl.clearSearchForm();
-        this.afterCtrl.limit = 1;
+        this.afterCtrl.limit = 2;
     }
 }
 
