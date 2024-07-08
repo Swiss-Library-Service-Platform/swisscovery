@@ -1150,6 +1150,12 @@ md-card.cardbox.default-card.quicklinksbox._md.md-primoExplore-theme>md-card-con
 }
 */
 
+/* Fix color inversion for links after click */
+.quicklinks .md-button.md-focused:not([disabled]),
+.quicklinks .md-button:focus:not([disabled]) {
+    background: none !important;
+}
+
 /*230 Footer*/
 
 
@@ -4043,5 +4049,4 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
 
 
 /*****************************************************************************/
-
 
