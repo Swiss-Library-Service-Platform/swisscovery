@@ -8,7 +8,7 @@ export class slspGitHintController {
 
     $onInit() {
         const currentTime = new Date(); // Aktuelle Zeit
-
+        console.log("Current time:", currentTime);
 
         this.slspGitHintService.getMessage()
             .then((data) => {

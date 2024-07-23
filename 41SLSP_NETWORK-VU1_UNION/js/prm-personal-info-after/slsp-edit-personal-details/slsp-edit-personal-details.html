@@ -8,7 +8,7 @@
 <div ng-if="$ctrl.getPatronGrp()" layout="column">
     <div layout="column">
         <div translate="customized.personal.details"></div>
-        <md-button href="{{ $ctrl.detailsBaseEdu }}" target="_blank" layout="row" class="courier-info bar alert-bar" layout-align="center center">
+        <md-button href="{{ $ctrl.detailsBaseEdu }}?lang={{ $ctrl.getLanguage() }}" target="_blank" layout="row" class="courier-info bar alert-bar" layout-align="center center">
             <prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="pencil">
             </prm-icon>
         </md-button>
@@ -18,7 +18,7 @@
 <br />
 <div ng-if="$ctrl.getPatronGrp()" layout="column">
     <div translate="customized.libcard.number"></div>
-    <md-button href="{{ $ctrl.detailsBaseReg }}" target="_blank" layout="row" class="courier-info bar alert-bar" layout-align="center center">
+    <md-button href="{{ $ctrl.detailsBaseReg }}?lang={{ $ctrl.getLanguage() }}" target="_blank" layout="row" class="courier-info bar alert-bar" layout-align="center center">
         <prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="account-card-details">
         </prm-icon>
     </md-button>
