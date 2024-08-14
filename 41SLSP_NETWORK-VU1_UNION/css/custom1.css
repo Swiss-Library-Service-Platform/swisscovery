@@ -1295,7 +1295,8 @@ span[translate="delivery.code.Transit"],
 span[translate="delivery.code.Requested"],
 span[translate="delivery.code.ngrs.unavailable"],
 span[translate="delivery.code.ngrs.not_available"],
-span[translate="delivery.code.NotinProcess"] {
+span[translate="delivery.code.NotinProcess"]
+span[translate="delivery.code.unavailable"] {
     color: #222 !important;
 }
 
@@ -2517,7 +2518,8 @@ prm-locations-filter div[ng-include="$ctrl.templateUrl"] {
 [translate="fulldisplay.holdings.showmore"] {
     border: 1px solid #a4a4a4;
     border-radius: 2px;
-    padding: 8px;
+    padding: 0 8px;
+    display: block;
 }
 
 [ng-if="$ctrl.relatedLocations.length>$ctrl.relatedLocationsListLimit"] {
@@ -2562,7 +2564,7 @@ md-list.md-primoExplore-theme.icnLblOtherUnitsE {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box !important;
-    -webkit-line-clamp: 4;
+    /* -webkit-line-clamp: 4; */
     -webkit-box-orient: vertical;
     white-space: normal;
 }
@@ -4029,6 +4031,8 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
 
 /*****************************************************************************/
 
+/************Open Knowledge Maps: display**************/
+
 /*Display "Open Knowledge Maps" link fully (facet group and okm link)*/
 .okm-full {
     display: block;
@@ -4039,6 +4043,92 @@ eth-okm-link-component {
     display: block;
 }
 
+/*****************Research Assistant*******************/
+
+/*RA logo*/
+div[ng-if="::$ctrl.isResearchAssistantByIcon"] .md-button.button-link {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00000000 !important;
+    margin: 5px 6px 5px 0;
+    justify-content: flex-start;
+}
+
+div[ng-if="::$ctrl.isResearchAssistantByIcon"] .md-button.button-link prm-icon {
+    margin-left: 10px;
+}
+
+.raBetaLogo {
+    position: absolute;
+    top: 5px;
+    right: 13px;
+}
+
+/*RA logo: primary colors and mouseover BG-color*/
+div[ng-if="::$ctrl.isResearchAssistantByIcon"] .md-button.button-link:hover:not([disabled]) {
+    color: #fff !important;
+    border-color: #fff !important;
+    background-color: #393765 !important;
+}
+
+div[ng-if="::$ctrl.isResearchAssistantByIcon"] .md-button.button-link {
+    color: #fff !important;
+}
+
+/*****************Temporary alert box*******************/
+.ra-alert {
+    padding-bottom: 0px !important;
+}
+
+.ra-alert-svg {
+    margin-right: 12px;
+}
+
+.ra-alert .ra-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/* .iheid-alert::after, .iheid-alert::before {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+.iheid-alert:hover {
+    color: #000 !important;
+    background-color: #99d0d0 !important;
+}
+
+.iheid-alert {
+    background-color: #99d0d0 !important;
+    color: black;
+    box-shadow: 2px 1px 3px 0px rgb(0 0 0 / 8%), 0 2px 5px 0 rgb(0 0 0 / 8%);
+    margin: 8px 8px 4px 8px;
+    padding: 10px;
+    position: relative;
+    opacity: 1;
+    border-radius: 3px;
+}
+
+.iheid-alert a {
+    color: #000;
+    text-decoration: underline !important;
+}
+
+/*Alert box close button*/
+
+.iheid-alert-close {
+    margin-left: 15px;
+    color: #000;
+    float: right;
+    cursor: pointer;
+}
+
+.iheid-alert-close:hover {
+    color: #00802F; 
+}
 
 /*****************************************************************************/
 
@@ -4059,4 +4149,6 @@ eth-okm-link-component {
 
 
 /*****************************************************************************/
+
+
 

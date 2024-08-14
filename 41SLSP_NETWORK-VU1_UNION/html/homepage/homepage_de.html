@@ -1,5 +1,57 @@
 <md-content>
 
+
+    <!-- MESSAGE D'ALERTE/INFO -->
+    <div class="ra-alert md-padding" layout-gt-sm="row" layout-align="start center" flex="100">
+        <div flex="0" flex-md="0" flex-lg="20" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="100" flex-lg="55" flex-xl="50" flex="100" layout="column">
+            <md-content class="_md md-primoExplore-theme">
+                <div class="iheid-alert">
+                    <span onclick="this.parentElement.style.display='none'" class="iheid-alert-close">
+                        <prm-icon class="padding-right-small" icon-type="svg" svg-icon-set="primo-ui"
+                            icon-definition="close"><!----><md-icon
+                                ng-if="($ctrl.iconDefinition !$ctrl.isCustom !$ctrl.isEmailMode()) !$ctrl.useFallBack"
+                                md-svg-icon="primo-ui:close" role="presentation" class="md-primoExplore-theme"><svg
+                                    id="close_cache27" width="100%" height="100%" viewBox="0 0 24 24" y="240"
+                                    xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false">
+                                    <path
+                                        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z">
+                                    </path>
+                                </svg></md-icon><prm-icon-after parent-ctrl="$ctrl"></prm-icon-after></prm-icon>
+                    </span>
+                    <!-- DEBUT DU CONTENU DE LA BOITE ANNONCE -->
+                    <span class="ra-text">
+                        <svg class="ra-alert-svg" width="40" height="40" viewBox="0 0 31 30" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet"
+                            focusable="false">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.4851 18.6146C14.819 18.6146 10.2425 14.02 10.2425 8.37207C10.2425 14.02 5.64793 18.6146 0 18.6146C5.64793 18.6146 10.2425 23.1911 10.2425 28.839C10.2425 23.1911 14.819 18.6146 20.4851 18.6146Z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.0001 23.8992C27.8946 23.8992 25.3885 21.3749 25.3885 18.2876C25.3885 21.3749 22.8641 23.8992 19.7769 23.8992C22.8641 23.8992 25.3885 26.4054 25.3885 29.5108C25.3885 26.4054 27.8946 23.8992 31.0001 23.8992Z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M27.7676 6.82836C23.9902 6.82836 20.9392 3.77739 20.9392 0C20.9392 3.77739 17.8882 6.82836 14.1108 6.82836C17.8882 6.82836 20.9392 9.87933 20.9392 13.6567C20.9392 9.87933 23.9902 6.82836 27.7676 6.82836Z">
+                            </path>
+                        </svg>
+                        <span>
+                            <strong>Testen Sie die Beta-Version des neuen KI-gestützten
+                                Research Assistant!
+                            </strong><br>
+                            <a href="https://swisscovery.help/research_assistant/de/" target="_blank"
+                                class="md-primoExplore-theme">Mehr erfahren</a>
+                        </span>
+                    </span>
+                    <!-- FIN DU CONTENU -->
+                </div>
+            </md-content>
+        </div>
+    </div>
+    <!-- FIN MESSAGE D'ALERTE/INFO -->
+
+
+
     <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
         <div flex="0" flex-md="0" flex-lg="20" flex-xl="25"></div>
         <div flex-sm="100" flex-md="60" flex-lg="35" flex-xl="30" flex="100" layout="column">
@@ -12,7 +64,8 @@
                 <md-card-content>
                     <p>
                         Die nationale Plattform, welche wissenschaftliche Informationen aus rund <a
-                            href="https://slsp.ch/bibliotheksnavigator/" target="_blank">500 Bibliotheken der Schweiz</a>
+                            href="https://slsp.ch/bibliotheksnavigator/" target="_blank">500 Bibliotheken der
+                            Schweiz</a>
                         zusammenführt.
                     </p>
                     <p>
@@ -45,29 +98,30 @@
             <md-card class="cardbox default-card">
                 <md-card-content>
                     <div class="resp-container">
-                        <iframe class="resp-iframe" src="https://tube.switch.ch/embed/7b3e77a9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe class="resp-iframe" src="https://tube.switch.ch/embed/7b3e77a9" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </md-card-content>
-            </md-card>		
-			<md-card class="cardbox default-card">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <h2 class="md-headline"><b>Nach einer Ressource fragen</b></h2>
-                        </md-card-title-text>
-                    </md-card-title>
-			<md-card-content id=computer>
-                        <p>
-                            Wenn Sie mehr über die verschiedenen Bestelloptionen wissen möchten, lesen Sie bitte diesen <a
-                                href="https://view.genial.ly/6408a3a4698c300018d4b86e" target="_blank">Leitfaden</a>.
-                        </p>
-            </md-card-content>
-			<md-card-content id=mobiles>
-						<p>
-                            Wenn Sie mehr über die verschiedenen Bestelloptionen wissen möchten, lesen Sie bitte diesen <a
-                                href="https://view.genial.ly/6414749f23d1aa00120e05ab" target="_blank">Leitfaden</a>.
-                        </p>
-            </md-card-content>
-			</md-card>
+            </md-card>
+            <md-card class="cardbox default-card">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h2 class="md-headline"><b>Nach einer Ressource fragen</b></h2>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content id=computer>
+                    <p>
+                        Wenn Sie mehr über die verschiedenen Bestelloptionen wissen möchten, lesen Sie bitte diesen <a
+                            href="https://view.genial.ly/6408a3a4698c300018d4b86e" target="_blank">Leitfaden</a>.
+                    </p>
+                </md-card-content>
+                <md-card-content id=mobiles>
+                    <p>
+                        Wenn Sie mehr über die verschiedenen Bestelloptionen wissen möchten, lesen Sie bitte diesen <a
+                            href="https://view.genial.ly/6414749f23d1aa00120e05ab" target="_blank">Leitfaden</a>.
+                    </p>
+                </md-card-content>
+            </md-card>
             <div flex-gt-sm="40" flex="100" layout="column">
                 <md-card class="cardbox default-card">
                     <md-card-title>
@@ -77,7 +131,8 @@
                     </md-card-title>
                     <md-card-content>
                         <p>
-                            Um swisscovery zu nutzen, registrieren Sie sich bitte auf unserer <a href="https://registration.slsp.ch/?iz=network">Registrierungsplattform</a>.
+                            Um swisscovery zu nutzen, registrieren Sie sich bitte auf unserer <a
+                                href="https://registration.slsp.ch/?iz=network">Registrierungsplattform</a>.
                         </p>
                     </md-card-content>
                 </md-card>
@@ -90,9 +145,10 @@
                     <md-card-content>
                         <p>
                             Haben Sie Fragen oder m&ouml;chten Sie einen Kommentar anbringen? Haben Sie Probleme mit
-                            swisscovery? Wenden Sie sich bitte an Ihre <a href="https://libraries.swisscovery.help/?lang=de"
-                                target="_blank">Bibliothek</a>.
+                            swisscovery? Wenden Sie sich bitte an Ihre <a
+                                href="https://libraries.swisscovery.help/?lang=de" target="_blank">Bibliothek</a>.
                         </p>
+
                     </md-card-content>
                 </md-card>
 
@@ -112,7 +168,8 @@
             </md-card-content>
             <md-card-content class="prm-primary-bg">
                 <span class="md-headline">Kontakt</span>
-                <p><a class="ps_link" href="https://libraries.swisscovery.help/?lang=de" target="_blank">slsp.ch/libraries</a></p>
+                <p><a class="ps_link" href="https://libraries.swisscovery.help/?lang=de"
+                        target="_blank">slsp.ch/libraries</a></p>
                 <p><a class="ps_link" href="https://www.slsp.ch/de" target="_blank">slsp.ch</a></p>
             </md-card-content>
             <md-card-content class="prm-primary-bg">

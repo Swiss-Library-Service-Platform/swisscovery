@@ -15,7 +15,7 @@ export class slspAdvancedSearchClearButtonController {
                 this.afterCtrl = this.afterCtrl.parentCtrl;
                 this.afterCtrl.limit = 2;
                 
-                console.log("slspAdvancedSearchClearButtonController: ", this.afterCtrl);
+                //console.log("slspAdvancedSearchClearButtonController: ", this.afterCtrl);
 
                 let incrementButton = angular.element(document.querySelector(`button[ng-click="$ctrl.incrementLimit()"`));
                 let decrementButtonHtml = `

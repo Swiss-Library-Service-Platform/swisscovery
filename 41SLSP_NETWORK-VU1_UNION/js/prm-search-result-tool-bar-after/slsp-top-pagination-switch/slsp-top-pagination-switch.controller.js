@@ -13,7 +13,7 @@ export class slspTopPaginationSwitchController {
 
                //console.log(this.parentCtrl);
                this.parentCtrl.enableTopPagination = false;
-              // this.parentCtrl.hidePageNumber();
+               //this.parentCtrl.hidePageNumber();
     
        
         } catch (e) {
