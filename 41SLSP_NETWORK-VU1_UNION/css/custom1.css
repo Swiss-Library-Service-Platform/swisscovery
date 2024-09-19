@@ -1310,7 +1310,8 @@ span[translate="delivery.code.Transit"],
 span[translate="delivery.code.Requested"],
 span[translate="delivery.code.ngrs.unavailable"],
 span[translate="delivery.code.ngrs.not_available"],
-span[translate="delivery.code.NotinProcess"] span[translate="delivery.code.unavailable"] {
+span[translate="delivery.code.NotinProcess"],
+span[translate="delivery.code.unavailable"] {
     color: #222 !important;
 }
 

@@ -27,7 +27,7 @@ export class slspCollapseOtherInstController {
                 if (this.parentCtrl.item.delivery.displayedAvailability == 'no_inventory') {
                         this.noItemAtPickupLocation = noItemAtPickupLocation ;
                         let noItemAtPickupLocation = document.querySelectorAll(`prm-alma-other-members`);
-                        let htmlnoItemAtPickupLocation = `<div class="bar alert-bar zero-margin-bottom layout-align-center-center layout-row">slsp-bar: <span class="center" translate="customized.alert.nolocations">​</span></div>`;
+                        let htmlnoItemAtPickupLocation = `<div class="bar alert-bar zero-margin-bottom layout-align-center-center layout-row"><span class="center" translate="customized.alert.nolocations">​</span></div>`;
                         
                         let almaAlertBar = document.querySelectorAll('alma-htgi-svc');
                             
