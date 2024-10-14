@@ -2827,12 +2827,18 @@ prm-alma-other-members .info-text {
     }
 }
 
-/*Hide "Online Access"*/
+/*Info box temporary hidden*/
 
-span.availability-status.available_online[translate="fulldisplay.otherMembers.availabilty.available_online"] {
+.info-text {
     display: none;
 }
 
+
+/*Hide "Online Access"*/
+
+prm-alma-other-members span.availability-status.available_online[translate="fulldisplay.otherMembers.availabilty.available_online"] {
+    display: none;
+}
 
 /*449 Other*/
 
