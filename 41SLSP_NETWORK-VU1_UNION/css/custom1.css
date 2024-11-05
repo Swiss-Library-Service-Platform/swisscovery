@@ -1789,10 +1789,10 @@ prm-alma-other-units>button>div>h3,
     display: none;
 }
 
-.DigiButtonLabel:nth-child(1),
+/* .DigiButtonLabel:nth-child(1),
 .DigiButtonLabel1:nth-child(2) {
     display: flex;
-}
+} */
 
 .DigiButtonLabel,
 .DigiButtonLabel1 {
@@ -4206,3 +4206,15 @@ eth-okm-link-component {
  
 /*****************************************************************************/
 
+
+
+
+
+.md-button:focus:not([disabled]) prm-icon {
+    color: #fff !important;
+}
+/**********************************************************************************/
+
+prm-alma-other-members .bar.alert-bar.zero-margin-bottom.layout-align-center-center.layout-row:nth-child(2) {
+    display: none;
+}
