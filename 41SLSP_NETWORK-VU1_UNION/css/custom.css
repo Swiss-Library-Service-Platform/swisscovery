@@ -1836,6 +1836,10 @@ alma-htgi-svc.alma-alert-bar-hide prm-alert-bar {
     display: block;
 }
 
+prm-alma-other-members .bar.alert-bar.zero-margin-bottom.layout-align-center-center.layout-row:nth-child(2) {
+    display: none;
+}
+
 /*410 Sections' order*/
 
 #full-view-container>*:first-child {
@@ -3454,6 +3458,12 @@ prm-account-overview md-list-item.md-2-line.zero-padding.md-no-proxy._md.md-clic
     }
 }
 
+/*Dropdown arrow*/
+
+.md-button:focus:not([disabled]) prm-icon {
+    color: #fff !important;
+}
+
 /* Fix for cut labels */
 
 #accountoverview>md-tabs>md-tabs-wrapper {
@@ -3528,7 +3538,7 @@ prm-account-overview .institutions-list md-list-item.is-selected span.institutio
         background-color: unset !important;
     }
 
-    /*Mobile IZ selectbox*/
+/*Mobile IZ selectbox*/
 
     prm-linked-user-selector md-input-container.toolbar-select-input.hide-gt-sm.md-primoExplore-theme.layout-align-center-stretch.layout-row.md-input-has-value md-select {
         border: #5e5e5e 1px solid !important;
@@ -4205,16 +4215,3 @@ eth-okm-link-component {
 
  
 /*****************************************************************************/
-
-
-
-
-
-.md-button:focus:not([disabled]) prm-icon {
-    color: #fff !important;
-}
-/**********************************************************************************/
-
-prm-alma-other-members .bar.alert-bar.zero-margin-bottom.layout-align-center-center.layout-row:nth-child(2) {
-    display: none;
-}
