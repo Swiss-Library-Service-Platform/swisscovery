@@ -1755,10 +1755,14 @@ prm-get-it-request .margin-buttons {
 #offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-secondary.md-button.md-primoExplore-theme.md-ink-ripple {
     border: 1px solid gray;
     margin-right: 0px;
+	margin-left: 30px;
+    min-width: 128%;
 }
 
 #offer_request_main_tile>div.getItNgrs>form>div.margin-buttons>button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple {
     margin-right: 0px;
+    margin-left: 30px;
+    min-width: 128%;
 }
 
 md-tabs.md-dynamic-height md-tabs-content-wrapper md-content>prm-request>div>div.service-form-dynamic-panel.zero-margin.layout-padding.layout-column.flex>form>div.layout-align-end-stretch.layout-column>div>button {
@@ -2125,6 +2129,10 @@ prm-alma-other-members .bar.alert-bar.zero-margin-bottom.layout-align-center-cen
     display: none;
 }
 
+prm-opac .ill-form, prm-blank_ill .digitization-form {
+    display: none;
+}
+
 
 /*Show icon*/
 
@@ -2218,7 +2226,8 @@ prm-opac>div>prm-request-services>div>div {
 
 /*432 Purchase request*/
 /* Hide button when inventory is available in the IZ => top button */
-div prm-service-button button span[translate="AlmaPurchaseRequest"] {
+div prm-service-button button span[translate="AlmaPurchaseRequest"],
+div prm-service-button button span[data-qa="AlmaPurchaseRequest"] {
     display: none;
 }
 
@@ -2986,12 +2995,60 @@ prm-service-ngrs .or-separator .or .word {
 
 prm-service-ngrs .main_tile_request_form {
     box-shadow: none;
+	border: none;
 }
 
 prm-get-it-request .offer_details_main_tail {
     border-left: none;
     background: #ffffff;
-    width: 24%;
+    width: 5%;
+}
+
+prm-offer-details-tile {
+    display: none;
+}
+
+.slsp-request-details-box {
+    padding: 8px;
+}
+
+.slsp-request-details,
+.slsp-request-alert {
+    padding: 8px;
+}
+
+.slsp-request-details .request-details-label,
+.slsp-request-alert .request-details-label {
+    color: #707070;
+    font-size: 13px;
+}
+
+div#physicalGetItRequest .digital-only,
+div#digitalGetItRequest .physical-only,
+div#physicalGetItRequest .slsp-request-alert,
+div#physicalGetItRequest.is-unavailbl-resource div.slsp-request-details.physical-only.deliverd-in,
+div#physicalGetItRequest.no-best-offer .slsp-request-details,
+div#physicalGetItRequest.is-unavailbl-resource .slsp-request-alert.physical-only.no-best-offer,
+prm-service-ngrs div#physicalGetItRequest span.reading-Room-Pod {
+    display: none;
+}
+
+div#physicalGetItRequest.is-unavailbl-resource .slsp-request-alert.physical-only.delivery-unknown,
+div#physicalGetItRequest.no-best-offer .slsp-request-alert.physical-only.no-best-offer
+ {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+}
+prm-service-ngrs.reading-room div#physicalGetItRequest span.reading-Room-Pod {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.slsp-request-alert.physical-only.delivery-unknown svg,
+.slsp-request-alert.physical-only.no-best-offer svg {
+    width: 18px;
+    vertical-align: text-top;
 }
 
 #rapidoOffer prm-rapido-no-offer-message .main_tile {
@@ -3194,7 +3251,7 @@ span[translate="rapido.tiles.digital.best_offer.line_2.first_part"]>span {
 
 span[translate="nui.ngrs.search.brief.digital.getAChapter"],
 span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] {
-    display: flex;
+    display: inline !important;
     flex-direction: column;
     align-items: flex-end;
     min-width: 122px;
@@ -3209,18 +3266,24 @@ span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span {
 
 span[translate="nui.ngrs.search.brief.digital.getAChapter"] span strong,
 span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span strong {
-    font-size: 30px;
+    font-size: 16px !important;
     display: flex;
-    padding: 0 5px;
-    font-weight: 700 !important;
+    padding: 0 5px 0 0 !important;
+	color: #3a3a3a;
+    font-weight: normal !important;
     align-items: center;
 }
 
 span[translate="nui.ngrs.search.brief.digital.getAChapter"] span b,
 span[translate="nui.ngrs.search.brief.digital.getDigitalCopy"] span b {
-    font-size: 16px;
-    font-weight: bold !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+	color: #3a3a3a;
     text-align: left;
+}
+
+prm-get-it-request div.relative-position {
+    min-width: 75%;
 }
 
 @media only screen and (min-width: 766px) {
@@ -3268,6 +3331,7 @@ button[ng-if="$ctrl.refineOfferIsVisible()"] {
     width: 85%;
     border: 1px solid #808080;
     border-radius: 2px;
+	margin-left: 30px;
 }
 
 button[ng-if="$ctrl.refineOfferIsVisible()"] span {
@@ -3284,6 +3348,31 @@ prm-get-it-request .getItNgrs {
 prm-get-it-request .form_item {
     justify-content: left;
     padding-left: 4%;
+}
+
+/*Design of the Rapido forms*/
+
+div#physicalGetItRequest prm-get-it-request,
+div#digitalGetItRequest prm-get-it-request {
+    display: flex;
+    flex-direction: row-reverse;
+    border: 1px solid #bdbdbd;
+}
+
+prm-get-it-request-after {
+    min-width: 25%;
+    background-color: #F8F8F8;
+}
+
+/*Close button*/
+slsp-close-pickup-anywhere-form-component button {
+    top: 76px !important;
+    position: absolute !important;
+    right: 22px !important;
+}
+
+div#pickup_information_form button#form-close-btn {
+    display: none;
 }
 
 /*470 Special external collections*/
@@ -3538,7 +3627,7 @@ prm-account-overview .institutions-list md-list-item.is-selected span.institutio
         background-color: unset !important;
     }
 
-/*Mobile IZ selectbox*/
+    /*Mobile IZ selectbox*/
 
     prm-linked-user-selector md-input-container.toolbar-select-input.hide-gt-sm.md-primoExplore-theme.layout-align-center-stretch.layout-row.md-input-has-value md-select {
         border: #5e5e5e 1px solid !important;
@@ -3834,7 +3923,7 @@ prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-co
 /*930 Forms*/
 
 
-/*alertbar for the courier fees info*/
+/*Alert bar for the courier fees info*/
 
 .courier-info {
     margin: 0px 8px;
@@ -4213,5 +4302,5 @@ eth-okm-link-component {
 
 /*****************************************************************************/
 
- 
+
 /*****************************************************************************/

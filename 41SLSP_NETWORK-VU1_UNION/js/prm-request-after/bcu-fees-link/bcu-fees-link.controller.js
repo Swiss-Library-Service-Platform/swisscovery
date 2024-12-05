@@ -20,10 +20,12 @@ export class bcuFeesLinkController {
                 let info = document.createElement('DIV');
                 info.className = "courier-info bar alert-bar";
                 info.innerHTML =
-                    `<h4>${this.afterCtrl.parentCtrl.$translate.instant('customize.fullview.feesTitle')}</h4>
+                    `<div class="digitization-form"><h4>${this.afterCtrl.parentCtrl.$translate.instant('customize.fullview.feesTitle')}</h4>
                     <p>${this.afterCtrl.parentCtrl.$translate.instant('customize.fullview.feesInfo')}</p>
                     <p><a href="${this.afterCtrl.parentCtrl.$translate.instant('customize.fullview.feesUrl')}"
-                    target="_blank">${this.afterCtrl.parentCtrl.$translate.instant('customize.fullview.feesLinkText')}</a></p>`;
+                    target="_blank">${this.afterCtrl.parentCtrl.$translate.instant('customize.fullview.feesLinkText')}</a></p></div>
+                    <div class="ill-form"><div>${this.afterCtrl.parentCtrl.$translate.instant('customize.fees.ill1')}</div>
+                    <div>${this.afterCtrl.parentCtrl.$translate.instant('customize.fees.ill2')}</div></div>`;
                 form.insertBefore(info, form.children[form.children.length - 1]);
             }
         } else {

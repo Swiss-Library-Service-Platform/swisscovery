@@ -71,9 +71,11 @@ export class slspRapidoDigitalOfferController {
 
                 this.$timeout(() => {
                     let readingRoomPod = document.querySelectorAll('div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer .keep_for span');
+                    let pickupInfo = document.querySelectorAll('prm-service-ngrs');
                     let htmlPD = `<span class="reading-Room-Pod" translate="customized.rapido.readingroom"></span>`;
 
                     angular.element(readingRoomPod).after(this.$compile(htmlPD)(this.$scope)).addClass('pod');
+                    angular.element(pickupInfo).addClass('reading-room');
                 }, 20);
             }
 
