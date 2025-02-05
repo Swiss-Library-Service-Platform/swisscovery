@@ -1,4 +1,5 @@
 import { slspCollapseRelatedEResourcesController } from './slsp-collapse-related-e-resources.controller';
+import {slspCollapseRelatedEResourcesHtml} from './slsp-collapse-related-e-resources.html';
 
 export const slspCollapseRelatedEResourcesModule = angular
     .module('slspCollapseRelatedEResourcesModule', [])
@@ -6,5 +7,6 @@ export const slspCollapseRelatedEResourcesModule = angular
     .component('slspCollapseRelatedEResourcesComponent', {
         bindings: { afterCtrl: '<' },
         controller: 'slspCollapseRelatedEResourcesController',
+        template: slspCollapseRelatedEResourcesHtml
 
     })

@@ -31,8 +31,7 @@ angular
                     <span translate="customized.archives.ETH_Hochschularchiv.text2">.</span>
                 </div>
             </div>
-        </div><slsp-alma-viewit-after parent-ctrl="$parent.$ctrl"></slsp-alma-viewit-after>
-        `
+        </div><slsp-alma-viewit-after parent-ctrl="$parent.$ctrl"></slsp-alma-viewit-after>`
         })
 
     // viewit section for archives when there are only partial digitized items, e.g. "ETH Hochschularchiv" (CMI STAR)
