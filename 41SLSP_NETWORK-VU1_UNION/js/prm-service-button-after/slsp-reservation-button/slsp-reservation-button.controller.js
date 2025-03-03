@@ -27,16 +27,16 @@ export class slspReservationButtonController {
     
                 // Das Elternelement ("md-list-item") der Angular-Komponente abrufen
                 let prmOpacElement = currentElement.closest('md-list-item');
-    
+                //console.log('prmOpacElement', prmOpacElement);
                 // Überprüfen, ob prmOpacElement vorhanden ist
                 if (prmOpacElement) {
                     // Den Button innerhalb des aktuellen "md-list-item" Teils auswählen
-                    let itemReservationButton = prmOpacElement.querySelector('prm-service-button button span[translate="AlmaItemRequest"]');
+                    let itemReservationButton = prmOpacElement.querySelector('prm-service-button button span[data-qa="AlmaItemRequest"]');
     
-                    // console.log('this.parentCtrl', this.parentCtrl);
-                    // console.log('language', language);
-                    // console.log('serviceType', serviceType);
-                    // console.log('statusName', statusName);
+                    //  console.log('this.parentCtrl', this.parentCtrl);
+                    //  console.log('language', language);
+                    //  console.log('serviceType', serviceType);
+                    //  console.log('statusName', statusName);
     
                     // Check conditions and execute code if necessary
                     if (serviceType === 'AlmaItemRequest' &&
@@ -49,10 +49,10 @@ export class slspReservationButtonController {
                         angular.element(itemReservationButton).replaceWith(compiledHtml);
     
                         // Execute your code here
-                        console.log('Condition met. Executing code...');
+                        //console.log('Condition met. Executing code...');
                     }
                 } else {
-                    console.warn('md-list-item element not found.');
+                    //console.warn('md-list-item element not found.');
                 }
     
             }, 0);

@@ -1409,7 +1409,8 @@ md-checkbox .md-icon {
 
 .available-facets .section-content .md-chips .md-chip .md-button:before {
     background-color: #ffffff;
-}											   
+}
+
 /*320 Top Bar*/
 
 #mainResults>prm-search-result-tool-bar>div>md-toolbar>div.search-toolbar-title.hide-xs.layout-row>prm-add-query-to-saved-searches>.md-button:hover:not([disabled]) {
@@ -1478,7 +1479,8 @@ prm-search-result-tool-bar .main-checkbox.animate-enter-leave-scale-bounce.stagg
 
 prm-add-query-to-saved-searches button {
     border-radius: 5px !important;
-}  
+}
+
 /*Mobiles*/
 
 .mobile-page-range span.text.tiny-uppercase-text {
@@ -2853,7 +2855,7 @@ label[translate="email.note"] {
 /*Info box*/
 
 prm-alma-other-members .info-text {
-    margin: 0 10px 20px 81px;
+    margin: 10px 10px 20px 81px;
     border: 1px solid #222;
     border-radius: 3px;
     padding: 20px 10px;
@@ -2869,9 +2871,9 @@ prm-alma-other-members .info-text {
 
 /*Info box temporary hidden*/
 
-.info-text {
+/* .info-text {
     display: none;
-}
+} */
 
 
 /*Hide "Online Access"*/
@@ -4370,11 +4372,13 @@ eth-okm-link-component {
 
 /************Temporary alert box**************/
 
-.iheid-alert::after, .iheid-alert::before {
+.iheid-alert::after,
+.iheid-alert::before {
     content: "";
     display: table;
     clear: both;
-} 
+}
+
 .iheid-alert:hover {
     color: #000 !important;
     background-color: #99d0d0 !important;
@@ -4406,12 +4410,12 @@ eth-okm-link-component {
 }
 
 .iheid-alert-close:hover {
-    color: #00802F; 
+    color: #00802F;
 }
 
 a:hover#alert {
-        background-color: rgba(47, 47, 47, 0.1) !important;
-    }
+    background-color: rgba(47, 47, 47, 0.1) !important;
+}
 
 /*****************************************************************************/
 
@@ -4435,3 +4439,5 @@ a:hover#alert {
 
 
 /*****************************************************************************/
+
+

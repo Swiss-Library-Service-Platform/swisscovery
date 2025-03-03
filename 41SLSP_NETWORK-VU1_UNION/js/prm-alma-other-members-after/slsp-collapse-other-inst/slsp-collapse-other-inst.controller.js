@@ -13,8 +13,8 @@ export class slspCollapseOtherInstController {
     $onInit() {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
-            //console.log(this.parentCtrl);
-            if (this.parentCtrl.serviceMode !== 'howovp') {
+            console.log(this.parentCtrl);
+            if (this.parentCtrl.serviceMode !== 'howovp' || this.parentCtrl.availabilityType === 'E') {
            
                 this.parentCtrl.isCollapsed = true;
             }

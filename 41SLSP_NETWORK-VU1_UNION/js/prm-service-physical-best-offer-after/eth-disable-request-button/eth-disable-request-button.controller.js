@@ -27,7 +27,7 @@ export class ethDisableRequestButtonController {
         const observer = new MutationObserver((mutationsList) => {
             for (const mutation of mutationsList) {
                 if (mutation.type === 'childList') {
-                    this.checkAndDisableButton();
+                    this.checkAndDisableButton(targetNode);
                 }
             }
         });
@@ -39,11 +39,11 @@ export class ethDisableRequestButtonController {
         // observer.disconnect();
     }
 
-    checkAndDisableButton() {
+    checkAndDisableButton(targetNode) {
         try {
-            let noAvailableCopies = document.querySelector('[translate="rapido.tiles.physical.no_best_offer.line_2"]');
+            let noAvailableCopies = targetNode.querySelector('[translate="rapido.tiles.physical.no_best_offer.line_2"]');
             if (noAvailableCopies) {
-                let requestButton = document.querySelector('#get_it_btn_physical');
+                let requestButton = targetNode.querySelector('#get_it_btn_physical');
                 if (requestButton) {
                     angular.element(requestButton).attr('disabled', 'disabled');
                 }

@@ -29,7 +29,7 @@ export class slspOvpReservationController {
             let prmOpacElement = currentElement.closest('prm-opac');
 
             // Den Button innerhalb des aktuellen "prm-opac" Teils auswählen
-            let reservationButton = prmOpacElement.querySelector('prm-service-button button span[translate="AlmaRequest"], prm-service-button button span[translate="AlmaRequestOther"]');
+            let reservationButton = prmOpacElement.querySelector('prm-service-button button span[data-qa="AlmaRequest"], prm-service-button button span[data-qa="AlmaRequestOther"]');
 
             if (!this.processDoCheck && unavailability !== "available" && unavailability !== "check_holdings") {
                 // Überprüfen, ob das Element gefunden wurde, bevor auf innerHTML zugegriffen wird
