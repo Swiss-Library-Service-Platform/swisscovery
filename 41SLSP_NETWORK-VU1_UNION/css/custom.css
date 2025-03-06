@@ -4353,7 +4353,7 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
 /*****************************************************************************/
 
 
-/*******************************03 Other local code***************************/
+/*******************************03 Other local code for the NZ***************************/
 
 
 /*****************************************************************************/
@@ -4370,7 +4370,7 @@ eth-okm-link-component {
     display: block;
 }
 
-/************Temporary alert box**************/
+/************Temporary alert box*************
 
 .iheid-alert::after,
 .iheid-alert::before {
@@ -4400,7 +4400,7 @@ eth-okm-link-component {
     text-decoration: underline !important;
 }
 
-/*Alert box close button*/
+/*Alert box close button
 
 .iheid-alert-close {
     margin-left: 15px;
@@ -4415,7 +4415,7 @@ eth-okm-link-component {
 
 a:hover#alert {
     background-color: rgba(47, 47, 47, 0.1) !important;
-}
+}*/
 
 /*****************************************************************************/
 

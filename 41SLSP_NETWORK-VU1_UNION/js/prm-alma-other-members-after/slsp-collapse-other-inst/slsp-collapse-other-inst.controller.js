@@ -14,7 +14,7 @@ export class slspCollapseOtherInstController {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
             console.log(this.parentCtrl);
-            if (this.parentCtrl.serviceMode !== 'howovp' || this.parentCtrl.availabilityType === 'E') {
+            if (this.parentCtrl.serviceMode !== 'howovp') {
            
                 this.parentCtrl.isCollapsed = true;
             }
