@@ -1,0 +1,11 @@
+<div class="custom-tooltip" 
+     ng-repeat="lang in $ctrl.languages">
+    <button class="md-button md-lang-button" 
+        ng-class="{active: $ctrl.afterCtrl.parentCtrl.lang == lang}" 
+        ng-click="$ctrl.changeLanguage(lang)" 
+        ng-attr-lang="{{lang}}" 
+        ng-attr-aria-label="{{$ctrl.getAriaLabelByLanguage(lang)}}">
+        {{lang}}
+    </button>
+    <span class="tooltip-text">{{ $ctrl.getAriaLabelByLanguage(lang) }}</span>
+</div>

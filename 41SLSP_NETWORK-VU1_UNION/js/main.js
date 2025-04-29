@@ -2,8 +2,6 @@
 import './slsp-ill-signin-order-alert';
 import './prm-locations-after';
 import './prm-location-items-after';
-import './slsp-archives-htgi';
-import './slsp-archives-viewit';
 import './slsp-http-intercept-requests';
 import './prm-user-area-expandable-after';
 import './prm-loan-after';
@@ -44,4 +42,4 @@ import './pickup-anywhere-form-after';
 
 
 
-var app = angular.module('viewCustom', ['angularLoad', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit', 'slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule', 'slspRequestsAfterModule', 'prmAlmaViewitItemsAfterModule', 'prmAlmaOtherUnitsAfterModule', 'prmLoginAfterModule', 'prmLocationHoldingsAfterModule', 'prmOfferDetailsTileAfterModule', 'prmFinesAfterModule', 'prmServiceDetailsAfterModule', 'hsgLocationItemAfterModule', 'prmUnionCatalogLoginAfterModule', 'prmOpacAfterModule', 'prmFacetExactAfterModule', 'prmCitationAfterModule' , 'prmSendEmailAfterModule', 'prmFavoritesEditLabelsMenuAfterModule', 'prmSearchResultToolBarAfterModule', 'prmSearchResultListAfterModule', 'prmTopBarBeforeModule', 'prmAdvancedSearchAfterModule', 'prmGetItRequestAfterModule', 'pickupAnywhereFormAfterModule']);
+var app = angular.module('viewCustom', ['angularLoad', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule', 'slspRequestsAfterModule', 'prmAlmaViewitItemsAfterModule', 'prmAlmaOtherUnitsAfterModule', 'prmLoginAfterModule', 'prmLocationHoldingsAfterModule', 'prmOfferDetailsTileAfterModule', 'prmFinesAfterModule', 'prmServiceDetailsAfterModule', 'hsgLocationItemAfterModule', 'prmUnionCatalogLoginAfterModule', 'prmOpacAfterModule', 'prmFacetExactAfterModule', 'prmCitationAfterModule' , 'prmSendEmailAfterModule', 'prmFavoritesEditLabelsMenuAfterModule', 'prmSearchResultToolBarAfterModule', 'prmSearchResultListAfterModule', 'prmTopBarBeforeModule', 'prmAdvancedSearchAfterModule', 'prmGetItRequestAfterModule', 'pickupAnywhereFormAfterModule']);

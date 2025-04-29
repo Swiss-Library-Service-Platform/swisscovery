@@ -18,7 +18,7 @@ export const slspHttpInterceptPickupInformation = angular.module('slspHttpInterc
                             let userGroup = angular.element(document.querySelector('primo-explore')).controller('primo-explore').userSessionManagerService.jwtUtilService.getDecodedToken().userGroup;
 
                             //list of user groups to change delivery for
-                            if (['91','92'].includes(userGroup)) {
+                            if (['91','92','02'].includes(userGroup)) {
                                 response.data.personalDelivery = 'None';
                             }
                         }

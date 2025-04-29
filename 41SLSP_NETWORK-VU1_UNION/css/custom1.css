@@ -84,21 +84,6 @@
 /*400 General*/
 
 
-/*410 Sections' order*/
-
-
-/*411 Sections' order: navigation English*/
-
-
-/*412 Sections' order: navigation German*/
-
-
-/*413 Sections' order: navigation French*/
-
-
-/*414 Sections' order: navigation Italian*/
-
-
 /*420 View online*/
 
 
@@ -121,9 +106,6 @@
 
 
 /*440 General*/
-
-
-/*441 How to get it sections' order*/
 
 
 /*442 Filter bar*/
@@ -151,9 +133,6 @@
 
 
 /*460 Rapido*/
-
-
-/*470 Special collections*/
 
 
 /*480 Open URL Service Page*/
@@ -214,6 +193,9 @@
 
 
 /*960 Email template*/
+
+
+/*970 Journals and databases search */
 
 
 /*990 Other*/
@@ -613,6 +595,36 @@ bcu-lang-switch-component a {
 
 bcu-lang-switch-component a:hover {
     color: rgba(255, 255, 255, 0.85);
+}
+
+/*Tooltip for language switch*/
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.custom-tooltip .tooltip-text {
+    visibility: hidden;
+    font-size: 12px;
+    width: 60px; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%; /* Position unterhalb des Buttons */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.custom-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 0.8;
 }
 
 
@@ -1076,6 +1088,10 @@ prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-rippl
 
 prm-resource-type-filter-bar button.md-button.md-primoExplore-theme.md-ink-ripple:hover span {
     box-shadow: none;
+}
+
+button.resource-type-option.md-button.selectedResourceTypeOption:focus svg {
+    color: #222;
 }
 
 /*220 Frames*/
@@ -3118,73 +3134,6 @@ div#pickup_information_form button#form-close-btn {
     display: none;
 }
 
-/*470 Special external collections*/
-
-.slsp-archives md-list-item {
-    cursor: pointer;
-}
-
-.slsp-archives .md-list-item-inner span {
-    padding-left: 2em;
-}
-
-.slsp-archives md-list md-list-item .md-button {
-    color: #3d6e94;
-    font-size: 16px;
-}
-
-.slsp-archives md-list md-list-item .md-button:hover:not([disabled]),
-.slsp-archives md-list md-list-item .md-button:focus:not([disabled]) {
-    background-color: transparent;
-    color: #3d6e94;
-    text-decoration: underline;
-}
-
-.slsp-archives-additional-hint {
-    justify-content: center;
-    display: flex;
-    padding: 1em;
-    background-color: #f7eda3;
-    border-color: #ede49e;
-    margin-bottom: 1em;
-    padding-left: 2em;
-    box-shadow: 0 1px 0 0 rgb(0 0 0 / 3%), 0 5px 5px -3px rgb(0 0 0 / 7%);
-}
-
-
-/* Max Frisch Archive, Thomas Mann Archive*/
-
-.slsp-archives-hide alma-htgi-svc>* {
-    display: none;
-}
-
-.slsp-archives-hide alma-htgi-svc-after {
-    display: block;
-}
-
-
-/* Hochschule Archive*/
-
-.slsp-archives-hide prm-alma-viewit>* {
-    display: none;
-}
-
-.slsp-archives-hide prm-alma-viewit-after {
-    display: block;
-}
-
-
-/* availability-line HSA, if no online resource */
-
-prm-search-result-availability-line.slsp-hsa-no-online prm-icon {
-    display: none;
-}
-
-prm-search-result-availability-line.slsp-hsa-no-online .availability-status {
-    color: gray;
-}
-
-
 /*480 Open URL Service Page*/
 
 
@@ -3794,6 +3743,14 @@ div#actionsList prm-action-list prm-action-container,
 /*960 Email template*/
 
 
+/*970 Journals and databases search */
+
+/*Page number alignement*/
+
+  .results-title.layout-row.is-categories-search {
+     align-self: center;
+}
+
 /*990 Other*/
 
 
@@ -4153,5 +4110,3 @@ a:hover#alert {
 
 
 /*****************************************************************************/
-
-
