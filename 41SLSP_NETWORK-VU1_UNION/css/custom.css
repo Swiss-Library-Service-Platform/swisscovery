@@ -3747,7 +3747,11 @@ div#actionsList prm-action-list prm-action-container,
 
 /*Page number alignement*/
 
-  .results-title.layout-row.is-categories-search {
+.results-title.layout-row.is-categories-search {
+     align-self: center;
+}
+
+#mainResults > div.results-title.layout-column {
      align-self: center;
 }
 
