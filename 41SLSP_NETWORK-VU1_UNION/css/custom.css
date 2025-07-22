@@ -1427,6 +1427,17 @@ md-checkbox .md-icon {
     background-color: #ffffff;
 }
 
+/*Facet arrows*/
+
+
+prm-facet-group .md-button:focus:not([disabled]) prm-icon{
+    color: #187474 !important;
+}
+
+prm-facet-group .section-title:hover span {
+    color: #222222 !important;
+}
+
 /*320 Top Bar*/
 
 #mainResults>prm-search-result-tool-bar>div>md-toolbar>div.search-toolbar-title.hide-xs.layout-row>prm-add-query-to-saved-searches>.md-button:hover:not([disabled]) {
@@ -3134,6 +3145,12 @@ div#pickup_information_form button#form-close-btn {
     display: none;
 }
 
+/*Rapido divider*/
+
+prm-service-ngrs .divider {
+    background-color: unset !important;
+}
+
 /*480 Open URL Service Page*/
 
 
@@ -4114,3 +4131,11 @@ a:hover#alert {
 
 
 /*****************************************************************************/
+
+
+
+
+
+
+
+
