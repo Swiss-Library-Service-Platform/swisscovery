@@ -24,7 +24,7 @@ export class slspPickupInformationController {
                 //this.getIsUnavailableResource = this.getIsUnavailableResource.bind(this);
 
                 //console.log(this.parentCtrl);
-                //console.log(this.parentCtrl.jwtUtilService.getDecodedToken());             
+                //console.log(this.parentCtrl.userSessionManagerService);             
                 //if="!$ctrl.isDigitalOffer() && !$ctrl.isUnavailableResource()"
                 
             }

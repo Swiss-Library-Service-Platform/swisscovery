@@ -645,7 +645,6 @@ bcu-lang-switch-component a:hover {
 }
 
 /*login-box make arrows clickable*/
-
 prm-login button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
     z-index: 100;
     border: 1px solid #ccc;
@@ -676,19 +675,12 @@ prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button:
 }
 
 /*Background color*/
-
 .full-view-spacer,
 md-content.padded-container.layout-fill._md.md-primoExplore-theme.layout-row {
     background-color: #fcfcfc !important;
 }
 
 /*Other login box*/
-
-.authMethSaml>div>div.md-list-item-inner>prm-login-item>div>p,
-.authMethAlma>div>div.md-list-item-inner>prm-login-item>div>p {
-    display: none;
-}
-
 md-list-item.authMethSaml,
 md-list-item.authMethAlma {
     display: flex;
@@ -722,13 +714,11 @@ p[translate="parallel.login.description2"] {
 }
 
 /*Login Union arrow*/
-
 prm-union-catalog-login md-dialog-content md-list md-list-item button.md-button {
     z-index: 100;
 }
 
 /*Login "register" button*/
-
 slsp-union-login-box-component {
     position: absolute;
     right: 0;
@@ -761,20 +751,18 @@ button.cancel-union-login:hover svg {
 }
 
 .loginbox-register {
-    left: 37px;
-    top: 70px;
+    left: 53px;
+    top: 281px;
     position: absolute;
 }
 
-/*div.loginbox-register a:focus,
-div.loginbox-register a svg:focus {
-    color: #fff !important;
-}*/
-
-.loginbox-register svg {
+/* Gemeinsame SVG Styles */
+.loginbox-register svg,
+prm-login .loginbox-register svg,
+prm-login md-list-item.authMethSaml a svg,
+.union-loginbox-register svg {
     width: 14px;
     height: 14px;
-    fill: rgb(17, 17, 17);
     margin-left: 2px;
     vertical-align: middle;
 }
@@ -782,41 +770,14 @@ div.loginbox-register a svg:focus {
 prm-login .loginbox-register svg,
 prm-login md-list-item.authMethSaml a svg {
     fill: rgb(47 222 223);
-    width: 14px;
-    height: 14px;
-    margin-left: 2px;
-    vertical-align: middle;
-}
-
-prm-login .loginbox-register:hover svg,
-prm-login .loginbox-register a:focus svg,
-prm-login md-list-item.authMethSaml a:hover svg,
-prm-login md-list-item.authMethSaml a:focus svg {
-    fill: rgb(241, 241, 241);
-}
-
-prm-login .loginbox-register a:focus,
-prm-login md-list-item.authMethSaml a:focus {
-    color: #fff !important;
 }
 
 .union-loginbox-register svg {
-    width: 14px;
-    height: 14px;
     fill: rgb(244, 244, 244);
-    margin-left: 2px;
-    vertical-align: middle;
 }
 
 a.parallelLoginDescription.md-primoExplore-theme {
-    margin-left: 15px;
-    margin-top: 8px;
-}
-
-prm-stand-alone-login .loginbox-register {
-    left: 16px;
-    top: 56px;
-    position: absolute;
+    margin-left: 50px;
 }
 
 prm-stand-alone-login prm-login .loginbox-register svg,
@@ -833,7 +794,6 @@ prm-stand-alone-login h2 {
 }
 
 prm-stand-alone-login p.parallelLoginDescription>a.md-primoExplore-theme:focus,
-prm-stand-alone-login div.loginbox-register>a.md-primoExplore-theme:focus,
 prm-stand-alone-login prm-login md-list-item.authMethSaml a:focus {
     color: #111 !important;
 }
@@ -849,6 +809,114 @@ label[translate="login.union.title"]:before {
     margin-right: 5px;
     background-position: 1px 3px;
     margin-bottom: -3px;
+}
+
+/* Hover & Focus for register/parallelLoginDescription links */
+.loginbox-register a.parallelLoginDescription.md-primoExplore-theme:hover,
+.loginbox-register a.parallelLoginDescription.md-primoExplore-theme:focus,
+a.register-link:hover,
+a.register-link:focus {
+    color: #ffffff !important;
+}
+
+.loginbox-register a.parallelLoginDescription.md-primoExplore-theme:hover svg,
+.loginbox-register a.parallelLoginDescription.md-primoExplore-theme:focus svg,
+a.register-link:hover svg,
+a.register-link:focus svg {
+    fill: #ffffff !important;
+}
+
+/*Login Dialogs min-height*/
+md-dialog.login-dialog.light-on-dark-dialog md-list.padded-container.md-primoExplore-theme,
+prm-stand-alone-login md-card.login-card.login-dialog._md.md-primoExplore-theme md-list.padded-container.md-primoExplore-theme {
+    min-height: 250px;
+}
+
+/*Auth Methods styling*/
+prm-login .authMethSaml div.md-list-item-inner {
+    flex-direction: column;
+    min-height: fit-content;
+    align-items: flex-start;
+}
+
+h3.saml-title-label {
+    font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+prm-login .authMethSaml prm-login-item {
+    line-height: 28px !important;
+}
+
+prm-login .authMethSaml div.md-list-item-inner md-icon {
+    min-height: 14px !important;
+    top: 0 !important;
+}
+
+prm-login .authMethSaml .md-button.md-no-style {
+    padding: 0 1em 8px 1em !important;
+}
+
+prm-stand-alone-login .loginbox-register a {
+    text-decoration: none !important;
+}
+
+prm-stand-alone-login .loginbox-register a span {
+    text-decoration: underline;
+}
+
+prm-stand-alone-login .authMethSaml prm-login-item span[translate="parallel.login.link1"],
+prm-stand-alone-login .authMethAlma span.list-item-title.md-display-3[translate="parallel.login.link2"] {
+    color: #3a3a3a !important;
+}
+
+/*Register + Help links in stand-alone login*/
+prm-stand-alone-login .loginbox-register a,
+prm-stand-alone-login prm-login-help a {
+    padding: 8px;
+    color: #3a3a3a !important;
+    border-radius: 3px;
+}
+
+prm-stand-alone-login .loginbox-register a:hover,
+prm-stand-alone-login .loginbox-register a:focus,
+prm-stand-alone-login prm-login-help a:hover,
+prm-stand-alone-login prm-login-help a:focus {
+    background-color: #3a3a3a !important;
+    color: #ffffff !important;
+}
+
+prm-stand-alone-login prm-login-help a:hover svg,
+prm-stand-alone-login prm-login-help a:focus svg {
+    fill: #ffffff !important;
+}
+
+/*Login card/dialog size*/
+.login-card, .login-dialog {
+    min-height: 380px;
+} 
+
+/*Dialog actions*/
+prm-login .md-actions,
+prm-login md-dialog-actions {
+    min-width: 100%;
+    min-height: 60px;
+    bottom: 0;
+    position: absolute;
+}
+
+prm-stand-alone-login .login-dialog md-input-container {
+    border-bottom: 1px solid #848484;
+}
+
+md-dialog prm-login md-dialog-actions .md-button {
+    margin: 0 !important;
+}
+
+md-dialog prm-login md-dialog-actions {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /*Search bar*/
@@ -1403,6 +1471,15 @@ div[data-facet-value="institution-5501"] {
 /*Hide the "Open Knowledge Maps" link in the facet group*/
 eth-okm-link-component {
     display: none;
+}
+
+/*Hide "Open data navigator*/
+div#odn-link-component {
+    display: none;
+}
+
+div#odn-link-component svg {
+    margin-right: 5px;
 }
 
 /*Checkboxes and icons to include and exclude*/
@@ -4062,6 +4139,11 @@ eth-okm-link-component {
     display: block;
 }
 
+/*Display "Open data navigator*/
+div#odn-link-component {
+    display: block;
+}
+
 /************Temporary alert box*************
 
 .iheid-alert::after,
@@ -4131,11 +4213,3 @@ a:hover#alert {
 
 
 /*****************************************************************************/
-
-
-
-
-
-
-
-

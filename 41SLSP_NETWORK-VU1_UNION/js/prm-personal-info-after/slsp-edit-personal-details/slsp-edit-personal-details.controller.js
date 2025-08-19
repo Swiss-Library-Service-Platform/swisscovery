@@ -14,7 +14,7 @@ export class slspEditPersonalDetailsController {
     $doCheck() {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
-
+            //console.log(this.parentCtrl);
             this.detailsBaseEdu = "https:\/\/eduid.ch\/account\/profile";
             this.detailsBaseReg = "https:\/\/registration.slsp.ch\/library-card";
             this.exclude = ['STAFF', '11', '12', '13', '14', '15', '16', '17', '18', '91', '92', '99'];

@@ -1,0 +1,12 @@
+{
+    "name": "prm-gallery-collection-after",
+    "version": "1.0.0",
+    "description": "",
+    "main": "prm-gallery-collection-after.module.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Philipp Schulz",
+    "license": "ISC"
+}
