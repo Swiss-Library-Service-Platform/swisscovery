@@ -48,7 +48,7 @@ export class ethOkmLinkController {
                 ]
                 let currentElement = this.$element[0];
                 let prmOkmElement = currentElement.closest('prm-facet-exact');
-                angular.element(prmOkmElement).addClass('okm-full');
+                angular.element(prmOkmElement).addClass('send-my-search-facet-group');
             }
 
 

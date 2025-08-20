@@ -607,7 +607,7 @@ bcu-lang-switch-component a:hover {
 .custom-tooltip .tooltip-text {
     visibility: hidden;
     font-size: 12px;
-    width: 60px; 
+    width: 60px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -615,7 +615,8 @@ bcu-lang-switch-component a:hover {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    top: 100%; /* Position unterhalb des Buttons */
+    top: 100%;
+    /* Position unterhalb des Buttons */
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -893,9 +894,10 @@ prm-stand-alone-login prm-login-help a:focus svg {
 }
 
 /*Login card/dialog size*/
-.login-card, .login-dialog {
+.login-card,
+.login-dialog {
     min-height: 380px;
-} 
+}
 
 /*Dialog actions*/
 prm-login .md-actions,
@@ -1426,13 +1428,13 @@ div[data-facet-value="institution-5501"] {
 
 /*Open Knowledge Maps*/
 
-.eth-okm-link {
+.send-my-search-link {
     height: auto !important;
     line-height: normal !important;
     margin-bottom: 5px;
 }
 
-.eth-okm-link a {
+.send-my-search-link a {
     padding-top: 3px;
     padding-bottom: 3px;
     overflow: visible;
@@ -1443,39 +1445,24 @@ div[data-facet-value="institution-5501"] {
     align-items: center;
 }
 
-.eth-okm-link a span {
+.send-my-search-link a span {
     color: #3a3a3a;
     line-height: 1.2em;
     border-radius: 3px;
     padding: 3px 0.25em;
 }
 
-.eth-okm-link strong:hover a span,
-.eth-okm-link strong:focus a span {
+.send-my-search-link strong:hover a span,
+.send-my-search-link strong:focus a span {
     color: #fff;
     background-color: #3a3a3a;
 }
 
-.eth-okm-link a img {
+.send-my-search-link a img {
     width: 20px;
     height: 20px;
     vertical-align: middle;
     margin-right: 5px;
-}
-
-/*Hide the "Open Knowledge Maps" link fully (facet group and okm link)*/
-.okm-full {
-    display: none;
-}
-
-/*Hide the "Open Knowledge Maps" link in the facet group*/
-eth-okm-link-component {
-    display: none;
-}
-
-/*Hide "Open data navigator*/
-div#odn-link-component {
-    display: none;
 }
 
 div#odn-link-component svg {
@@ -1507,7 +1494,7 @@ md-checkbox .md-icon {
 /*Facet arrows*/
 
 
-prm-facet-group .md-button:focus:not([disabled]) prm-icon{
+prm-facet-group .md-button:focus:not([disabled]) prm-icon {
     color: #187474 !important;
 }
 
@@ -3842,11 +3829,11 @@ div#actionsList prm-action-list prm-action-container,
 /*Page number alignement*/
 
 .results-title.layout-row.is-categories-search {
-     align-self: center;
+    align-self: center;
 }
 
-#mainResults > div.results-title.layout-column {
-     align-self: center;
+#mainResults>div.results-title.layout-column {
+    align-self: center;
 }
 
 /*990 Other*/
@@ -4127,21 +4114,21 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
 
 /*****************************************************************************/
 
-/************Open Knowledge Maps: display**************/
+/************"Send My Search To" facet group: display**************/
 
-/*Display "Open Knowledge Maps" link fully (facet group and okm link)*/
-.okm-full {
-    display: block;
+/*Display "Send My Search To" facet group fully (facet group and okm link and odn-link)*/
+.send-my-search-facet-group {
+    display: block !important;
 }
 
 /*Display the "Open Knowledge Maps" link in the facet group*/
-eth-okm-link-component {
-    display: block;
+.eth-okm-link {
+    display: block !important;
 }
 
 /*Display "Open data navigator*/
-div#odn-link-component {
-    display: block;
+#odn-link-component {
+    display: block !important;
 }
 
 /************Temporary alert box*************
