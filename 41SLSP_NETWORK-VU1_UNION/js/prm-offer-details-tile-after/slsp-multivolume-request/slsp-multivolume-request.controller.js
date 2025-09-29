@@ -7,21 +7,28 @@ export class slspMultivolumeRequestController {
     $onInit() {
         this.parentCtrl = this.afterCtrl.parentCtrl;
         this.domManipulated = false;
+
     }
 
     $doCheck() {
         try {
             const currentUnavailableVolume = this.parentCtrl.isNoOfferAfterRefine();
             const isUnavailableResource = this.parentCtrl.isUnavailableResource();
+            const resourceType = this.parentCtrl.getResourceType();
+            // console.log('currentUnavailableVolume: ' + currentUnavailableVolume);
+            // console.log('isUnavailableResource: ' + isUnavailableResource);
+            //console.log('resourceType: ' + resourceType);
 
-            //console.log('currentUnavailableVolume: ' + currentUnavailableVolume);
-            //console.log('isUnavailableResource: ' + isUnavailableResource);
+            if (!this.domManipulated && resourceType != 'journal') {
+                // let volumeField = angular.element(document.querySelector('prm-get-it-request .form_item[ng-if="::$ctrl.isCodeEnabledforForm(\'VOLUME\')"]'));
+                // let refineButton = angular.element(document.querySelector('prm-get-it-request .margin-buttons span[ng-if="::!$ctrl.isEbookOffer()"]'));
 
-            if (!this.domManipulated) {
-                let volumeField = angular.element(document.querySelector('prm-get-it-request .form_item[ng-if="::$ctrl.isCodeEnabledforForm(\'VOLUME\')"]'));
-                let refineButton = angular.element(document.querySelector('span[ng-if="::$ctrl._tempRapidoLocateSerialMultivolumeOffers"]'));
+                // volumeField.append(refineButton);
 
-                volumeField.append(refineButton);
+                let resetButton = angular.element(document.querySelector('span[translate="nui.reset"]'));
+                if (resetButton && resetButton.parent()) {
+                    resetButton.parent().addClass('hidden');
+                }
 
                 this.domManipulated = true;
             }

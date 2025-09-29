@@ -24,7 +24,7 @@ export class slspPickupInformationController {
                 //this.getIsUnavailableResource = this.getIsUnavailableResource.bind(this);
 
                 //console.log(this.parentCtrl);
-                //console.log(this.parentCtrl.userSessionManagerService);             
+                //console.log(this.parentCtrl.jwtUtilService.getDecodedToken());             
                 //if="!$ctrl.isDigitalOffer() && !$ctrl.isUnavailableResource()"
                 
             }
@@ -51,33 +51,35 @@ export class slspPickupInformationController {
             }
         }
         getSupplyTime() {
-            if (this.parentCtrl.bestoffer !== null) {
-                return this.parentCtrl.bestoffer.supplyTime;
+            if (this.parentCtrl && this.parentCtrl._bestOffer && this.parentCtrl._bestOffer.supplyTime) {
+                return this.parentCtrl._bestOffer.supplyTime;
             } else {
-                return;
+                return null; // Rückgabe von null, wenn kein Wert vorhanden ist
             }
         }
+        
         getLoanPeriod() {
-            if (this.parentCtrl.bestoffer !== null) {
-                return this.parentCtrl.bestoffer.loanPeriod;
+            if (this.parentCtrl && this.parentCtrl._bestOffer && this.parentCtrl._bestOffer.loanPeriod) {
+                return this.parentCtrl._bestOffer.loanPeriod;
             } else {
-                return;
+                return null; // Rückgabe von null, wenn kein Wert vorhanden ist
             }
         }
+        
         getPatronCost() {
-            if (this.parentCtrl.bestoffer !== null) {
-                return this.parentCtrl.bestoffer.patronCost;
+            if (this.parentCtrl && this.parentCtrl._bestOffer && this.parentCtrl._bestOffer.patronCost) {
+                return this.parentCtrl._bestOffer.patronCost;
             } else {
-                return;
+                return null; // Rückgabe von null, wenn kein Wert vorhanden ist
             }
         }
+        
         getCurrency() {
-            if (this.parentCtrl.bestoffer !== null) {
-                return this.parentCtrl.bestoffer.currency;
+            if (this.parentCtrl && this.parentCtrl._bestOffer && this.parentCtrl._bestOffer.currency) {
+                return this.parentCtrl._bestOffer.currency;
             } else {
-                return;
+                return null; // Rückgabe von null, wenn kein Wert vorhanden ist
             }
-           
         }
         getChosenPlaceRadio() {
             if (this.parentCtrl.pickupAnywhereService !== undefined) {

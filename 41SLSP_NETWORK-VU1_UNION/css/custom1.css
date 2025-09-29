@@ -478,6 +478,25 @@ md-dialog.light-on-dark-dialog a:hover {
     color: #fff !important;
 }
 
+/*Keyboard focus styles*/
+:focus {
+    outline: none !important;
+}
+
+body.using-keyboard :focus {
+    box-shadow: inset 0 0 0 2px #0B57D0 !important;
+    outline-color: none !important;
+}
+
+body.using-keyboard .md-button:focus:not([disabled]) prm-icon,
+body.using-keyboard .md-button.switch-to-advanced:focus {
+    color: unset !important;
+}
+
+body.using-keyboard .md-button.button-as-link.link-alt-color:focus:not([disabled]) {
+    background-color: unset !important;
+}
+
 
 /*090 Other*/
 
@@ -3215,6 +3234,20 @@ prm-service-ngrs .divider {
     background-color: unset !important;
 }
 
+/*Journals issues request*/
+button[ng-if="$ctrl.refineOfferIsVisible()"] {
+    width: 128% !important;
+}
+
+pickup-anywhere-form .form_item[ng-if="$ctrl.showHomeDelivery"] {
+    flex-direction: column !important;
+    align-items: start !important;
+}
+
+div#homeDeliveryLabel {
+    margin-bottom: 40px;
+}
+
 /*480 Open URL Service Page*/
 
 
@@ -4200,3 +4233,4 @@ a:hover#alert {
 
 
 /*****************************************************************************/
+

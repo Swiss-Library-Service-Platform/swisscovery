@@ -59,7 +59,7 @@ export class slspCollapseRelatedEResourcesController {
 
                     this.isCollapsed = true; // Set the flag to true to prevent further execution
                 }
-            });
+            }, 0);
         } catch (error) {
             console.error(error);
         }

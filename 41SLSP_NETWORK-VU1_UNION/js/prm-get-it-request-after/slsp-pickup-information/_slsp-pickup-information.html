@@ -16,8 +16,8 @@
         <span class="request-details-label" translate="nui.ngrs.pickup.information.title"></span>
         <br>
 
-        <!-- Anzeige von Institution und Bibliothek, wenn chosenPlaceRadio NICHT "homeDelivery" oder "" ist -->
-        <span ng-if="$ctrl.getChosenPlaceRadio() === 'pickupAtLibrary'">
+        <!-- Anzeige von Institution und Bibliothek, wenn chosenPlaceRadio NICHT "homeDelivery" ist -->
+        <span ng-if="$ctrl.getChosenPlaceRadio() !== 'homeDelivery'">
             <span>{{ $ctrl.getInstitutionName() }}</span><span> - </span>
             <span>{{ $ctrl.getLibraryName() }}</span>
         </span>
@@ -25,11 +25,6 @@
         <!-- Anzeigen, wenn chosenPlaceRadio "homeDelivery" ist -->
         <span class="days" translate="nui.ngrs.request.home_delivery"
             ng-if="$ctrl.getChosenPlaceRadio() === 'homeDelivery'"></span>
-
-        <!-- Anzeigen, wenn chosenPlaceRadio "officeDelivery" ist -->
-        <span class="days" translate="nui.ngrs.request.office_delivery"
-            ng-if="$ctrl.getChosenPlaceRadio() === 'officeDelivery'"></span>
-
     </div>
 
     <div class="slsp-request-details physical-only deliverd-in" ng-if="$ctrl.getSupplyTime()">
