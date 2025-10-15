@@ -67,7 +67,8 @@ export class slspRapidoDigitalOfferController {
                 this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '452167827350000041' ||
                 this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '452497325370000041' ||
                 this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '452497929300000041' ||
-                this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '452084165700000041') {
+                this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '452084165700000041' ||
+                this.parentCtrl.isdigitaloffer !== true && this.parentCtrl.bestoffer !== undefined && this.parentCtrl.bestoffer.podId == '529457897220000041') {
 
                 this.$timeout(() => {
                     let readingRoomPod = document.querySelectorAll('div[ng-if="$ctrl.physicalTileVisible"] prm-service-physical-best-offer .keep_for span');
