@@ -37,10 +37,11 @@ export class ethDisableRequestButtonController {
         observer.observe(targetNode, config);
     }
 
-    checkAndHandleButton(targetNode) {
+     checkAndHandleButton(targetNode) {
         try {
             let noAvailableCopies = targetNode.querySelector('[translate="rapido.tiles.physical.no_best_offer.line_2"]');
             let noAvailableCopiesLine1 = targetNode.querySelector('[translate="rapido.tiles.physical.no_best_offer.line_1"]');
+            let noAvailableCopiesLine3 = targetNode.querySelector('[translate="rapido.tiles.physical.no_best_offer.line_3"]');
             let requestButton = targetNode.querySelector('#get_it_btn_physical');
             let noPersonalDelivery = targetNode.querySelector('[translate="nui.ngrs.pickup.information.noPersonalDeliveryOffer"]');
 
@@ -52,6 +53,9 @@ export class ethDisableRequestButtonController {
 
             // Standardfall: Button deaktivieren, falls keine Exemplare verfügbar sind
             if (noAvailableCopies && requestButton) {
+                angular.element(requestButton).attr('disabled', 'disabled');
+            }
+            if (noAvailableCopiesLine3 && requestButton) {
                 angular.element(requestButton).attr('disabled', 'disabled');
             }
 
