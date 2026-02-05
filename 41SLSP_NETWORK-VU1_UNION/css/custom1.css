@@ -4242,13 +4242,13 @@ prm-gallery-collection[collection-id="81546771520005501"] {
 /*****************************************************************************/
 
 /*Temporary info bar*/
+@media (min-width: 599px) {
 body::before { 
   content:
-    "Ihre Rechnungen für Bibliotheksgebühren finden Sie jetzt auch im swisscovery-Konto unter «Mein Konto → Rechnungen».\A"
-    "Vous trouverez désormais vos factures de frais de bibliothèque dans votre compte swisscovery, dans la rubrique « Mon compte → Factures ».\A"
-    "Le fatture relative ai costi della biblioteca sono ora disponibili anche nell'account personale swisscovery, alla voce 'Il mio conto > Fatture'.\A"
-    "You can now access your library fee invoices via your Swisscovery account, under 'My account' > 'Invoices'.";
-  
+	"Ihre Rechnungen für Bibliotheksgebühren finden Sie jetzt auch im swisscovery-Konto unter «Mein Konto → Rechnungen». Der Versand per E-Mail bleibt unverändert.\A"
+    "Désormais, vous trouverez également vos factures de frais de bibliothèque dans votre compte swisscovery, dans la rubrique « Mon compte → Factures ». L'envoi par e-mail reste inchangé.\A"
+    "Le fatture relative ai costi della biblioteca sono ora disponibili anche nell'account personale swisscovery, alla voce 'Il mio conto' > 'Fatture'. Continuerai a ricevere queste fatture anche via e-mail come in precedenza.\A"
+    "You can now also access your library fee invoices via your swisscovery account, under 'My account' > 'Invoices'. You will still continue to receive these invoices by email as before.";
   white-space: pre-line;
   display: block;
   background: #8dd8d8;
@@ -4257,4 +4257,5 @@ body::before {
   width: 100%;
   font-weight: bold;
   color: black;
+}
 }
