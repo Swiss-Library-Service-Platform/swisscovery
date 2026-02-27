@@ -61,32 +61,7 @@ export class slspRefineJournalRequestController {
                 this._lastPublicationData = publicationData;
 
                 this.parentCtrl.noteField.label = 'customized.journal.note';
-
-                // Button-Handler nur einmal registrieren
-                if (!this._submitHandlerRegistered) {
-                    const submitBtn = document.querySelector('button.button-with-icon.button-confirm');
-                    if (submitBtn) {
-                        submitBtn.addEventListener('click', (event) => {
-                            // Mische publicationData und noteData vor dem Absenden
-                            let publicationData = this.parentCtrl.formData.myPublicationDate;
-                            let noteData = this.parentCtrl.formData.myNote;
-                            let currentNote = noteData || '';
-                            let alreadyCombined = currentNote.includes(publicationData);
-                            let combinedNote = '';
-                            if (!alreadyCombined) {
-                                if (publicationData && noteData) {
-                                    combinedNote = publicationData + ' | ' + noteData;
-                                } else if (publicationData) {
-                                    combinedNote = publicationData;
-                                } else if (noteData) {
-                                    combinedNote = noteData;
-                                }
-                                this.parentCtrl.formData.myNote = combinedNote;
-                            }
-                        }, true); // Capture-Phase
-                        this._submitHandlerRegistered = true;
-                    }
-                }
+                
 
                 if (!isRefined || hasNoBestOfferClass || refineOfferDisabled) {
                     this.disableRequestButton();

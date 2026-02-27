@@ -4164,57 +4164,17 @@ prm-resource-type-filter-bar button.selectedResourceTypeOption prm-icon {
     display: block !important;
 }
 
-/************Temporary alert box*************
-
-.iheid-alert::after,
-.iheid-alert::before {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.iheid-alert:hover {
-    color: #000 !important;
-    background-color: #99d0d0 !important;
-}
-
-.iheid-alert {
-    background-color: #99d0d0 !important;
-    color: black;
-    box-shadow: 2px 1px 3px 0px rgb(0 0 0 / 8%), 0 2px 5px 0 rgb(0 0 0 / 8%);
-    margin: 8px 8px 4px 8px;
-    padding: 10px;
-    position: relative;
-    opacity: 1;
-    border-radius: 3px;
-}
-
-.iheid-alert a {
-    color: #000;
-    text-decoration: underline !important;
-}
-
-/*Alert box close button
-
-.iheid-alert-close {
-    margin-left: 15px;
-    color: #000;
-    float: right;
-    cursor: pointer;
-}
-
-.iheid-alert-close:hover {
-    color: #00802F;
-}
-
-a:hover#alert {
-    background-color: rgba(47, 47, 47, 0.1) !important;
-}*/
 /************Hide collections**************/
 
-/*Hide Juscovery*/
+/*Hide Juscovery in collections*/
 
 prm-gallery-collection[collection-id="81546771520005501"] {
+    display: none;
+}
+
+/*Hide Collection path in full display*/
+
+prm-record-collection-paths {
     display: none;
 }
 
@@ -4240,22 +4200,3 @@ prm-gallery-collection[collection-id="81546771520005501"] {
 
 
 /*****************************************************************************/
-
-/*Temporary info bar*/
-@media (min-width: 599px) {
-body::before { 
-  content:
-	"Ihre Rechnungen für Bibliotheksgebühren finden Sie jetzt auch im swisscovery-Konto unter «Mein Konto → Rechnungen». Der Versand per E-Mail bleibt unverändert.\A"
-    "Désormais, vous trouverez également vos factures de frais de bibliothèque dans votre compte swisscovery, dans la rubrique « Mon compte → Factures ». L'envoi par e-mail reste inchangé.\A"
-    "Le fatture relative ai costi della biblioteca sono ora disponibili anche nell'account personale swisscovery, alla voce 'Il mio conto' > 'Fatture'. Continuerai a ricevere queste fatture anche via e-mail come in precedenza.\A"
-    "You can now also access your library fee invoices via your swisscovery account, under 'My account' > 'Invoices'. You will still continue to receive these invoices by email as before.";
-  white-space: pre-line;
-  display: block;
-  background: #8dd8d8;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-  font-weight: bold;
-  color: black;
-}
-}
