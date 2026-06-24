@@ -26,28 +26,30 @@ export class slspInvoicesController {
         };
     }
 
-    fetchInvoices() {
-        const apiUrl = 'https://inv-slsp.bossonline.ch:21143/jrpc/slsp/getInvoices';
-        const jwt = sessionStorage.getItem('primoExploreJwt').slice(1, -1);
+    getJwt() {
+        const raw = sessionStorage && sessionStorage.getItem('primoExploreJwt');
+        if (!raw) return null;
+        // Primo stores the JWT JSON-quoted ("eyJ..."). Tolerate both quoted and unquoted.
+        return raw.replace(/^"|"$/g, '');
+    }
 
-        const postData = {
-            jsonrpc: '2.0',
-            method: 'getInvoices',
-            params: {},
-            id: 1
-        };
+    fetchInvoices(retryCount = 0) {
+        const apiUrl = 'https://inv-slsp.bossonline.ch:21143/jrpc/slsp/getInvoices';
+        const jwt = this.getJwt();
+        if (!jwt) {
+            console.error('Invoice fetch aborted: no JWT available in sessionStorage');
+            return;
+        }
 
         const config = {
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
                 'token': jwt
             },
             withCredentials: false,
             cache: false
         };
 
-        this.$http.post(apiUrl, postData, config)
+        this.$http.get(apiUrl, config)
             .then(response => {
 
                 if (response && response.data && response.data.data) {
@@ -67,6 +69,15 @@ export class slspInvoicesController {
                     status: error.status,
                     statusText: error.statusText
                 });
+
+                if (error.status === 500 && retryCount < 2) {
+                    console.log(`Invoice fetch returned 500 — retrying (attempt ${retryCount + 1} of 2) in 1 second...`);
+                    this.$timeout(() => {
+                        this.fetchInvoices(retryCount + 1);
+                    }, 1000);
+                    return;
+                }
+
                 this.invoices = [];
                 this.$timeout(() => {
                     this.$scope.$apply();
@@ -143,7 +154,17 @@ export class slspInvoicesController {
             newWindow.document.close();
         }
 
-        const jwt = sessionStorage.getItem('primoExploreJwt').slice(1, -1);
+        const jwt = this.getJwt();
+        if (!jwt) {
+            console.error('PDF fetch aborted: no JWT available in sessionStorage');
+            if (newWindow && !newWindow.closed) {
+                newWindow.close();
+            }
+            this.$timeout(() => {
+                this.$window.alert('Authentication unavailable. Please reload the page and try again.');
+            }, 0);
+            return;
+        }
         const documentId = documentLink.split('/').pop();
 
         // Use GET request with JWT token in header
@@ -193,11 +214,12 @@ export class slspInvoicesController {
                     });
                 }
 
-                // Retry logic for 500 errors
-                if (error.status === 500 && retryCount === 0) {
+                // Retry logic for 500 errors (up to 2 retries)
+                if (error.status === 500 && retryCount < 2) {
+                    console.log(`PDF fetch returned 500 — retrying (attempt ${retryCount + 1} of 2) in 1 second...`);
                     // Keep the window open and retry with the same window
                     this.$timeout(() => {
-                        this.fetchPdf(documentLink, event, 1, newWindow);
+                        this.fetchPdf(documentLink, event, retryCount + 1, newWindow);
                     }, 1000);
                     return; // Don't show error alert yet - window stays open with loading spinner
                 }
@@ -212,7 +234,7 @@ export class slspInvoicesController {
                     if (error.status === -1) {
                         this.$window.alert('Unable to access PDF. Please try again later.');
                     } else if (error.status === 500) {
-                        this.$window.alert('Server error while fetching PDF. The retry also failed. Please try again later or contact support.');
+                        this.$window.alert('Server error while fetching PDF. The retries also failed. Please try again later or contact support.');
                     } else {
                         this.$window.alert('Could not load PDF. Please try again later.');
                     }

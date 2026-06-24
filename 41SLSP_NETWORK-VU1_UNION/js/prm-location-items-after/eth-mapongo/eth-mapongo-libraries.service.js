@@ -65,14 +65,6 @@ export const ethMapongoLibrariesService = [function () {
             "locationWhiteList": ["Ausleihe nur intern an Angehörige PH FHNW für Lehre und Forschung", "Bibliothek", "Magazin: Nicht frei zugänglich, zur Abholung bestellen", "Verschiedene Standorte"]
         },
         {
-            "shortname": "FHNW-PH-S",
-            "name": "FHNW Bibliothek Solothurn",
-            "libraryCode": "E39",
-            "baseUrl": "https://fhnw-solothurn.mapongo.de",
-            "locationCodeWhiteList": ["E39BJ", "E39BI", "E39BB", "E39KA", "E39LS", "E39LE", "E39TK", "E39ZS"],
-            "locationWhiteList": ["Belletristik Kinder/Jugend", "Bibliothek", "Bilderbücher", "Kamishibai", "Benutzung nur vor Ort", "Lernspiele", "Themenkisten", "Zeitschriften"]
-        },
-        {
             "shortname": "UBH",
             "name": "Basel - UB Hauptbibliothek",
             "libraryCode": "A100",
