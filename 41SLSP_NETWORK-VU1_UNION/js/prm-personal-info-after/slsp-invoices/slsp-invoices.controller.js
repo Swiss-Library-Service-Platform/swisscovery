@@ -15,7 +15,13 @@ export class slspInvoicesController {
         this.$interval = $interval;
         this.invoices = [];
         this.isLoading = false;
+        this.hasLoaded = false; // a first fetch has produced a result of any kind
+        this.errorMessage = null; // English failure notice shown in the tab
+        this.canRetry = false; // whether to offer a "Try again" button
         this.refreshInterval = null; // Store interval reference for cleanup
+        this.deregisterTranslateWatch = null; // $rootScope listener, needs manual cleanup
+        this.tabSizeObserver = null; // ResizeObserver, needs manual cleanup
+        this.isDestroyed = false;
 
         // Translation object for tab name
         this.tabLabels = {
@@ -27,19 +33,90 @@ export class slspInvoicesController {
     }
 
     getJwt() {
-        const raw = sessionStorage && sessionStorage.getItem('primoExploreJwt');
+        let raw;
+        try {
+            raw = sessionStorage && sessionStorage.getItem('primoExploreJwt');
+        } catch (e) {
+            // sessionStorage throws on access when site data is blocked.
+            console.error('Invoice JWT unavailable: sessionStorage is not accessible', e);
+            return null;
+        }
         if (!raw) return null;
         // Primo stores the JWT JSON-quoted ("eyJ..."). Tolerate both quoted and unquoted.
         return raw.replace(/^"|"$/g, '');
     }
 
+    // True when Boss reports "Invalid userName": the patron is unknown to the invoicing
+    // system and has no invoices. Sent as HTTP 400 or 500, with the reason in
+    // errors[].errorMessage and errors[].col_messageParams.
+    isUnknownAccountError(response) {
+        const body = response && response.data;
+        if (!body) return false;
+
+        const messages = [];
+        const collect = value => {
+            if (typeof value === 'string') messages.push(value);
+        };
+
+        collect(body);
+        collect(body.errorMessage);
+        if (Array.isArray(body.errors)) {
+            body.errors.forEach(err => {
+                if (!err) return;
+                collect(err.errorMessage);
+                if (Array.isArray(err.col_messageParams)) err.col_messageParams.forEach(collect);
+            });
+        }
+
+        return messages.some(message => /invalid\s*user\s*name/i.test(message));
+    }
+
+    // Ends a fetch and clears the spinner. Not called while a retry is still pending.
+    finishLoading() {
+        this.isLoading = false;
+        this.hasLoaded = true;
+    }
+
+    // Shows an English failure notice in the tab, with an optional "Try again" button.
+    setError(message, canRetry) {
+        this.invoices = [];
+        this.errorMessage = message;
+        this.canRetry = canRetry;
+        this.finishLoading();
+    }
+
+    clearError() {
+        this.errorMessage = null;
+        this.canRetry = false;
+    }
+
+    // "Try again" button: clears the notice and refetches with the spinner showing.
+    retryFetch() {
+        this.clearError();
+        this.hasLoaded = false;
+        this.fetchInvoices();
+    }
+
+    // Empty result, logged and rendered like a successful load of zero invoices.
+    setNoInvoices() {
+        this.invoices = [];
+        this.clearError();
+        this.finishLoading();
+        console.log('Invoices loaded:', this.invoices.length,
+                    '(no invoices have been issued for this account yet)');
+    }
+
     fetchInvoices(retryCount = 0) {
-        const apiUrl = 'https://inv-slsp.bossonline.ch:21143/jrpc/slsp/getInvoices';
+        const apiUrl = 'https://invproxy.swisscovery.network/jrpc/slsp/getInvoices';
         const jwt = this.getJwt();
         if (!jwt) {
             console.error('Invoice fetch aborted: no JWT available in sessionStorage');
+            // Not retryable: the patron has to sign in again.
+            this.setError('Please sign in again to view your invoices.', false);
             return;
         }
+
+        this.isLoading = !this.hasLoaded;
 
         const config = {
             headers: {
@@ -52,8 +129,27 @@ export class slspInvoicesController {
         this.$http.get(apiUrl, config)
             .then(response => {
 
-                if (response && response.data && response.data.data) {
+                if (this.isUnknownAccountError(response)) {
+                    this.setNoInvoices();
+                    return;
+                }
+
+                // Only an array is a valid invoice list.
+                if (response && response.data && Array.isArray(response.data.data)) {
+
                     this.invoices = response.data.data;
+
+                    this.invoices.forEach(invoice => {
+                        if (invoice.documentLink) {
+                            invoice.documentLink = invoice.documentLink.replace(
+                                'https://inv-slsp.bossonline.ch:21143',
+                                'https://invproxy.swisscovery.network'
+                            );
+                        }
+                    });
+
+                    this.clearError();
+                    this.finishLoading();
                     console.log('Invoices loaded:', this.invoices.length);
 
                     this.$timeout(() => {
@@ -61,16 +157,34 @@ export class slspInvoicesController {
                     });
                 } else {
                     console.error('Invalid response format received');
-                    this.invoices = [];
+                    this.setError('Invoices are temporarily unavailable.', true);
                 }
             })
             .catch(error => {
-                console.error('Invoice fetch error:', {
-                    status: error.status,
-                    statusText: error.statusText
-                });
+                if (this.isUnknownAccountError(error)) {
+                    this.setNoInvoices();
+                    this.$timeout(() => {
+                        this.$scope.$apply();
+                    });
+                    return;
+                }
 
-                if (error.status === 500 && retryCount < 2) {
+                // A request failure always has a numeric status; anything else was
+                // thrown while handling the response.
+                const status = error && error.status;
+                if (typeof status !== 'number') {
+                    console.error('Invoice processing error (not a request failure):', error);
+                } else {
+                    // xhrStatus explains a status of -1: 'abort', 'error' or 'timeout'.
+                    console.error('Invoice fetch error:', {
+                        status: status,
+                        statusText: error.statusText,
+                        xhrStatus: error.xhrStatus,
+                        url: error.config && error.config.url
+                    });
+                }
+
+                if (status === 500 && retryCount < 2) {
                     console.log(`Invoice fetch returned 500 — retrying (attempt ${retryCount + 1} of 2) in 1 second...`);
                     this.$timeout(() => {
                         this.fetchInvoices(retryCount + 1);
@@ -78,7 +192,13 @@ export class slspInvoicesController {
                     return;
                 }
 
-                this.invoices = [];
+                // Keep any invoices already on screen; notify only when there are none.
+                if (Array.isArray(this.invoices) && this.invoices.length) {
+                    this.finishLoading();
+                } else {
+                    this.setError('Invoices are temporarily unavailable.', true);
+                }
+
                 this.$timeout(() => {
                     this.$scope.$apply();
                 });
@@ -86,8 +206,6 @@ export class slspInvoicesController {
     }
 
     fetchPdf(documentLink, event, retryCount = 0, existingWindow = null) {
-        // Check if middle mouse button (mousewheel click) was used
-        const isMiddleClick = event && event.button === 1;
 
         // Check if existing window is still valid and open
         let newWindow;
@@ -98,7 +216,6 @@ export class slspInvoicesController {
             newWindow = existingWindow;
             isReusingWindow = true;
         } else {
-            // Open a new window (need to write loading HTML)
             newWindow = this.$window.open('', '_blank');
         }
 
@@ -167,7 +284,6 @@ export class slspInvoicesController {
         }
         const documentId = documentLink.split('/').pop();
 
-        // Use GET request with JWT token in header
         const config = {
             headers: {
                 'token': jwt
@@ -197,7 +313,7 @@ export class slspInvoicesController {
                 }, 30000);
             })
             .catch(error => {
-                // Try to read the error response even though responseType is 'blob'
+                // error.data is an ArrayBuffer here, so this Blob branch never runs.
                 if (error.data instanceof Blob) {
                     const reader = new FileReader();
                     reader.onload = () => {
@@ -244,6 +360,11 @@ export class slspInvoicesController {
 
 
     addCustomTab() {
+        // The startup timeout in $onInit can fire after the component is destroyed.
+        if (this.isDestroyed) {
+            return;
+        }
+
         const tabsContainer = angular.element(document.querySelector('md-tabs'));
         const tabsCtrl = tabsContainer.controller('mdTabs');
 
@@ -261,7 +382,7 @@ export class slspInvoicesController {
             return;
         }
 
-        // Neuen Scope erstellen
+        // Create the scope the tab content is bound to.
         const newScope = this.$scope.$new();
         newScope.label = translatedLabel;
         newScope.$ctrl = this;
@@ -269,7 +390,7 @@ export class slspInvoicesController {
         newScope.deselect = function() { };
 
 
-        // Tab Template (nur die Vorlage)
+        // Tab content markup, wrapped in md-tab-content below.
         const template = `
             <div class="padding-large">
                 <h2 translate="customized.invoices"></h2>
@@ -278,10 +399,20 @@ export class slspInvoicesController {
                     <md-progress-circular md-mode="indeterminate"></md-progress-circular>
                     <span translate="customized.download.invoices">Lade Rechnungen…</span>
                 </div>
-                <div ng-if="!$ctrl.isLoading && !$ctrl.invoices.length">
+                <div ng-if="!$ctrl.isLoading && $ctrl.errorMessage">
+                    <md-card class="bar alert-bar" style="height: unset; min-height: unset;">
+                        <div>{{ $ctrl.errorMessage }}</div>
+                    </md-card>
+                    <md-button ng-if="$ctrl.canRetry"
+                               class="md-raised md-primary"
+                               ng-click="$ctrl.retryFetch()">
+                        Try again
+                    </md-button>
+                </div>
+                <div ng-if="!$ctrl.isLoading && !$ctrl.errorMessage && !$ctrl.invoices.length">
                     <span translate="customized.no.invoices">Keine Rechnungen gefunden</span>
                 </div>
-                <md-list ng-if="!$ctrl.isLoading && $ctrl.invoices.length">
+                <md-list ng-if="!$ctrl.isLoading && !$ctrl.errorMessage && $ctrl.invoices.length">
                     <md-list-item
                         ng-repeat="invoice in $ctrl.invoices"
                         layout="row"
@@ -302,7 +433,7 @@ export class slspInvoicesController {
             </div>
         `;
 
-        // Komplette md-tab-content-Struktur bauen
+        // Wrap the markup in the md-tab-content structure md-tabs expects.
         const tabContentId = 'tab-content-13';
         const tabContentTemplate = `
         <md-tab-content id="${tabContentId}"
@@ -322,13 +453,13 @@ export class slspInvoicesController {
         </md-tab-content>
         `;
 
-        // Kompilieren
+        // Compile against the tab scope.
         const compiledTabContent = this.$compile(tabContentTemplate)(newScope);
 
-        // Index für den neuen Tab bestimmen
+        // Index the new tab will occupy.
         const index = tabsCtrl.tabs.length;
 
-        // Tab-Objekt
+        // Tab object in the shape md-tabs expects.
         const newTab = {
             scope: newScope,
             label: translatedLabel,
@@ -340,10 +471,10 @@ export class slspInvoicesController {
             hasFocus: () => false,
             element: compiledTabContent
         };
-        // Push Tab + Template in DOM-Struktur, die Angular erwartet
+        // Register the tab with md-tabs.
         tabsCtrl.tabs.push(newTab);
 
-        // INS md-tabs-content-wrapper einfügen
+        // Insert the content into md-tabs-content-wrapper, or into md-tabs if absent.
         const contentWrapper = document.querySelector('md-tabs-content-wrapper');
         if (contentWrapper) {
             angular.element(contentWrapper).append(compiledTabContent);
@@ -353,8 +484,8 @@ export class slspInvoicesController {
 
         newScope.tab = newTab;
 
-        // Watch for language changes and update tab label
-        this.$rootScope.$on('$translateChangeSuccess', () => {
+        // Updates the tab label on language change. Deregistered in $destroy.
+        this.deregisterTranslateWatch = this.$rootScope.$on('$translateChangeSuccess', () => {
             const currentLang = this.$translate.use() || 'de';
             const translatedLabel = this.tabLabels[currentLang] || this.tabLabels['de'];
 
@@ -363,43 +494,49 @@ export class slspInvoicesController {
             newTab.label = translatedLabel;
             newTab.parent.label = translatedLabel;
 
-            // Force tab refresh to show new label
+            // The new label has a different width, so pagination has to be recomputed.
             this.$timeout(() => {
-                if (tabsCtrl.refreshInkBar) {
-                    tabsCtrl.refreshInkBar();
-                }
-                // Force Angular to re-render the tabs
-                this.$scope.$apply();
+                this.refreshTabs(tabsCtrl);
             }, 0);
         });
 
-        // Angular aktualisieren
+        // Recompute pagination now that the tab item is in the DOM and measurable.
         this.$timeout(() => {
-            if (tabsCtrl.pagination && typeof tabsCtrl.pagination.updateVisible === 'function') {
-                tabsCtrl.pagination.updateVisible();
-            }
-            if (typeof tabsCtrl.refreshInkBar === 'function') {
-                tabsCtrl.refreshInkBar();
-            }
-
+            this.refreshTabs(tabsCtrl);
             this.$scope.$applyAsync();
         }, 0);
 
-        // Daten laden
+        this.watchTabSize(tabsCtrl);
+
+        // Load invoices unless they are already present.
         if (!this.invoices.length) {
             this.fetchInvoices();
         }
     }
 
 
-    updatePagination() {
-        const tabsContainer = angular.element(document.querySelector('md-tabs'));
-        const tabsCtrl = tabsContainer.controller('mdTabs');
-        if (tabsCtrl && tabsCtrl.pagination) {
-            tabsCtrl.pagination.shouldPageForward = true;
-            tabsCtrl.pagination.shouldPageBack = true;
-            tabsCtrl.pagination.updatePagination();
+    // Recomputes pagination, which gates the prev/next buttons, and the ink bar.
+    // md-tabs does this itself only in insertTab, removeTab and on window resize.
+    refreshTabs(tabsCtrl) {
+        if (typeof tabsCtrl.updatePagination === 'function') {
+            tabsCtrl.updatePagination();
         }
+        if (typeof tabsCtrl.updateInkBarStyles === 'function') {
+            tabsCtrl.updateInkBarStyles();
+        }
+    }
+
+
+    // md-tabs measures tab widths against the live DOM, so a measurement taken while
+    // the tab strip is still hidden or unsized yields no pagination and is never
+    // revisited. Recompute whenever the canvas changes size. Disconnected in $destroy.
+    watchTabSize(tabsCtrl) {
+        const canvas = document.querySelector('md-tabs-canvas');
+        if (!canvas || typeof ResizeObserver !== 'function') {
+            return;
+        }
+        this.tabSizeObserver = new ResizeObserver(() => this.refreshTabs(tabsCtrl));
+        this.tabSizeObserver.observe(canvas);
     }
 
 
@@ -412,8 +549,6 @@ export class slspInvoicesController {
 
             this.$timeout(() => {
                 this.addCustomTab();
-                // Update tab pagination after adding the new tab
-                this.updatePagination();
             }, 500);
 
             // Setup auto-refresh for invoices every 10 minutes (600000 milliseconds)
@@ -424,16 +559,27 @@ export class slspInvoicesController {
 
             // Cleanup interval when controller is destroyed
             this.$scope.$on('$destroy', () => {
+                this.isDestroyed = true;
+
                 if (this.refreshInterval) {
                     console.log('Cancelling invoice auto-refresh interval');
                     this.$interval.cancel(this.refreshInterval);
                     this.refreshInterval = null;
                 }
+
+                if (this.deregisterTranslateWatch) {
+                    this.deregisterTranslateWatch();
+                    this.deregisterTranslateWatch = null;
+                }
+
+                if (this.tabSizeObserver) {
+                    this.tabSizeObserver.disconnect();
+                    this.tabSizeObserver = null;
+                }
             });
 
         } catch (e) {
-            console.error("***SLSP*** an initialization error occured: InvoicesController\n\n");
-            // console.error(e.message);
+            console.error("***SLSP*** an initialization error occured: InvoicesController\n\n", e);
         }
     }
 

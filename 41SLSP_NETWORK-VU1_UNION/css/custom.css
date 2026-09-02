@@ -3184,7 +3184,7 @@ button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ri
 
 /*Refine Offer button*/
 
-button[ng-if="$ctrl.refineOfferIsVisible()"] {
+.refine-offer-button button, button.slsp-refine-button {
     display: flex;
     width: 85%;
     border: 1px solid #808080;
@@ -3192,7 +3192,7 @@ button[ng-if="$ctrl.refineOfferIsVisible()"] {
     margin-left: 30px;
 }
 
-button[ng-if="$ctrl.refineOfferIsVisible()"] span {
+.refine-offer-button button span, button.slsp-refine-button span {
     text-wrap: wrap;
     line-height: 16px;
     margin-left: 0px !important;
@@ -3240,7 +3240,7 @@ prm-service-ngrs .divider {
 }
 
 /*Journals issues request*/
-button[ng-if="$ctrl.refineOfferIsVisible()"] {
+button[ng-if="$ctrl.refineOfferIsVisible()"], button.slsp-refine-button {
     width: 128% !important;
 }
 

@@ -2,10 +2,12 @@ export class slspMultivolumeRequestController {
     constructor($scope) {
         this.$scope = $scope;
         this.previousUnavailableVolume = null;
+        this.refineButtonMoved = false;
     }
 
     $onInit() {
         this.parentCtrl = this.afterCtrl.parentCtrl;
+       
         this.domManipulated = false;
 
     }
@@ -15,15 +17,18 @@ export class slspMultivolumeRequestController {
             const currentUnavailableVolume = this.parentCtrl.isNoOfferAfterRefine();
             const isUnavailableResource = this.parentCtrl.isUnavailableResource();
             const resourceType = this.parentCtrl.getResourceType();
-            // console.log('currentUnavailableVolume: ' + currentUnavailableVolume);
+             console.log('currentUnavailableVolume: ' + currentUnavailableVolume);
+             console.log('parentCtrl: ', this.parentCtrl);
             // console.log('isUnavailableResource: ' + isUnavailableResource);
             //console.log('resourceType: ' + resourceType);
+
+            if (resourceType != 'journal' && !this.refineButtonMoved) {
+                this.refineButtonMoved = this.ensureRefineButtonBeforeConfirm();
+            }
 
             if (!this.domManipulated && resourceType != 'journal') {
                 // let volumeField = angular.element(document.querySelector('prm-get-it-request .form_item[ng-if="::$ctrl.isCodeEnabledforForm(\'VOLUME\')"]'));
                 // let refineButton = angular.element(document.querySelector('prm-get-it-request .margin-buttons span[ng-if="::!$ctrl.isEbookOffer()"]'));
-
-                // volumeField.append(refineButton);
 
                 let resetButton = angular.element(document.querySelector('span[translate="nui.reset"]'));
                 if (resetButton && resetButton.parent()) {
@@ -42,6 +47,11 @@ export class slspMultivolumeRequestController {
                 }
 
                 this.previousUnavailableVolume = currentUnavailableVolume;
+            }
+
+            // Re-apply disabled state in case Primo re-renders the button while the state stays true.
+            if (currentUnavailableVolume === true) {
+                this.disableRequestButton();
             }
 
             // Klassen hinzufügen/entfernen
@@ -85,6 +95,34 @@ export class slspMultivolumeRequestController {
             }
         }
     }
+
+     ensureRefineButtonBeforeConfirm() {
+        const confirmButton = document.querySelector('#physicalGetItRequest button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple');
+        const movedRefineButton = confirmButton && confirmButton.parentNode
+            ? confirmButton.parentNode.querySelector('.md-button.button-with-icon.slsp-refine-moved')
+            : null;
+        const refineButton = document.querySelector('#physicalGetItRequest prm-offer-details-tile .refine-offer-button .md-button.button-with-icon:not(.slsp-refine-moved)');
+
+        console.log('Refine button:', refineButton);
+        console.log('Confirm button:', confirmButton);
+
+        if (movedRefineButton) {
+            return true;
+        }
+
+        if (!refineButton || !confirmButton || !confirmButton.parentNode) {
+            return false;
+        }
+
+        if (refineButton !== confirmButton.previousElementSibling) {
+            confirmButton.parentNode.insertBefore(refineButton, confirmButton);
+        }
+
+        refineButton.classList.add('slsp-refine-moved');
+
+        return true;
+    }
+
 }
 
 slspMultivolumeRequestController.$inject = ['$scope'];

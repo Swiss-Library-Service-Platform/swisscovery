@@ -12,28 +12,35 @@ export class slspRefineJournalRequestController {
     $doCheck() {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
+            this.ensureRefineButtonBeforeConfirm();
 
             let isRefined = this.parentCtrl._refined;
             let isPhysicalForm = this.parentCtrl.openphysicalform.openPhysicalForm;
             let isPhysicalJournal = this.parentCtrl.isPhysicalJournal();
-            let refineOfferDisabled = this.parentCtrl._refineOfferDisabled;
+            this.isPhysicalForm = isPhysicalForm;
+            this.isPhysicalJournal = isPhysicalJournal;
             let volumeData = this.parentCtrl.formData.myVolume;
             let noteData = this.parentCtrl.formData.myNote;
             let publicationData = this.parentCtrl.formData.myPublicationDate;
+            const hasPublicationDate = typeof publicationData === 'string'
+                ? publicationData.trim().length > 0
+                : !!publicationData;
             // Prüfen, ob #physicalGetItRequest die Klasse no-best-offer hat
             const physicalGetItRequestElem = document.querySelector('#physicalGetItRequest');
             const hasNoBestOfferClass = physicalGetItRequestElem && physicalGetItRequestElem.classList.contains('no-best-offer');
+            this.refineSpinner = !!this.parentCtrl._refineOfferInProgress;
 
-
+            //console.log('isPhysicalJournal', isPhysicalJournal);
+            //console.log('hasNoBestOfferClass', hasNoBestOfferClass);
             // console.log('openphysicalform', this.parentCtrl.openphysicalform.openPhysicalForm);
-            // console.log('parentCtrl', this.parentCtrl);
+            //console.log('parentCtrl', this.parentCtrl);
             // console.log('volumeData', volumeData);
-            // console.log('_refineOfferDisabled)', this.parentCtrl._refineOfferDisabled);
+            //console.log('_refineOfferDisabled)', this.parentCtrl._refineOfferDisabled);
 
-            /*  console.log('_refined', this.parentCtrl._refined);
-             console.log('sendDisabled', this.parentCtrl.sendDisabled());
-             
-              */
+            //console.log('_refined', this.parentCtrl._refined);
+            //console.log('sendDisabled', this.parentCtrl.sendDisabled());
+
+
 
             // console.log('isPhysicalJournal', this.parentCtrl.isPhysicalJournal());
             //
@@ -46,7 +53,7 @@ export class slspRefineJournalRequestController {
             //console.log('requestSubmitted:',this.parentCtrl._requestSubmitted);
 
             if (isPhysicalJournal && isPhysicalForm) {
-                if (!publicationData) {
+                if (!hasPublicationDate) {
                     this.disableRefineButton();
                 } else {
                     this.enableRefineButton();
@@ -57,13 +64,21 @@ export class slspRefineJournalRequestController {
                 ) {
                     this.parentCtrl._refined = false;
                 }
+
+                 if (
+                    (this._lastPublicationData !== undefined && this._lastPublicationData !== publicationData)
+                ) {
+                    this.parentCtrl._showPublicationDateRefineWarning = true;
+                }
                 this._lastVolumeData = volumeData;
                 this._lastPublicationData = publicationData;
 
                 this.parentCtrl.noteField.label = 'customized.journal.note';
-                
 
-                if (!isRefined || hasNoBestOfferClass || refineOfferDisabled) {
+               
+
+
+                if (!isRefined || hasNoBestOfferClass) {
                     this.disableRequestButton();
                 } else {
                     this.enableRequestButton();
@@ -106,30 +121,49 @@ export class slspRefineJournalRequestController {
     }
 
     disableRequestButton() {
-        const requestButton = angular.element(document.querySelector('button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple'));
+        const requestButton = angular.element(document.querySelector('#physicalGetItRequest button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple'));
         if (requestButton) {
             requestButton.attr('disabled', 'disabled');
         }
     }
 
     enableRequestButton() {
-        const requestButton = angular.element(document.querySelector('button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple'));
+        const requestButton = angular.element(document.querySelector('#physicalGetItRequest button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple'));
         if (requestButton) {
             requestButton.removeAttr('disabled');
         }
     }
 
     disableRefineButton() {
-        const requestButton = angular.element(document.querySelector('button[ng-if="$ctrl.refineOfferIsVisible()"]'));
+        const requestButton = angular.element(document.querySelectorAll('#physicalGetItRequest .refine-offer-button button, #physicalGetItRequest button.slsp-refine-button'));
         if (requestButton) {
             requestButton.attr('disabled', 'disabled');
+            this.parentCtrl._refineOfferDisabled = true;
         }
     }
 
     enableRefineButton() {
-        const requestButton = angular.element(document.querySelector('button[ng-if="$ctrl.refineOfferIsVisible()"]'));
+        const requestButton = angular.element(document.querySelectorAll('#physicalGetItRequest .refine-offer-button button, #physicalGetItRequest button.slsp-refine-button'));
         if (requestButton) {
             requestButton.removeAttr('disabled');
+            this.parentCtrl._refineOfferDisabled = false;
+        }
+    }
+
+    doRefine() {
+        this.parentCtrl.refineOffer();
+    }
+
+    ensureRefineButtonBeforeConfirm() {
+        const refineButton = document.querySelector('#physicalGetItRequest button.slsp-refine-button');
+        const confirmButton = document.querySelector('#physicalGetItRequest button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple');
+
+        if (!refineButton || !confirmButton || !confirmButton.parentNode) {
+            return;
+        }
+
+        if (refineButton.nextElementSibling !== confirmButton) {
+            confirmButton.parentNode.insertBefore(refineButton, confirmButton);
         }
     }
 
