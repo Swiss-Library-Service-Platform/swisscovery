@@ -1,6 +1,7 @@
 import { slspPickupInformationModule } from './slsp-pickup-information/slsp-pickup-information.module';
 import { slspRefineJournalRequestModule } from './slsp-refine-journal-request/slsp-refine-journal-request.module';
 import { slspScoreRequestModule } from './slsp-score-request/slsp-score-request.module';
+import { slspRefineJournalDigitizationRequestModule } from './slsp-refine-journal-digitization-request/slsp-refine-journal-digitization-request.module';
 
 
 export const prmGetItRequestAfterModule = angular
@@ -11,6 +12,7 @@ export const prmGetItRequestAfterModule = angular
             <slsp-pickup-information-component after-ctrl="$ctrl"></slsp-pickup-information-component>
             <slsp-refine-journal-request-component after-ctrl="$ctrl"></slsp-refine-journal-request-component>
             <slsp-score-request-component after-ctrl="$ctrl"></slsp-score-request-component>
+            <slsp-refine-journal-digitization-request-component after-ctrl="$ctrl"></slsp-refine-journal-digitization-request-component>
             <slsp-get-it-request-after parent-ctrl="$parent.$ctrl"></slsp-get-it-request-after>`
     });
 
@@ -18,3 +20,4 @@ export const prmGetItRequestAfterModule = angular
 prmGetItRequestAfterModule.requires.push(slspPickupInformationModule.name);
 prmGetItRequestAfterModule.requires.push(slspRefineJournalRequestModule.name);
 prmGetItRequestAfterModule.requires.push(slspScoreRequestModule.name);
+prmGetItRequestAfterModule.requires.push(slspRefineJournalDigitizationRequestModule.name);

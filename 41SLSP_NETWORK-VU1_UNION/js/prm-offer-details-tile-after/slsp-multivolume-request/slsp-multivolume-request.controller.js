@@ -7,7 +7,7 @@ export class slspMultivolumeRequestController {
 
     $onInit() {
         this.parentCtrl = this.afterCtrl.parentCtrl;
-       
+
         this.domManipulated = false;
 
     }
@@ -17,9 +17,8 @@ export class slspMultivolumeRequestController {
             const currentUnavailableVolume = this.parentCtrl.isNoOfferAfterRefine();
             const isUnavailableResource = this.parentCtrl.isUnavailableResource();
             const resourceType = this.parentCtrl.getResourceType();
-             console.log('currentUnavailableVolume: ' + currentUnavailableVolume);
-             console.log('parentCtrl: ', this.parentCtrl);
-            // console.log('isUnavailableResource: ' + isUnavailableResource);
+
+            //console.log('isUnavailableResource: ' + isUnavailableResource);
             //console.log('resourceType: ' + resourceType);
 
             if (resourceType != 'journal' && !this.refineButtonMoved) {
@@ -96,15 +95,15 @@ export class slspMultivolumeRequestController {
         }
     }
 
-     ensureRefineButtonBeforeConfirm() {
+    ensureRefineButtonBeforeConfirm() {
         const confirmButton = document.querySelector('#physicalGetItRequest button.button-with-icon.button-confirm.md-button.md-primoExplore-theme.md-ink-ripple');
         const movedRefineButton = confirmButton && confirmButton.parentNode
             ? confirmButton.parentNode.querySelector('.md-button.button-with-icon.slsp-refine-moved')
             : null;
         const refineButton = document.querySelector('#physicalGetItRequest prm-offer-details-tile .refine-offer-button .md-button.button-with-icon:not(.slsp-refine-moved)');
 
-        console.log('Refine button:', refineButton);
-        console.log('Confirm button:', confirmButton);
+        // console.log('Refine button:', refineButton);
+        // console.log('Confirm button:', confirmButton);
 
         if (movedRefineButton) {
             return true;
